@@ -10,7 +10,7 @@ export dbcommun=sige_commun
 
 #export PGCLIENTENCODING=LATIN1;
 
-rm $sqliteoutput
+rm -f $sqliteoutput
 
 
 ########################################################################

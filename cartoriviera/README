@@ -1,0 +1,27 @@
+
+
+Données copiées sur le site www.cartoriviera.ch pour y accéder depuis map.cartoriviera.ch (photos ouvrages, schéma abonnés, etc)
+
+
+Les scripts fonctionnent depuis le serveur 171.74.172.203
+
+S'assurer que cartoriviera est bien été monté avec:
+	sshfs drouzaud@cartoriviera.vevey.ch:/var/www/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
+	une clef ssh est autorisée pour l'utilisateur drouzaud avec denis.rouzaud@sige.ch pour la connexion sur cartoriviera.vevey.ch
+	demander une clef à camptocamp en cas de besoin.
+	
+et le dossier ouvrages
+	sudo /bin/mount -t cifs //s1laveyre.sige.ch/dao_saisie$/01_DISTRIBUTION/OUVRAGES /home/sige/mount/ouvrages -o user=rouzaudd,password=XXXX,dom=sige.ch,gid=1000,uid=1000
+	sudo /bin/mount -t cifs //s1laveyre.sige.ch/dao_saisie$/01_DISTRIBUTION/ABONNES /home/sige/mount/abonnes -o user=rouzaudd,password=XXXXX,dom=sige.ch,gid=1000,uid=1000
+
+
+1. Ouvrages
+	executer le script ouvrages.sh qui:
+		- copie les photos/pdf des ouvrages dans un nouveau dossier (nommé selon la date) et crée les miniatures
+		- synchronise vers la droite le nouveau dossier avec le contenu sur www.cartoriviera.ch
+		- met à jour le champ link de la table ouvrage
+	
+2. Croquis/photos abonnés
+	executer abonnes.sh qui	synchronise vers la droite, puis met à jour les droits avec abonnes.sh
+	
+	
