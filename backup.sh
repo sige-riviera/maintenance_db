@@ -15,6 +15,8 @@ pg_dump --host localhost --port 5432 --username "sige" --no-password --format ta
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --verbose --file "/home/sige/data/backup/qwat_all_$TODAY.backup" "qwat"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --verbose --file "/home/sige/data/backup/sige_commun_$TODAY.backup" "sige_commun"
 
+pg_dumpall -r -f /home/sige/data/backup/roles_$TODAY.backup
+
 mkdir -p /home/sige/data/backup/$YEAR
 mkdir -p /home/sige/data/backup/$YEAR/$MONTH
 
@@ -27,6 +29,7 @@ qwat_sys_$TODAY.backup \
 qwat_dr_$TODAY.backup  \
 qwat_all_$TODAY.backup \
 sige_commun_$TODAY.backup
+roles_$TODAY.backup
 
 rm qwat_od_$TODAY.backup
 rm qwat_vl_$TODAY.backup
@@ -34,6 +37,7 @@ rm qwat_sys_$TODAY.backup
 rm qwat_dr_$TODAY.backup
 rm qwat_all_$TODAY.backup
 rm sige_commun_$TODAY.backup
+rm roles_$TODAY.backup
 
 
 # backup on other server
