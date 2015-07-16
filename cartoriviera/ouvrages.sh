@@ -4,8 +4,8 @@
 set -e
 
 # creer dossier
-rm -rf /home/sige/data_carto/data_ouvrage
-mkdir /home/sige/data_carto/data_ouvrage
+rm -rf /home/sige/data/carto/data_ouvrage
+mkdir /home/sige/data/carto/data_ouvrage
 
 # copier les photos/pdf ouvrages dans nouveau dossier
 disk_path=/home/sige/mount/ouvrages
@@ -19,11 +19,11 @@ do
 	if  [ "$num" ]; then	
 		echo "Ouvrage $ouvrage:"
 		# directories creation
-		mkdir /home/sige/data_carto/data_ouvrage/$ouvrage
-		mkdir /home/sige/data_carto/data_ouvrage/$ouvrage/pdf
-		mkdir /home/sige/data_carto/data_ouvrage/$ouvrage/images
-		mkdir /home/sige/data_carto/data_ouvrage/$ouvrage/images/large
-		mkdir /home/sige/data_carto/data_ouvrage/$ouvrage/images/small
+		mkdir /home/sige/data/carto/data_ouvrage/$ouvrage
+		mkdir /home/sige/data/carto/data_ouvrage/$ouvrage/pdf
+		mkdir /home/sige/data/carto/data_ouvrage/$ouvrage/images
+		mkdir /home/sige/data/carto/data_ouvrage/$ouvrage/images/large
+		mkdir /home/sige/data/carto/data_ouvrage/$ouvrage/images/small
 		# find path on disk
 		echo "\tFinding path ..."
 		type=`echo "$ouvrage - $ouvrage % 1000" | bc`
@@ -36,13 +36,13 @@ do
 		find "$ouvrage_path/${ouvrage}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} /home/sige/mount/dao_saisie/OUVRAGES/$ouvrage/pdf/ \;	
 		# resize pictures
 		# echo "\tResizing pictures ..."
-		mogrify -resize 800x800 -quality 92 -path /home/sige/data_carto/data_ouvrage/$ouvrage/images/small/ /home/sige/data_carto/data_ouvrage/$ouvrage/images/large/*
+		mogrify -resize 800x800 -quality 92 -path /home/sige/data/carto/data_ouvrage/$ouvrage/images/small/ /home/sige/data/carto/data_ouvrage/$ouvrage/images/large/*
 	fi
-done < /home/sige/data_carto/ouvrages.txt
+done < /home/sige/data/carto/ouvrages.txt
 
 
 
 # mettre à jour sur cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only -u -s /home/sige/data_carto/data_ouvrage/ drouzaud@cartoriviera.vevey.ch:ouvrages/
+rsync -r -t -v --delete --size-only -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera.vevey.ch:ouvrages/
 

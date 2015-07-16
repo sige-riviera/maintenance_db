@@ -4,7 +4,7 @@
 set -e
 
 export db_address=localhost
-export sqliteoutput=/home/sige/data_carto/sige_qwat.sqlite
+export sqliteoutput=/home/sige/data/carto/sige_qwat.sqlite
 export dbqwat=qwat
 export dbcommun=sige_commun
 
