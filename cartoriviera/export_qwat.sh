@@ -238,7 +238,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 
 ########################################################################
 # FTP UPLOAD
-PASS=`cat ../ftp_pass/carto`
+PASS=`cat ../../ftp_pass/carto`
 ftp -n -v ftp.vevey.ch <<-EOF
 user carto_sige $PASS 
 prompt

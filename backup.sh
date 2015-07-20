@@ -7,6 +7,8 @@ TODAY=`date '+%Y%m%d'`
 YEAR=`date '+%Y'`
 MONTH=`date '+%m'`
 
+export PGOPTIONS='--client-min-messages=warning'
+
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_od_$TODAY.backup" --schema "qwat_od" "qwat"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_vl_$TODAY.backup" --schema "qwat_vl" "qwat"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_sys_$TODAY.backup" --schema "qwat_sys" "qwat"
@@ -15,7 +17,7 @@ pg_dump --host localhost --port 5432 --username "sige" --no-password --format ta
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --verbose --file "/home/sige/data/backup/qwat_all_$TODAY.backup" "qwat"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --verbose --file "/home/sige/data/backup/sige_commun_$TODAY.backup" "sige_commun"
 
-pg_dumpall -r -f /home/sige/data/backup/roles_$TODAY.backup
+pg_dumpall -r -f /home/sige/data/backup/roles_$TODAY.sql
 
 mkdir -p /home/sige/data/backup/$YEAR
 mkdir -p /home/sige/data/backup/$YEAR/$MONTH
@@ -28,8 +30,8 @@ qwat_vl_$TODAY.backup  \
 qwat_sys_$TODAY.backup \
 qwat_dr_$TODAY.backup  \
 qwat_all_$TODAY.backup \
-sige_commun_$TODAY.backup
-roles_$TODAY.backup
+sige_commun_$TODAY.backup \
+roles_$TODAY.sql
 
 rm qwat_od_$TODAY.backup
 rm qwat_vl_$TODAY.backup
@@ -37,7 +39,7 @@ rm qwat_sys_$TODAY.backup
 rm qwat_dr_$TODAY.backup
 rm qwat_all_$TODAY.backup
 rm sige_commun_$TODAY.backup
-rm roles_$TODAY.backup
+rm roles_$TODAY.sql
 
 
 # backup on other server
