@@ -9,13 +9,13 @@ MONTH=`date '+%m'`
 
 export PGOPTIONS='--client-min-messages=warning'
 
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_od_$TODAY.backup" --schema "qwat_od" "qwat"
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_vl_$TODAY.backup" --schema "qwat_vl" "qwat"
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_sys_$TODAY.backup" --schema "qwat_sys" "qwat"
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --verbose --file "/home/sige/data/backup/qwat_dr_$TODAY.backup" --schema "qwat_dr" "qwat"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_od_$TODAY.backup" --schema "qwat_od" "qwat"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_vl_$TODAY.backup" --schema "qwat_vl" "qwat"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_sys_$TODAY.backup" --schema "qwat_sys" "qwat"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_dr_$TODAY.backup" --schema "qwat_dr" "qwat"
 
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --verbose --file "/home/sige/data/backup/qwat_all_$TODAY.backup" "qwat"
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --verbose --file "/home/sige/data/backup/sige_commun_$TODAY.backup" "sige_commun"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "/home/sige/data/backup/qwat_all_$TODAY.backup" "qwat"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "/home/sige/data/backup/sige_commun_$TODAY.backup" "sige_commun"
 
 pg_dumpall -r -f /home/sige/data/backup/roles_$TODAY.sql
 
