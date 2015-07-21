@@ -48,7 +48,7 @@ zip -9r donnees_sige_$TODAY.zip *
 #rsync -r -t -v --delete --size-only -u -s $OUTPATH/donnees_sige_$TODAY.zip vuadens@46.140.101.173
 
 # transfert ftp
-PASS=`cat ../ftp_pass/bouveret`
+PASS=`cat /home/sige/ftp_pass/bouveret`
 ftp -n -v miranda.kreativmedia.ch <<-EOF
 user vuadens $PASS
 prompt
