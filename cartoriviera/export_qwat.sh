@@ -164,42 +164,42 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 
 echo "installation tank"
 ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
-'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_installation_tank_fr WHERE fk_status in (1301,1302)" \
+'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_tank_fr WHERE fk_status in (1301,1302)" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation_tank -nlt POINT -progress \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 echo "installation pump"
 ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
-'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_installation_pump_fr WHERE fk_status in (1301,1302)" \
+'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_pump_fr WHERE fk_status in (1301,1302)" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation_pump -nlt POINT -progress \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 echo "installation source"
 ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
-'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_installation_source_fr WHERE fk_status in (1301,1302)" \
+'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_source_fr WHERE fk_status in (1301,1302)" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation_source -nlt POINT -progress \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 echo "installation treatment"
 ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
-'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_installation_treatment_fr WHERE fk_status in (1301,1302)" \
+'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_treatment_fr WHERE fk_status in (1301,1302)" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation_treatment -nlt POINT -progress \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 echo "installation pressurecontrol"
 ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
-'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_installation_pressurecontrol_fr WHERE fk_status in (1301,1302)" \
+'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_pressurecontrol_fr WHERE fk_status in (1301,1302)" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation_pressurecontrol -nlt POINT -progress \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 echo "installation chamber"
 ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
-'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_installation_chamber_fr WHERE fk_status in (1301,1302)" \
+'\",\"Ouvrage\",600,600)>croquis</a>' as links FROM qwat_od.vw_chamber_fr WHERE fk_status in (1301,1302)" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation_valvechamber -nlt POINT -progress \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
