@@ -44,5 +44,5 @@ done < /home/sige/data/carto/ouvrages.txt
 
 # mettre à jour sur cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera.vevey.ch:ouvrages/
+rsync -r -t -v --delete --size-only -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera3.vevey.ch:ouvrages/
 
