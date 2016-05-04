@@ -84,7 +84,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 
 echo "valves"
-ogr2ogr -sql "SELECT * FROM qwat_od.vw_export_valve "  \
+ogr2ogr -sql "SELECT *, COALESCE(valve_type_short_fr,'')||COALESCE(identification,'')||COALESCE(valve_function_short_fr,'') AS _label FROM qwat_od.vw_export_valve "  \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln valve -nlt POINT -progress -preserve_fid \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
@@ -119,7 +119,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 
 echo "subscriber"
-ogr2ogr -sql "SELECT vw_export_subscriber.*, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=abonne&abonne='
+ogr2ogr -sql "SELECT vw_export_subscriber.*, '<a href=javascript:app.openInfoWindow(\"https://www.cartoriviera.ch/sige/www/gallery.php?type=abonne&abonne='
 ||identification||'&commune='||district_prefix||
 '\",\"Abonne\",600,600)>croquis</a>' as link 
 FROM qwat_od.vw_export_subscriber"  \
@@ -162,7 +162,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 # INSTALLATION
 
 echo "installation tank"
-ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"http://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
+ogr2ogr -sql "SELECT *, '<a href=javascript:app.openInfoWindow(\"https://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||
 '\",\"Ouvrage\",600,600)>croquis</a>' as link FROM qwat_od.vw_export_installation" \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln installation -nlt POINT -progress \
