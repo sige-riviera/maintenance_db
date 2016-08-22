@@ -5,10 +5,10 @@ set -e
 
 export TODAY=`date '+%Y%m%d'`
 
-export OUTPATH=/home/sige/data_bouveret_$TODAY
+export OUTPATH=/home/sige/data/bouveret
 
-mkdir -p $OUTPATH
 rm -f $OUTPATH/*
+
 
 export PGCLIENTENCODING=ISO-8859-1
 export PGCLIENTENCODING=LATIN1
@@ -20,26 +20,26 @@ pgsql2shp -h localhost -g geom -f $OUTPATH/vannes -u sige qwat "\
 SELECT \
  id   AS ID,               \
  identification     AS id_sige,             \
- geometry::geometry(Point,21781) AS geom \
-FROM qwat_od.valve WHERE ST_Intersects(geometry,$box)" 
+ ST_Force2d(geometry)::geometry(Point,21781) AS geom \
+FROM qwat_od.vw_export_valve WHERE ST_Intersects(ST_Force2d(geometry), $box)" 
 
  # hydrantes 
 pgsql2shp -h localhost -g geom -f $OUTPATH/hydrantes -u sige qwat "\
 SELECT \
  id   AS ID,               \
- identification                   AS id_sige,             \
- geometry::geometry(Point,21781) AS geom \
-FROM qwat_od.vw_hydrant WHERE _status_active IS TRUE AND ST_Intersects(geometry,$box)" 
+ identification    AS id_sige,             \
+ ST_Force2d(geometry)::geometry(Point,21781) AS geom \
+FROM qwat_od.vw_export_hydrant WHERE status_active IS TRUE AND ST_Intersects(ST_Force2d(geometry), $box)" 
 
 
 # conduites
 pgsql2shp -h localhost -g geom -f $OUTPATH/conduites -u sige qwat "\
 SELECT                                         \
  id   AS ID,               \
- geometry::geometry(LineString,21781) AS geom, \
- _material_name          AS MATERIAU,      \
- _function               AS FONCTION       \
-FROM qwat_od.vw_pipe WHERE _status_active IS TRUE AND ST_Intersects(geometry,$box)"
+ ST_Force2d(geometry)::geometry(LineString,21781) AS geom, \
+ _material_name   AS MATERIAU,      \
+ _function        AS FONCTION       \
+FROM qwat_od.vw_export_pipe WHERE _status_active IS TRUE AND ST_Intersects(ST_Force2d(geometry), $box)"
 
 # make zip
 cd $OUTPATH

@@ -56,7 +56,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 
 echo "pipes"
-ogr2ogr -sql "SELECT * FROM qwat_od.vw_pipe"  \
+ogr2ogr -sql "SELECT material_short_fr||' '||material_diameter AS _label, COALESCE(schema_force_visible, function_schema_visible) IS TRUE AS _schema_view, * FROM qwat_od.vw_export_pipe"  \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln pipe -nlt LINESTRING -progress -preserve_fid \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
@@ -145,7 +145,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no FORMAT=SPATIALITE" -gt 65536
 
 echo "leaks"
-ogr2ogr -sql "SELECT * FROM qwat_od.leak"  \
+ogr2ogr -sql "SELECT * FROM qwat_od.vw_export_leak"  \
 -overwrite -a_srs EPSG:21781 -f SQLite $sqliteoutput \
 -nln leak -nlt POINT -progress -preserve_fid \
 PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
