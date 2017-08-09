@@ -31,3 +31,5 @@ MAILTO=denis.rouzaud@gmail.com
 
 0 5 * * sun /home/sige/maintenance_db/cartoriviera/export_data.sh>/dev/null
 
+52 14 * * wed /home/sige/maintenance_db/cartoriviera/export_data.sh>/dev/null
+
