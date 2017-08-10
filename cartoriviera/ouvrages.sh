@@ -39,6 +39,8 @@ for directory in "${directories[@]}"; do
       find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(jpg\|png\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/images/large/ \;
       find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/pdf/ \;	
     fi
+    # apply rights
+    chmod -R 755 /home/sige/data/carto/data_ouvrage/$num
     # resize pictures
     shopt -s nullglob dotglob 
     files=(/home/sige/data/carto/data_ouvrage/$num/images/large/*)
@@ -54,5 +56,5 @@ done
 
 # mettre à jour sur cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only --omit-dir-times -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
+rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
 
