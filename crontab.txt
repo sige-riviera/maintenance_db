@@ -21,7 +21,7 @@
 # 
 # m h  dom mon dow   command
 
-MAILTO=denis.rouzaud@gmail.com
+MAILTO="denis.rouzaud@sige.ch,jonas.graf@sige.ch"
 
 # maintenance db + backup + export qwat DB to cartoriviera
 1 0 * * mon,tue,wed,thu,fri /home/sige/maintenance_db/daily.cron>/dev/null
@@ -33,6 +33,8 @@ MAILTO=denis.rouzaud@gmail.com
 0 5 * * sat /home/sige/maintenance_db/bouveret.sh>/dev/null
 
 # export data (ouvrages, abonnes) to cartoriviera
-0 5 * * sun /home/sige/maintenance_db/cartoriviera/export_data.sh>/dev/null
+0 5 * * sun /home/sige/maintenance_db/cartoriviera/ouvrages.sh>/dev/null
+0 3 * * * /home/sige/maintenance_db/cartoriviera/abonnes.sh>/dev/null
+
 
 
