@@ -16,7 +16,7 @@ for directory in "${directories[@]}"; do
   for ouvrage_path in $disk_path/$directory/*/; do
     num=$(sed -r 's/^.*_([0-9]{4})\//\1/' <<< $ouvrage_path)
     if [[ ! $num =~ ^[0-9]+ ]]; then
-      echo " * Number not found in $ouvrage_path" 1>&2 
+      echo " * Number not found in $ouvrage_path" 1>&2
       continue
     fi
     echo "Ouvrage $num"
@@ -37,12 +37,12 @@ for directory in "${directories[@]}"; do
       echo "ERROR Plans folder not found in $ouvrage_path"  1>&2
     else
       find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(jpg\|png\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/images/large/ \;
-      find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/pdf/ \;	
+      find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/pdf/ \;
     fi
     # apply rights
     chmod -R 755 /home/sige/data/carto/data_ouvrage/$num
     # resize pictures
-    shopt -s nullglob dotglob 
+    shopt -s nullglob dotglob
     files=(/home/sige/data/carto/data_ouvrage/$num/images/large/*)
     echo " * Resizing pictures ... ${#files[@]}"
     if [[ ${#files[@]} -gt 0 ]]; then
@@ -57,4 +57,7 @@ done
 # mettre à jour sur cartoriviera
 # to show progress, add: --progress
 rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
-
+if [[ ! mountpoint -q -- /home/sige/mount/cartoriviera ]]; then
+  sshfs drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
+fi
+chmod -R 755 /home/sige/mount/cartoriviera/ouvrages
