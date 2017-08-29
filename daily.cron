@@ -1,7 +1,0 @@
-#!/bin/bash
-
-/home/sige/maintenance_db/data_maintenance.sh
-
-/home/sige/maintenance_db/backup.sh
-
-/home/sige/maintenance_db/cartoriviera/export_qwat.sh

@@ -44,12 +44,12 @@ PG:"dbname='$dbcommun' host=$db_address port='5432' user='sige'" \
 # QWAT
 
 echo "search view"
-ogr2ogr -sql "SELECT * FROM qwat_od.vw_search_view 
-UNION 
+ogr2ogr -sql "SELECT * FROM qwat_od.vw_search_view
+UNION
 SELECT *
 FROM dblink('dbname=sige_commun',\$\$SELECT 'Adresse Valais' AS layer_name, rue || ' ' || numero || ', ' || commune AS search_text, geometry FROM adresse.geopost WHERE commune = 'Bouveret' OR commune = 'Les Evouettes'\$\$)
 AS addr(layer_name varchar(120), search_text varchar(120), geometry geometry(Point,2056))
-UNION 
+UNION
 SELECT *
 FROM dblink('dbname=sige_commun',\$\$SELECT 'Cadastre Valais' AS layer_name, 'Parcelle ' || numero || ', Port-Valais' AS search_text, ST_Centroid(geom) AS geometry FROM cadastre.portvalais_bienfonds\$\$)
 AS parcel(layer_name varchar(120), search_text varchar(120), geometry geometry(Point,2056))" \
@@ -59,7 +59,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 -dsco SPATIALITE=no -lco "SPATIAL_INDEX=no" -lco "FORMAT=SPATIALITE" -gt 65536
 
 echo "pipes"
-ogr2ogr -sql "SELECT material_short_fr||' '||material_diameter AS _label, COALESCE(schema_force_visible, function_schema_visible) IS TRUE AS _schema_view, * FROM qwat_od.vw_export_pipe"  \
+ogr2ogr -sql "SELECT material_short_fr||' '||material_diameter AS _label, COALESCE(schema_force_visible, pipe_function_schema_visible) IS TRUE AS _schema_view, * FROM qwat_od.vw_export_pipe"  \
 -overwrite -a_srs EPSG:2056 -f SQLite $sqliteoutput \
 -nln pipe -nlt LINESTRING -progress -preserve_fid \
 -fieldTypeToString IntegerList \
@@ -133,7 +133,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 echo "subscriber"
 ogr2ogr -sql "SELECT vw_export_subscriber.*, '<a href=javascript:app.openInfoWindow(\"https://www.cartoriviera.ch/sige/www/gallery.php?type=abonne&abonne='
 ||identification||'&commune='||district_prefix||
-'\",\"Abonne\",600,600)>croquis</a>' as link 
+'\",\"Abonne\",600,600)>croquis</a>' as link
 FROM qwat_od.vw_export_subscriber"  \
 -overwrite -a_srs EPSG:2056 -f SQLite $sqliteoutput \
 -nln subscriber -nlt POINT -progress -preserve_fid \
@@ -143,7 +143,7 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 
 echo "subscriber_reference"
 ogr2ogr -sql "SELECT subscriber_reference.id, vw_export_subscriber.identification, subscriber_reference.geometry::geometry(Point,2056)
-FROM qwat_od.subscriber_reference JOIN qwat_od.vw_export_subscriber 
+FROM qwat_od.subscriber_reference JOIN qwat_od.vw_export_subscriber
 ON vw_export_subscriber.id = subscriber_reference.fk_subscriber" \
 -overwrite -a_srs EPSG:2056 -f SQLite $sqliteoutput \
 -nln subscriber_reference -nlt POINT -progress -preserve_fid \
@@ -221,11 +221,10 @@ PG:"dbname='$dbqwat' host=$db_address port='5432' user='sige'" \
 # FTP UPLOAD
 PASS=`cat /home/sige/ftp_pass/carto`
 ftp -n -v ftp.vevey.ch <<-EOF
-user carto_sige $PASS 
+user carto_sige $PASS
 prompt
 binary
 cd Distribution
 put $sqliteoutput sige_distribution_v9_mn95.sqlite
 bye
 EOF
-
