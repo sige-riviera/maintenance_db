@@ -16,8 +16,10 @@ cd /home/sige/data/backup/
 export PGOPTIONS='--client-min-messages=warning'
 
 # backup on other server
-mkdir -p /home/sige/mount/backup_sbk_pierrier/$YEAR
-mkdir -p /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH
+# creation of directories are not working at the moment on this server
+# folders are created up to 2019
+#mkdir -p /home/sige/mount/backup_sbk_pierrier/$YEAR
+#mkdir -p /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH
 
 
 # QWAT
@@ -51,7 +53,7 @@ rm sige_commun_$TODAY.backup
 rm qwat_roles_$TODAY.sql
 
 # backup on other server
-#cp /home/sige/data/backup/$YEAR/$MONTH/qwat_$TODAY.zip /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH/qwat_$TODAY.zip
+cp /home/sige/data/backup/$YEAR/$MONTH/qwat_$TODAY.zip /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH/qwat_$TODAY.zip
 
 
 
@@ -67,6 +69,4 @@ rm qgep_all_$TODAY.backup
 rm qgep_roles_$TODAY.sql
 
 # backup on other server
-#cp /home/sige/data/backup/$YEAR/$MONTH/qgep_$TODAY.zip /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH/qgep_$TODAY.zip
-
-
+cp /home/sige/data/backup/$YEAR/$MONTH/qgep_$TODAY.zip /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH/qgep_$TODAY.zip
