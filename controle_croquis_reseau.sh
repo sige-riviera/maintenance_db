@@ -4,21 +4,21 @@
 
 set -e
 
-directories=(Attalens  Blonay  Chardonne Corseaux  Corsier  Jongny  La_Tour_de_Peilz  Montreux  Port-Valais  Roche  St_Legier  Vevey  Veytaux  Villeneuve-Noville)
-declare -A COMMUNES=( ["Attalens"]="Attalens" \
-                      ["82"]="Blonay" \
+declare -A COMMUNES=( ["Attalens"]="Attalens" \
+                      ["82"]="Blonay" \
                       ["84"]="Chardonne" \
-                      ["81"]="Corseaux"  \
-                      ["80"]="Corsier"  \
-                      ["88"]="Jongny"  \
-                      ["60"]="La_Tour_de_Peilz"  \
-                      ["51"]="Montreux" \
-                      ["43"]="Port-Valais"  \
-                      ["Roche"]="Roche"  \
-                      ["83"]="St_Legier"  \
-                      ["71"]="Vevey"  \
-                      ["50"]="Veytaux"  \
+                      ["81"]="Corseaux" \
+                      ["80"]="Corsier" \
+                      ["88"]="Jongny" \
+                      ["60"]="La_Tour_de_Peilz" \
+                      ["51"]="Montreux" \
+                      ["43"]="Port-Valais" \
+                      ["Roche"]="Roche" \
+                      ["83"]="St_Legier" \
+                      ["71"]="Vevey" \
+                      ["50"]="Veytaux" \
                       ["37"]="Villeneuve-Noville" )
+  
 
 FILE_NOT_FOUND=false
 for file in $(PGUSER=sige PGDATABASE=sige_commun psql -t -q -c "select file from distribution.croquis_reseau order by file asc"); do
