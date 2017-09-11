@@ -20,12 +20,12 @@ for directory in "${directories[@]}"; do
       continue
     fi
     echo "Ouvrage $num"
-    # directories creation
-    mkdir /home/sige/data/carto/data_ouvrage/$num
-    mkdir /home/sige/data/carto/data_ouvrage/$num/pdf
-    mkdir /home/sige/data/carto/data_ouvrage/$num/images
-    mkdir /home/sige/data/carto/data_ouvrage/$num/images/large
-    mkdir /home/sige/data/carto/data_ouvrage/$num/images/small
+    # directories creation (it might already exist)
+    mkdir -p /home/sige/data/carto/data_ouvrage/$num
+    mkdir -p /home/sige/data/carto/data_ouvrage/$num/pdf
+    mkdir -p /home/sige/data/carto/data_ouvrage/$num/images
+    mkdir -p /home/sige/data/carto/data_ouvrage/$num/images/large
+    mkdir -p /home/sige/data/carto/data_ouvrage/$num/images/small
     # copy files
     echo " * Copying pictures ..."
     if [[ ! -d $ouvrage_path/${num}_00_ETAT_ACTUEL/Photos/ ]]; then
@@ -57,5 +57,5 @@ done
 # mettre à jour sur cartoriviera
 # to show progress, add: --progress
 rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
-mountpoint -q -- /home/sige/mount/cartoriviera || sshfs douzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
+mountpoint -q -- /home/sige/mount/cartoriviera || sshfs drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
 chmod -R 755 /home/sige/mount/cartoriviera/ouvrages
