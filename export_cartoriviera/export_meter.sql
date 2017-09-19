@@ -34,7 +34,6 @@ select
     year_end,
     orientation,
     remark,
-    -- schema_force_visible,
     label_1_visible,
     label_1_x,
     label_1_y,

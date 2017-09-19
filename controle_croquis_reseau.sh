@@ -18,11 +18,11 @@ declare -A COMMUNES=( ["Attalens"]="Attalens" \
                       ["71"]="Vevey" \
                       ["50"]="Veytaux" \
                       ["37"]="Villeneuve-Noville" )
-  
+
 
 FILE_NOT_FOUND=false
 for file in $(PGUSER=sige PGDATABASE=sige_commun psql -t -q -c "select file from distribution.croquis_reseau order by file asc"); do
-  code=$(sed -r 's/^([0-9]+).*$/\1/' <<< $file)
+  code=$(sed -r 's/^([^_]+)_.*$/\1/' <<< $file)
   commune=$(sed -r 's/ //g' <<< ${COMMUNES[$code]})
   filepath="/home/sige/mount/reseau/COMMUNES/${commune}/Croquis_reseau/$file"
   if [[ ! -f $filepath ]]; then
@@ -62,7 +62,7 @@ for commune in "${COMMUNES[@]}"; do
           DIRECTORY_DISPLAYED=true
         fi
       fi
-      echo "* $filename"
+      echo "* $filename" 1>&2
     fi
   done
 done
