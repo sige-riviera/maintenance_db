@@ -23,5 +23,8 @@ S'assurer que les dossiers de données de DAO_SAISIE$ sont bien montés sur ce s
 	
 2. Croquis/photos abonnés
 	executer abonnes.sh qui	synchronise vers la droite, puis met à jour les droits avec abonnes.sh
+
+
+3. Export DB (qwat, qgep, sige_commun)
 	
 	
