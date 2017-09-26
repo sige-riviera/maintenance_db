@@ -5,66 +5,66 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;croquis_reseau&quot; (geometry) sql=" name="croquis_reseau">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;croquis_reseau&quot; (geometry) sql=" name="croquis_reseau">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_line20170919102956179" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;cartoriviera&quot;.&quot;qwat_annotation_line&quot; (geometry) sql=" name="annotation_ligne">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_line20170919102956179" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_annotation_line&quot; (geometry) sql=" name="annotation_ligne">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_point20170919102956209" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_annotation_point&quot; (geometry) sql=" name="annotation_point">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_point20170919102956209" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_annotation_point&quot; (geometry) sql=" name="annotation_point">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="hydrant20170912112103216" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_hydrant&quot; (geometry) sql=" name="hydrante">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="hydrant20170912112103216" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_hydrant&quot; (geometry) sql=" name="hydrante">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="installation20170912103810982" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_installation&quot; (geometry) sql=" name="ouvrage">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="installation20170912103810982" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_installation&quot; (geometry) sql=" name="ouvrage">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="meter20170912075821953" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_meter&quot; (geometry) sql=" name="compteur_reseau">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="meter20170912075821953" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_meter&quot; (geometry) sql=" name="compteur_reseau">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="subscriber20170911155257972" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_subscriber&quot; (geometry) sql=" name="abonne">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="subscriber20170911155257972" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_subscriber&quot; (geometry) sql=" name="abonne">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="valve20170829165258108" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_valve&quot; (geometry) sql=" name="vanne">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="valve20170829165258108" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_valve&quot; (geometry) sql=" name="vanne">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="crossing20170912143156180" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_crossing&quot; (geometry) sql=" name="croisement">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="crossing20170912143156180" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_crossing&quot; (geometry) sql=" name="croisement">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="part20170912113448062" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_part&quot; (geometry) sql=" name="piece">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="part20170912113448062" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_part&quot; (geometry) sql=" name="piece">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="node20170821111240113" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;cartoriviera&quot;.&quot;qwat_node&quot; (geometry) sql=" name="noeud">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="node20170821111240113" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_node&quot; (geometry) sql=" name="noeud">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe20170817163039703" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;cartoriviera&quot;.&quot;qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 't'" name="conduite_fonctionnelle">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe20170817163039703" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 't'" name="conduite_fonctionnelle">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;cartoriviera&quot;.&quot;qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'f'" name="conduite_non_fonctionnelle">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'f'" name="conduite_non_fonctionnelle">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075917185" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;cartoriviera&quot;.&quot;qwat_pipe&quot; (geometry) sql=fk_distributor != 1" name="conduite_etranger">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075917185" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_pipe&quot; (geometry) sql=fk_distributor != 1" name="conduite_etranger">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_folder20170919112604553" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiLineString table=&quot;cartoriviera&quot;.&quot;qwat_folder&quot; (geometry_line) sql=" name="dossier_technique">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_folder20170919112604553" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiLineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_folder&quot; (geometry_line) sql=" name="dossier_technique">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_printmap20170919102956238" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table=&quot;cartoriviera&quot;.&quot;qwat_printmap&quot; (geometry) sql=" name="folios">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_printmap20170919102956238" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_printmap&quot; (geometry) sql=" name="folios">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_consumptionzone20170919113125033" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table=&quot;cartoriviera&quot;.&quot;qwat_consumptionzone&quot; (geometry) sql=" name="zone_consommation">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_consumptionzone20170919113125033" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_consumptionzone&quot; (geometry) sql=" name="zone_consommation">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_pressurezone20170919102956224" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table=&quot;cartoriviera&quot;.&quot;qwat_pressurezone&quot; (geometry) sql=" name="zone_pression">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_pressurezone20170919102956224" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;qwat_pressurezone&quot; (geometry) sql=" name="zone_pression">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -219,7 +219,7 @@
         <ymax>151928.859375</ymax>
       </extent>
       <id>croquis_reseau20170914153941848</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."croquis_reseau" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."croquis_reseau" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -534,7 +534,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>crossing20170912143156180</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_crossing" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_crossing" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1014,7 +1014,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="10001" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>hydrant20170912112103216</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_hydrant" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_hydrant" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1768,7 +1768,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="100000" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>installation20170912103810982</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_installation" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_installation" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3822,7 +3822,7 @@ END
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>meter20170912075821953</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_meter" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_meter" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4449,7 +4449,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="501" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>node20170821111240113</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_node" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_node" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4938,7 +4938,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1000" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="3.6" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="0" scaleBasedLabelVisibilityFlag="0">
       <id>part20170912113448062</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_part" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_part" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -5622,7 +5622,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>152121.72699980001198128</ymax>
       </extent>
       <id>pipe20170817163039703</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="cartoriviera"."qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 't'</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 't'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -7064,7 +7064,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="100000" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>pipe_copy20170821075917185</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="cartoriviera"."qwat_pipe" (geometry) sql=fk_distributor != 1</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."qwat_pipe" (geometry) sql=fk_distributor != 1</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -8187,7 +8187,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>152203.625</ymax>
       </extent>
       <id>pipe_copy20170821075918952</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="cartoriviera"."qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 'f'</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 'f'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -9305,7 +9305,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1001" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>qwat_annotation_line20170919102956179</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="cartoriviera"."qwat_annotation_line" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."qwat_annotation_line" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -9666,7 +9666,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1001" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>qwat_annotation_point20170919102956209</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_annotation_point" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_annotation_point" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -10025,7 +10025,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>qwat_consumptionzone20170919113125033</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table="cartoriviera"."qwat_consumptionzone" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table="sige_qgis_cartoriviera"."qwat_consumptionzone" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -10514,7 +10514,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>qwat_folder20170919112604553</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiLineString table="cartoriviera"."qwat_folder" (geometry_line) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiLineString table="sige_qgis_cartoriviera"."qwat_folder" (geometry_line) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -10877,7 +10877,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>qwat_pressurezone20170919102956224</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table="cartoriviera"."qwat_pressurezone" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiPolygon table="sige_qgis_cartoriviera"."qwat_pressurezone" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -11471,7 +11471,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="200" maximumScale="250000" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>qwat_printmap20170919102956238</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table="cartoriviera"."qwat_printmap" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table="sige_qgis_cartoriviera"."qwat_printmap" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -12007,7 +12007,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>subscriber20170911155257972</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_subscriber" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_subscriber" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -12839,7 +12839,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="1" maximumScale="10001" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>valve20170829165258108</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="cartoriviera"."qwat_valve" (geometry) sql=</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."qwat_valve" (geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
