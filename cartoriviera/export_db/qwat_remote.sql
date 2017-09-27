@@ -2,9 +2,9 @@
 
 create schema if not exists cartoriviera;
 
-drop table if exists cartoriviera.qwat_remote;
+drop table if exists cartoriviera.sige_qgis_qwat_remote;
 
-create table cartoriviera.qwat_remote as
+create table cartoriviera.sige_qgis_qwat_remote as
 select
     id,
     fk_distributor,
@@ -84,4 +84,4 @@ select
     -- precision_code_sire
 from qwat_od.vw_export_remote;
 
-alter table cartoriviera.qwat_remote alter column geometry type geometry('MultiLineString', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+alter table cartoriviera.sige_qgis_qwat_remote alter column geometry type geometry('MultiLineString', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));

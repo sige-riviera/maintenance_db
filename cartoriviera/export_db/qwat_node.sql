@@ -6,12 +6,12 @@ create schema if not exists cartoriviera;
 
 
 
-drop table if exists cartoriviera.qwat_node;
+drop table if exists cartoriviera.sige_qgis_qwat_node;
 
-create table cartoriviera.qwat_node as
+create table cartoriviera.sige_qgis_qwat_node as
 select id, _pipe_node_type, _pipe_orientation, geometry
 from qwat_od.node
 where _pipe_node_type is not null;
 
-alter table cartoriviera.qwat_node alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
-alter table cartoriviera.qwat_node alter column _pipe_node_type type text USING _pipe_node_type::text;
+alter table cartoriviera.sige_qgis_qwat_node alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+alter table cartoriviera.sige_qgis_qwat_node alter column _pipe_node_type type text USING _pipe_node_type::text;

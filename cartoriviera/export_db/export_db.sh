@@ -8,6 +8,8 @@ PGSERVICE=sige_commun psql -c "CREATE SCHEMA cartoriviera"
 
 
 # QWAT copy data into dedicated schema
+PGSERVICE=qwat psql -c "DROP SCHEMA IF EXISTS cartoriviera CASCADE"
+PGSERVICE=qwat psql -c "CREATE SCHEMA cartoriviera"
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_hydrant.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_installation.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_meter.sql

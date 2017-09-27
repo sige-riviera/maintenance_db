@@ -2,9 +2,9 @@
 
 create schema if not exists cartoriviera;
 
-drop table if exists cartoriviera.qwat_valve;
+drop table if exists cartoriviera.sige_qgis_qwat_valve;
 
-create table cartoriviera.qwat_valve as
+create table cartoriviera.sige_qgis_qwat_valve as
 select
     id,
     fk_valve_type,
@@ -158,14 +158,14 @@ select
     -- precisionalti_code_sire
 from qwat_od.vw_export_valve;
 
-alter table cartoriviera.qwat_valve alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+alter table cartoriviera.sige_qgis_qwat_valve alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
 
-update cartoriviera.qwat_valve set
+update cartoriviera.sige_qgis_qwat_valve set
  label_1_x = ST_X(st_geomfromewkb(st_fineltra(st_setsrid(st_makepoint(label_1_x, label_1_y),2056), 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'))),
  label_1_y = ST_Y(st_geomfromewkb(st_fineltra(st_setsrid(st_makepoint(label_1_x, label_1_y),2056), 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')))
  where label_1_x is not null and label_1_y is not null;
 
- update cartoriviera.qwat_valve set
+ update cartoriviera.sige_qgis_qwat_valve set
   label_2_x = ST_X(st_geomfromewkb(st_fineltra(st_setsrid(st_makepoint(label_2_x, label_2_y),2056), 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'))),
   label_2_y = ST_Y(st_geomfromewkb(st_fineltra(st_setsrid(st_makepoint(label_2_x, label_2_y),2056), 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')))
   where label_2_x is not null and label_2_y is not null;

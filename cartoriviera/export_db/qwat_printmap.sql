@@ -2,9 +2,9 @@
 
 create schema if not exists cartoriviera;
 
-drop table if exists cartoriviera.qwat_printmap;
+drop table if exists cartoriviera.sige_qgis_qwat_printmap;
 
-create table cartoriviera.qwat_printmap as
+create table cartoriviera.sige_qgis_qwat_printmap as
 select
   id,
   name,
@@ -35,4 +35,4 @@ select
   district_colorcode
 from qwat_od.vw_export_printmap;
 
-alter table cartoriviera.qwat_printmap alter column geometry type geometry('polygon', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+alter table cartoriviera.sige_qgis_qwat_printmap alter column geometry type geometry('polygon', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
