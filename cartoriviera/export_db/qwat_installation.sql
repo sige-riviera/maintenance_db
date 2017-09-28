@@ -279,13 +279,14 @@ select
     -- pump_operating_short_fr,
     -- pump_operating_short_en,
     -- pump_operating_short_ro,
-    pump_operating_value_fr
+    pump_operating_value_fr,
     -- pump_operating_value_en,
     -- pump_operating_value_ro,
     -- pump_operating_description_fr,
     -- pump_operating_description_en,
     -- pump_operating_description_ro,
     -- pump_operating_code_sire
+    '<a href=javascript:app.openInfoWindow("https://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||'","Ouvrage",600,600)>croquis/photos</a>' as lien
 from qwat_od.vw_export_installation;
 
 alter table cartoriviera.sige_qgis_qwat_installation alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));

@@ -114,7 +114,7 @@ select
     folder_identification,
     folder_description,
     folder_date_start,
-    folder_date_end
+    folder_date_end,
     -- precisionalti_vl_active,
     -- precisionalti_short_fr,
     -- precisionalti_short_en,
@@ -126,6 +126,7 @@ select
     -- precisionalti_description_en,
     -- precisionalti_description_ro,
     -- precisionalti_code_sire
+    '<a href=javascript:app.openInfoWindow("https://www.cartoriviera.ch/sige/www/gallery.php?type=abonne&abonne='||identification||'&commune='||district_prefix||'","Abonne",600,600)>croquis/photos</a>' as lien
 from qwat_od.vw_export_subscriber;
 
 alter table cartoriviera.sige_qgis_qwat_subscriber alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
