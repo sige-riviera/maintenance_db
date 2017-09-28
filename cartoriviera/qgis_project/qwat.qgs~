@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.11">
+<qgis projectname="" version="2.18.12">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -15,6 +15,9 @@
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="hydrant20170912112103216" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_leak20170928162343618" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_leak&quot; (geometry) sql=" name="sige_qgis_qwat_fuite">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="installation20170912103810982" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_installation&quot; (geometry) sql=" name="sige_qgis_ouvrage">
@@ -72,10 +75,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>554199.20652622706256807</xmin>
-      <ymin>146266.83023255382431671</ymin>
-      <xmax>554304.64185363776050508</xmax>
-      <ymax>146333.02913086925400421</ymax>
+      <xmin>554243.73387053108308464</xmin>
+      <ymin>146245.72379167674807832</ymin>
+      <xmax>554250.32357849425170571</xmax>
+      <ymax>146249.86122282146243379</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -116,6 +119,7 @@
       <item>qwat_printmap20170919102956238</item>
       <item>qwat_folder20170919112604553</item>
       <item>qwat_consumptionzone20170919113125033</item>
+      <item>sige_qgis_qwat_leak20170928162343618</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -137,6 +141,11 @@
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_hydrante" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="hydrant20170912112103216" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_qwat_fuite" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_leak20170928162343618" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_ouvrage" showFeatureCount="0">
@@ -530,7 +539,7 @@ def my_form_open(dialog, layer, feature):
         <default field="file" expression=""/>
         <default field="link" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>crossing20170912143156180</id>
@@ -3437,16 +3446,52 @@ def my_form_open(dialog, layer, feature):
         <alias field="pump_operating_value_fr" index="116" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>fk_printmap</attribute>
-        <attribute>_geometry_alt2_used</attribute>
-        <attribute>_pipe_orientation</attribute>
         <attribute>_pipe_schema_visible</attribute>
-        <attribute>_geometry_alt1_used</attribute>
-        <attribute>_printmaps</attribute>
-        <attribute>fk_pressurezone</attribute>
-        <attribute>_pipe_node_type</attribute>
+        <attribute>fk_overflow</attribute>
+        <attribute>_geometry_alt2_used</attribute>
+        <attribute>status_functional</attribute>
+        <attribute>fk_precisionalti</attribute>
+        <attribute>fk_watertype</attribute>
+        <attribute>fk_source_type</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>fk_pipe_out</attribute>
+        <attribute>fk_remote</attribute>
+        <attribute>fk_object_reference</attribute>
+        <attribute>fk_source_quality</attribute>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>fk_folder</attribute>
+        <attribute>label_2_visible</attribute>
         <attribute>fk_district</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>fk_pump_type</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>_cistern2_litrepercm</attribute>
+        <attribute>orientation</attribute>
+        <attribute>fk_precision</attribute>
         <attribute>_litrepercm</attribute>
+        <attribute>status_active</attribute>
+        <attribute>_geometry_alt1_used</attribute>
+        <attribute>geometry_polygon</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>fk_pump_operating</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>fk_tank_firestorage</attribute>
+        <attribute>fk_printmap</attribute>
+        <attribute>cistern2_fk_type</attribute>
+        <attribute>fk_parent</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>cistern1_fk_type</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_pipe_in</attribute>
+        <attribute>fk_pressurecontrol_type</attribute>
+        <attribute>_cistern1_litrepercm</attribute>
+        <attribute>_printmaps</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -3459,7 +3504,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="_printmaps"/>
           <column width="-1" hidden="0" type="field" name="_geometry_alt1_used"/>
           <column width="-1" hidden="0" type="field" name="_geometry_alt2_used"/>
-          <column width="-1" hidden="0" type="field" name="_pipe_node_type"/>
           <column width="-1" hidden="0" type="field" name="_pipe_orientation"/>
           <column width="-1" hidden="0" type="field" name="_pipe_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="identification"/>
@@ -3470,7 +3514,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="year"/>
           <column width="-1" hidden="0" type="field" name="year_end"/>
           <column width="-1" hidden="0" type="field" name="remark"/>
-          <column width="-1" hidden="0" type="field" name="schema_force_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_x"/>
           <column width="-1" hidden="0" type="field" name="label_1_y"/>
@@ -3550,16 +3593,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="status_value_fr"/>
           <column width="-1" hidden="0" type="field" name="pump_type_value_fr"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_vl_active"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_short_fr"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_short_en"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_short_ro"/>
           <column width="-1" hidden="0" type="field" name="cistern2_value_fr"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_value_en"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_value_ro"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_description_fr"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_description_en"/>
-          <column width="-1" hidden="0" type="field" name="cistern2_description_ro"/>
           <column width="-1" hidden="0" type="field" name="tank_firestorage_value_fr"/>
           <column width="-1" hidden="0" type="field" name="cistern1_value_fr"/>
           <column width="-1" hidden="0" type="field" name="source_type_value_fr"/>
@@ -3579,6 +3613,8 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="folder_date_start"/>
           <column width="-1" hidden="0" type="field" name="folder_date_end"/>
           <column width="-1" hidden="0" type="field" name="pump_operating_value_fr"/>
+          <column width="-1" hidden="0" type="field" name="status_active"/>
+          <column width="-1" hidden="0" type="field" name="status_functional"/>
         </columns>
       </attributetableconfig>
       <editform>./ui_forms/installation.ui</editform>
@@ -11775,6 +11811,424 @@ def my_form_open(dialog, layer, feature):
       </defaults>
       <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="1" maximumScale="5000" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>sige_qgis_qwat_leak20170928162343618</id>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_leak" (geometry) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sige_qgis_qwat_fuite</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1919</srsid>
+          <srid>21781</srid>
+          <authid>EPSG:21781</authid>
+          <description>CH1903 / LV03</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="fk_cause">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="id" constraint="" Layer="vl_leak_cause20130822081237639" Value="value_fr" labelOnTop="0" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="RelationReference" name="fk_pipe">
+          <widgetv2config OrderByValue="0" fieldEditable="1" AllowAddFeatures="0" ShowForm="0" Relation="relation_pipe_leak" ReadOnly="1" constraint="" MapIdentification="1" labelOnTop="0" constraintDescription="" notNull="0" AllowNULL="1"/>
+        </edittype>
+        <edittype widgetv2type="CheckBox" name="widespread_damage">
+          <widgetv2config fieldEditable="1" UncheckedState="f" constraint="" CheckedState="t" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="DateTime" name="detection_date">
+          <widgetv2config fieldEditable="1" calendar_popup="1" allow_null="0" display_format="yyyy-MM-dd" field_format="yyyy-MM-dd" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="DateTime" name="repair_date">
+          <widgetv2config fieldEditable="1" calendar_popup="1" allow_null="1" display_format="yyyy-MM-dd" field_format="yyyy-MM-dd" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="CheckBox" name="_repaired">
+          <widgetv2config fieldEditable="1" UncheckedState="f" constraint="" CheckedState="t" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="address">
+          <widgetv2config IsMultiline="1" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="CheckBox" name="pipe_replaced">
+          <widgetv2config fieldEditable="1" UncheckedState="f" constraint="" CheckedState="t" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="description">
+          <widgetv2config IsMultiline="1" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="repair">
+          <widgetv2config IsMultiline="1" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="cause_value_fr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="255,0,255,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="diamond"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.2"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="3"/>
+              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <effect enabled="0" type="effectStack">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="transparency" v="0"/>
+                </effect>
+              </effect>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+        <effect enabled="0" type="effectStack">
+          <effect type="drawSource">
+            <prop k="blend_mode" v="0"/>
+            <prop k="draw_mode" v="2"/>
+            <prop k="enabled" v="1"/>
+            <prop k="transparency" v="0"/>
+          </effect>
+        </effect>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="labeling" value="pal"/>
+        <property key="labeling/addDirectionSymbol" value="false"/>
+        <property key="labeling/angleOffset" value="0"/>
+        <property key="labeling/blendMode" value="0"/>
+        <property key="labeling/bufferBlendMode" value="0"/>
+        <property key="labeling/bufferColorA" value="255"/>
+        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorG" value="255"/>
+        <property key="labeling/bufferColorR" value="255"/>
+        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferJoinStyle" value="64"/>
+        <property key="labeling/bufferNoFill" value="false"/>
+        <property key="labeling/bufferSize" value="1"/>
+        <property key="labeling/bufferSizeInMapUnits" value="false"/>
+        <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/bufferTransp" value="0"/>
+        <property key="labeling/centroidInside" value="false"/>
+        <property key="labeling/centroidWhole" value="false"/>
+        <property key="labeling/decimals" value="3"/>
+        <property key="labeling/displayAll" value="false"/>
+        <property key="labeling/dist" value="0"/>
+        <property key="labeling/distInMapUnits" value="false"/>
+        <property key="labeling/distMapUnitMaxScale" value="0"/>
+        <property key="labeling/distMapUnitMinScale" value="0"/>
+        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="detection_date"/>
+        <property key="labeling/fitInPolygonOnly" value="false"/>
+        <property key="labeling/fontBold" value="false"/>
+        <property key="labeling/fontCapitals" value="0"/>
+        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontLetterSpacing" value="0"/>
+        <property key="labeling/fontLimitPixelSize" value="false"/>
+        <property key="labeling/fontMaxPixelSize" value="10000"/>
+        <property key="labeling/fontMinPixelSize" value="3"/>
+        <property key="labeling/fontSize" value="8"/>
+        <property key="labeling/fontSizeInMapUnits" value="false"/>
+        <property key="labeling/fontSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/fontSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/fontStrikeout" value="false"/>
+        <property key="labeling/fontUnderline" value="false"/>
+        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWordSpacing" value="0"/>
+        <property key="labeling/formatNumbers" value="false"/>
+        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/labelOffsetInMapUnits" value="true"/>
+        <property key="labeling/labelOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/labelOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/labelPerPart" value="false"/>
+        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+        <property key="labeling/limitNumLabels" value="false"/>
+        <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+        <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+        <property key="labeling/maxNumLabels" value="2000"/>
+        <property key="labeling/mergeLines" value="false"/>
+        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/multilineAlign" value="0"/>
+        <property key="labeling/multilineHeight" value="1"/>
+        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/obstacle" value="true"/>
+        <property key="labeling/obstacleFactor" value="1"/>
+        <property key="labeling/obstacleType" value="0"/>
+        <property key="labeling/offsetType" value="0"/>
+        <property key="labeling/placeDirectionSymbol" value="0"/>
+        <property key="labeling/placement" value="0"/>
+        <property key="labeling/placementFlags" value="0"/>
+        <property key="labeling/plussign" value="false"/>
+        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
+        <property key="labeling/preserveRotation" value="true"/>
+        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+        <property key="labeling/priority" value="5"/>
+        <property key="labeling/quadOffset" value="4"/>
+        <property key="labeling/repeatDistance" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitMaxScale" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitMinScale" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/repeatDistanceUnit" value="1"/>
+        <property key="labeling/reverseDirectionSymbol" value="false"/>
+        <property key="labeling/rightDirectionSymbol" value=">"/>
+        <property key="labeling/scaleMax" value="10000000"/>
+        <property key="labeling/scaleMin" value="1"/>
+        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/shadowBlendMode" value="6"/>
+        <property key="labeling/shadowColorB" value="0"/>
+        <property key="labeling/shadowColorG" value="0"/>
+        <property key="labeling/shadowColorR" value="0"/>
+        <property key="labeling/shadowDraw" value="false"/>
+        <property key="labeling/shadowOffsetAngle" value="135"/>
+        <property key="labeling/shadowOffsetDist" value="1"/>
+        <property key="labeling/shadowOffsetGlobal" value="true"/>
+        <property key="labeling/shadowOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/shadowOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowOffsetUnits" value="1"/>
+        <property key="labeling/shadowRadius" value="1.5"/>
+        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+        <property key="labeling/shadowRadiusMapUnitMaxScale" value="0"/>
+        <property key="labeling/shadowRadiusMapUnitMinScale" value="0"/>
+        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowRadiusUnits" value="1"/>
+        <property key="labeling/shadowScale" value="100"/>
+        <property key="labeling/shadowTransparency" value="30"/>
+        <property key="labeling/shadowUnder" value="0"/>
+        <property key="labeling/shapeBlendMode" value="0"/>
+        <property key="labeling/shapeBorderColorA" value="255"/>
+        <property key="labeling/shapeBorderColorB" value="128"/>
+        <property key="labeling/shapeBorderColorG" value="128"/>
+        <property key="labeling/shapeBorderColorR" value="128"/>
+        <property key="labeling/shapeBorderWidth" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeBorderWidthUnits" value="1"/>
+        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeFillColorA" value="255"/>
+        <property key="labeling/shapeFillColorB" value="255"/>
+        <property key="labeling/shapeFillColorG" value="255"/>
+        <property key="labeling/shapeFillColorR" value="255"/>
+        <property key="labeling/shapeJoinStyle" value="64"/>
+        <property key="labeling/shapeOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeOffsetUnits" value="1"/>
+        <property key="labeling/shapeOffsetX" value="0"/>
+        <property key="labeling/shapeOffsetY" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeRadiiUnits" value="1"/>
+        <property key="labeling/shapeRadiiX" value="0"/>
+        <property key="labeling/shapeRadiiY" value="0"/>
+        <property key="labeling/shapeRotation" value="0"/>
+        <property key="labeling/shapeRotationType" value="0"/>
+        <property key="labeling/shapeSVGFile" value=""/>
+        <property key="labeling/shapeSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeSizeType" value="0"/>
+        <property key="labeling/shapeSizeUnits" value="1"/>
+        <property key="labeling/shapeSizeX" value="0"/>
+        <property key="labeling/shapeSizeY" value="0"/>
+        <property key="labeling/shapeTransparency" value="0"/>
+        <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
+        <property key="labeling/textColorA" value="255"/>
+        <property key="labeling/textColorB" value="255"/>
+        <property key="labeling/textColorG" value="0"/>
+        <property key="labeling/textColorR" value="255"/>
+        <property key="labeling/textTransp" value="0"/>
+        <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/useSubstitutions" value="false"/>
+        <property key="labeling/wrapChar" value=""/>
+        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/yOffset" value="0"/>
+        <property key="labeling/zIndex" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>description</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="Ubuntu"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+        </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="id" index="0" name=""/>
+        <alias field="fk_cause" index="1" name="Cause"/>
+        <alias field="fk_pipe" index="2" name="Conduite"/>
+        <alias field="widespread_damage" index="3" name=""/>
+        <alias field="detection_date" index="4" name="Date de détection"/>
+        <alias field="repair_date" index="5" name="Date de réparation"/>
+        <alias field="_repaired" index="6" name="Réparé"/>
+        <alias field="address" index="7" name="Adresse"/>
+        <alias field="pipe_replaced" index="8" name="Conduite remplacée"/>
+        <alias field="description" index="9" name="Description"/>
+        <alias field="repair" index="10" name="Réparation"/>
+        <alias field="cause_value_fr" index="11" name=""/>
+      </aliases>
+      <excludeAttributesWMS>
+        <attribute>fk_cause</attribute>
+        <attribute>fk_pipe</attribute>
+      </excludeAttributesWMS>
+      <excludeAttributesWFS/>
+      <attributeactions default="0">
+        <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].audit('leak20130821111917060',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
+        <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['linkit'].linkit('leak20130821111917060','fk_pipe','conduites_copy20130709141244955', [% $id %])" icon="" capture="0" type="1" name="Fuite - conduites" shortTitle=""/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="id"/>
+          <column width="-1" hidden="0" type="field" name="fk_cause"/>
+          <column width="-1" hidden="0" type="field" name="fk_pipe"/>
+          <column width="-1" hidden="0" type="field" name="widespread_damage"/>
+          <column width="-1" hidden="0" type="field" name="detection_date"/>
+          <column width="-1" hidden="0" type="field" name="repair_date"/>
+          <column width="-1" hidden="0" type="field" name="_repaired"/>
+          <column width="-1" hidden="0" type="field" name="address"/>
+          <column width="-1" hidden="0" type="field" name="pipe_replaced"/>
+          <column width="-1" hidden="0" type="field" name="description"/>
+          <column width="-1" hidden="0" type="field" name="repair"/>
+          <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="cause_value_fr"/>
+        </columns>
+      </attributetableconfig>
+      <editform>./ui_forms/leak.ui</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from PyQt4.QtGui import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>uifilelayout</editorlayout>
+      <attributeEditorForm>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="hgf" groupBox="0" columnCount="0">
+          <attributeEditorField showLabel="1" index="0" name="id"/>
+        </attributeEditorContainer>
+      </attributeEditorForm>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="id" expression=""/>
+        <default field="fk_cause" expression=""/>
+        <default field="fk_pipe" expression=""/>
+        <default field="widespread_damage" expression=""/>
+        <default field="detection_date" expression=""/>
+        <default field="repair_date" expression=""/>
+        <default field="_repaired" expression=""/>
+        <default field="address" expression=""/>
+        <default field="pipe_replaced" expression=""/>
+        <default field="description" expression=""/>
+        <default field="repair" expression=""/>
+        <default field="cause_value_fr" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "description", '&lt;NULL>' )</previewExpression>
+    </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>subscriber20170911155257972</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_subscriber" (geometry) sql=</datasource>
@@ -12262,7 +12716,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/repeatDistanceUnit" value="1"/>
         <property key="labeling/reverseDirectionSymbol" value="false"/>
         <property key="labeling/rightDirectionSymbol" value=">"/>
-        <property key="labeling/scaleMax" value="1000"/>
+        <property key="labeling/scaleMax" value="501"/>
         <property key="labeling/scaleMin" value="1"/>
         <property key="labeling/scaleVisibility" value="true"/>
         <property key="labeling/shadowBlendMode" value="6"/>
@@ -13723,8 +14177,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
