@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.11">
+<qgis projectname="" version="2.18.12">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -5703,7 +5703,10 @@ def my_form_open(dialog, layer, feature):
       <Absolute type="bool">false</Absolute>
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList"/>
+    <WFSLayers type="QStringList">
+      <value>export_reach20170515094209621</value>
+      <value>export_wastewater_structure20170515095249749</value>
+    </WFSLayers>
     <WMSContactMail type="QString"></WMSContactMail>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
@@ -5711,8 +5714,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -5757,6 +5760,10 @@ def my_form_open(dialog, layer, feature):
         <value>10.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
+    <WFSLayersPrecision>
+      <export_wastewater_structure20170515095249749 type="int">8</export_wastewater_structure20170515095249749>
+      <export_reach20170515094209621 type="int">8</export_reach20170515094209621>
+    </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList"/>
     </Identify>

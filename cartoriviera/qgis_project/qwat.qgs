@@ -75,10 +75,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>553081.83324224839452654</xmin>
-      <ymin>145235.9347513974935282</ymin>
-      <xmax>556455.76371939072851092</xmax>
-      <ymax>147354.2994974912435282</ymax>
+      <xmin>552240.12140522862318903</xmin>
+      <ymin>144347.00205395589000545</ymin>
+      <xmax>555614.05188237095717341</xmax>
+      <ymax>146465.36680004964000545</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -14180,7 +14180,27 @@ def my_form_open(dialog, layer, feature):
       <Absolute type="bool">false</Absolute>
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList"/>
+    <WFSLayers type="QStringList">
+      <value>croquis_reseau20170914153941848</value>
+      <value>crossing20170912143156180</value>
+      <value>hydrant20170912112103216</value>
+      <value>installation20170912103810982</value>
+      <value>meter20170912075821953</value>
+      <value>node20170821111240113</value>
+      <value>part20170912113448062</value>
+      <value>pipe20170817163039703</value>
+      <value>pipe_copy20170821075917185</value>
+      <value>pipe_copy20170821075918952</value>
+      <value>qwat_annotation_line20170919102956179</value>
+      <value>qwat_annotation_point20170919102956209</value>
+      <value>qwat_consumptionzone20170919113125033</value>
+      <value>qwat_folder20170919112604553</value>
+      <value>qwat_pressurezone20170919102956224</value>
+      <value>qwat_printmap20170919102956238</value>
+      <value>sige_qgis_qwat_leak20170928162343618</value>
+      <value>subscriber20170911155257972</value>
+      <value>valve20170829165258108</value>
+    </WFSLayers>
     <WMSContactMail type="QString"></WMSContactMail>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
@@ -14188,8 +14208,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -14279,6 +14299,27 @@ def my_form_open(dialog, layer, feature):
         <value>0.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
+    <WFSLayersPrecision>
+      <qwat_printmap20170919102956238 type="int">8</qwat_printmap20170919102956238>
+      <qwat_annotation_line20170919102956179 type="int">8</qwat_annotation_line20170919102956179>
+      <installation20170912103810982 type="int">8</installation20170912103810982>
+      <node20170821111240113 type="int">8</node20170821111240113>
+      <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
+      <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
+      <part20170912113448062 type="int">8</part20170912113448062>
+      <meter20170912075821953 type="int">8</meter20170912075821953>
+      <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
+      <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
+      <pipe20170817163039703 type="int">8</pipe20170817163039703>
+      <qwat_folder20170919112604553 type="int">8</qwat_folder20170919112604553>
+      <crossing20170912143156180 type="int">8</crossing20170912143156180>
+      <qwat_annotation_point20170919102956209 type="int">8</qwat_annotation_point20170919102956209>
+      <qwat_consumptionzone20170919113125033 type="int">8</qwat_consumptionzone20170919113125033>
+      <qwat_pressurezone20170919102956224 type="int">8</qwat_pressurezone20170919102956224>
+      <valve20170829165258108 type="int">8</valve20170829165258108>
+      <sige_qgis_qwat_leak20170928162343618 type="int">8</sige_qgis_qwat_leak20170928162343618>
+      <croquis_reseau20170914153941848 type="int">8</croquis_reseau20170914153941848>
+    </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList">
         <value>crossing20170912143156180</value>
