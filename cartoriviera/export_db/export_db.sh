@@ -59,18 +59,18 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/big_sea
 # /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format plain $VERBOSE_CMD --file "/home/rouzaudd/Documents/sige.sql" --schema "sige_qgis_cartoriviera" "sige_commun"
 
 
-exit 0
 
-# export
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# FTP UPLOAD
-PASS=`cat /home/sige/ftp_pass/carto`
-ftp -n -v ftp.vevey.ch <<-EOF
-user carto_sige $PASS
-prompt
-binary
-cd QGIS_server
-put /home/sige/maintenance_db/cartoriviera/export_db/sige.backup sige.backup
-bye
-EOF
+# # export
+# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#
+# # FTP UPLOAD
+# PASS=`cat /home/sige/ftp_pass/carto`
+# ftp -n -v ftp.vevey.ch <<-EOF
+# user carto_sige $PASS
+# prompt
+# binary
+# cd QGIS_server
+# put /home/sige/maintenance_db/cartoriviera/export_db/sige.backup sige.backup
+# bye
+# EOF
