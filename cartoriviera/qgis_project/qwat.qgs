@@ -43,12 +43,12 @@
     <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="node20170821111240113" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_node&quot; (geometry) sql=" name="sige_qgis_noeud">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe20170817163039703" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 't'" name="sige_qgis_conduite_fonctionnelle">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe20170817163039703" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'oui'" name="sige_qgis_conduite_fonctionnelle">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'f'" name="sige_qgis_conduite_non_fonctionnelle">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'non'" name="sige_qgis_conduite_non_fonctionnelle">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
@@ -596,7 +596,7 @@ def my_form_open(dialog, layer, feature):
       <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
         <rules key="{8750e61a-8c50-4fd1-aa40-51b3d8bfbaa0}">
           <rule scalemaxdenom="5000" key="{bdb56b7a-1c26-428b-8597-ce6b6eb58f01}" symbol="0" label="croisement"/>
-          <rule checkstate="0" filter="controled ='f'" key="{a8095b83-9f6e-4f71-859d-63fe932c52c8}" symbol="1" label="à contrôler"/>
+          <rule checkstate="0" filter="controled ='non'" key="{a8095b83-9f6e-4f71-859d-63fe932c52c8}" symbol="1" label="à contrôler"/>
         </rules>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
@@ -1312,7 +1312,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/drawLabels" value="true"/>
         <property key="labeling/enabled" value="true"/>
-        <property key="labeling/fieldName" value="CASE WHEN  &quot;underground&quot; = 't' THEN 'HS' ELSE 'BH' END ||identification"/>
+        <property key="labeling/fieldName" value="CASE WHEN  &quot;underground&quot; = 'oui' THEN 'HS' ELSE 'BH' END ||identification"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
@@ -2166,10 +2166,10 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
         <rules key="{89d1d7f3-6dd2-48ab-a978-572c899af422}">
-          <rule filter="fk_distributor = 1 AND status_functional = 't'" key="{69b3bf49-4ced-4bb9-8799-da2f168ad22c}" label="fonctionnel">
-            <rule filter="status_active = 't' AND (fk_parent IS NULL OR @map_scale &lt; 501)" key="{6f043e9f-1731-47a8-86d1-a6084a99e57b}" label="actif">
+          <rule filter="fk_distributor = 1 AND status_functional = 'oui'" key="{69b3bf49-4ced-4bb9-8799-da2f168ad22c}" label="fonctionnel">
+            <rule filter="status_active = 'oui' AND (fk_parent IS NULL OR @map_scale &lt; 501)" key="{6f043e9f-1731-47a8-86d1-a6084a99e57b}" label="actif">
               <rule filter="installation_type = 'chamber'" key="{e50fbbc2-a891-4432-a846-34d4f3e99c86}" label="Chambre">
-                <rule filter="flow_meter = 't' or water_meter = 't' or manometer = 't'" key="{c5aa7421-12d9-4e1f-b39e-ddc5f7c287e9}" symbol="0" label="Chambre débitmètre"/>
+                <rule filter="flow_meter = 'oui' or water_meter = 'oui' or manometer = 'oui'" key="{c5aa7421-12d9-4e1f-b39e-ddc5f7c287e9}" symbol="0" label="Chambre débitmètre"/>
                 <rule filter="ELSE" key="{278ef659-c656-449d-a1c5-7c60acabaa65}" symbol="1" label="Chambre"/>
               </rule>
               <rule filter="installation_type = 'pressurecontrol'" key="{dcad679b-71a0-497e-b02e-93f46651826b}" label="pressurecontrol">
@@ -2183,9 +2183,9 @@ def my_form_open(dialog, layer, feature):
               <rule filter="installation_type = 'treatment'" key="{a841e611-3390-4ae1-b9f5-e7fee4fea027}" symbol="8" label="treatment"/>
               <rule filter="ELSE" key="{5d01efe9-2c1b-4052-a11f-5ce82dd09f65}" symbol="9"/>
             </rule>
-            <rule filter="status_active = 'f' AND (fk_parent IS NULL OR @map_scale &lt; 501)" key="{f955cc23-5f5f-4ac6-949b-6711a8862c7a}" label="inactif">
+            <rule filter="status_active = 'non' AND (fk_parent IS NULL OR @map_scale &lt; 501)" key="{f955cc23-5f5f-4ac6-949b-6711a8862c7a}" label="inactif">
               <rule filter="installation_type = 'chamber'" key="{33dee9ac-9240-41d9-8da7-d047d8521f65}" label="Chambre">
-                <rule filter="flow_meter = 't' or water_meter = 't' or manometer = 't'" key="{b30d473c-b7f4-448a-b647-b2a5ceb1a131}" symbol="10" label="Chambre débitmètre"/>
+                <rule filter="flow_meter = 'oui' or water_meter = 'oui' or manometer = 'oui'" key="{b30d473c-b7f4-448a-b647-b2a5ceb1a131}" symbol="10" label="Chambre débitmètre"/>
                 <rule filter="ELSE" key="{ee6ec74f-d3e1-435a-90d0-b91da4a9537f}" symbol="11" label="Chambre"/>
               </rule>
               <rule filter="installation_type = 'pressurecontrol'" key="{dc540c42-11d4-4a71-a720-5c18f763734e}" label="pressurecontrol">
@@ -2200,9 +2200,9 @@ def my_form_open(dialog, layer, feature):
               <rule filter="ELSE" key="{0b8281d6-7c39-44b5-8a40-ecb1889399cb}" symbol="19"/>
             </rule>
           </rule>
-          <rule checkstate="0" filter="fk_distributor = 1 AND status_functional = 'f'" key="{1a64d4d9-3bd2-437b-9620-740b13e32509}" label="non fonctionnel">
+          <rule checkstate="0" filter="fk_distributor = 1 AND status_functional = 'non'" key="{1a64d4d9-3bd2-437b-9620-740b13e32509}" label="non fonctionnel">
             <rule filter="installation_type = 'chamber'" key="{ce0c94bb-b016-41a1-931c-3109807689b0}" label="Chambre">
-              <rule filter="flow_meter = 't' or water_meter = 't' or manometer = 't'" key="{f16643c2-ce75-4f94-beee-56389f55aee7}" symbol="20" label="Chambre débitmètre"/>
+              <rule filter="flow_meter = 'oui' or water_meter = 'oui' or manometer = 'oui'" key="{f16643c2-ce75-4f94-beee-56389f55aee7}" symbol="20" label="Chambre débitmètre"/>
               <rule filter="ELSE" key="{8366c510-1142-41fb-85a1-bf9663ad9d11}" symbol="21" label="Chambre"/>
             </rule>
             <rule filter="installation_type = 'pressurecontrol'" key="{d31ae609-73ec-4d88-8324-5300f14ed738}" label="pressurecontrol">
@@ -2218,7 +2218,7 @@ def my_form_open(dialog, layer, feature):
           </rule>
           <rule filter="fk_distributor != 1" key="{05336f6d-543d-4bf7-bea5-a474d431bdf3}" label="étranger">
             <rule filter="installation_type = 'chamber'" key="{8beaf9ba-e486-46ce-8f70-957911d5515b}" label="Chambre">
-              <rule filter="flow_meter = 't' or water_meter = 't' or manometer = 't'" key="{5f09c1ec-36a2-4dba-98f0-bcd568e24533}" symbol="30" label="Chambre débitmètre"/>
+              <rule filter="flow_meter = 'oui' or water_meter = 'oui' or manometer = 'oui'" key="{5f09c1ec-36a2-4dba-98f0-bcd568e24533}" symbol="30" label="Chambre débitmètre"/>
               <rule filter="ELSE" key="{a6204137-028d-44b7-b245-5d3b24a7d399}" symbol="31" label="Chambre"/>
             </rule>
             <rule filter="installation_type = 'pressurecontrol'" key="{94454820-5d27-4427-80f6-24d28c5c51a3}" label="pressurecontrol">
@@ -5663,7 +5663,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>152121.72699980001198128</ymax>
       </extent>
       <id>pipe20170817163039703</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 't'</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 'oui'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -5879,22 +5879,22 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
         <rules key="{dbde1c2b-a27d-484e-8dd5-d13dcd527b89}">
-          <rule filter="status_active = 't' and fk_status != 1307" key="{790003c5-7dfd-4819-aae2-f612f610f182}" label="actif">
-            <rule filter="&quot;schema_visible&quot; = 't'" key="{910e17ef-555c-4f81-950b-6712050f1cf2}" symbol="0" label="schématique">
+          <rule filter="status_active = 'oui' and fk_status != 1307" key="{790003c5-7dfd-4819-aae2-f612f610f182}" label="actif">
+            <rule filter="&quot;schema_visible&quot; = 'oui'" key="{910e17ef-555c-4f81-950b-6712050f1cf2}" symbol="0" label="schématique">
               <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{780bcb9c-2192-4f19-a712-79335453e2fb}" symbol="1" scalemindenom="1" label="chemisée"/>
               <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{9c891fdf-efd9-4e7c-aa1d-705769d2c1b4}" symbol="2" label="protégée"/>
             </rule>
-            <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'f'" key="{3d7efd23-7e37-4464-8c82-3ef36dbef2d9}" symbol="3" scalemindenom="1" label="détail">
+            <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'non'" key="{3d7efd23-7e37-4464-8c82-3ef36dbef2d9}" symbol="3" scalemindenom="1" label="détail">
               <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{bf4f8e96-b071-4355-92ae-889f3c578a5c}" symbol="4" scalemindenom="1" label="chemisée"/>
               <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{96ddce13-885c-4c93-a172-7c4eedcaed32}" symbol="5" label="protégée"/>
             </rule>
           </rule>
-          <rule filter="status_active = 'f'" key="{63ac4998-ce47-4917-a684-e01920537885}" label="inactif">
-            <rule filter="&quot;schema_visible&quot; = 't'" key="{675917e7-7b50-4c07-a10d-a82fa231df8a}" symbol="6" label="schématique">
+          <rule filter="status_active = 'non'" key="{63ac4998-ce47-4917-a684-e01920537885}" label="inactif">
+            <rule filter="&quot;schema_visible&quot; = 'oui'" key="{675917e7-7b50-4c07-a10d-a82fa231df8a}" symbol="6" label="schématique">
               <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{222e51ce-7c5b-4684-9f03-6d883b329934}" symbol="7" scalemindenom="1" label="chemisée"/>
               <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{0dcc3085-e74e-4ebe-87e4-dc47767da249}" symbol="8" label="protégée"/>
             </rule>
-            <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'f'" key="{4cff4b3b-ad18-476c-bb5f-2e22164e9c1a}" symbol="9" scalemindenom="1" label="détail">
+            <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'non'" key="{4cff4b3b-ad18-476c-bb5f-2e22164e9c1a}" symbol="9" scalemindenom="1" label="détail">
               <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{785df7ac-adf6-4056-990b-73f3ca792cfe}" symbol="10" scalemindenom="1" label="chemisée"/>
               <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{38bf9381-c8db-44ad-b946-e385773d44dd}" symbol="11" label="protégée"/>
             </rule>
@@ -5907,7 +5907,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="3;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -5917,7 +5917,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="0,140,255,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.6"/>
@@ -6179,7 +6179,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="2;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -6189,7 +6189,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="0,140,255,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.4"/>
@@ -6319,7 +6319,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="3;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -6329,7 +6329,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="217,0,0,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.6"/>
@@ -6459,7 +6459,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="2;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -6469,7 +6469,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="217,0,0,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.4"/>
@@ -7246,11 +7246,11 @@ def my_form_open(dialog, layer, feature):
       <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
         <rules key="{dbde1c2b-a27d-484e-8dd5-d13dcd527b89}">
           <rule filter="fk_distributor != 1" key="{013429dc-a1cd-4a17-904a-6550a0175046}" label="étranger">
-            <rule filter="&quot;schema_visible&quot; = 't'" key="{0b815298-4880-43c7-aa5c-a0f4487b94ce}" symbol="0" label="schématique">
+            <rule filter="&quot;schema_visible&quot; = 'oui'" key="{0b815298-4880-43c7-aa5c-a0f4487b94ce}" symbol="0" label="schématique">
               <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{c57c368d-fd1b-4e70-9b7a-c24a306b3941}" symbol="1" scalemindenom="1" label="chemisée"/>
               <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{ca9c1d30-406f-4a4a-82f8-ad982710e778}" symbol="2" label="protégée"/>
             </rule>
-            <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'f'" key="{d1dedad5-dfc5-4327-a338-401bd8b7bed6}" symbol="3" scalemindenom="1" label="détail">
+            <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'non'" key="{d1dedad5-dfc5-4327-a338-401bd8b7bed6}" symbol="3" scalemindenom="1" label="détail">
               <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{e8ac0281-6fd9-4a32-9610-5e3535020b54}" symbol="4" scalemindenom="1" label="chemisée"/>
               <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{5818bcf7-6790-48bc-8192-4e0f67a64a7e}" symbol="5" label="protégée"/>
             </rule>
@@ -7262,7 +7262,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="3;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -7272,7 +7272,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="40,180,16,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.6"/>
@@ -7402,7 +7402,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="2;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -7412,7 +7412,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="40,180,16,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.4"/>
@@ -8074,7 +8074,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>152203.625</ymax>
       </extent>
       <id>pipe_copy20170821075918952</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 'f'</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional" = 'non'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -8290,11 +8290,11 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
         <rules key="{dbde1c2b-a27d-484e-8dd5-d13dcd527b89}">
-          <rule filter="&quot;schema_visible&quot; = 't'" key="{0e88427f-fcf5-447e-8f88-265710236fc1}" symbol="0" label="schématique">
+          <rule filter="&quot;schema_visible&quot; = 'oui'" key="{0e88427f-fcf5-447e-8f88-265710236fc1}" symbol="0" label="schématique">
             <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{e0a15d44-7363-4cd2-9b09-dbf1d6ec62b9}" symbol="1" scalemindenom="1" label="chemisée"/>
             <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{ede03828-adf1-482e-9872-f45615ac595f}" symbol="2" label="protégée"/>
           </rule>
-          <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'f'" key="{f3793859-7f56-4164-af00-42b4339987db}" symbol="3" scalemindenom="1" label="détail">
+          <rule scalemaxdenom="3000" filter="&quot;schema_visible&quot; = 'non'" key="{f3793859-7f56-4164-af00-42b4339987db}" symbol="3" scalemindenom="1" label="détail">
             <rule scalemaxdenom="3000" filter=" &quot;fk_installmethod&quot;  =4202" key="{ced9a4a0-3313-438d-9a05-2e2814a1a181}" symbol="4" scalemindenom="1" label="chemisée"/>
             <rule filter=" &quot;fk_protection&quot; IS NOT NULL" key="{02dae820-b6d7-4eff-94a0-7bbad90895a5}" symbol="5" label="protégée"/>
           </rule>
@@ -8305,7 +8305,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="3;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -8315,7 +8315,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="217,0,0,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.6"/>
@@ -8445,7 +8445,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="2;2"/>
               <prop k="customdash_dd_active" v="1"/>
-              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', '1;0', '2;2')"/>
+              <prop k="customdash_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')"/>
               <prop k="customdash_dd_field" v=""/>
               <prop k="customdash_dd_useexpr" v="1"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -8455,7 +8455,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="line_color" v="217,0,0,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_style_dd_active" v="0"/>
-              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 't', 'solid', 'dash')"/>
+              <prop k="line_style_dd_expression" v="if( &quot;pipe_function_major&quot; = 'oui', 'solid', 'dash')"/>
               <prop k="line_style_dd_field" v=""/>
               <prop k="line_style_dd_useexpr" v="1"/>
               <prop k="line_width" v="0.4"/>
@@ -13294,19 +13294,19 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
         <rules key="{8ac6d04b-1bb5-46e9-b2fb-236cb107ffc9}">
-          <rule scalemaxdenom="10000" description="toutes les vannes sauf organe réseau et vanne d'hydrant" filter="status_active = 't' AND fk_valve_function != 6105 AND fk_valve_function != 6108" key="{7a025dab-c7fe-4c7c-9f0b-25a39f73abd8}" symbol="0" scalemindenom="-2147483648" label="réseau">
-            <rule filter="closed = 't'" key="{edf1c363-d849-4700-82d0-34d494178d4d}" symbol="1" label="Fermée"/>
+          <rule scalemaxdenom="10000" description="toutes les vannes sauf organe réseau et vanne d'hydrant" filter="status_active = 'oui' AND fk_valve_function != 6105 AND fk_valve_function != 6108" key="{7a025dab-c7fe-4c7c-9f0b-25a39f73abd8}" symbol="0" scalemindenom="-2147483648" label="réseau">
+            <rule filter="closed = 'oui'" key="{edf1c363-d849-4700-82d0-34d494178d4d}" symbol="1" label="Fermée"/>
             <rule filter="&quot;fk_valve_type&quot; = 6312" key="{d1ec978f-6d96-4ed2-ac03-a37e6629f13c}" symbol="2" label="elgelf"/>
             <rule filter="&quot;fk_valve_type&quot; =6313" key="{6c48a279-b0d9-428b-819c-2fc5371720fe}" symbol="3" label="arrêt"/>
             <rule filter=" &quot;valve_function_value_fr&quot; IN ( 'vidange' ,  'vidange-ventouse' )" key="{3bf2a10c-e2fe-43c6-9287-c4055baec2a1}" symbol="4" label="vidange"/>
           </rule>
-          <rule scalemaxdenom="1000" filter="status_active = 't' AND fk_valve_function = 6105 OR fk_valve_function = 6108" key="{143022c7-b3e1-4c03-80d5-58520da677c2}" symbol="5" scalemindenom="-2147483648" label="abonné">
-            <rule filter="closed = 't'" key="{ee4ed8dd-20ae-42fb-b43b-a4c02c5399e9}" symbol="6" label="Fermée"/>
+          <rule scalemaxdenom="1000" filter="status_active = 'oui' AND fk_valve_function = 6105 OR fk_valve_function = 6108" key="{143022c7-b3e1-4c03-80d5-58520da677c2}" symbol="5" scalemindenom="-2147483648" label="abonné">
+            <rule filter="closed = 'oui'" key="{ee4ed8dd-20ae-42fb-b43b-a4c02c5399e9}" symbol="6" label="Fermée"/>
             <rule filter="&quot;fk_valve_type&quot; =6313" key="{b149b2b9-3783-416c-b413-7a6f7de74e1d}" symbol="7" label="arrêt"/>
             <rule filter="fk_valve_type = 6312" key="{221f27a3-6778-4b14-8bb9-1b4c7d708bc3}" symbol="8" label="elgelf"/>
             <rule filter=" &quot;valve_function_value_fr&quot; IN ( 'vidange' ,  'vidange-ventouse' )" key="{a0c08631-a6ac-4d0b-b538-41bb1efe2315}" symbol="9" label="vidange"/>
           </rule>
-          <rule checkstate="0" filter="status_active = 'f'" key="{0e58d6c7-b1a4-4712-9ab5-68675c588c6d}" symbol="10" label="inactive"/>
+          <rule checkstate="0" filter="status_active = 'non'" key="{0e58d6c7-b1a4-4712-9ab5-68675c588c6d}" symbol="10" label="inactive"/>
         </rules>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
@@ -13680,7 +13680,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/dataDefined/PositionX" value="1~~1~~CASE &#xa; WHEN $scale=0 THEN &quot;label_1_x&quot;&#xa; WHEN $scale &lt; 501 THEN &quot;label_1_x&quot;&#xa; ELSE null END~~label_1_x"/>
         <property key="labeling/dataDefined/PositionY" value="1~~1~~CASE&#xa; WHEN $scale=0 THEN &quot;label_1_y&quot;&#xa; WHEN $scale &lt; 501 THEN &quot;label_1_y&quot;&#xa; ELSE null END~~label_1_y"/>
         <property key="labeling/dataDefined/Rotation" value="1~~0~~~~label_1_rotation"/>
-        <property key="labeling/dataDefined/Show" value="1~~0~~CASE WHEN &quot;fk_labelvisible&quot; = 'f' THEN 0 ELSE 1 END~~label_1_visible"/>
+        <property key="labeling/dataDefined/Show" value="1~~0~~CASE WHEN &quot;fk_labelvisible&quot; = 'non' THEN 0 ELSE 1 END~~label_1_visible"/>
         <property key="labeling/decimals" value="0"/>
         <property key="labeling/displayAll" value="false"/>
         <property key="labeling/dist" value="1"/>
