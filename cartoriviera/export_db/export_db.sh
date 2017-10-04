@@ -52,7 +52,10 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/
 # rename schema
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -c "ALTER SCHEMA cartoriviera RENAME TO sige_qgis_cartoriviera"
 # add big search table
-PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/big_search_table.sql
+PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/big_search_table.sql
+# transform boolean to oui/non
+PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/boolean2str.sql
+
 
 # final dump
 /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format custom $VERBOSE_CMD --file "/home/sige/maintenance_db/cartoriviera/export_db/sige.backup" --schema "sige_qgis_cartoriviera" "sige_commun"
