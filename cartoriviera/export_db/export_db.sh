@@ -11,7 +11,7 @@ PGSERVICE=sige_commun psql -c "DROP SCHEMA IF EXISTS sige_qgis_cartoriviera CASC
 PGSERVICE=sige_commun psql -c "CREATE SCHEMA cartoriviera"
 
 
-# QWAT copy data into dedicated schema
+# QWAT copy data into dedicated schema
 PGSERVICE=qwat psql -c "DROP SCHEMA IF EXISTS cartoriviera CASCADE"
 PGSERVICE=qwat psql -c "CREATE SCHEMA cartoriviera"
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_hydrant.sql
@@ -35,7 +35,7 @@ PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_
 # Restore on sige_commun.cartoriviera
 /usr/bin/pg_restore --host localhost --port 5432 --username "sige" --dbname "sige_commun" --no-password  --schema cartoriviera $VERBOSE_CMD "/home/sige/maintenance_db/cartoriviera/export_db/qwat.backup"
 
-# QGEP copy data into dedicated schema
+# QGEP copy data into dedicated schema
 PGSERVICE=qgep_prod psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qgep_export.sql
 # Dump qgep.cartoriviera schema
 /usr/bin/pg_dump --host 172.24.173.216 --port 5432 --username "sige" --no-password  --format custom $VERBOSE_CMD --file "/home/sige/maintenance_db/cartoriviera/export_db/qgep.backup" --schema "cartoriviera" "qgep_prod"
@@ -63,17 +63,16 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/
 
 
 
+# export
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# # export
-# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-#
-# # FTP UPLOAD
-# PASS=`cat /home/sige/ftp_pass/carto`
-# ftp -n -v ftp.vevey.ch <<-EOF
-# user carto_sige $PASS
-# prompt
-# binary
-# cd QGIS_server
-# put /home/sige/maintenance_db/cartoriviera/export_db/sige.backup sige.backup
-# bye
-# EOF
+# FTP UPLOAD
+PASS=`cat /home/sige/ftp_pass/carto`
+ftp -p -n -v ftp.vevey.ch <<-EOF
+user carto_sige $PASS
+prompt
+binary
+cd QGIS_server
+put /home/sige/maintenance_db/cartoriviera/export_db/sige.backup sige.backup
+bye
+EOF
