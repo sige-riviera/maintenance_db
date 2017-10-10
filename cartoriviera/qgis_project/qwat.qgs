@@ -75,10 +75,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>553404.98168957466259599</xmin>
-      <ymin>145575.81370009708916768</ymin>
-      <xmax>554248.46430886024609208</xmax>
-      <ymax>146105.40488662052666768</ymax>
+      <xmin>553666.65616552461870015</xmin>
+      <ymin>145511.43899524238076992</ymin>
+      <xmax>554510.13878481020219624</xmax>
+      <ymax>146041.03018176581826992</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -11476,7 +11476,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/dataDefined/LabelDistance" value="1~~1~~CASE WHEN $scale &lt; 6000 THEN 5.0 ELSE 0.0 END~~"/>
         <property key="labeling/dataDefined/Rotation" value="1~~1~~0~~"/>
         <property key="labeling/dataDefined/Show" value="1~~1~~1~~"/>
-        <property key="labeling/dataDefined/Size" value="0~~1~~CASE WHEN $scale &lt; 4999 THEN 10&#xa;ELSE 8&#xa;END~~"/>
+        <property key="labeling/dataDefined/Size" value="1~~1~~CASE &#xa;WHEN $scale &lt; 501 THEN 16&#xa;WHEN $scale &lt; 5001 THEN 10&#xa;ELSE 8&#xa;END~~"/>
         <property key="labeling/decimals" value="0"/>
         <property key="labeling/displayAll" value="false"/>
         <property key="labeling/dist" value="5"/>
@@ -11543,7 +11543,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/reverseDirectionSymbol" value="false"/>
         <property key="labeling/rightDirectionSymbol" value=">"/>
         <property key="labeling/scaleMax" value="25000"/>
-        <property key="labeling/scaleMin" value="800"/>
+        <property key="labeling/scaleMin" value="1"/>
         <property key="labeling/scaleVisibility" value="true"/>
         <property key="labeling/shadowBlendMode" value="6"/>
         <property key="labeling/shadowColorB" value="0"/>
