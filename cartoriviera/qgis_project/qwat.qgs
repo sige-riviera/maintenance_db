@@ -5,7 +5,7 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_croquis_reseau&quot; (geometry) sql=" name="sige_qgis_croquis_reseau">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_croquis_reseau&quot; (geometry) sql=" name="sige_qgis_croquis_reseau">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_line20170919102956179" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_annotation_line&quot; (geometry) sql=" name="sige_qgis_annotation_ligne">
@@ -75,10 +75,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>553666.65616552461870015</xmin>
-      <ymin>145511.43899524238076992</ymin>
-      <xmax>554510.13878481020219624</xmax>
-      <ymax>146041.03018176581826992</ymax>
+      <xmin>562004.03261924942489713</xmin>
+      <ymin>144578.47407411871245131</ymin>
+      <xmax>562265.17636951466556638</xmax>
+      <ymax>144742.43646693456685171</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -123,9 +123,9 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_croquis_reseau" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_croquis_reseau" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="croquis_reseau20170914153941848" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="croquis_reseau20170914153941848" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_annotation_ligne" showFeatureCount="0">
@@ -542,6 +542,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551188.82367745600640774</xmin>
+        <ymin>136351.00235996401170269</ymin>
+        <xmax>565089.57458736898843199</xmax>
+        <ymax>152016.72451783198630437</ymax>
+      </extent>
       <id>crossing20170912143156180</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_crossing" (geometry) sql=</datasource>
       <keywordList>
@@ -1022,6 +1028,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="10001" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551514.06764131004456431</xmin>
+        <ymin>136205.05549400000018068</ymin>
+        <xmax>564495.39870298001915216</xmax>
+        <ymax>152008.55817818999639712</ymax>
+      </extent>
       <id>hydrant20170912112103216</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_hydrant" (geometry) sql=</datasource>
       <keywordList>
@@ -1776,6 +1788,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="100000" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551180.72515397996176034</xmin>
+        <ymin>136435.49569447000976652</ymin>
+        <xmax>565094.6472711079986766</xmax>
+        <ymax>152118.81289085999014787</ymax>
+      </extent>
       <id>installation20170912103810982</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_installation" (geometry) sql=</datasource>
       <keywordList>
@@ -3862,6 +3880,12 @@ END
 || coalesce(name,'')</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551176.97799044998828322</xmin>
+        <ymin>136562.87261264200787991</ymin>
+        <xmax>564635.11634476995095611</xmax>
+        <ymax>152117.93218683998566121</ymax>
+      </extent>
       <id>meter20170912075821953</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_meter" (geometry) sql=</datasource>
       <keywordList>
@@ -4489,6 +4513,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="501" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>550787.6875</xmin>
+        <ymin>136094.328125</ymin>
+        <xmax>565278.875</xmax>
+        <ymax>152201.46875</ymax>
+      </extent>
       <id>node20170821111240113</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_node" (geometry) sql=</datasource>
       <keywordList>
@@ -4978,6 +5008,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1000" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="3.6" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="0" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551180.72481756994966418</xmin>
+        <ymin>136178.64705177501309663</ymin>
+        <xmax>564577.832066860049963</xmax>
+        <ymax>151756.4882311699911952</ymax>
+      </extent>
       <id>part20170912113448062</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_part" (geometry) sql=</datasource>
       <keywordList>
@@ -7028,6 +7064,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="100000" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>550340.76855758996680379</xmin>
+        <ymin>136174.70277967999572866</ymin>
+        <xmax>564096.93433546100277454</xmax>
+        <ymax>152123.71034849001443945</ymax>
+      </extent>
       <id>pipe_copy20170821075917185</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor != 1</datasource>
       <keywordList>
@@ -9114,7 +9156,13 @@ def my_form_open(dialog, layer, feature):
       </defaults>
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1001" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="2001" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551179.9621645329752937</xmin>
+        <ymin>136130.00711239900556393</ymin>
+        <xmax>565180.83209774596616626</xmax>
+        <ymax>152123.71034849001443945</ymax>
+      </extent>
       <id>qwat_annotation_line20170919102956179</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_annotation_line" (geometry) sql=</datasource>
       <keywordList>
@@ -9476,6 +9524,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1001" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>550795.29509369400329888</xmin>
+        <ymin>136160.32212477701250464</ymin>
+        <xmax>567895.42431004799436778</xmax>
+        <ymax>152134.61965247700572945</ymax>
+      </extent>
       <id>qwat_annotation_point20170919102956209</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_annotation_point" (geometry) sql=</datasource>
       <keywordList>
@@ -11281,6 +11335,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="200" maximumScale="250000" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>549711.5625</xmin>
+        <ymin>135738.796875</ymin>
+        <xmax>568091.0625</xmax>
+        <ymax>154845.828125</ymax>
+      </extent>
       <id>qwat_printmap20170919102956238</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table="sige_qgis_cartoriviera"."sige_qgis_qwat_printmap" (geometry) sql=</datasource>
       <keywordList>
@@ -11817,6 +11877,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="1" maximumScale="5000" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551574.4279094219673425</xmin>
+        <ymin>136260.10900339001091197</ymin>
+        <xmax>565250</xmax>
+        <ymax>151851.22714020099374466</ymax>
+      </extent>
       <id>sige_qgis_qwat_leak20170928162343618</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_leak" (geometry) sql=</datasource>
       <keywordList>
@@ -12236,6 +12302,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "description", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551159.01811429997906089</xmin>
+        <ymin>136145.90337174601154402</ymin>
+        <xmax>565191.51113992999307811</xmax>
+        <ymax>151828.96177724999142811</ymax>
+      </extent>
       <id>subscriber20170911155257972</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_subscriber" (geometry) sql=</datasource>
       <keywordList>
@@ -13073,6 +13145,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="1" maximumScale="10001" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>551073.15025410999078304</xmin>
+        <ymin>136174.07603932998608798</ymin>
+        <xmax>565181.63239723001606762</xmax>
+        <ymax>152017.31419999999343418</ymax>
+      </extent>
       <id>valve20170829165258108</id>
       <datasource>service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table="sige_qgis_cartoriviera"."sige_qgis_qwat_valve" (geometry) sql=</datasource>
       <keywordList>
@@ -14170,6 +14248,12 @@ def my_form_open(dialog, layer, feature):
     </Variables>
     <WMSContactPerson type="QString"></WMSContactPerson>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <quickfinder_plugin>
+      <qftsfilepath type="QString"></qftsfilepath>
+      <project type="bool">false</project>
+      <refreshDelay type="int">15</refreshDelay>
+      <refreshAuto type="bool">true</refreshAuto>
+    </quickfinder_plugin>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WMSKeywordList type="QStringList">
