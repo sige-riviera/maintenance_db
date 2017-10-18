@@ -5,6 +5,7 @@ set -e
 VERBOSE=no
 
 [[ $VERBOSE =~ yes ]] && VERBOSE_CMD=--verbose
+[[ $VERBOSE =~ no ]] && export PGOPTIONS='--client-min-messages=warning'
 
 PGSERVICE=sige_commun psql -c "DROP SCHEMA IF EXISTS cartoriviera CASCADE"
 PGSERVICE=sige_commun psql -c "DROP SCHEMA IF EXISTS sige_qgis_cartoriviera CASCADE"
