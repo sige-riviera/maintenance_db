@@ -1,7 +1,7 @@
 
-
-Données copiées sur le site www.cartoriviera.ch pour y accéder depuis map.cartoriviera.ch (photos ouvrages, schéma abonnés, etc)
-
+Ce répertoire contient l'ensemble des tâches exécutées automatique sur le serveur
+- données transformées et copiées pour cartriviera
+- opérations de maintenance et backup
 
 Les scripts fonctionnent depuis le serveur 171.74.172.203
 
@@ -15,16 +15,11 @@ S'assurer que les dossiers de données de DAO_SAISIE$ sont bien montés sur ce s
 	sudo /bin/mount -t cifs //s4laveyre.sige.ch/dao_saisie$/01_DISTRIBUTION/ABONNES /home/sige/mount/abonnes -o user=rouzaudd,password=XXXXX,dom=sige.ch,gid=1000,uid=1000
 	sudo /bin/mount -t cifs //s4laveyre.sige.ch/dao_saisie$/01_DISTRIBUTION/RESEAU /home/sige/mount/reseau -o user=rouzaudd,password=XXXX,dom=sige.ch,gid=1000,uid=1000
 
-
-1. Ouvrages
-	executer le script ouvrages.sh qui:
-		- copie les photos/pdf des ouvrages dans un nouveau dossier (nommé selon la date) et crée les miniatures
-		- synchronise vers la droite le nouveau dossier avec le contenu sur www.cartoriviera.ch
-	
-2. Croquis/photos abonnés
-	executer abonnes.sh qui	synchronise vers la droite, puis met à jour les droits avec abonnes.sh
+S'assurer que le disque de backup est monté:
+	 sudo /bin/mount -t cifs //sbkpierrier.sige.ch/bk_laveyre/qgis /home/sige/mount/backup_sbk_pierrier/ -o user=backupadmin,password=XXXX,dom=sige.ch,gid=1000,uid=1000
 
 
-3. Export DB (qwat, qgep, sige_commun)
+
+L'ensemble des tâches excéutées est listée sous crontab.txt (résultat de la commande crontab -l).
 	
 	
