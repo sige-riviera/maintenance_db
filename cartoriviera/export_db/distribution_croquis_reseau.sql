@@ -27,6 +27,6 @@ select
   *
 from distribution.croquis_reseau;
 
-create table sige_qgis_croquis_reseau as select * from sige_qgis_croquis_reseau_mn95;
+create table cartoriviera.sige_qgis_croquis_reseau as select * from cartoriviera.sige_qgis_croquis_reseau_mn95;
 
 alter table cartoriviera.sige_qgis_croquis_reseau alter column geometry type geometry('point', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));
