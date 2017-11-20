@@ -3,8 +3,9 @@
 create schema if not exists cartoriviera;
 
 drop table if exists cartoriviera.sige_qgis_qwat_part;
+drop table if exists cartoriviera.sige_qgis_qwat_part_mn95;
 
-create table cartoriviera.sige_qgis_qwat_part as
+create table cartoriviera.sige_qgis_qwat_part_mn95 as
 select
 id,
 fk_district,
