@@ -3,8 +3,9 @@
 create schema if not exists cartoriviera;
 
 drop table if exists cartoriviera.sige_qgis_croquis_reseau;
+drop table if exists cartoriviera.sige_qgis_croquis_reseau_mn95;
 
-create table cartoriviera.sige_qgis_croquis_reseau as
+create table cartoriviera.sige_qgis_croquis_reseau_mn95 as
 select
   '<a href=javascript:app.openInfoWindow("https://www.cartoriviera.ch/sige/reseau/COMMUNES/' ||
   CASE
@@ -26,4 +27,6 @@ select
   *
 from distribution.croquis_reseau;
 
-alter table cartoriviera.sige_qgis_croquis_reseau alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+create table sige_qgis_croquis_reseau as select * from sige_qgis_croquis_reseau_mn95;
+
+alter table cartoriviera.sige_qgis_croquis_reseau alter column geometry type geometry('point', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));

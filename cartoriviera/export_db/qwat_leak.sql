@@ -3,8 +3,9 @@
 create schema if not exists cartoriviera;
 
 drop table if exists cartoriviera.sige_qgis_qwat_leak;
+drop table if exists cartoriviera.sige_qgis_qwat_leak_mn95;
 
-create table cartoriviera.sige_qgis_qwat_leak as
+create table cartoriviera.sige_qgis_qwat_leak_mn95 as
 select
     id,
     fk_cause,
@@ -199,4 +200,8 @@ select
     -- cause_description_ro
 from qwat_od.vw_export_leak;
 
-alter table cartoriviera.sige_qgis_qwat_leak alter column geometry type geometry('point', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+alter table cartoriviera.sige_qgis_qwat_leak_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+
+create table cartoriviera.sige_qgis_qwat_leak as select * from cartoriviera.sige_qgis_qwat_leak_mn95;
+
+alter table cartoriviera.sige_qgis_qwat_leak alter column geometry type geometry('point', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));

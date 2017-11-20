@@ -3,9 +3,10 @@
 create schema if not exists cartoriviera;
 
 drop table if exists cartoriviera.sige_qgis_qwat_protectionzone;
+drop table if exists cartoriviera.sige_qgis_qwat_protectionzone_mn95;
 
-create table cartoriviera.sige_qgis_qwat_protectionzone as
-select * 
+create table cartoriviera.sige_qgis_qwat_protectionzone_mn95 as
+select *
 from (SELECT protectionzone.id,
     protectionzone.fk_type,
     protectionzone.name,
@@ -18,5 +19,6 @@ from (SELECT protectionzone.id,
    FROM qwat_od.protectionzone
      JOIN qwat_vl.protectionzone_type ON protectionzone.fk_type = protectionzone_type.id ) as foo;
 
+create table cartoriviera.sige_qgis_qwat_protectionzone as select * from cartoriviera.sige_qgis_qwat_protectionzone_mn95;
 
-alter table cartoriviera.sige_qgis_qwat_protectionzone alter column geometry type geometry('multipolygon', 21781) using st_force2d(st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03')));
+alter table cartoriviera.sige_qgis_qwat_protectionzone alter column geometry type geometry('multipolygon', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));

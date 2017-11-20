@@ -3,8 +3,9 @@
 create schema if not exists cartoriviera;
 
 drop table if exists cartoriviera.sige_qgis_qwat_pipe;
+drop table if exists cartoriviera.sige_qgis_qwat_pipe_mn95;
 
-create table cartoriviera.sige_qgis_qwat_pipe as
+create table cartoriviera.sige_qgis_qwat_pipe_mn95 as
 select
   id,
   fk_parent,
@@ -172,7 +173,9 @@ folder_date_end
 -- node_a__pipe_orientation,
 -- node_a__pipe_schema_visible,
 -- node_a_update_geometry_alt1,
--- node_a_update_geometry_alt2 
+-- node_a_update_geometry_alt2
 from qwat_od.vw_export_pipe;
+
+create table cartoriviera.sige_qgis_qwat_pipe as select * from cartoriviera.sige_qgis_qwat_pipe_mn95;
 
 alter table cartoriviera.sige_qgis_qwat_pipe alter column geometry type geometry('linestring', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));

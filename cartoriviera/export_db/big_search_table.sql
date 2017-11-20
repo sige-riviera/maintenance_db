@@ -43,7 +43,7 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
 -------------------
 --  QGEP
 UNION
-  SELECT 'AS Chambres' AS layer_name,
+  SELECT 'AS Chambres' AS layer_name,
       co_identifier AS search_text,
       ST_GeometryN(situation_geometry,1)::geometry(Point,21781)
     FROM sige_qgis_cartoriviera.sige_qgis_qgep_wastewater_structure
