@@ -5,7 +5,7 @@ create schema if not exists cartoriviera;
 drop table if exists cartoriviera.sige_qgis_qwat_folder;
 drop table if exists cartoriviera.sige_qgis_qwat_folder_mn95;
 
-create table cartoriviera.sige_qgis_qwat_folder as
+create table cartoriviera.sige_qgis_qwat_folder_mn95 as
 select * from qwat_od.folder;
 
 alter table cartoriviera.sige_qgis_qwat_folder_mn95 alter column geometry_line type geometry('MultiLineString', 2056) using st_force2d(geometry_line);
