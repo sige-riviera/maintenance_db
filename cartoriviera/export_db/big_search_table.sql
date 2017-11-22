@@ -63,4 +63,8 @@ UNION
     FROM cadastre.portvalais_bienfonds
 );
 
+CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table_mn95 AS select * from sige_qgis_cartoriviera.sige_qgis_big_table;
+alter table sige_qgis_cartoriviera.sige_qgis_big_table_mn95 alter column geometry type geometry('point', 2056) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv03', 'the_geom_lv95'));
+
+
 SELECT DISTINCT layer_name FROM sige_qgis_cartoriviera.sige_qgis_big_table ORDER BY layer_name;

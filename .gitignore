@@ -1,2 +1,4 @@
 *.backup
 *.qgs~
+.DS_Store
+
