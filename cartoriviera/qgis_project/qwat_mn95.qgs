@@ -1,11 +1,14 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.12">
+<qgis projectname="" version="2.18.14">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_hydrant20171020105757789" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante_pression">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_remote20171122094212805" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_remote&quot; (geometry) sql=" name="sige_qgis_qwat_remote">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="sige_qgis_qwat_hydrant20171020105757789" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante_pression">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
@@ -13,39 +16,39 @@
     <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_croquis_reseau&quot; (geometry) sql=" name="sige_qgis_croquis_reseau">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_line20170919102956179" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_annotation_line&quot; (geometry) sql=" name="sige_qgis_annotation_ligne">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="qwat_annotation_line20170919102956179" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_annotation_line&quot; (geometry) sql=" name="sige_qgis_annotation_ligne">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="qwat_annotation_point20170919102956209" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_annotation_point&quot; (geometry) sql=" name="sige_qgis_annotation_point">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="qwat_annotation_point20170919102956209" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_annotation_point&quot; (geometry) sql=" name="sige_qgis_annotation_point">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="hydrant20170912112103216" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="hydrant20170912112103216" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_leak20170928162343618" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_leak&quot; (geometry) sql=" name="sige_qgis_qwat_fuite">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="sige_qgis_qwat_leak20170928162343618" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_leak&quot; (geometry) sql=" name="sige_qgis_qwat_fuite">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="installation20170912103810982" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_installation&quot; (geometry) sql=" name="sige_qgis_ouvrage">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="installation20170912103810982" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_installation&quot; (geometry) sql=" name="sige_qgis_ouvrage">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="meter20170912075821953" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_meter&quot; (geometry) sql=" name="sige_qgis_compteur_reseau">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="meter20170912075821953" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_meter&quot; (geometry) sql=" name="sige_qgis_compteur_reseau">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="subscriber20170911155257972" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_subscriber&quot; (geometry) sql=" name="sige_qgis_abonne">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="subscriber20170911155257972" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_subscriber&quot; (geometry) sql=" name="sige_qgis_abonne">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="valve20170829165258108" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_valve&quot; (geometry) sql=" name="sige_qgis_vanne">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="valve20170829165258108" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_valve&quot; (geometry) sql=" name="sige_qgis_vanne">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="crossing20170912143156180" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_crossing&quot; (geometry) sql=" name="sige_qgis_croisement">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="crossing20170912143156180" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_crossing&quot; (geometry) sql=" name="sige_qgis_croisement">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="part20170912113448062" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_part&quot; (geometry) sql=" name="sige_qgis_piece">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="part20170912113448062" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_part&quot; (geometry) sql=" name="sige_qgis_piece">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="node20170821111240113" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_node&quot; (geometry) sql=" name="sige_qgis_noeud">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="node20170821111240113" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_node&quot; (geometry) sql=" name="sige_qgis_noeud">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe20170817163039703" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'oui'" name="sige_qgis_conduite_fonctionnelle">
@@ -53,12 +56,12 @@
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'non'" name="sige_qgis_conduite_non_fonctionnelle">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'non'" name="sige_qgis_conduite_non_fonctionnelle">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075917185" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor != 1" name="sige_qgis_conduite_etranger">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="pipe_copy20170821075917185" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor != 1" name="sige_qgis_conduite_etranger">
       <customproperties>
         <property key="expandedLegendNodes"/>
       </customproperties>
@@ -66,7 +69,7 @@
     <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="qwat_folder20170919112604553" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_folder&quot; (geometry_line) sql=" name="sige_qgis_dossier_technique">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_printmap20170919102956238" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Polygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_printmap&quot; (geometry) sql=" name="sige_qgis_folios">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="qwat_printmap20170919102956238" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Polygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_printmap&quot; (geometry) sql=" name="sige_qgis_folios">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="qwat_consumptionzone20170919113125033" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiPolygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_consumptionzone&quot; (geometry) sql=" name="sige_qgis_zone_consommation">
@@ -80,10 +83,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>561062.32138753496110439</xmin>
-      <ymin>143938.39540549760567956</ymin>
-      <xmax>562551.39638905390165746</xmax>
-      <ymax>144873.32990070691448636</ymax>
+      <xmin>561742.24752659001387656</xmin>
+      <ymin>144920.59650413133203983</ymin>
+      <xmax>562005.50794352521188557</xmax>
+      <ymax>145235.69441525905858725</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -126,12 +129,18 @@
       <item>qwat_consumptionzone20170919113125033</item>
       <item>sige_qgis_qwat_leak20170928162343618</item>
       <item>sige_qgis_qwat_hydrant20171020105757789</item>
+      <item>sige_qgis_qwat_remote20171122094212805</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_hydrante_pression" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_qwat_remote" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_remote20171122094212805" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_hydrante_pression" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_hydrant20171020105757789" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_hydrant20171020105757789" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_croquis_reseau" showFeatureCount="0">
@@ -139,59 +148,59 @@
         <legendlayerfile isInOverview="0" layerid="croquis_reseau20170914153941848" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_annotation_ligne" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_annotation_ligne" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="qwat_annotation_line20170919102956179" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="qwat_annotation_line20170919102956179" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_annotation_point" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_annotation_point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="qwat_annotation_point20170919102956209" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="qwat_annotation_point20170919102956209" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_hydrante" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_hydrante" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="hydrant20170912112103216" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="hydrant20170912112103216" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_qwat_fuite" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_qwat_fuite" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_leak20170928162343618" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_leak20170928162343618" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_ouvrage" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_ouvrage" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="installation20170912103810982" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="installation20170912103810982" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_compteur_reseau" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_compteur_reseau" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="meter20170912075821953" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="meter20170912075821953" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_abonne" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_abonne" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="subscriber20170911155257972" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="subscriber20170911155257972" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_vanne" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_vanne" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="valve20170829165258108" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="valve20170829165258108" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_croisement" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_croisement" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="crossing20170912143156180" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="crossing20170912143156180" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_piece" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_piece" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="part20170912113448062" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="part20170912113448062" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_noeud" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_noeud" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="node20170821111240113" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="node20170821111240113" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_conduite_fonctionnelle" showFeatureCount="0">
@@ -199,14 +208,14 @@
         <legendlayerfile isInOverview="0" layerid="pipe20170817163039703" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_conduite_non_fonctionnelle" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_conduite_non_fonctionnelle" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="pipe_copy20170821075918952" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="pipe_copy20170821075918952" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_conduite_etranger" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_conduite_etranger" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="pipe_copy20170821075917185" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="pipe_copy20170821075917185" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_dossier_technique" showFeatureCount="0">
@@ -214,9 +223,9 @@
         <legendlayerfile isInOverview="0" layerid="qwat_folder20170919112604553" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_folios" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_folios" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="qwat_printmap20170919102956238" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="qwat_printmap20170919102956238" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_zone_consommation" showFeatureCount="0">
@@ -13097,6 +13106,463 @@ def my_form_open(dialog, layer, feature):
       </defaults>
       <previewExpression>COALESCE( "description", '&lt;NULL>' )</previewExpression>
     </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>sige_qgis_qwat_remote20171122094212805</id>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_remote_mn95" (geometry) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sige_qgis_qwat_remote</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1919</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903 / LV03</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="fk_distributor">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="fk_status">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="fk_precision">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="fk_material">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="identification">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="year">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="origin">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="destination">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="folder">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="plan">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="remark">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_1_visible">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_1_x">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_1_y">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_1_rotation">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_1_text">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_2_visible">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_2_x">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_2_y">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_2_rotation">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label_2_text">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="distributor_name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="status_value_fr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="material_value_fr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="line" name="0">
+            <layer pass="0" class="SimpleLine" locked="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="160,78,149,145"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.8"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="labeling" value="pal"/>
+        <property key="labeling/addDirectionSymbol" value="false"/>
+        <property key="labeling/angleOffset" value="0"/>
+        <property key="labeling/blendMode" value="0"/>
+        <property key="labeling/bufferBlendMode" value="0"/>
+        <property key="labeling/bufferColorA" value="255"/>
+        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorG" value="255"/>
+        <property key="labeling/bufferColorR" value="255"/>
+        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferJoinStyle" value="128"/>
+        <property key="labeling/bufferNoFill" value="false"/>
+        <property key="labeling/bufferSize" value="1"/>
+        <property key="labeling/bufferSizeInMapUnits" value="false"/>
+        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/bufferTransp" value="0"/>
+        <property key="labeling/centroidInside" value="false"/>
+        <property key="labeling/centroidWhole" value="false"/>
+        <property key="labeling/decimals" value="3"/>
+        <property key="labeling/displayAll" value="true"/>
+        <property key="labeling/dist" value="2"/>
+        <property key="labeling/distInMapUnits" value="false"/>
+        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="'télécommande'"/>
+        <property key="labeling/fitInPolygonOnly" value="false"/>
+        <property key="labeling/fontCapitals" value="0"/>
+        <property key="labeling/fontFamily" value=".SF NS Text"/>
+        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontLetterSpacing" value="0"/>
+        <property key="labeling/fontLimitPixelSize" value="false"/>
+        <property key="labeling/fontMaxPixelSize" value="10000"/>
+        <property key="labeling/fontMinPixelSize" value="3"/>
+        <property key="labeling/fontSize" value="7"/>
+        <property key="labeling/fontSizeInMapUnits" value="false"/>
+        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/fontStrikeout" value="false"/>
+        <property key="labeling/fontUnderline" value="false"/>
+        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWordSpacing" value="0"/>
+        <property key="labeling/formatNumbers" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/labelOffsetInMapUnits" value="true"/>
+        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/labelPerPart" value="false"/>
+        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+        <property key="labeling/limitNumLabels" value="false"/>
+        <property key="labeling/maxCurvedCharAngleIn" value="25"/>
+        <property key="labeling/maxCurvedCharAngleOut" value="-25"/>
+        <property key="labeling/maxNumLabels" value="2000"/>
+        <property key="labeling/mergeLines" value="true"/>
+        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/multilineAlign" value="4294967295"/>
+        <property key="labeling/multilineHeight" value="1"/>
+        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/obstacle" value="true"/>
+        <property key="labeling/obstacleFactor" value="1"/>
+        <property key="labeling/obstacleType" value="0"/>
+        <property key="labeling/offsetType" value="0"/>
+        <property key="labeling/placeDirectionSymbol" value="0"/>
+        <property key="labeling/placement" value="2"/>
+        <property key="labeling/placementFlags" value="14"/>
+        <property key="labeling/plussign" value="false"/>
+        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
+        <property key="labeling/preserveRotation" value="true"/>
+        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+        <property key="labeling/priority" value="5"/>
+        <property key="labeling/quadOffset" value="4"/>
+        <property key="labeling/repeatDistance" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/repeatDistanceUnit" value="1"/>
+        <property key="labeling/reverseDirectionSymbol" value="false"/>
+        <property key="labeling/rightDirectionSymbol" value=">"/>
+        <property key="labeling/scaleMax" value="10000000"/>
+        <property key="labeling/scaleMin" value="1"/>
+        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/shadowBlendMode" value="6"/>
+        <property key="labeling/shadowColorB" value="0"/>
+        <property key="labeling/shadowColorG" value="0"/>
+        <property key="labeling/shadowColorR" value="0"/>
+        <property key="labeling/shadowDraw" value="false"/>
+        <property key="labeling/shadowOffsetAngle" value="135"/>
+        <property key="labeling/shadowOffsetDist" value="1"/>
+        <property key="labeling/shadowOffsetGlobal" value="true"/>
+        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowOffsetUnits" value="1"/>
+        <property key="labeling/shadowRadius" value="1.5"/>
+        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowRadiusUnits" value="1"/>
+        <property key="labeling/shadowScale" value="100"/>
+        <property key="labeling/shadowTransparency" value="30"/>
+        <property key="labeling/shadowUnder" value="0"/>
+        <property key="labeling/shapeBlendMode" value="0"/>
+        <property key="labeling/shapeBorderColorA" value="255"/>
+        <property key="labeling/shapeBorderColorB" value="128"/>
+        <property key="labeling/shapeBorderColorG" value="128"/>
+        <property key="labeling/shapeBorderColorR" value="128"/>
+        <property key="labeling/shapeBorderWidth" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeBorderWidthUnits" value="1"/>
+        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeFillColorA" value="255"/>
+        <property key="labeling/shapeFillColorB" value="255"/>
+        <property key="labeling/shapeFillColorG" value="255"/>
+        <property key="labeling/shapeFillColorR" value="255"/>
+        <property key="labeling/shapeJoinStyle" value="64"/>
+        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeOffsetUnits" value="1"/>
+        <property key="labeling/shapeOffsetX" value="0"/>
+        <property key="labeling/shapeOffsetY" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeRadiiUnits" value="1"/>
+        <property key="labeling/shapeRadiiX" value="0"/>
+        <property key="labeling/shapeRadiiY" value="0"/>
+        <property key="labeling/shapeRotation" value="0"/>
+        <property key="labeling/shapeRotationType" value="0"/>
+        <property key="labeling/shapeSVGFile" value=""/>
+        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeSizeType" value="0"/>
+        <property key="labeling/shapeSizeUnits" value="1"/>
+        <property key="labeling/shapeSizeX" value="0"/>
+        <property key="labeling/shapeSizeY" value="0"/>
+        <property key="labeling/shapeTransparency" value="0"/>
+        <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
+        <property key="labeling/textColorA" value="255"/>
+        <property key="labeling/textColorB" value="149"/>
+        <property key="labeling/textColorG" value="78"/>
+        <property key="labeling/textColorR" value="160"/>
+        <property key="labeling/textTransp" value="0"/>
+        <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/useSubstitutions" value="false"/>
+        <property key="labeling/wrapChar" value=""/>
+        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/yOffset" value="0"/>
+        <property key="labeling/zIndex" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>distributor_name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Étiquette"/>
+        <family fieldname="" name=".SF NS Text"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+        </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform></annotationform>
+      <aliases>
+        <alias field="id" index="0" name=""/>
+        <alias field="fk_distributor" index="1" name=""/>
+        <alias field="fk_status" index="2" name=""/>
+        <alias field="fk_precision" index="3" name=""/>
+        <alias field="fk_material" index="4" name=""/>
+        <alias field="identification" index="5" name=""/>
+        <alias field="year" index="6" name=""/>
+        <alias field="origin" index="7" name=""/>
+        <alias field="destination" index="8" name=""/>
+        <alias field="folder" index="9" name=""/>
+        <alias field="plan" index="10" name=""/>
+        <alias field="remark" index="11" name=""/>
+        <alias field="label_1_visible" index="12" name=""/>
+        <alias field="label_1_x" index="13" name=""/>
+        <alias field="label_1_y" index="14" name=""/>
+        <alias field="label_1_rotation" index="15" name=""/>
+        <alias field="label_1_text" index="16" name=""/>
+        <alias field="label_2_visible" index="17" name=""/>
+        <alias field="label_2_x" index="18" name=""/>
+        <alias field="label_2_y" index="19" name=""/>
+        <alias field="label_2_rotation" index="20" name=""/>
+        <alias field="label_2_text" index="21" name=""/>
+        <alias field="distributor_name" index="22" name=""/>
+        <alias field="status_value_fr" index="23" name=""/>
+        <alias field="material_value_fr" index="24" name=""/>
+      </aliases>
+      <excludeAttributesWMS>
+        <attribute>label_2_rotation</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>fk_material</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>label_2_visible</attribute>
+      </excludeAttributesWMS>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="673441049">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="id"/>
+          <column width="-1" hidden="0" type="field" name="fk_distributor"/>
+          <column width="-1" hidden="0" type="field" name="fk_status"/>
+          <column width="-1" hidden="0" type="field" name="fk_precision"/>
+          <column width="-1" hidden="0" type="field" name="fk_material"/>
+          <column width="-1" hidden="0" type="field" name="identification"/>
+          <column width="-1" hidden="0" type="field" name="year"/>
+          <column width="187" hidden="0" type="field" name="origin"/>
+          <column width="210" hidden="0" type="field" name="destination"/>
+          <column width="-1" hidden="0" type="field" name="folder"/>
+          <column width="-1" hidden="0" type="field" name="plan"/>
+          <column width="-1" hidden="0" type="field" name="remark"/>
+          <column width="-1" hidden="0" type="field" name="label_1_visible"/>
+          <column width="-1" hidden="0" type="field" name="label_1_x"/>
+          <column width="-1" hidden="0" type="field" name="label_1_y"/>
+          <column width="-1" hidden="0" type="field" name="label_1_rotation"/>
+          <column width="-1" hidden="0" type="field" name="label_1_text"/>
+          <column width="-1" hidden="0" type="field" name="label_2_visible"/>
+          <column width="-1" hidden="0" type="field" name="label_2_x"/>
+          <column width="-1" hidden="0" type="field" name="label_2_y"/>
+          <column width="-1" hidden="0" type="field" name="label_2_rotation"/>
+          <column width="-1" hidden="0" type="field" name="label_2_text"/>
+          <column width="-1" hidden="0" type="field" name="distributor_name"/>
+          <column width="-1" hidden="0" type="field" name="status_value_fr"/>
+          <column width="-1" hidden="0" type="field" name="material_value_fr"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="id" expression=""/>
+        <default field="fk_distributor" expression=""/>
+        <default field="fk_status" expression=""/>
+        <default field="fk_precision" expression=""/>
+        <default field="fk_material" expression=""/>
+        <default field="identification" expression=""/>
+        <default field="year" expression=""/>
+        <default field="origin" expression=""/>
+        <default field="destination" expression=""/>
+        <default field="folder" expression=""/>
+        <default field="plan" expression=""/>
+        <default field="remark" expression=""/>
+        <default field="label_1_visible" expression=""/>
+        <default field="label_1_x" expression=""/>
+        <default field="label_1_y" expression=""/>
+        <default field="label_1_rotation" expression=""/>
+        <default field="label_1_text" expression=""/>
+        <default field="label_2_visible" expression=""/>
+        <default field="label_2_x" expression=""/>
+        <default field="label_2_y" expression=""/>
+        <default field="label_2_rotation" expression=""/>
+        <default field="label_2_text" expression=""/>
+        <default field="distributor_name" expression=""/>
+        <default field="status_value_fr" expression=""/>
+        <default field="material_value_fr" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "distributor_name", '&lt;NULL>' )</previewExpression>
+    </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>551159.01811429997906089</xmin>
@@ -14123,6 +14589,9 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="pressurezone_name">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="valve_function_short_fr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="valve_function_value_fr">
           <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
@@ -14138,6 +14607,9 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="distributor_name">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="valve_type_short_fr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="valve_type_value_fr">
           <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
@@ -14145,6 +14617,9 @@ def my_form_open(dialog, layer, feature):
           <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="object_reference_value_fr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="valve_actuation_short_fr">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="valve_actuation_value_fr">
@@ -14807,20 +15282,23 @@ def my_form_open(dialog, layer, feature):
         <alias field="district_land_registry" index="47" name=""/>
         <alias field="district_prefix" index="48" name=""/>
         <alias field="pressurezone_name" index="49" name=""/>
-        <alias field="valve_function_value_fr" index="50" name=""/>
-        <alias field="valve_function_description_fr" index="51" name=""/>
-        <alias field="precision_value_fr" index="52" name=""/>
-        <alias field="precision_description_fr" index="53" name=""/>
-        <alias field="distributor_name" index="54" name=""/>
-        <alias field="valve_type_value_fr" index="55" name=""/>
-        <alias field="valve_type_description_fr" index="56" name=""/>
-        <alias field="object_reference_value_fr" index="57" name=""/>
-        <alias field="valve_actuation_value_fr" index="58" name=""/>
-        <alias field="folder_identification" index="59" name=""/>
-        <alias field="folder_description" index="60" name=""/>
-        <alias field="folder_date_start" index="61" name=""/>
-        <alias field="folder_date_end" index="62" name=""/>
-        <alias field="precisionalti_value_fr" index="63" name=""/>
+        <alias field="valve_function_short_fr" index="50" name=""/>
+        <alias field="valve_function_value_fr" index="51" name=""/>
+        <alias field="valve_function_description_fr" index="52" name=""/>
+        <alias field="precision_value_fr" index="53" name=""/>
+        <alias field="precision_description_fr" index="54" name=""/>
+        <alias field="distributor_name" index="55" name=""/>
+        <alias field="valve_type_short_fr" index="56" name=""/>
+        <alias field="valve_type_value_fr" index="57" name=""/>
+        <alias field="valve_type_description_fr" index="58" name=""/>
+        <alias field="object_reference_value_fr" index="59" name=""/>
+        <alias field="valve_actuation_short_fr" index="60" name=""/>
+        <alias field="valve_actuation_value_fr" index="61" name=""/>
+        <alias field="folder_identification" index="62" name=""/>
+        <alias field="folder_description" index="63" name=""/>
+        <alias field="folder_date_start" index="64" name=""/>
+        <alias field="folder_date_end" index="65" name=""/>
+        <alias field="precisionalti_value_fr" index="66" name=""/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>altitude</attribute>
@@ -15019,14 +15497,17 @@ def my_form_open(dialog, layer, feature):
         <default field="district_land_registry" expression=""/>
         <default field="district_prefix" expression=""/>
         <default field="pressurezone_name" expression=""/>
+        <default field="valve_function_short_fr" expression=""/>
         <default field="valve_function_value_fr" expression=""/>
         <default field="valve_function_description_fr" expression=""/>
         <default field="precision_value_fr" expression=""/>
         <default field="precision_description_fr" expression=""/>
         <default field="distributor_name" expression=""/>
+        <default field="valve_type_short_fr" expression=""/>
         <default field="valve_type_value_fr" expression=""/>
         <default field="valve_type_description_fr" expression=""/>
         <default field="object_reference_value_fr" expression=""/>
+        <default field="valve_actuation_short_fr" expression=""/>
         <default field="valve_actuation_value_fr" expression=""/>
         <default field="folder_identification" expression=""/>
         <default field="folder_description" expression=""/>
@@ -15043,13 +15524,13 @@ def my_form_open(dialog, layer, feature):
       <variableValues type="QStringList"/>
     </Variables>
     <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
     <quickfinder_plugin>
       <qftsfilepath type="QString"></qftsfilepath>
       <project type="bool">false</project>
       <refreshDelay type="int">15</refreshDelay>
       <refreshAuto type="bool">true</refreshAuto>
     </quickfinder_plugin>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WMSKeywordList type="QStringList">
@@ -15089,8 +15570,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -15188,8 +15669,8 @@ def my_form_open(dialog, layer, feature):
       <node20170821111240113 type="int">8</node20170821111240113>
       <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
       <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
-      <meter20170912075821953 type="int">8</meter20170912075821953>
       <part20170912113448062 type="int">8</part20170912113448062>
+      <meter20170912075821953 type="int">8</meter20170912075821953>
       <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
       <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
       <pipe20170817163039703 type="int">8</pipe20170817163039703>
