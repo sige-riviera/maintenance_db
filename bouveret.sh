@@ -37,9 +37,9 @@ pgsql2shp -h localhost -g geom -f $OUTPATH/conduites -u sige qwat "\
 SELECT                                         \
  id   AS ID,               \
  ST_Force2d(geometry)::geometry(LineString,21781) AS geom, \
- _material_name   AS MATERIAU,      \
- _function        AS FONCTION       \
-FROM qwat_od.vw_export_pipe WHERE _status_active IS TRUE AND ST_Intersects(ST_Force2d(geometry), $box)"
+ pipe_material_value_fr   AS MATERIAU,      \
+ pipe_function_value_fr        AS FONCTION       \
+FROM qwat_od.vw_export_pipe WHERE status_active IS TRUE AND ST_Intersects(ST_Force2d(geometry), $box)"
 
 # make zip
 cd $OUTPATH
