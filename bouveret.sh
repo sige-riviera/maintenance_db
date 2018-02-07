@@ -49,7 +49,7 @@ zip -9r donnees_sige_$TODAY.zip *
 
 # transfert ftp
 PASS=`cat /home/sige/ftp_pass/bouveret`
-ftp -n -v miranda.kreativmedia.ch <<-EOF
+ftp -p -n -v miranda.kreativmedia.ch <<-EOF
 user vuadens $PASS
 prompt
 binary
