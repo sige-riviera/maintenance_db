@@ -5719,7 +5719,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>152121.72699980001198128</ymax>
       </extent>
       <id>pipe20170817163039703</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional_mn95" = 'oui'</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe_mn95" (geometry) sql=fk_distributor = 1 and "status_functional"='oui'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -8136,7 +8136,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>152203.625</ymax>
       </extent>
       <id>pipe_copy20170821075918952</id>
-      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe" (geometry) sql=fk_distributor = 1 and "status_functional_mn95" = 'non'</datasource>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_qwat_pipe_mn95" (geometry) sql=fk_distributor = 1 and "status_functional" = 'non'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
