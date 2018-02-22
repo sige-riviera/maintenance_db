@@ -5,7 +5,7 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-group expanded="0" checked="Qt::Checked" name="Assainissement">
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="Assainissement">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="export_wastewater_structure20170515095249749" source="service='sige_carto' sslmode=allow key='tid' srid=21781 type=MultiPoint table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qgep_wastewater_structure&quot; (situation_geometry) sql=" name="sige_qgis_chambres">
         <customproperties>
@@ -20,7 +20,7 @@
         </customproperties>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="Distribution">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Distribution">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="valve20170829165258108" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_valve&quot; (geometry) sql=" name="sige_qgis_vanne">
         <customproperties>
@@ -34,13 +34,13 @@
           <property key="embedded_project" value="./qwat.qgs"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_leak20170928162343618" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_leak&quot; (geometry) sql=" name="sige_qgis_qwat_fuite">
+      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="sige_qgis_qwat_leak20170928162343618" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_leak&quot; (geometry) sql=" name="sige_qgis_qwat_fuite">
         <customproperties>
           <property key="embedded" value="1"/>
           <property key="embedded_project" value="./qwat.qgs"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_hydrant20171020105757789" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante_pression">
+      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="sige_qgis_qwat_hydrant20171020105757789" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_hydrant&quot; (geometry) sql=" name="sige_qgis_hydrante_pression">
         <customproperties>
           <property key="embedded" value="1"/>
           <property key="embedded_project" value="./qwat.qgs"/>
@@ -58,13 +58,13 @@
           <property key="embedded_project" value="./qwat.qgs"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_croquis_reseau&quot; (geometry) sql=" name="sige_qgis_croquis_reseau">
+      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="croquis_reseau20170914153941848" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_croquis_reseau&quot; (geometry) sql=" name="sige_qgis_croquis_reseau">
         <customproperties>
           <property key="embedded" value="1"/>
           <property key="embedded_project" value="./qwat.qgs"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'non'" name="sige_qgis_conduite_non_fonctionnelle">
+      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="pipe_copy20170821075918952" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'non'" name="sige_qgis_conduite_non_fonctionnelle">
         <customproperties>
           <property key="embedded" value="1"/>
           <property key="embedded_project" value="./qwat.qgs"/>
@@ -124,7 +124,7 @@
           <property key="embedded_project" value="./qwat.qgs"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="qwat_printmap20170919102956238" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_printmap&quot; (geometry) sql=" name="sige_qgis_folios">
+      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="qwat_printmap20170919102956238" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=Polygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_printmap&quot; (geometry) sql=" name="sige_qgis_folios">
         <customproperties>
           <property key="embedded" value="1"/>
           <property key="embedded_project" value="./qwat.qgs"/>
@@ -170,10 +170,19 @@
         </customproperties>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="Fonds de plans" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="Fonds de plans" mutually-exclusive-child="-1">
       <customproperties>
         <property key="embedded" value="1"/>
         <property key="embedded-invisible-layers">
+          <value>no_nomenclature20161124151011953</value>
+          <value>od_entree_batiment20161124100003328</value>
+          <value>bf_point_limite20161123141033694</value>
+          <value>pf_points_fixes20161123144654375</value>
+          <value>ab_rue20161122113837293</value>
+          <value>od_element_lineaire20161123134458480</value>
+          <value>bf_immeuble20161019163752305</value>
+          <value>od_element_surfacique20161123111234045</value>
+          <value>cs_couverture_sol20161117155047081</value>
           <value>National_Map_1_25_00020170314120154767</value>
           <value>National_Maps__color_20170314120148938</value>
           <value>SWISSIMAGE20170314120137660</value>
@@ -196,7 +205,7 @@
     <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
         <srsid>1919</srsid>
         <srid>21781</srid>
         <authid>EPSG:21781</authid>
@@ -264,7 +273,7 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendgroup open="false" checked="Qt::Checked" name="Assainissement">
+    <legendgroup open="true" checked="Qt::Checked" name="Assainissement">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_chambres" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="export_wastewater_structure20170515095249749" visible="1"/>
@@ -276,7 +285,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::PartiallyChecked" name="Distribution">
+    <legendgroup open="true" checked="Qt::PartiallyChecked" name="Distribution">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_vanne" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="valve20170829165258108" visible="1"/>
@@ -287,14 +296,14 @@
           <legendlayerfile isInOverview="0" layerid="subscriber20170911155257972" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_qwat_fuite" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_qwat_fuite" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_leak20170928162343618" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_leak20170928162343618" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_hydrante_pression" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_hydrante_pression" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_hydrant20171020105757789" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_hydrant20171020105757789" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_annotation_point" showFeatureCount="0">
@@ -307,14 +316,14 @@
           <legendlayerfile isInOverview="0" layerid="qwat_annotation_line20170919102956179" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_croquis_reseau" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sige_qgis_croquis_reseau" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="croquis_reseau20170914153941848" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="croquis_reseau20170914153941848" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_conduite_non_fonctionnelle" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_conduite_non_fonctionnelle" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="pipe_copy20170821075918952" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="pipe_copy20170821075918952" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_conduite_etranger" showFeatureCount="0">
@@ -362,9 +371,9 @@
           <legendlayerfile isInOverview="0" layerid="qwat_folder20170919112604553" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_folios" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_folios" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="qwat_printmap20170919102956238" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="qwat_printmap20170919102956238" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_zone_consommation" showFeatureCount="0">
