@@ -15,22 +15,15 @@ export PGCLIENTENCODING=LATIN1
 
 export box="ST_SetSRID(ST_GeomFromText('POLYGON((2554197.49803597 1138007.59717084,2556720.6652748 1137977.97224944,2556707.85429497 1135687.63992234,2554188.95355474 1135755.39129017,2554197.49803597 1138007.59717084))'),2056)"
 
-# vannes
+ # vannes 
 pgsql2shp -h localhost -g geom -f $OUTPATH/vannes -u sige qwat "\
 SELECT \
  id   AS ID,               \
  identification     AS id_sige,             \
  ST_Force2d(geometry)::geometry(Point,2056) AS geom \
-<<<<<<< HEAD
-<<<<<<< HEAD
-FROM qwat_od.vw_export_valve WHERE ST_Intersects(ST_Force2d(geometry), $box)"
-=======
-=======
->>>>>>> 82471be82a76515830551876cfed82485d89a4a3
 FROM qwat_od.vw_export_valve WHERE ST_Intersects(ST_Force2d(geometry), $box)" 
->>>>>>> 82471be82a76515830551876cfed82485d89a4a3
 
-# hydrantes
+ # hydrantes 
 pgsql2shp -h localhost -g geom -f $OUTPATH/hydrantes -u sige qwat "\
 SELECT \
  id   AS ID,               \
