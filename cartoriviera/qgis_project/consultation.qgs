@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.12">
+<qgis projectname="" version="2.18.17">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -77,6 +77,12 @@
         </customproperties>
       </layer-tree-layer>
       <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="pipe20170817163039703" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot; = 'oui'" name="sige_qgis_conduite_fonctionnelle">
+        <customproperties>
+          <property key="embedded" value="1"/>
+          <property key="embedded_project" value="./qwat.qgs"/>
+        </customproperties>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_qwat_remote20171122094212805" source="service='sige_carto' sslmode=disable key='tid' srid=21781 type=MultiLineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_remote&quot; (geometry) sql=" name="sige_qgis_qwat_telecommande">
         <customproperties>
           <property key="embedded" value="1"/>
           <property key="embedded_project" value="./qwat.qgs"/>
@@ -196,10 +202,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>547444.96405901981052011</xmin>
-      <ymin>137240.54079160263063386</ymin>
-      <xmax>563962.25504508090671152</xmax>
-      <ymax>145574.47467336227418855</ymax>
+      <xmin>551845.05406974989455193</xmin>
+      <ymin>138675.60729194228770211</ymin>
+      <xmax>568362.34505581099074334</xmax>
+      <ymax>147009.5411737019312568</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -270,6 +276,7 @@
       <item>National_Maps__color_20170314120148938</item>
       <item>SWISSIMAGE20170314120137660</item>
       <item>OpenStreeMap20170131085532398</item>
+      <item>sige_qgis_qwat_remote20171122094212805</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -334,6 +341,11 @@
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_conduite_fonctionnelle" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="pipe20170817163039703" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sige_qgis_qwat_telecommande" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="sige_qgis_qwat_remote20171122094212805" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_piece" showFeatureCount="0">
@@ -434,6 +446,7 @@
     <maplayer embedded="1" id="sige_qgis_enquete_camac20171003142415834" project="./cadastre_sige.qgs"/>
     <maplayer embedded="1" id="sige_qgis_qwat_hydrant20171020105757789" project="./qwat.qgs"/>
     <maplayer embedded="1" id="sige_qgis_qwat_leak20170928162343618" project="./qwat.qgs"/>
+    <maplayer embedded="1" id="sige_qgis_qwat_remote20171122094212805" project="./qwat.qgs"/>
     <maplayer embedded="1" id="sige_qgis_servitude_ligne20170928170530878" project="./cadastre_sige.qgs"/>
     <maplayer embedded="1" id="sige_qgis_servitude_zone20170928170530892" project="./cadastre_sige.qgs"/>
     <maplayer embedded="1" id="subscriber20170911155257972" project="./qwat.qgs"/>
