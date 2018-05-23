@@ -59,6 +59,4 @@ put $OUTPATH/donnees_sige_$TODAY.zip donnees_sige_$TODAY.zip
 bye
 EOF
 
-rm -rf $OUTPATH
-
 
