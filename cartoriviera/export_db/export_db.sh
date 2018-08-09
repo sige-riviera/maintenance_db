@@ -18,7 +18,9 @@ PGSERVICE=qwat psql -c "CREATE SCHEMA cartoriviera"
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_hydrant.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_installation.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_meter.sql
+PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_meter_reference.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_subscriber.sql
+PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_subscriber_reference.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_valve.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_crossing.sql
 PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/qwat_part.sql
