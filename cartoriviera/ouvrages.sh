@@ -28,16 +28,16 @@ for directory in "${directories[@]}"; do
     mkdir -p /home/sige/data/carto/data_ouvrage/$num/images/small
     # copy files
     echo " * Copying pictures ..."
-    if [[ ! -d $ouvrage_path/${num}_00_ETAT_ACTUEL/Photos/ ]]; then
+    if [[ ! -d $ouvrage_path/_ETAT_ACTUEL/Photos/ ]]; then
       echo "ERROR photos folder not found in $ouvrage_path " 1>&2
     else
-      find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Photos/" -iregex '.*\(jpg\|png\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/images/large/ \;
+      find "$ouvrage_path/_ETAT_ACTUEL/Photos/" -iregex '.*\(jpg\|png\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/images/large/ \;
     fi
-    if [[ ! -d $ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/ ]]; then
+    if [[ ! -d $ouvrage_path/_ETAT_ACTUEL/Plans/ ]]; then
       echo "ERROR Plans folder not found in $ouvrage_path"  1>&2
     else
-      find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(jpg\|png\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/images/large/ \;
-      find "$ouvrage_path/${num}_00_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/pdf/ \;
+      find "$ouvrage_path/_ETAT_ACTUEL/Plans/" -iregex '.*\(jpg\|png\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/images/large/ \;
+      find "$ouvrage_path/_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} /home/sige/data/carto/data_ouvrage/$num/pdf/ \;
     fi
     # apply rights
     chmod -R 755 /home/sige/data/carto/data_ouvrage/$num
