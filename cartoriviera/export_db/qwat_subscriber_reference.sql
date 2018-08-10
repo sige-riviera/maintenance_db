@@ -6,7 +6,8 @@ drop table if exists cartoriviera.sige_qgis_qwat_subscriber_reference;
 drop table if exists cartoriviera.sige_qgis_qwat_subscriber_reference_mn95;
 
 create table cartoriviera.sige_qgis_qwat_subscriber_reference_mn95 as
-select * from qwat_od.subscriber_reference;
+select subscriber_reference.*, vw_export_subscriber.identification as subscriber_identification from qwat_od.subscriber_reference
+	left join qwat_od.vw_export_subscriber ON subscriber_reference.fk_subscriber = vw_export_subscriber.id;
 
 alter table cartoriviera.sige_qgis_qwat_subscriber_reference_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
 

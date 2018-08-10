@@ -6,7 +6,8 @@ drop table if exists cartoriviera.sige_qgis_qwat_meter_reference;
 drop table if exists cartoriviera.sige_qgis_qwat_meter_reference_mn95;
 
 create table cartoriviera.sige_qgis_qwat_meter_reference_mn95 as
-select * from qwat_od.meter_reference;
+select meter_reference.*, vw_export_meter.identification as meter_identification from qwat_od.meter_reference
+	left join qwat_od.vw_export_meter ON meter_reference.fk_meter = vw_export_meter.id;
 
 alter table cartoriviera.sige_qgis_qwat_meter_reference_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
 
