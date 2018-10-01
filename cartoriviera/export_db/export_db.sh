@@ -53,6 +53,7 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/
 # Also bring stuff from sige_commun in other schemas
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/distribution_croquis_reseau.sql
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/cadastre_sige.sql
+PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/maintenance_db/cartoriviera/export_db/sige_waterhardness.sql
 
 # rename schema
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -c "ALTER SCHEMA cartoriviera RENAME TO sige_qgis_cartoriviera"
