@@ -6,7 +6,7 @@ drop table if exists cartoriviera.sige_qgis_waterhardness;
 drop table if exists cartoriviera.sige_qgis_waterhardness_mn95;
 
 create table cartoriviera.sige_qgis_waterhardness_mn95 as
-select * from sige.waterhardness where visible is true;
+select id, name AS sqwh_name, hardness_median AS sqwh_hardness_median, hardness_min AS sqwh_hardness_min, hardness_max AS sqwh_hardness_max, classification AS sqwh_classification, appreciation AS sqwh_appreciation, geometry from sige.waterhardness where visible is true;
 
 create table cartoriviera.sige_qgis_waterhardness as select * from cartoriviera.sige_qgis_waterhardness_mn95;
 
