@@ -14,6 +14,7 @@ declare -A COMMUNES=( ["Attalens"]="Attalens" \
                       ["51"]="Montreux" \
                       ["43"]="Port-Valais" \
                       ["Roche"]="Roche" \
+                      ["Remaufens"]="Remaufens" \
                       ["83"]="St_Legier" \
                       ["71"]="Vevey" \
                       ["50"]="Veytaux" \
