@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.14">
+<qgis projectname="" version="2.18.23">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -83,16 +83,16 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>561742.24752659001387656</xmin>
-      <ymin>144920.59650413133203983</ymin>
-      <xmax>562005.50794352521188557</xmax>
-      <ymax>145235.69441525905858725</ymax>
+      <xmin>551670.53805300313979387</xmin>
+      <ymin>135119.17680240998743102</ymin>
+      <xmax>568519.20473685581237078</xmax>
+      <ymax>155285.4431145844864659</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
         <srsid>1919</srsid>
         <srid>21781</srid>
         <authid>EPSG:21781</authid>
@@ -255,7 +255,7 @@
       <layername>sige_qgis_croquis_reseau</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -576,7 +576,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_croisement</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -1062,7 +1062,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_hydrante</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -1822,7 +1822,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_ouvrage</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -3886,17 +3886,17 @@ def my_form_open(dialog, layer, feature):
         <default field="folder_date_end" expression=""/>
         <default field="pump_operating_value_fr" expression=""/>
       </defaults>
-      <previewExpression>coalesce(identification|| ' ','') || CASE
-WHEN  "installation_type"  = 'chamber' THEN 'C. '
-WHEN "installation_type"  = 'pressurecontrol' AND fk_pressurecontrol_type = 2801 THEN 'CR. '
-WHEN  "installation_type"  = 'pressurecontrol' AND fk_pressurecontrol_type = 2802 THEN 'CCP. '
-WHEN  "installation_type"  = 'pressurecontrol' AND fk_pressurecontrol_type = 2803 THEN 'CRA. '
-WHEN  "installation_type"  = 'pump' THEN 'P. '
-WHEN  "installation_type"  = 'source' THEN 'S. '
-WHEN  "installation_type"  = 'tank' THEN 'R. '
-WHEN  "installation_type"  = 'treatment' THEN 'T. '
-ELSE ''
-END
+      <previewExpression>coalesce(identification|| ' ','') || CASE&#xd;
+WHEN  "installation_type"  = 'chamber' THEN 'C. '&#xd;
+WHEN "installation_type"  = 'pressurecontrol' AND fk_pressurecontrol_type = 2801 THEN 'CR. '&#xd;
+WHEN  "installation_type"  = 'pressurecontrol' AND fk_pressurecontrol_type = 2802 THEN 'CCP. '&#xd;
+WHEN  "installation_type"  = 'pressurecontrol' AND fk_pressurecontrol_type = 2803 THEN 'CRA. '&#xd;
+WHEN  "installation_type"  = 'pump' THEN 'P. '&#xd;
+WHEN  "installation_type"  = 'source' THEN 'S. '&#xd;
+WHEN  "installation_type"  = 'tank' THEN 'R. '&#xd;
+WHEN  "installation_type"  = 'treatment' THEN 'T. '&#xd;
+ELSE ''&#xd;
+END&#xd;
 || coalesce(name,'')</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="4" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
@@ -3914,7 +3914,7 @@ END
       <layername>sige_qgis_compteur_reseau</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -4547,7 +4547,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_noeud</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -5042,7 +5042,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_piece</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -5726,7 +5726,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_conduite_fonctionnelle</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -7098,7 +7098,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_conduite_etranger</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -8143,7 +8143,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_conduite_non_fonctionnelle</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -9191,7 +9191,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_annotation_ligne</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -9558,7 +9558,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_annotation_point</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -9917,7 +9917,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_zone_consommation</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -10406,7 +10406,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_dossier_technique</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -10769,7 +10769,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_zone_pression</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -11369,7 +11369,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_folios</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -11905,7 +11905,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_hydrante_pression</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -12696,7 +12696,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_qwat_fuite</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -13115,7 +13115,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_qwat_remote</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -13406,6 +13406,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -13431,7 +13432,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="fk_distributor" index="1" name=""/>
@@ -13477,7 +13478,7 @@ def my_form_open(dialog, layer, feature):
       </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="673441049">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="fk_distributor"/>
@@ -13507,10 +13508,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
@@ -13578,7 +13579,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_abonne</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -14421,7 +14422,7 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_vanne</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
           <srsid>1919</srsid>
           <srid>21781</srid>
           <authid>EPSG:21781</authid>
@@ -15519,81 +15520,79 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
   </projectlayers>
   <properties>
-    <Variables>
-      <variableNames type="QStringList"/>
-      <variableValues type="QStringList"/>
-    </Variables>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUrl type="QString"></WMSUrl>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:21781</ProjectCrs>
+      <ProjectCRSID type="int">1919</ProjectCRSID>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <RandomColors type="bool">true</RandomColors>
+      <AlphaInt type="int">255</AlphaInt>
+      <ColorRamp type="QString"></ColorRamp>
+    </DefaultStyles>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <quickfinder_plugin>
       <qftsfilepath type="QString"></qftsfilepath>
       <project type="bool">false</project>
       <refreshDelay type="int">15</refreshDelay>
       <refreshAuto type="bool">true</refreshAuto>
     </quickfinder_plugin>
-    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
-    <WMSKeywordList type="QStringList">
-      <value></value>
-    </WMSKeywordList>
-    <WFSUrl type="QString"></WFSUrl>
-    <Paths>
-      <Absolute type="bool">false</Absolute>
-    </Paths>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList">
-      <value>croquis_reseau20170914153941848</value>
-      <value>crossing20170912143156180</value>
-      <value>hydrant20170912112103216</value>
-      <value>installation20170912103810982</value>
-      <value>meter20170912075821953</value>
-      <value>node20170821111240113</value>
-      <value>part20170912113448062</value>
-      <value>pipe20170817163039703</value>
-      <value>pipe_copy20170821075917185</value>
-      <value>pipe_copy20170821075918952</value>
-      <value>qwat_annotation_line20170919102956179</value>
-      <value>qwat_annotation_point20170919102956209</value>
-      <value>qwat_consumptionzone20170919113125033</value>
-      <value>qwat_folder20170919112604553</value>
-      <value>qwat_pressurezone20170919102956224</value>
-      <value>qwat_printmap20170919102956238</value>
-      <value>sige_qgis_qwat_hydrant20171020105757789</value>
-      <value>sige_qgis_qwat_leak20170928162343618</value>
-      <value>subscriber20170911155257972</value>
-      <value>valve20170829165258108</value>
-    </WFSLayers>
     <WMSContactMail type="QString"></WMSContactMail>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-      <DegreeFormat type="QString">MU</DegreeFormat>
-    </PositionPrecision>
-    <WCSUrl type="QString"></WCSUrl>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WFSLayersPrecision>
+      <sige_qgis_qwat_hydrant20171020105757789 type="int">8</sige_qgis_qwat_hydrant20171020105757789>
+      <sige_qgis_qwat_remote20171122094212805 type="int">8</sige_qgis_qwat_remote20171122094212805>
+      <qwat_printmap20170919102956238 type="int">8</qwat_printmap20170919102956238>
+      <qwat_annotation_line20170919102956179 type="int">8</qwat_annotation_line20170919102956179>
+      <installation20170912103810982 type="int">8</installation20170912103810982>
+      <node20170821111240113 type="int">8</node20170821111240113>
+      <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
+      <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
+      <meter20170912075821953 type="int">8</meter20170912075821953>
+      <part20170912113448062 type="int">8</part20170912113448062>
+      <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
+      <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
+      <pipe20170817163039703 type="int">8</pipe20170817163039703>
+      <qwat_folder20170919112604553 type="int">8</qwat_folder20170919112604553>
+      <crossing20170912143156180 type="int">8</crossing20170912143156180>
+      <qwat_annotation_point20170919102956209 type="int">8</qwat_annotation_point20170919102956209>
+      <qwat_consumptionzone20170919113125033 type="int">8</qwat_consumptionzone20170919113125033>
+      <qwat_pressurezone20170919102956224 type="int">8</qwat_pressurezone20170919102956224>
+      <valve20170829165258108 type="int">8</valve20170829165258108>
+      <sige_qgis_qwat_leak20170928162343618 type="int">8</sige_qgis_qwat_leak20170928162343618>
+      <croquis_reseau20170914153941848 type="int">8</croquis_reseau20170914153941848>
+    </WFSLayersPrecision>
+    <WMSRestrictedComposers type="QStringList"/>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WMSContactPhone type="QString"></WMSContactPhone>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSContactPosition type="QString"></WMSContactPosition>
-    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
-    <Measure>
-      <Ellipsoid type="QString">bessel</Ellipsoid>
-    </Measure>
-    <WMSPrecision type="QString">8</WMSPrecision>
-    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <WFSTLayers>
       <Insert type="QStringList"/>
       <Update type="QStringList"/>
       <Delete type="QStringList"/>
     </WFSTLayers>
-    <Gui>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-    </Gui>
+    <WCSLayers type="QStringList"/>
+    <WMSRestrictedLayers type="QStringList"/>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSPrecision type="QString">8</WMSPrecision>
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
@@ -15661,28 +15660,6 @@ def my_form_open(dialog, layer, feature):
         <value>0.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
-    <WFSLayersPrecision>
-      <sige_qgis_qwat_hydrant20171020105757789 type="int">8</sige_qgis_qwat_hydrant20171020105757789>
-      <qwat_printmap20170919102956238 type="int">8</qwat_printmap20170919102956238>
-      <qwat_annotation_line20170919102956179 type="int">8</qwat_annotation_line20170919102956179>
-      <installation20170912103810982 type="int">8</installation20170912103810982>
-      <node20170821111240113 type="int">8</node20170821111240113>
-      <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
-      <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
-      <part20170912113448062 type="int">8</part20170912113448062>
-      <meter20170912075821953 type="int">8</meter20170912075821953>
-      <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
-      <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
-      <pipe20170817163039703 type="int">8</pipe20170817163039703>
-      <qwat_folder20170919112604553 type="int">8</qwat_folder20170919112604553>
-      <crossing20170912143156180 type="int">8</crossing20170912143156180>
-      <qwat_annotation_point20170919102956209 type="int">8</qwat_annotation_point20170919102956209>
-      <qwat_consumptionzone20170919113125033 type="int">8</qwat_consumptionzone20170919113125033>
-      <qwat_pressurezone20170919102956224 type="int">8</qwat_pressurezone20170919102956224>
-      <valve20170829165258108 type="int">8</valve20170829165258108>
-      <sige_qgis_qwat_leak20170928162343618 type="int">8</sige_qgis_qwat_leak20170928162343618>
-      <croquis_reseau20170914153941848 type="int">8</croquis_reseau20170914153941848>
-    </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList">
         <value>crossing20170912143156180</value>
@@ -15692,35 +15669,63 @@ def my_form_open(dialog, layer, feature):
         <value>qwat_printmap20170919102956238</value>
       </disabledLayers>
     </Identify>
-    <Macros>
-      <pythonCode type="QString"></pythonCode>
-    </Macros>
-    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
-    <WCSLayers type="QStringList"/>
-    <Legend>
-      <filterByMap type="bool">false</filterByMap>
-    </Legend>
-    <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
-      <ProjectCrs type="QString">EPSG:21781</ProjectCrs>
-      <ProjectCRSID type="int">1919</ProjectCRSID>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
-    <DefaultStyles>
-      <Fill type="QString"></Fill>
-      <Line type="QString"></Line>
-      <Marker type="QString"></Marker>
-      <RandomColors type="bool">true</RandomColors>
-      <AlphaInt type="int">255</AlphaInt>
-      <ColorRamp type="QString"></ColorRamp>
-    </DefaultStyles>
-    <WMSFees type="QString">conditions unknown</WMSFees>
-    <WMSImageQuality type="int">90</WMSImageQuality>
-    <Measurement>
-      <DistanceUnits type="QString">meters</DistanceUnits>
-      <AreaUnits type="QString">m2</AreaUnits>
-    </Measurement>
-    <WMSUrl type="QString"></WMSUrl>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+    </Gui>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <Measure>
+      <Ellipsoid type="QString">bessel</Ellipsoid>
+    </Measure>
+    <WFSLayers type="QStringList">
+      <value>croquis_reseau20170914153941848</value>
+      <value>crossing20170912143156180</value>
+      <value>hydrant20170912112103216</value>
+      <value>installation20170912103810982</value>
+      <value>meter20170912075821953</value>
+      <value>node20170821111240113</value>
+      <value>part20170912113448062</value>
+      <value>pipe20170817163039703</value>
+      <value>pipe_copy20170821075917185</value>
+      <value>pipe_copy20170821075918952</value>
+      <value>qwat_annotation_line20170919102956179</value>
+      <value>qwat_annotation_point20170919102956209</value>
+      <value>qwat_consumptionzone20170919113125033</value>
+      <value>qwat_folder20170919112604553</value>
+      <value>qwat_pressurezone20170919102956224</value>
+      <value>qwat_printmap20170919102956238</value>
+      <value>sige_qgis_qwat_hydrant20171020105757789</value>
+      <value>sige_qgis_qwat_leak20170928162343618</value>
+      <value>sige_qgis_qwat_remote20171122094212805</value>
+      <value>subscriber20170911155257972</value>
+      <value>valve20170829165258108</value>
+    </WFSLayers>
+    <WFSUrl type="QString"></WFSUrl>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
   </properties>
   <visibility-presets/>
 </qgis>

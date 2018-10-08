@@ -1,14 +1,14 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.12">
+<qgis projectname="" version="2.18.23">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="export_wastewater_structure20170515095249749" source="service='sige_carto' sslmode=allow key='tid' srid=2056 type=MultiPoint table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qgep_wastewater_structure&quot; (situation_geometry) sql=" name="sige_qgis_chambres">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="export_wastewater_structure20170515095249749" source="service='sige_carto' sslmode=allow key='tid' srid=2056 type=MultiPoint table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qgep_wastewater_structure_mn95&quot; (situation_geometry) sql=" name="sige_qgis_chambres">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="export_reach20170515094209621" source="service='sige_carto' sslmode=allow key='tid' srid=2056 type=CompoundCurveZ table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qgep_reach&quot; (progression_geometry) sql=" name="sige_qgis_collecteurs">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="export_reach20170515094209621" source="service='sige_carto' sslmode=allow key='tid' srid=2056 type=CompoundCurveZ table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qgep_reach_mn95&quot; (progression_geometry) sql=" name="sige_qgis_collecteurs">
       <customproperties>
         <property key="showFeatureCount" value="0"/>
       </customproperties>
@@ -18,20 +18,20 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>556607.09766330197453499</xmin>
-      <ymin>141262.08697624213527888</ymin>
-      <xmax>560131.93821792723610997</xmax>
-      <ymax>146252.81347418902441859</ymax>
+      <xmin>2544424.99608218390494585</xmin>
+      <ymin>1133373.34599099843762815</ymin>
+      <xmax>2575060.81676884833723307</xmax>
+      <ymax>1153336.25198278552852571</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
-        <srsid>1919</srsid>
+        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>47</srsid>
         <srid>2056</srid>
         <authid>EPSG:2056</authid>
-        <description>CH1903 / LV03</description>
+        <description>CH1903+ / LV95</description>
         <projectionacronym>somerc</projectionacronym>
         <ellipsoidacronym>bessel</ellipsoidacronym>
         <geographicflag>false</geographicflag>
@@ -74,11 +74,11 @@
       <layername>sige_qgis_collecteurs</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>1919</srsid>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
           <srid>2056</srid>
           <authid>EPSG:2056</authid>
-          <description>CH1903 / LV03</description>
+          <description>CH1903+ / LV95</description>
           <projectionacronym>somerc</projectionacronym>
           <ellipsoidacronym>bessel</ellipsoidacronym>
           <geographicflag>false</geographicflag>
@@ -1582,8 +1582,8 @@
         <attribute>accessibility_value_de</attribute>
         <attribute>horizontal_positioning_vsacode</attribute>
         <attribute>function_hierarchic_value_de</attribute>
-        <attribute>horizontal_positioning_value_ro</attribute>
         <attribute>usage_planned_abbr_en</attribute>
+        <attribute>horizontal_positioning_value_ro</attribute>
         <attribute>rv_construction_type_value_en</attribute>
         <attribute>function_hydraulic_vsacode</attribute>
         <attribute>fk_operator</attribute>
@@ -1601,27 +1601,27 @@
         <attribute>operator_old_obj_id</attribute>
         <attribute>structure_condition_value_de</attribute>
         <attribute>reliner_material_value_de</attribute>
-        <attribute>material_abbr_en</attribute>
         <attribute>usage_planned_abbr_fr</attribute>
-        <attribute>usage_current_value_en</attribute>
+        <attribute>material_abbr_en</attribute>
         <attribute>financing_abbr_ro</attribute>
+        <attribute>usage_current_value_en</attribute>
         <attribute>relining_kind_value_ro</attribute>
-        <attribute>accessibility_value_en</attribute>
         <attribute>horizontal_positioning_value_de</attribute>
-        <attribute>function_hierarchic_value_en</attribute>
+        <attribute>accessibility_value_en</attribute>
         <attribute>horizontal_positioning_abbr_fr</attribute>
+        <attribute>function_hierarchic_value_en</attribute>
         <attribute>fk_pipe_profile_profile_type</attribute>
-        <attribute>usage_current_order_usage_current</attribute>
         <attribute>reliner_material_abbr_fr</attribute>
+        <attribute>usage_current_order_usage_current</attribute>
         <attribute>status_abbr_ro</attribute>
-        <attribute>inside_coating_abbr_ro</attribute>
         <attribute>elevation_determination_value_en</attribute>
+        <attribute>inside_coating_abbr_ro</attribute>
         <attribute>accessibility_abbr_de</attribute>
         <attribute>relining_construction_value_de</attribute>
         <attribute>rp_from_elevation_accuracy</attribute>
-        <attribute>gross_costs</attribute>
-        <attribute>function_hierarchic_value_ro</attribute>
         <attribute>reliner_material_vsacode</attribute>
+        <attribute>function_hierarchic_value_ro</attribute>
+        <attribute>gross_costs</attribute>
         <attribute>usage_current_abbr_de</attribute>
         <attribute>operator_remark</attribute>
         <attribute>material_abbr_fr</attribute>
@@ -1647,8 +1647,8 @@
         <attribute>rp_from_fk_dataowner</attribute>
         <attribute>material_value_de</attribute>
         <attribute>usage_planned_active</attribute>
-        <attribute>rp_to_outlet_shape</attribute>
         <attribute>relining_kind_value_en</attribute>
+        <attribute>rp_to_outlet_shape</attribute>
         <attribute>structure_condition_abbr_de</attribute>
         <attribute>status_value_de</attribute>
         <attribute>owner_last_modification</attribute>
@@ -1660,14 +1660,14 @@
         <attribute>material_vsacode</attribute>
         <attribute>rp_to_fk_dataowner</attribute>
         <attribute>usage_current_abbr_ro</attribute>
-        <attribute>connection_type_vsacode</attribute>
         <attribute>fk_pipe_profile_remark</attribute>
+        <attribute>connection_type_vsacode</attribute>
         <attribute>fk_pipe_profile_fk_provider</attribute>
         <attribute>financing_abbr_fr</attribute>
         <attribute>elevation_determination_abbr_fr</attribute>
         <attribute>relining_construction_abbr_de</attribute>
-        <attribute>accessibility_active</attribute>
         <attribute>inside_coating_value_de</attribute>
+        <attribute>accessibility_active</attribute>
         <attribute>fk_pipe_profile</attribute>
         <attribute>material_value_en</attribute>
         <attribute>structure_condition_abbr_en</attribute>
@@ -2524,11 +2524,11 @@ def my_form_open(dialog, layer, feature):
       <layername>sige_qgis_chambres</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>1919</srsid>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
           <srid>2056</srid>
           <authid>EPSG:2056</authid>
-          <description>CH1903 / LV03</description>
+          <description>CH1903+ / LV95</description>
           <projectionacronym>somerc</projectionacronym>
           <ellipsoidacronym>bessel</ellipsoidacronym>
           <geographicflag>false</geographicflag>
@@ -5144,20 +5144,20 @@ def my_form_open(dialog, layer, feature):
         <attribute>financing_abbr_en</attribute>
         <attribute>special_structure_function_abbr_en</attribute>
         <attribute>surface_inflow_abbr_ro</attribute>
-        <attribute>fk_dataowner</attribute>
         <attribute>owner_old_obj_id</attribute>
+        <attribute>fk_dataowner</attribute>
         <attribute>owner_fk_dataowner</attribute>
-        <attribute>manhole_function_value_ro</attribute>
         <attribute>cover_shape_abbr_de</attribute>
+        <attribute>manhole_function_value_ro</attribute>
         <attribute>sludge_bucket_abbr_en</attribute>
         <attribute>status_vsacode</attribute>
         <attribute>operator_old_obj_id</attribute>
         <attribute>structure_condition_value_de</attribute>
         <attribute>cover_material_abbr_de</attribute>
-        <attribute>cover_material_value_de</attribute>
-        <attribute>material_abbr_en</attribute>
-        <attribute>bypass_value_de</attribute>
         <attribute>bypass_active</attribute>
+        <attribute>cover_material_value_de</attribute>
+        <attribute>bypass_value_de</attribute>
+        <attribute>material_abbr_en</attribute>
         <attribute>financing_abbr_ro</attribute>
         <attribute>special_structure_function_value_en</attribute>
         <attribute>surface_inflow_abbr_de</attribute>
@@ -5165,24 +5165,24 @@ def my_form_open(dialog, layer, feature):
         <attribute>status_abbr_ro</attribute>
         <attribute>venting_abbr_fr</attribute>
         <attribute>sludge_bucket_abbr_fr</attribute>
-        <attribute>manhole_function_value_de</attribute>
         <attribute>cover_shape_abbr_en</attribute>
+        <attribute>manhole_function_value_de</attribute>
         <attribute>operator_remark</attribute>
         <attribute>material_abbr_fr</attribute>
         <attribute>structure_condition_value_en</attribute>
         <attribute>cover_material_abbr_en</attribute>
         <attribute>positional_accuracy_value_ro</attribute>
         <attribute>cover_material_value_en</attribute>
-        <attribute>wn_last_modification</attribute>
-        <attribute>bypass_value_en</attribute>
         <attribute>relevance_value_de</attribute>
+        <attribute>bypass_value_en</attribute>
+        <attribute>wn_last_modification</attribute>
         <attribute>renovation_demand_vsacode</attribute>
         <attribute>bypass_vsacode</attribute>
         <attribute>operator_last_modification</attribute>
         <attribute>surface_inflow_abbr_en</attribute>
         <attribute>status_abbr_de</attribute>
-        <attribute>owner_remark</attribute>
         <attribute>cover_fastening_abbr_ro</attribute>
+        <attribute>owner_remark</attribute>
         <attribute>renovation_necessity_vsacode</attribute>
         <attribute>renovation_demand_abbr_ro</attribute>
         <attribute>structure_condition_value_ro</attribute>
@@ -5194,15 +5194,15 @@ def my_form_open(dialog, layer, feature):
         <attribute>cover_material_vsacode</attribute>
         <attribute>venting_value_de</attribute>
         <attribute>material_value_de</attribute>
-        <attribute>sludge_bucket_value_de</attribute>
         <attribute>venting_vsacode</attribute>
+        <attribute>sludge_bucket_value_de</attribute>
         <attribute>relevance_value_en</attribute>
         <attribute>structure_condition_abbr_de</attribute>
         <attribute>status_value_de</attribute>
         <attribute>cover_fastening_abbr_de</attribute>
+        <attribute>owner_last_modification</attribute>
         <attribute>financing_vsacode</attribute>
         <attribute>manhole_function_abbr_fr</attribute>
-        <attribute>owner_last_modification</attribute>
         <attribute>stormwater_tank_arrangement_abbr_fr</attribute>
         <attribute>status_abbr_en</attribute>
         <attribute>renovation_demand_active</attribute>
@@ -5216,16 +5216,16 @@ def my_form_open(dialog, layer, feature):
         <attribute>venting_active</attribute>
         <attribute>venting_value_en</attribute>
         <attribute>manhole_function_abbr_de</attribute>
+        <attribute>positional_accuracy_abbr_de</attribute>
         <attribute>material_value_en</attribute>
         <attribute>cover_fastening_vsacode</attribute>
-        <attribute>positional_accuracy_abbr_de</attribute>
         <attribute>sludge_bucket_value_en</attribute>
-        <attribute>structure_condition_abbr_en</attribute>
         <attribute>stormwater_tank_arrangement_abbr_de</attribute>
+        <attribute>structure_condition_abbr_en</attribute>
         <attribute>status_abbr_fr</attribute>
         <attribute>status_value_en</attribute>
-        <attribute>cover_fastening_abbr_en</attribute>
         <attribute>relevance_vsacode</attribute>
+        <attribute>cover_fastening_abbr_en</attribute>
         <attribute>operator_fk_dataowner</attribute>
         <attribute>sludge_bucket_active</attribute>
         <attribute>status_active</attribute>
@@ -5233,28 +5233,28 @@ def my_form_open(dialog, layer, feature):
         <attribute>manhole_function_vsacode</attribute>
         <attribute>renovation_demand_abbr_en</attribute>
         <attribute>venting_value_ro</attribute>
-        <attribute>structure_condition_abbr_ro</attribute>
         <attribute>cover_shape_value_de</attribute>
+        <attribute>structure_condition_abbr_ro</attribute>
         <attribute>owner_uid</attribute>
         <attribute>material_value_ro</attribute>
         <attribute>sludge_bucket_value_ro</attribute>
         <attribute>status_value_ro</attribute>
         <attribute>manhole_function_abbr_en</attribute>
         <attribute>positional_accuracy_abbr_en</attribute>
-        <attribute>rv_construction_type_abbr_ro</attribute>
         <attribute>stormwater_tank_arrangement_abbr_en</attribute>
+        <attribute>rv_construction_type_abbr_ro</attribute>
         <attribute>rv_construction_type_vsacode</attribute>
-        <attribute>renovation_necessity_value_ro</attribute>
         <attribute>relevance_abbr_de</attribute>
+        <attribute>renovation_necessity_value_ro</attribute>
         <attribute>cover_material_active</attribute>
         <attribute>bypass_abbr_de</attribute>
-        <attribute>cover_shape_value_en</attribute>
         <attribute>positional_accuracy_abbr_ro</attribute>
+        <attribute>cover_shape_value_en</attribute>
         <attribute>owner_identifier</attribute>
         <attribute>wn_obj_id</attribute>
         <attribute>manhole_function_active</attribute>
-        <attribute>manhole_function_abbr_ro</attribute>
         <attribute>stormwater_tank_arrangement_abbr_ro</attribute>
+        <attribute>manhole_function_abbr_ro</attribute>
         <attribute>renovation_demand_value_ro</attribute>
         <attribute>rv_construction_type_abbr_de</attribute>
         <attribute>cover_fastening_value_ro</attribute>
