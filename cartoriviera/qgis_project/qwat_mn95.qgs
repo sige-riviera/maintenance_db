@@ -116,10 +116,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2544438.20996755082160234</xmin>
-      <ymin>1136506.18958634370937943</ymin>
-      <xmax>2568639.80009597260504961</xmax>
-      <ymax>1152077.95208639139309525</ymax>
+      <xmin>2548291.41113594174385071</xmin>
+      <ymin>1137185.72960906033404171</ymin>
+      <xmax>2572493.00126436352729797</xmax>
+      <ymax>1152757.49210910801775753</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -405,7 +405,7 @@
         <property key="labeling/fieldName" value=""/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -432,7 +432,7 @@
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="3"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -574,9 +574,9 @@
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="croquis" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="file" index="2" name=""/>
+        <alias field="croquis" index="0" name="Lien"/>
+        <alias field="id" index="1" name="ID"/>
+        <alias field="file" index="2" name="Nom de fichier"/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -585,8 +585,8 @@
         <columns>
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="file"/>
-          <column width="-1" hidden="0" type="field" name="link"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="croquis"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -856,7 +856,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="true"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -887,7 +887,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -1043,7 +1043,7 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="disabled" index="1" name=""/>
         <alias field="controled" index="2" name=""/>
         <alias field="hide_pipe" index="3" name=""/>
@@ -1052,7 +1052,15 @@ def my_form_open(dialog, layer, feature):
         <alias field="_pipe1_angle" index="6" name=""/>
         <alias field="_pipe2_angle" index="7" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>_pipe2_id</attribute>
+        <attribute>_pipe1_id</attribute>
+        <attribute>hide_pipe</attribute>
+        <attribute>disabled</attribute>
+        <attribute>controled</attribute>
+        <attribute>_pipe1_angle</attribute>
+        <attribute>_pipe2_angle</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].audit('od_crossing20141023083754327',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -1411,7 +1419,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -1442,7 +1450,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -1601,69 +1609,109 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name="ID"/>
-        <alias field="fk_district" index="1" name="commune"/>
-        <alias field="fk_pressurezone" index="2" name="zone de pression"/>
-        <alias field="fk_printmap" index="3" name="folio"/>
-        <alias field="_printmaps" index="4" name="folios"/>
+        <alias field="fk_district" index="1" name=""/>
+        <alias field="fk_pressurezone" index="2" name=""/>
+        <alias field="fk_printmap" index="3" name=""/>
+        <alias field="_printmaps" index="4" name="Folio"/>
         <alias field="_pipe_orientation" index="5" name=""/>
         <alias field="_pipe_schema_visible" index="6" name=""/>
-        <alias field="identification" index="7" name=""/>
-        <alias field="fk_distributor" index="8" name="distributeur"/>
-        <alias field="fk_status" index="9" name="état"/>
-        <alias field="fk_folder" index="10" name="dossier technique"/>
+        <alias field="identification" index="7" name="Identifiant"/>
+        <alias field="fk_distributor" index="8" name=""/>
+        <alias field="fk_status" index="9" name=""/>
+        <alias field="fk_folder" index="10" name=""/>
         <alias field="fk_locationtype" index="11" name=""/>
-        <alias field="fk_precision" index="12" name="précision"/>
-        <alias field="fk_precisionalti" index="13" name="précision altimétrique"/>
-        <alias field="fk_object_reference" index="14" name="pt. de référence"/>
+        <alias field="fk_precision" index="12" name=""/>
+        <alias field="fk_precisionalti" index="13" name=""/>
+        <alias field="fk_object_reference" index="14" name=""/>
         <alias field="altitude" index="15" name=""/>
-        <alias field="year" index="16" name="année"/>
-        <alias field="year_end" index="17" name="année fin"/>
+        <alias field="year" index="16" name="Année"/>
+        <alias field="year_end" index="17" name=""/>
         <alias field="orientation" index="18" name=""/>
-        <alias field="remark" index="19" name="remarques"/>
-        <alias field="label_1_visible" index="20" name="étiquette 1/250"/>
+        <alias field="remark" index="19" name="Remarque"/>
+        <alias field="label_1_visible" index="20" name=""/>
         <alias field="label_1_x" index="21" name=""/>
         <alias field="label_1_y" index="22" name=""/>
         <alias field="label_1_rotation" index="23" name=""/>
-        <alias field="label_1_text" index="24" name="texte 1/250"/>
-        <alias field="label_2_visible" index="25" name="étiquette 1/5000"/>
+        <alias field="label_1_text" index="24" name=""/>
+        <alias field="label_2_visible" index="25" name=""/>
         <alias field="label_2_x" index="26" name=""/>
         <alias field="label_2_y" index="27" name=""/>
         <alias field="label_2_rotation" index="28" name=""/>
-        <alias field="label_2_text" index="29" name="texte 1/5000"/>
-        <alias field="fk_provider" index="30" name="fournisseur"/>
-        <alias field="fk_model_sup" index="31" name="modèle sup."/>
-        <alias field="fk_model_inf" index="32" name="modèle inf."/>
-        <alias field="fk_material" index="33" name="matériau"/>
-        <alias field="fk_output" index="34" name="sortie"/>
-        <alias field="underground" index="35" name="souterraine"/>
-        <alias field="marked" index="36" name="marqué"/>
-        <alias field="pressure_static" index="37" name="pression statique"/>
-        <alias field="pressure_dynamic" index="38" name="pression dynamique"/>
-        <alias field="flow" index="39" name="débit"/>
-        <alias field="observation_date" index="40" name="date de mesure"/>
-        <alias field="observation_source" index="41" name="origine des mesures"/>
-        <alias field="status_value_fr" index="42" name="statut"/>
-        <alias field="status_functional" index="43" name="fonctionnelle"/>
-        <alias field="district_name" index="44" name=""/>
-        <alias field="district_shortname" index="45" name=""/>
-        <alias field="district_zip" index="46" name=""/>
-        <alias field="district_land_registry" index="47" name=""/>
-        <alias field="district_prefix" index="48" name=""/>
-        <alias field="model_inf_value_fr" index="49" name=""/>
-        <alias field="pressurezone_name" index="50" name=""/>
+        <alias field="label_2_text" index="29" name=""/>
+        <alias field="fk_provider" index="30" name=""/>
+        <alias field="fk_model_sup" index="31" name=""/>
+        <alias field="fk_model_inf" index="32" name=""/>
+        <alias field="fk_material" index="33" name=""/>
+        <alias field="fk_output" index="34" name=""/>
+        <alias field="underground" index="35" name="Souterraine"/>
+        <alias field="marked" index="36" name=""/>
+        <alias field="pressure_static" index="37" name="Pression statique"/>
+        <alias field="pressure_dynamic" index="38" name="Pression dynamique"/>
+        <alias field="flow" index="39" name="Débit"/>
+        <alias field="observation_date" index="40" name="Date de mesure"/>
+        <alias field="observation_source" index="41" name="Origine des mesures"/>
+        <alias field="status_value_fr" index="42" name="Etat"/>
+        <alias field="status_functional" index="43" name="Fonctionnelle"/>
+        <alias field="district_name" index="44" name="Commune"/>
+        <alias field="district_shortname" index="45" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="46" name="Code postal"/>
+        <alias field="district_land_registry" index="47" name="Numéro de commune"/>
+        <alias field="district_prefix" index="48" name="Préfixe de commune"/>
+        <alias field="model_inf_value_fr" index="49" name="Modèle inf."/>
+        <alias field="pressurezone_name" index="50" name="Zone de pression"/>
         <alias field="pressurezone_colorcode" index="51" name=""/>
-        <alias field="material_value_fr" index="52" name=""/>
+        <alias field="material_value_fr" index="52" name="Matériau"/>
         <alias field="precision_value_fr" index="53" name=""/>
-        <alias field="model_sup_value_fr" index="54" name=""/>
-        <alias field="provider_value_fr" index="55" name=""/>
-        <alias field="distributor_name" index="56" name=""/>
+        <alias field="model_sup_value_fr" index="54" name="Modèle sup."/>
+        <alias field="provider_value_fr" index="55" name="Fournisseur"/>
+        <alias field="distributor_name" index="56" name="Distributeur"/>
         <alias field="output_value_fr" index="57" name=""/>
-        <alias field="folder_identification" index="58" name=""/>
+        <alias field="folder_identification" index="58" name="Dossier technique"/>
         <alias field="folder_description" index="59" name=""/>
         <alias field="folder_date_start" index="60" name=""/>
         <alias field="folder_date_end" index="61" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>_pipe_schema_visible</attribute>
+        <attribute>year</attribute>
+        <attribute>fk_model_inf</attribute>
+        <attribute>folder_description</attribute>
+        <attribute>fk_precisionalti</attribute>
+        <attribute>folder_date_start</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>fk_provider</attribute>
+        <attribute>fk_model_sup</attribute>
+        <attribute>fk_output</attribute>
+        <attribute>fk_object_reference</attribute>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>fk_folder</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>year_end</attribute>
+        <attribute>fk_material</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>marked</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>identification</attribute>
+        <attribute>orientation</attribute>
+        <attribute>folder_date_end</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>pressurezone_colorcode</attribute>
+        <attribute>precision_value_fr</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>altitude</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>fk_printmap</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>output_value_fr</attribute>
+        <attribute>label_1_visible</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('hydrant20130304110004848',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -1676,7 +1724,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="field" name="fk_pressurezone"/>
           <column width="-1" hidden="1" type="field" name="fk_printmap"/>
           <column width="-1" hidden="1" type="field" name="_printmaps"/>
-          <column width="-1" hidden="1" type="field" name="_pipe_node_type"/>
           <column width="-1" hidden="1" type="field" name="_pipe_orientation"/>
           <column width="-1" hidden="1" type="field" name="_pipe_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="fk_distributor"/>
@@ -1686,7 +1733,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="year"/>
           <column width="-1" hidden="0" type="field" name="year_end"/>
           <column width="-1" hidden="0" type="field" name="remark"/>
-          <column width="-1" hidden="1" type="field" name="schema_force_visible"/>
           <column width="-1" hidden="1" type="field" name="label_1_visible"/>
           <column width="-1" hidden="1" type="field" name="label_1_x"/>
           <column width="-1" hidden="1" type="field" name="label_1_y"/>
@@ -2961,29 +3007,29 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="lien" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="fk_district" index="2" name="commune"/>
-        <alias field="fk_pressurezone" index="3" name="zone de pression"/>
-        <alias field="fk_printmap" index="4" name="folio"/>
-        <alias field="_printmaps" index="5" name="folios"/>
+        <alias field="lien" index="0" name="Lien"/>
+        <alias field="id" index="1" name="ID"/>
+        <alias field="fk_district" index="2" name=""/>
+        <alias field="fk_pressurezone" index="3" name=""/>
+        <alias field="fk_printmap" index="4" name=""/>
+        <alias field="_printmaps" index="5" name="Folio"/>
         <alias field="_geometry_alt1_used" index="6" name=""/>
         <alias field="_geometry_alt2_used" index="7" name=""/>
         <alias field="_pipe_orientation" index="8" name=""/>
         <alias field="_pipe_schema_visible" index="9" name=""/>
-        <alias field="identification" index="10" name=""/>
-        <alias field="fk_distributor" index="11" name="distributeur"/>
-        <alias field="fk_status" index="12" name="statut"/>
-        <alias field="fk_folder" index="13" name="dossier technique"/>
-        <alias field="fk_locationtype" index="14" name="emplacement"/>
-        <alias field="fk_precision" index="15" name="précision"/>
-        <alias field="fk_precisionalti" index="16" name="précis. alti."/>
-        <alias field="fk_object_reference" index="17" name="point de référence"/>
+        <alias field="identification" index="10" name="Identifiant"/>
+        <alias field="fk_distributor" index="11" name=""/>
+        <alias field="fk_status" index="12" name=""/>
+        <alias field="fk_folder" index="13" name=""/>
+        <alias field="fk_locationtype" index="14" name=""/>
+        <alias field="fk_precision" index="15" name=""/>
+        <alias field="fk_precisionalti" index="16" name=""/>
+        <alias field="fk_object_reference" index="17" name=""/>
         <alias field="altitude" index="18" name=""/>
-        <alias field="year" index="19" name="année"/>
-        <alias field="year_end" index="20" name="année fin"/>
+        <alias field="year" index="19" name="Année"/>
+        <alias field="year_end" index="20" name=""/>
         <alias field="orientation" index="21" name=""/>
-        <alias field="remark" index="22" name="remarques"/>
+        <alias field="remark" index="22" name="Remarque"/>
         <alias field="label_1_visible" index="23" name=""/>
         <alias field="label_1_x" index="24" name=""/>
         <alias field="label_1_y" index="25" name=""/>
@@ -2994,87 +3040,87 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_y" index="30" name=""/>
         <alias field="label_2_rotation" index="31" name=""/>
         <alias field="label_2_text" index="32" name=""/>
-        <alias field="installation_type" index="33" name=""/>
-        <alias field="name" index="34" name=""/>
-        <alias field="fk_parent" index="35" name="ouvrage principal"/>
+        <alias field="installation_type" index="33" name="Type d'ouvrage"/>
+        <alias field="name" index="34" name="Nom"/>
+        <alias field="fk_parent" index="35" name=""/>
         <alias field="fk_remote" index="36" name=""/>
         <alias field="fk_watertype" index="37" name=""/>
-        <alias field="parcel" index="38" name=""/>
-        <alias field="eca" index="39" name=""/>
-        <alias field="open_water_surface" index="40" name="eau de surface"/>
+        <alias field="parcel" index="38" name="Parcelle"/>
+        <alias field="eca" index="39" name="ECA"/>
+        <alias field="open_water_surface" index="40" name="Eau de surface"/>
         <alias field="geometry_polygon" index="41" name=""/>
-        <alias field="fk_source_type" index="42" name="type de source"/>
-        <alias field="fk_source_quality" index="43" name="qualité"/>
-        <alias field="flow_lowest" index="44" name="débit étiage"/>
-        <alias field="flow_average" index="45" name="débit moyen"/>
-        <alias field="flow_concession" index="46" name="débit concession"/>
-        <alias field="contract_end" index="47" name="fin de contrat"/>
-        <alias field="gathering_chamber" index="48" name="chambre de rassemblement"/>
-        <alias field="fk_pump_type" index="49" name="type de pompage"/>
+        <alias field="fk_source_type" index="42" name=""/>
+        <alias field="fk_source_quality" index="43" name=""/>
+        <alias field="flow_lowest" index="44" name="Débit étiage"/>
+        <alias field="flow_average" index="45" name="Débit moyen"/>
+        <alias field="flow_concession" index="46" name="Débit concession"/>
+        <alias field="contract_end" index="47" name="Fin de contrat"/>
+        <alias field="gathering_chamber" index="48" name="Chambre de rassemblement"/>
+        <alias field="fk_pump_type" index="49" name=""/>
         <alias field="fk_pipe_in" index="50" name=""/>
         <alias field="fk_pipe_out" index="51" name=""/>
-        <alias field="fk_pump_operating" index="52" name="mode de pompage"/>
-        <alias field="no_pumps" index="53" name="nb. de pompes"/>
-        <alias field="rejected_flow" index="54" name="débit refoulé"/>
-        <alias field="manometric_height" index="55" name="hauteur manométrique"/>
+        <alias field="fk_pump_operating" index="52" name=""/>
+        <alias field="no_pumps" index="53" name="Nombre de pompes"/>
+        <alias field="rejected_flow" index="54" name="Débit refoulé"/>
+        <alias field="manometric_height" index="55" name="Hauteur manométrique"/>
         <alias field="fk_overflow" index="56" name=""/>
         <alias field="fk_tank_firestorage" index="57" name=""/>
-        <alias field="storage_total" index="58" name="réserve totale"/>
-        <alias field="storage_supply" index="59" name="réserve utile"/>
-        <alias field="storage_fire" index="60" name="réserve incendie"/>
-        <alias field="altitude_overflow" index="61" name="altitude trop-plein"/>
-        <alias field="altitude_apron" index="62" name="altitude radier"/>
-        <alias field="height_max" index="63" name="hauteur max"/>
-        <alias field="fire_valve" index="64" name="vanne incendie"/>
-        <alias field="fire_remote" index="65" name="télécommande incendie"/>
-        <alias field="_litrepercm" index="66" name="litres par cm"/>
-        <alias field="cistern1_fk_type" index="67" name="type"/>
-        <alias field="cistern1_dimension_1" index="68" name="diamètre/largeur"/>
-        <alias field="cistern1_dimension_2" index="69" name="longueur"/>
-        <alias field="cistern1_storage" index="70" name="volume"/>
-        <alias field="_cistern1_litrepercm" index="71" name="cuve 1 litres par cm"/>
-        <alias field="cistern2_fk_type" index="72" name="type"/>
-        <alias field="cistern2_dimension_1" index="73" name="diamètre/largeur"/>
-        <alias field="cistern2_dimension_2" index="74" name="longueur"/>
-        <alias field="cistern2_storage" index="75" name="volume"/>
-        <alias field="_cistern2_litrepercm" index="76" name="cuve 2 litres par cm"/>
-        <alias field="sanitization_uv" index="77" name="désinfection UV"/>
-        <alias field="sanitization_chlorine_liquid" index="78" name="désinfection chlore liquide"/>
-        <alias field="sanitization_chlorine_gazeous" index="79" name="désinfection chlore gazeux"/>
-        <alias field="sanitization_ozone" index="80" name="désinfection ozone"/>
-        <alias field="filtration_membrane" index="81" name="filtration membranaire"/>
-        <alias field="filtration_sandorgravel" index="82" name="filtration à sable"/>
-        <alias field="flocculation" index="83" name="flocculation"/>
-        <alias field="activatedcharcoal" index="84" name="charbon actif"/>
-        <alias field="settling" index="85" name="décantation"/>
-        <alias field="treatment_capacity" index="86" name="cpacité de traitment"/>
-        <alias field="networkseparation" index="87" name="séparation de réseau"/>
-        <alias field="flow_meter" index="88" name="débitmètre"/>
-        <alias field="water_meter" index="89" name="compteur"/>
-        <alias field="manometer" index="90" name="manomètre"/>
-        <alias field="depth" index="91" name=""/>
+        <alias field="storage_total" index="58" name="Réserve totale"/>
+        <alias field="storage_supply" index="59" name="Réserve utile"/>
+        <alias field="storage_fire" index="60" name="Réserve incendie"/>
+        <alias field="altitude_overflow" index="61" name="Altitude trop-plein"/>
+        <alias field="altitude_apron" index="62" name="Altitude radier"/>
+        <alias field="height_max" index="63" name="Hauteur max"/>
+        <alias field="fire_valve" index="64" name="Vanne incendie"/>
+        <alias field="fire_remote" index="65" name="Télécommande incendie"/>
+        <alias field="_litrepercm" index="66" name=""/>
+        <alias field="cistern1_fk_type" index="67" name=""/>
+        <alias field="cistern1_dimension_1" index="68" name="Cuve 1 - diamètre/largeur"/>
+        <alias field="cistern1_dimension_2" index="69" name="Cuve 1 - longueur"/>
+        <alias field="cistern1_storage" index="70" name="Cuve 1 - volume"/>
+        <alias field="_cistern1_litrepercm" index="71" name=""/>
+        <alias field="cistern2_fk_type" index="72" name=""/>
+        <alias field="cistern2_dimension_1" index="73" name="Cuve 2 - diamètre/largeur"/>
+        <alias field="cistern2_dimension_2" index="74" name="Cuve 2 - longueur"/>
+        <alias field="cistern2_storage" index="75" name="Cuve 2 - volume"/>
+        <alias field="_cistern2_litrepercm" index="76" name=""/>
+        <alias field="sanitization_uv" index="77" name="Désinfection UV"/>
+        <alias field="sanitization_chlorine_liquid" index="78" name="Désinfection chlore liquide"/>
+        <alias field="sanitization_chlorine_gazeous" index="79" name="Désinfection chlore gazeux"/>
+        <alias field="sanitization_ozone" index="80" name="Désinfection ozone"/>
+        <alias field="filtration_membrane" index="81" name="Filtration membranaire"/>
+        <alias field="filtration_sandorgravel" index="82" name="Filtration à sable"/>
+        <alias field="flocculation" index="83" name="Flocculation"/>
+        <alias field="activatedcharcoal" index="84" name="Charbon actif"/>
+        <alias field="settling" index="85" name="Décantation"/>
+        <alias field="treatment_capacity" index="86" name="Capacité de traitement"/>
+        <alias field="networkseparation" index="87" name="Séparation de réseau"/>
+        <alias field="flow_meter" index="88" name="Débitmètre"/>
+        <alias field="water_meter" index="89" name="Compteur"/>
+        <alias field="manometer" index="90" name="Manomètre"/>
+        <alias field="depth" index="91" name="Profondeur"/>
         <alias field="no_valves" index="92" name=""/>
-        <alias field="fk_pressurecontrol_type" index="93" name="type de régulation"/>
-        <alias field="status_value_fr" index="94" name=""/>
+        <alias field="fk_pressurecontrol_type" index="93" name=""/>
+        <alias field="status_value_fr" index="94" name="Etat"/>
         <alias field="status_active" index="95" name=""/>
         <alias field="status_functional" index="96" name=""/>
         <alias field="pump_type_value_fr" index="97" name=""/>
         <alias field="cistern2_value_fr" index="98" name=""/>
         <alias field="tank_firestorage_value_fr" index="99" name=""/>
-        <alias field="cistern1_value_fr" index="100" name="type"/>
+        <alias field="cistern1_value_fr" index="100" name=""/>
         <alias field="source_type_value_fr" index="101" name=""/>
         <alias field="source_quality_value_fr" index="102" name=""/>
-        <alias field="distributor_name" index="103" name=""/>
+        <alias field="distributor_name" index="103" name="Distributeur"/>
         <alias field="overflow_value_fr" index="104" name=""/>
         <alias field="pressurecontrol_type_value_fr" index="105" name=""/>
         <alias field="remote_value_fr" index="106" name=""/>
-        <alias field="district_name" index="107" name=""/>
-        <alias field="district_shortname" index="108" name=""/>
-        <alias field="district_zip" index="109" name=""/>
-        <alias field="district_land_registry" index="110" name=""/>
-        <alias field="district_prefix" index="111" name=""/>
-        <alias field="pressurezone_name" index="112" name=""/>
-        <alias field="folder_identification" index="113" name=""/>
+        <alias field="district_name" index="107" name="Commune"/>
+        <alias field="district_shortname" index="108" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="109" name="Code postal"/>
+        <alias field="district_land_registry" index="110" name="Numéro de commune"/>
+        <alias field="district_prefix" index="111" name="Préfixe commune"/>
+        <alias field="pressurezone_name" index="112" name="Zone de pression"/>
+        <alias field="folder_identification" index="113" name="Dossier technique"/>
         <alias field="folder_description" index="114" name=""/>
         <alias field="folder_date_start" index="115" name=""/>
         <alias field="folder_date_end" index="116" name=""/>
@@ -3083,21 +3129,26 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS>
         <attribute>_pipe_schema_visible</attribute>
         <attribute>fk_overflow</attribute>
+        <attribute>folder_description</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>status_functional</attribute>
         <attribute>fk_precisionalti</attribute>
         <attribute>fk_watertype</attribute>
         <attribute>fk_source_type</attribute>
+        <attribute>folder_date_start</attribute>
         <attribute>label_1_rotation</attribute>
         <attribute>fk_pipe_out</attribute>
+        <attribute>no_valves</attribute>
         <attribute>fk_remote</attribute>
         <attribute>fk_object_reference</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>_pipe_orientation</attribute>
+        <attribute>pump_operating_value_fr</attribute>
         <attribute>fk_folder</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>fk_district</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>year_end</attribute>
         <attribute>fk_pump_type</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_x</attribute>
@@ -3105,6 +3156,7 @@ def my_form_open(dialog, layer, feature):
         <attribute>_cistern2_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>orientation</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>fk_precision</attribute>
         <attribute>status_active</attribute>
         <attribute>_litrepercm</attribute>
@@ -3113,10 +3165,10 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_1_x</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_y</attribute>
-        <attribute>fk_tank_firestorage</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>cistern2_fk_type</attribute>
+        <attribute>fk_tank_firestorage</attribute>
         <attribute>fk_printmap</attribute>
+        <attribute>cistern2_fk_type</attribute>
         <attribute>fk_parent</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>label_2_text</attribute>
@@ -3126,7 +3178,6 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pipe_in</attribute>
         <attribute>fk_pressurecontrol_type</attribute>
         <attribute>_cistern1_litrepercm</attribute>
-        <attribute>_printmaps</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -4380,7 +4431,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="true"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -4411,7 +4462,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -4569,11 +4620,14 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="_pipe_node_type" index="1" name=""/>
         <alias field="_pipe_orientation" index="2" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>_pipe_node_type</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('node20130304110005126',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -4971,7 +5025,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="true"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -5002,7 +5056,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -5158,7 +5212,7 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="fk_district" index="1" name=""/>
         <alias field="fk_pressurezone" index="2" name=""/>
         <alias field="fk_printmap" index="3" name=""/>
@@ -5193,7 +5247,41 @@ def my_form_open(dialog, layer, feature):
         <alias field="fk_part_type" index="32" name=""/>
         <alias field="fk_pipe" index="33" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>fk_precisionalti</attribute>
+        <attribute>_pipe_schema_visible</attribute>
+        <attribute>fk_folder</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>_geometry_alt2_used</attribute>
+        <attribute>remark</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_pipe</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>_geometry_alt1_used</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>altitude</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>_printmaps</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>year_end</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>orientation</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>fk_object_reference</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>identification</attribute>
+        <attribute>year</attribute>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>fk_part_type</attribute>
+        <attribute>fk_printmap</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].audit('od_part20140429113327995',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -5207,7 +5295,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="_printmaps"/>
           <column width="-1" hidden="0" type="field" name="_geometry_alt1_used"/>
           <column width="-1" hidden="0" type="field" name="_geometry_alt2_used"/>
-          <column width="-1" hidden="0" type="field" name="_pipe_node_type"/>
           <column width="-1" hidden="0" type="field" name="_pipe_orientation"/>
           <column width="-1" hidden="0" type="field" name="_pipe_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="identification"/>
@@ -5223,7 +5310,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="year_end"/>
           <column width="-1" hidden="0" type="field" name="orientation"/>
           <column width="-1" hidden="0" type="field" name="remark"/>
-          <column width="-1" hidden="0" type="field" name="schema_force_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_x"/>
           <column width="-1" hidden="0" type="field" name="label_1_y"/>
@@ -6191,7 +6277,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -6222,7 +6308,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="7"/>
         <property key="labeling/multilineAlign" value="4294967295"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -6380,26 +6466,26 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>..</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="fk_parent" index="1" name="Parent"/>
-        <alias field="fk_function" index="2" name="Fonction"/>
-        <alias field="fk_installmethod" index="3" name="Mode de pose"/>
-        <alias field="fk_material" index="4" name="Matériau"/>
-        <alias field="fk_distributor" index="5" name="Distributeur"/>
-        <alias field="fk_precision" index="6" name="Précision"/>
-        <alias field="fk_bedding" index="7" name="Lit de pose"/>
-        <alias field="fk_protection" index="8" name="Protection"/>
-        <alias field="fk_status" index="9" name="Statut"/>
-        <alias field="fk_watertype" index="10" name="Eau"/>
-        <alias field="fk_locationtype" index="11" name="Localisation"/>
-        <alias field="fk_folder" index="12" name="Dossier technique"/>
-        <alias field="year" index="13" name="année"/>
-        <alias field="year_rehabilitation" index="14" name="année réhabilitation"/>
-        <alias field="year_end" index="15" name="année fin"/>
+        <alias field="id" index="0" name="ID"/>
+        <alias field="fk_parent" index="1" name=""/>
+        <alias field="fk_function" index="2" name=""/>
+        <alias field="fk_installmethod" index="3" name=""/>
+        <alias field="fk_material" index="4" name=""/>
+        <alias field="fk_distributor" index="5" name=""/>
+        <alias field="fk_precision" index="6" name=""/>
+        <alias field="fk_bedding" index="7" name=""/>
+        <alias field="fk_protection" index="8" name=""/>
+        <alias field="fk_status" index="9" name=""/>
+        <alias field="fk_watertype" index="10" name=""/>
+        <alias field="fk_locationtype" index="11" name=""/>
+        <alias field="fk_folder" index="12" name=""/>
+        <alias field="year" index="13" name="Année"/>
+        <alias field="year_rehabilitation" index="14" name="Année de réhabilitation"/>
+        <alias field="year_end" index="15" name="Année de fin"/>
         <alias field="tunnel_or_bridge" index="16" name="Tunnel ou pont"/>
-        <alias field="pressure_nominal" index="17" name="pression nominale"/>
+        <alias field="pressure_nominal" index="17" name="Pression nominale"/>
         <alias field="remark" index="18" name="Remarque"/>
-        <alias field="_valve_count" index="19" name="Nombre de vanne"/>
+        <alias field="_valve_count" index="19" name="Nombre de vannes"/>
         <alias field="_valve_closed" index="20" name="Fermée par vanne"/>
         <alias field="_schema_visible" index="21" name=""/>
         <alias field="label_1_visible" index="22" name=""/>
@@ -6411,34 +6497,34 @@ def my_form_open(dialog, layer, feature):
         <alias field="fk_district" index="28" name="Commune"/>
         <alias field="fk_pressurezone" index="29" name="Zone de pression"/>
         <alias field="fk_printmap" index="30" name="Folio"/>
-        <alias field="_length2d" index="31" name="longueur 2d"/>
-        <alias field="_length3d" index="32" name="longueur 3d"/>
+        <alias field="_length2d" index="31" name="Longueur 2d"/>
+        <alias field="_length3d" index="32" name="Longueur 3d"/>
         <alias field="_diff_elevation" index="33" name=""/>
         <alias field="_printmaps" index="34" name=""/>
         <alias field="schema_visible" index="35" name=""/>
-        <alias field="status_value_fr" index="36" name="statut"/>
-        <alias field="status_active" index="37" name="active"/>
-        <alias field="status_functional" index="38" name="fonctionnelle"/>
-        <alias field="district_name" index="39" name="communne"/>
-        <alias field="pressurezone_name" index="40" name="zone de pression"/>
+        <alias field="status_value_fr" index="36" name="Statut"/>
+        <alias field="status_active" index="37" name="Active"/>
+        <alias field="status_functional" index="38" name="Fonctionnelle"/>
+        <alias field="district_name" index="39" name="Commune"/>
+        <alias field="pressurezone_name" index="40" name="Zone de pression"/>
         <alias field="pressurezone_population" index="41" name=""/>
         <alias field="pressurezone_subscriber" index="42" name=""/>
         <alias field="pressurezone_colorcode" index="43" name=""/>
-        <alias field="pipe_material_short_fr" index="44" name="matériau"/>
-        <alias field="pipe_material__displayname_fr" index="45" name=""/>
-        <alias field="pipe_material_diameter" index="46" name=""/>
-        <alias field="pipe_material_diameter_nominal" index="47" name=""/>
-        <alias field="pipe_material_diameter_internal" index="48" name=""/>
-        <alias field="pipe_material_diameter_external" index="49" name=""/>
-        <alias field="pipe_material_pressure_nominal" index="50" name=""/>
-        <alias field="precision_value_fr" index="51" name="précision"/>
-        <alias field="pipe_function_value_fr" index="52" name="fonction"/>
+        <alias field="pipe_material_short_fr" index="44" name=""/>
+        <alias field="pipe_material__displayname_fr" index="45" name="Matériau"/>
+        <alias field="pipe_material_diameter" index="46" name="Diamètre"/>
+        <alias field="pipe_material_diameter_nominal" index="47" name="Diamètre nominal"/>
+        <alias field="pipe_material_diameter_internal" index="48" name="Diamètre interne"/>
+        <alias field="pipe_material_diameter_external" index="49" name="Diamètre externe"/>
+        <alias field="pipe_material_pressure_nominal" index="50" name="Pression nominale"/>
+        <alias field="precision_value_fr" index="51" name=""/>
+        <alias field="pipe_function_value_fr" index="52" name="Fonction"/>
         <alias field="pipe_function_schema_visible" index="53" name=""/>
         <alias field="pipe_function_major" index="54" name=""/>
-        <alias field="protection_value_fr" index="55" name="protection"/>
-        <alias field="distributor_name" index="56" name="distributor"/>
-        <alias field="folder_identification" index="57" name="dossier technique"/>
-        <alias field="folder_description" index="58" name="dossier description"/>
+        <alias field="protection_value_fr" index="55" name="Protection"/>
+        <alias field="distributor_name" index="56" name="Distributeur"/>
+        <alias field="folder_identification" index="57" name="Dossier technique"/>
+        <alias field="folder_description" index="58" name=""/>
         <alias field="folder_date_start" index="59" name=""/>
         <alias field="folder_date_end" index="60" name=""/>
       </aliases>
@@ -6451,7 +6537,6 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_node_a</attribute>
         <attribute>label_1_visible</attribute>
         <attribute>fk_node_b</attribute>
-        <attribute>pipe_material_diameter_nominal</attribute>
         <attribute>label_2_text</attribute>
         <attribute>folder_date_end</attribute>
         <attribute>label_2_visible</attribute>
@@ -6459,25 +6544,21 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_1_text</attribute>
         <attribute>_printmaps</attribute>
         <attribute>fk_parent</attribute>
-        <attribute>fk_material</attribute>
         <attribute>pipe_function_schema_visible</attribute>
+        <attribute>fk_material</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>schema_force_visible</attribute>
         <attribute>fk_protection</attribute>
         <attribute>_diff_elevation</attribute>
         <attribute>pipe_material__displayname_fr</attribute>
-        <attribute>pipe_material_diameter</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_district</attribute>
         <attribute>fk_status</attribute>
-        <attribute>pipe_material_pressure_nominal</attribute>
         <attribute>pressurezone_colorcode</attribute>
-        <attribute>pipe_material_diameter_internal</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>fk_pressurezone</attribute>
+        <attribute>folder_description</attribute>
         <attribute>pipe_function_major</attribute>
-        <attribute>pipe_material_diameter_external</attribute>
         <attribute>folder_date_start</attribute>
         <attribute>fk_printmap</attribute>
       </excludeAttributesWMS>
@@ -6508,7 +6589,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="remark"/>
           <column width="-1" hidden="0" type="field" name="_valve_count"/>
           <column width="-1" hidden="0" type="field" name="_valve_closed"/>
-          <column width="-1" hidden="0" type="field" name="schema_force_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_text"/>
           <column width="-1" hidden="0" type="field" name="label_2_visible"/>
@@ -6549,6 +6629,8 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="pipe_material_pressure_nominal"/>
           <column width="-1" hidden="0" type="field" name="pipe_function_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="pipe_function_major"/>
+          <column width="-1" hidden="0" type="field" name="_schema_visible"/>
+          <column width="-1" hidden="0" type="field" name="schema_visible"/>
         </columns>
       </attributetableconfig>
       <editform>../ui_forms/pipe.ui</editform>
@@ -7239,7 +7321,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -7270,7 +7352,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="4294967295"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -7428,26 +7510,26 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>..</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="fk_parent" index="1" name="Parent"/>
-        <alias field="fk_function" index="2" name="Fonction"/>
-        <alias field="fk_installmethod" index="3" name="Mode de pose"/>
-        <alias field="fk_material" index="4" name="Matériau"/>
-        <alias field="fk_distributor" index="5" name="Distributeur"/>
-        <alias field="fk_precision" index="6" name="Précision"/>
-        <alias field="fk_bedding" index="7" name="Lit de pose"/>
-        <alias field="fk_protection" index="8" name="Protection"/>
-        <alias field="fk_status" index="9" name="Statut"/>
-        <alias field="fk_watertype" index="10" name="Eau"/>
-        <alias field="fk_locationtype" index="11" name="Localisation"/>
-        <alias field="fk_folder" index="12" name="Dossier technique"/>
+        <alias field="id" index="0" name="ID"/>
+        <alias field="fk_parent" index="1" name=""/>
+        <alias field="fk_function" index="2" name=""/>
+        <alias field="fk_installmethod" index="3" name=""/>
+        <alias field="fk_material" index="4" name=""/>
+        <alias field="fk_distributor" index="5" name=""/>
+        <alias field="fk_precision" index="6" name=""/>
+        <alias field="fk_bedding" index="7" name=""/>
+        <alias field="fk_protection" index="8" name=""/>
+        <alias field="fk_status" index="9" name=""/>
+        <alias field="fk_watertype" index="10" name=""/>
+        <alias field="fk_locationtype" index="11" name=""/>
+        <alias field="fk_folder" index="12" name=""/>
         <alias field="year" index="13" name="Année"/>
-        <alias field="year_rehabilitation" index="14" name=""/>
+        <alias field="year_rehabilitation" index="14" name="Année de réhabilitation"/>
         <alias field="year_end" index="15" name="Année fin"/>
         <alias field="tunnel_or_bridge" index="16" name="Tunnel ou pont"/>
-        <alias field="pressure_nominal" index="17" name=""/>
+        <alias field="pressure_nominal" index="17" name="Pression nominale"/>
         <alias field="remark" index="18" name="Remarque"/>
-        <alias field="_valve_count" index="19" name="Nombre de vanne"/>
+        <alias field="_valve_count" index="19" name="Nombre de vannes"/>
         <alias field="_valve_closed" index="20" name="Fermée par vanne"/>
         <alias field="_schema_visible" index="21" name=""/>
         <alias field="label_1_visible" index="22" name=""/>
@@ -7456,72 +7538,73 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_text" index="25" name=""/>
         <alias field="fk_node_a" index="26" name=""/>
         <alias field="fk_node_b" index="27" name=""/>
-        <alias field="fk_district" index="28" name="Commune"/>
-        <alias field="fk_pressurezone" index="29" name="Zone de pression"/>
-        <alias field="fk_printmap" index="30" name="Folio"/>
-        <alias field="_length2d" index="31" name=""/>
-        <alias field="_length3d" index="32" name=""/>
+        <alias field="fk_district" index="28" name=""/>
+        <alias field="fk_pressurezone" index="29" name=""/>
+        <alias field="fk_printmap" index="30" name=""/>
+        <alias field="_length2d" index="31" name="Longueur 2D"/>
+        <alias field="_length3d" index="32" name="Longueur 3D"/>
         <alias field="_diff_elevation" index="33" name=""/>
-        <alias field="_printmaps" index="34" name=""/>
+        <alias field="_printmaps" index="34" name="Folio"/>
         <alias field="schema_visible" index="35" name=""/>
-        <alias field="status_value_fr" index="36" name=""/>
-        <alias field="status_active" index="37" name=""/>
-        <alias field="status_functional" index="38" name=""/>
-        <alias field="district_name" index="39" name=""/>
-        <alias field="pressurezone_name" index="40" name=""/>
+        <alias field="status_value_fr" index="36" name="Etat"/>
+        <alias field="status_active" index="37" name="Active"/>
+        <alias field="status_functional" index="38" name="Fonctionnelle"/>
+        <alias field="district_name" index="39" name="Commune"/>
+        <alias field="pressurezone_name" index="40" name="Zone de pression"/>
         <alias field="pressurezone_population" index="41" name=""/>
         <alias field="pressurezone_subscriber" index="42" name=""/>
         <alias field="pressurezone_colorcode" index="43" name=""/>
         <alias field="pipe_material_short_fr" index="44" name=""/>
-        <alias field="pipe_material__displayname_fr" index="45" name=""/>
-        <alias field="pipe_material_diameter" index="46" name=""/>
-        <alias field="pipe_material_diameter_nominal" index="47" name=""/>
-        <alias field="pipe_material_diameter_internal" index="48" name=""/>
-        <alias field="pipe_material_diameter_external" index="49" name=""/>
-        <alias field="pipe_material_pressure_nominal" index="50" name=""/>
+        <alias field="pipe_material__displayname_fr" index="45" name="Materiau"/>
+        <alias field="pipe_material_diameter" index="46" name="Diamètre"/>
+        <alias field="pipe_material_diameter_nominal" index="47" name="Diamètre nominal"/>
+        <alias field="pipe_material_diameter_internal" index="48" name="Diamètre interne"/>
+        <alias field="pipe_material_diameter_external" index="49" name="Diamètre externe"/>
+        <alias field="pipe_material_pressure_nominal" index="50" name="Pression nominale"/>
         <alias field="precision_value_fr" index="51" name=""/>
-        <alias field="pipe_function_value_fr" index="52" name=""/>
+        <alias field="pipe_function_value_fr" index="52" name="Fonction"/>
         <alias field="pipe_function_schema_visible" index="53" name=""/>
         <alias field="pipe_function_major" index="54" name=""/>
-        <alias field="protection_value_fr" index="55" name=""/>
-        <alias field="distributor_name" index="56" name=""/>
-        <alias field="folder_identification" index="57" name=""/>
+        <alias field="protection_value_fr" index="55" name="Protection"/>
+        <alias field="distributor_name" index="56" name="Distributeur"/>
+        <alias field="folder_identification" index="57" name="Dossier technique"/>
         <alias field="folder_description" index="58" name=""/>
         <alias field="folder_date_start" index="59" name=""/>
         <alias field="folder_date_end" index="60" name=""/>
       </aliases>
       <excludeAttributesWMS>
+        <attribute>pipe_material_short_fr</attribute>
         <attribute>fk_folder</attribute>
         <attribute>fk_installmethod</attribute>
         <attribute>fk_watertype</attribute>
+        <attribute>pressurezone_population</attribute>
+        <attribute>schema_visible</attribute>
+        <attribute>precision_value_fr</attribute>
         <attribute>fk_function</attribute>
         <attribute>fk_node_a</attribute>
         <attribute>label_1_visible</attribute>
         <attribute>fk_node_b</attribute>
-        <attribute>pipe_material_diameter_nominal</attribute>
         <attribute>label_2_text</attribute>
         <attribute>folder_date_end</attribute>
         <attribute>label_2_visible</attribute>
+        <attribute>pressurezone_subscriber</attribute>
         <attribute>label_1_text</attribute>
         <attribute>fk_parent</attribute>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_material</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>schema_force_visible</attribute>
         <attribute>fk_protection</attribute>
         <attribute>_diff_elevation</attribute>
-        <attribute>pipe_material__displayname_fr</attribute>
-        <attribute>pipe_material_diameter</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_district</attribute>
         <attribute>fk_status</attribute>
-        <attribute>pipe_material_pressure_nominal</attribute>
-        <attribute>pipe_material_diameter_internal</attribute>
+        <attribute>pressurezone_colorcode</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>fk_pressurezone</attribute>
+        <attribute>folder_description</attribute>
         <attribute>pipe_function_major</attribute>
-        <attribute>pipe_material_diameter_external</attribute>
+        <attribute>_schema_visible</attribute>
         <attribute>folder_date_start</attribute>
         <attribute>fk_printmap</attribute>
       </excludeAttributesWMS>
@@ -7552,7 +7635,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="remark"/>
           <column width="-1" hidden="0" type="field" name="_valve_count"/>
           <column width="-1" hidden="0" type="field" name="_valve_closed"/>
-          <column width="-1" hidden="0" type="field" name="schema_force_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_text"/>
           <column width="-1" hidden="0" type="field" name="label_2_visible"/>
@@ -7594,6 +7676,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="pipe_function_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="pipe_function_major"/>
           <column width="-1" hidden="0" type="field" name="schema_visible"/>
+          <column width="-1" hidden="0" type="field" name="_schema_visible"/>
         </columns>
       </attributetableconfig>
       <editform>../ui_forms/pipe.ui</editform>
@@ -8284,7 +8367,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -8315,7 +8398,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="7"/>
         <property key="labeling/multilineAlign" value="4294967295"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -8473,26 +8556,26 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>..</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="fk_parent" index="1" name="Parent"/>
-        <alias field="fk_function" index="2" name="Fonction"/>
-        <alias field="fk_installmethod" index="3" name="Mode de pose"/>
-        <alias field="fk_material" index="4" name="Matériau"/>
-        <alias field="fk_distributor" index="5" name="Distributeur"/>
-        <alias field="fk_precision" index="6" name="Précision"/>
-        <alias field="fk_bedding" index="7" name="Lit de pose"/>
-        <alias field="fk_protection" index="8" name="Protection"/>
-        <alias field="fk_status" index="9" name="Statut"/>
-        <alias field="fk_watertype" index="10" name="Eau"/>
-        <alias field="fk_locationtype" index="11" name="Localisation"/>
-        <alias field="fk_folder" index="12" name="Dossier technique"/>
+        <alias field="id" index="0" name="ID"/>
+        <alias field="fk_parent" index="1" name=""/>
+        <alias field="fk_function" index="2" name=""/>
+        <alias field="fk_installmethod" index="3" name=""/>
+        <alias field="fk_material" index="4" name=""/>
+        <alias field="fk_distributor" index="5" name=""/>
+        <alias field="fk_precision" index="6" name=""/>
+        <alias field="fk_bedding" index="7" name=""/>
+        <alias field="fk_protection" index="8" name=""/>
+        <alias field="fk_status" index="9" name=""/>
+        <alias field="fk_watertype" index="10" name=""/>
+        <alias field="fk_locationtype" index="11" name=""/>
+        <alias field="fk_folder" index="12" name=""/>
         <alias field="year" index="13" name="Année"/>
-        <alias field="year_rehabilitation" index="14" name=""/>
-        <alias field="year_end" index="15" name="Année fin"/>
+        <alias field="year_rehabilitation" index="14" name="Année de réhabilitation"/>
+        <alias field="year_end" index="15" name="Année de fin"/>
         <alias field="tunnel_or_bridge" index="16" name="Tunnel ou pont"/>
-        <alias field="pressure_nominal" index="17" name=""/>
+        <alias field="pressure_nominal" index="17" name="Pression nominale"/>
         <alias field="remark" index="18" name="Remarque"/>
-        <alias field="_valve_count" index="19" name="Nombre de vanne"/>
+        <alias field="_valve_count" index="19" name="Nombre de vannes"/>
         <alias field="_valve_closed" index="20" name="Fermée par vanne"/>
         <alias field="_schema_visible" index="21" name=""/>
         <alias field="label_1_visible" index="22" name=""/>
@@ -8501,75 +8584,73 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_text" index="25" name=""/>
         <alias field="fk_node_a" index="26" name=""/>
         <alias field="fk_node_b" index="27" name=""/>
-        <alias field="fk_district" index="28" name="Commune"/>
-        <alias field="fk_pressurezone" index="29" name="Zone de pression"/>
-        <alias field="fk_printmap" index="30" name="Folio"/>
-        <alias field="_length2d" index="31" name=""/>
-        <alias field="_length3d" index="32" name=""/>
+        <alias field="fk_district" index="28" name=""/>
+        <alias field="fk_pressurezone" index="29" name=""/>
+        <alias field="fk_printmap" index="30" name=""/>
+        <alias field="_length2d" index="31" name="Longueur 2D"/>
+        <alias field="_length3d" index="32" name="Longueur 3D"/>
         <alias field="_diff_elevation" index="33" name=""/>
-        <alias field="_printmaps" index="34" name=""/>
+        <alias field="_printmaps" index="34" name="Folio"/>
         <alias field="schema_visible" index="35" name=""/>
-        <alias field="status_value_fr" index="36" name=""/>
-        <alias field="status_active" index="37" name=""/>
-        <alias field="status_functional" index="38" name=""/>
-        <alias field="district_name" index="39" name=""/>
-        <alias field="pressurezone_name" index="40" name=""/>
+        <alias field="status_value_fr" index="36" name="Etat"/>
+        <alias field="status_active" index="37" name="Active"/>
+        <alias field="status_functional" index="38" name="Fonctionnelle"/>
+        <alias field="district_name" index="39" name="Commune"/>
+        <alias field="pressurezone_name" index="40" name="Zone de pression"/>
         <alias field="pressurezone_population" index="41" name=""/>
         <alias field="pressurezone_subscriber" index="42" name=""/>
         <alias field="pressurezone_colorcode" index="43" name=""/>
         <alias field="pipe_material_short_fr" index="44" name=""/>
-        <alias field="pipe_material__displayname_fr" index="45" name=""/>
-        <alias field="pipe_material_diameter" index="46" name=""/>
-        <alias field="pipe_material_diameter_nominal" index="47" name=""/>
-        <alias field="pipe_material_diameter_internal" index="48" name=""/>
-        <alias field="pipe_material_diameter_external" index="49" name=""/>
-        <alias field="pipe_material_pressure_nominal" index="50" name=""/>
+        <alias field="pipe_material__displayname_fr" index="45" name="Matériau"/>
+        <alias field="pipe_material_diameter" index="46" name="Diamètre"/>
+        <alias field="pipe_material_diameter_nominal" index="47" name="Diamètre nominal"/>
+        <alias field="pipe_material_diameter_internal" index="48" name="Diamètre interne"/>
+        <alias field="pipe_material_diameter_external" index="49" name="Diamètre externe"/>
+        <alias field="pipe_material_pressure_nominal" index="50" name="Pression nominale"/>
         <alias field="precision_value_fr" index="51" name=""/>
-        <alias field="pipe_function_value_fr" index="52" name=""/>
+        <alias field="pipe_function_value_fr" index="52" name="Fonction"/>
         <alias field="pipe_function_schema_visible" index="53" name=""/>
         <alias field="pipe_function_major" index="54" name=""/>
-        <alias field="protection_value_fr" index="55" name=""/>
-        <alias field="distributor_name" index="56" name=""/>
-        <alias field="folder_identification" index="57" name=""/>
+        <alias field="protection_value_fr" index="55" name="Protection"/>
+        <alias field="distributor_name" index="56" name="Distributeur"/>
+        <alias field="folder_identification" index="57" name="Dossier technique"/>
         <alias field="folder_description" index="58" name=""/>
         <alias field="folder_date_start" index="59" name=""/>
         <alias field="folder_date_end" index="60" name=""/>
       </aliases>
       <excludeAttributesWMS>
+        <attribute>pipe_material_short_fr</attribute>
         <attribute>fk_folder</attribute>
         <attribute>fk_installmethod</attribute>
         <attribute>fk_watertype</attribute>
         <attribute>pressurezone_population</attribute>
+        <attribute>schema_visible</attribute>
+        <attribute>precision_value_fr</attribute>
         <attribute>fk_function</attribute>
         <attribute>fk_node_a</attribute>
         <attribute>label_1_visible</attribute>
         <attribute>fk_node_b</attribute>
-        <attribute>pipe_material_diameter_nominal</attribute>
         <attribute>label_2_text</attribute>
         <attribute>folder_date_end</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>pressurezone_subscriber</attribute>
         <attribute>label_1_text</attribute>
         <attribute>fk_parent</attribute>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_material</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>schema_force_visible</attribute>
         <attribute>fk_protection</attribute>
         <attribute>_diff_elevation</attribute>
-        <attribute>pipe_material__displayname_fr</attribute>
-        <attribute>pipe_material_diameter</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_district</attribute>
         <attribute>fk_status</attribute>
-        <attribute>pipe_material_pressure_nominal</attribute>
         <attribute>pressurezone_colorcode</attribute>
-        <attribute>pipe_material_diameter_internal</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>fk_pressurezone</attribute>
+        <attribute>folder_description</attribute>
         <attribute>pipe_function_major</attribute>
-        <attribute>pipe_material_diameter_external</attribute>
+        <attribute>_schema_visible</attribute>
         <attribute>folder_date_start</attribute>
         <attribute>fk_printmap</attribute>
       </excludeAttributesWMS>
@@ -8600,7 +8681,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="remark"/>
           <column width="-1" hidden="0" type="field" name="_valve_count"/>
           <column width="-1" hidden="0" type="field" name="_valve_closed"/>
-          <column width="-1" hidden="0" type="field" name="schema_force_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_visible"/>
           <column width="-1" hidden="0" type="field" name="label_1_text"/>
           <column width="-1" hidden="0" type="field" name="label_2_visible"/>
@@ -8642,6 +8722,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="pipe_function_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="pipe_function_major"/>
           <column width="-1" hidden="0" type="field" name="schema_visible"/>
+          <column width="-1" hidden="0" type="field" name="_schema_visible"/>
         </columns>
       </attributetableconfig>
       <editform>../ui_forms/pipe.ui</editform>
@@ -8898,7 +8979,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="true"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -8925,7 +9006,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -9067,11 +9148,11 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="labelvisible" index="1" name=""/>
         <alias field="text_size" index="2" name=""/>
         <alias field="text_orientation" index="3" name=""/>
-        <alias field="annotation" index="4" name=""/>
+        <alias field="annotation" index="4" name="Annotation"/>
         <alias field="scale_1" index="5" name=""/>
         <alias field="scale_2" index="6" name=""/>
       </aliases>
@@ -9267,7 +9348,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="true"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -9294,7 +9375,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -9436,10 +9517,10 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="text_size" index="1" name=""/>
         <alias field="text_orientation" index="2" name=""/>
-        <alias field="annotation" index="3" name=""/>
+        <alias field="annotation" index="3" name="Annotation"/>
         <alias field="scale_1" index="4" name=""/>
         <alias field="scale_2" index="5" name=""/>
       </aliases>
@@ -9745,7 +9826,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -9776,7 +9857,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -9932,14 +10013,17 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="name" index="1" name=""/>
+        <alias field="id" index="0" name="ID"/>
+        <alias field="name" index="1" name="Nom"/>
         <alias field="population" index="2" name=""/>
         <alias field="colorcode" index="3" name=""/>
         <alias field="_sum_population" index="4" name="Population totale"/>
-        <alias field="_sum_subscriber" index="5" name="Nb. Abonnés total"/>
+        <alias field="_sum_subscriber" index="5" name="Nb. abonnés total"/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>population</attribute>
+        <attribute>colorcode</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
@@ -10098,7 +10182,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -10129,7 +10213,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -10285,14 +10369,16 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="identification" index="1" name=""/>
-        <alias field="description" index="2" name=""/>
-        <alias field="date_start" index="3" name=""/>
-        <alias field="date_end" index="4" name=""/>
+        <alias field="id" index="0" name="ID"/>
+        <alias field="identification" index="1" name="Identifiant"/>
+        <alias field="description" index="2" name="Description"/>
+        <alias field="date_start" index="3" name="Date de début"/>
+        <alias field="date_end" index="4" name="Date de fin"/>
         <alias field="geometry_polygon" index="5" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>geometry_polygon</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
@@ -10629,7 +10715,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -10660,7 +10746,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="5"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -10818,10 +10904,10 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="fk_distributor" index="1" name=""/>
         <alias field="fk_consumptionzone" index="2" name=""/>
-        <alias field="name" index="3" name=""/>
+        <alias field="name" index="3" name="Nom"/>
         <alias field="population" index="4" name=""/>
         <alias field="subscriber" index="5" name=""/>
         <alias field="colorcode" index="6" name=""/>
@@ -10843,23 +10929,27 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_text" index="22" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>geometry_alt1</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>geometry_alt2</attribute>
-        <attribute>_geometry_alt1_used</attribute>
-        <attribute>label_2_rotation</attribute>
-        <attribute>label_2_text</attribute>
-        <attribute>update_geometry_alt1</attribute>
-        <attribute>label_1_text</attribute>
-        <attribute>update_geometry_alt2</attribute>
-        <attribute>label_1_x</attribute>
-        <attribute>label_1_y</attribute>
+        <attribute>population</attribute>
         <attribute>label_2_x</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>label_1_visible</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>_geometry_alt1_used</attribute>
+        <attribute>label_2_text</attribute>
         <attribute>label_2_visible</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>colorcode</attribute>
+        <attribute>update_geometry_alt1</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>update_geometry_alt2</attribute>
+        <attribute>geometry_alt1</attribute>
+        <attribute>fk_consumptionzone</attribute>
+        <attribute>subscriber</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
@@ -11164,7 +11254,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -11195,7 +11285,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="1"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -11353,12 +11443,12 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="name" index="1" name="Folio"/>
-        <alias field="fk_district" index="2" name="Commune"/>
-        <alias field="remark" index="3" name="Remarques"/>
+        <alias field="id" index="0" name="ID"/>
+        <alias field="name" index="1" name="Nom"/>
+        <alias field="fk_district" index="2" name=""/>
+        <alias field="remark" index="3" name="Remarque"/>
         <alias field="version_date" index="4" name="Date MAJ"/>
-        <alias field="print_scale" index="5" name=""/>
+        <alias field="print_scale" index="5" name="Echelle d'impression"/>
         <alias field="x_min" index="6" name=""/>
         <alias field="y_min" index="7" name=""/>
         <alias field="x_max" index="8" name=""/>
@@ -11373,27 +11463,28 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_y" index="17" name=""/>
         <alias field="label_2_rotation" index="18" name=""/>
         <alias field="label_2_text" index="19" name=""/>
-        <alias field="district_name" index="20" name=""/>
-        <alias field="district_shortname" index="21" name=""/>
-        <alias field="district_zip" index="22" name=""/>
-        <alias field="district_land_registry" index="23" name=""/>
-        <alias field="district_prefix" index="24" name=""/>
+        <alias field="district_name" index="20" name="Commune"/>
+        <alias field="district_shortname" index="21" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="22" name="Code postal"/>
+        <alias field="district_land_registry" index="23" name="Numéro de commune"/>
+        <alias field="district_prefix" index="24" name="Préfixe commune"/>
         <alias field="district_colorcode" index="25" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>district_shortname</attribute>
+        <attribute>x_min</attribute>
         <attribute>label_2_rotation</attribute>
         <attribute>label_2_text</attribute>
-        <attribute>district_prefix</attribute>
+        <attribute>y_min</attribute>
+        <attribute>x_max</attribute>
         <attribute>label_1_text</attribute>
-        <attribute>district_zip</attribute>
+        <attribute>y_max</attribute>
         <attribute>label_1_x</attribute>
         <attribute>label_1_y</attribute>
         <attribute>label_2_x</attribute>
-        <attribute>district_land_registry</attribute>
         <attribute>label_2_y</attribute>
         <attribute>label_1_rotation</attribute>
         <attribute>label_1_visible</attribute>
+        <attribute>fk_district</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>district_colorcode</attribute>
       </excludeAttributesWMS>
@@ -12343,29 +12434,29 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="lien" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="fk_district" index="2" name="commune"/>
-        <alias field="fk_pressurezone" index="3" name="zone de pression"/>
-        <alias field="fk_printmap" index="4" name="folio"/>
-        <alias field="_printmaps" index="5" name="folios"/>
+        <alias field="lien" index="0" name="Lien"/>
+        <alias field="id" index="1" name="ID"/>
+        <alias field="fk_district" index="2" name=""/>
+        <alias field="fk_pressurezone" index="3" name=""/>
+        <alias field="fk_printmap" index="4" name=""/>
+        <alias field="_printmaps" index="5" name="Folio"/>
         <alias field="_geometry_alt1_used" index="6" name=""/>
         <alias field="_geometry_alt2_used" index="7" name=""/>
         <alias field="_pipe_orientation" index="8" name=""/>
         <alias field="_pipe_schema_visible" index="9" name=""/>
-        <alias field="identification" index="10" name=""/>
-        <alias field="fk_distributor" index="11" name="distributeur"/>
-        <alias field="fk_status" index="12" name="statut"/>
-        <alias field="fk_folder" index="13" name="dossier technique"/>
-        <alias field="fk_locationtype" index="14" name="emplacement"/>
-        <alias field="fk_precision" index="15" name="précision"/>
-        <alias field="fk_precisionalti" index="16" name="précis. alti."/>
-        <alias field="fk_object_reference" index="17" name="point de référence"/>
+        <alias field="identification" index="10" name="Identifiant"/>
+        <alias field="fk_distributor" index="11" name=""/>
+        <alias field="fk_status" index="12" name=""/>
+        <alias field="fk_folder" index="13" name=""/>
+        <alias field="fk_locationtype" index="14" name=""/>
+        <alias field="fk_precision" index="15" name=""/>
+        <alias field="fk_precisionalti" index="16" name=""/>
+        <alias field="fk_object_reference" index="17" name=""/>
         <alias field="altitude" index="18" name=""/>
-        <alias field="year" index="19" name="année"/>
-        <alias field="year_end" index="20" name="année fin"/>
+        <alias field="year" index="19" name="Année"/>
+        <alias field="year_end" index="20" name=""/>
         <alias field="orientation" index="21" name=""/>
-        <alias field="remark" index="22" name="remarques"/>
+        <alias field="remark" index="22" name="Remarque"/>
         <alias field="label_1_visible" index="23" name=""/>
         <alias field="label_1_x" index="24" name=""/>
         <alias field="label_1_y" index="25" name=""/>
@@ -12376,87 +12467,87 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_y" index="30" name=""/>
         <alias field="label_2_rotation" index="31" name=""/>
         <alias field="label_2_text" index="32" name=""/>
-        <alias field="installation_type" index="33" name=""/>
+        <alias field="installation_type" index="33" name="Type d'ouvrage"/>
         <alias field="name" index="34" name=""/>
-        <alias field="fk_parent" index="35" name="ouvrage principal"/>
+        <alias field="fk_parent" index="35" name=""/>
         <alias field="fk_remote" index="36" name=""/>
         <alias field="fk_watertype" index="37" name=""/>
-        <alias field="parcel" index="38" name=""/>
-        <alias field="eca" index="39" name=""/>
-        <alias field="open_water_surface" index="40" name="eau de surface"/>
+        <alias field="parcel" index="38" name="Parcelle"/>
+        <alias field="eca" index="39" name="ECA"/>
+        <alias field="open_water_surface" index="40" name="Eau de surface"/>
         <alias field="geometry_polygon" index="41" name=""/>
-        <alias field="fk_source_type" index="42" name="type de source"/>
-        <alias field="fk_source_quality" index="43" name="qualité"/>
-        <alias field="flow_lowest" index="44" name="débit étiage"/>
-        <alias field="flow_average" index="45" name="débit moyen"/>
-        <alias field="flow_concession" index="46" name="débit concession"/>
-        <alias field="contract_end" index="47" name="fin de contrat"/>
-        <alias field="gathering_chamber" index="48" name="chambre de rassemblement"/>
-        <alias field="fk_pump_type" index="49" name="type de pompage"/>
+        <alias field="fk_source_type" index="42" name=""/>
+        <alias field="fk_source_quality" index="43" name=""/>
+        <alias field="flow_lowest" index="44" name="Débit étiage"/>
+        <alias field="flow_average" index="45" name="Débit moyen"/>
+        <alias field="flow_concession" index="46" name="Débit concession"/>
+        <alias field="contract_end" index="47" name="Fin de contrat"/>
+        <alias field="gathering_chamber" index="48" name="Chambre de rassemblement"/>
+        <alias field="fk_pump_type" index="49" name=""/>
         <alias field="fk_pipe_in" index="50" name=""/>
         <alias field="fk_pipe_out" index="51" name=""/>
-        <alias field="fk_pump_operating" index="52" name="mode de pompage"/>
-        <alias field="no_pumps" index="53" name="nb. de pompes"/>
-        <alias field="rejected_flow" index="54" name="débit refoulé"/>
-        <alias field="manometric_height" index="55" name="hauteur manométrique"/>
+        <alias field="fk_pump_operating" index="52" name=""/>
+        <alias field="no_pumps" index="53" name="Nombre de pompes"/>
+        <alias field="rejected_flow" index="54" name="Débit refoulé"/>
+        <alias field="manometric_height" index="55" name="Hauteur manométrique"/>
         <alias field="fk_overflow" index="56" name=""/>
         <alias field="fk_tank_firestorage" index="57" name=""/>
-        <alias field="storage_total" index="58" name="réserve totale"/>
-        <alias field="storage_supply" index="59" name="réserve utile"/>
-        <alias field="storage_fire" index="60" name="réserve incendie"/>
-        <alias field="altitude_overflow" index="61" name="altitude trop-plein"/>
-        <alias field="altitude_apron" index="62" name="altitude radier"/>
-        <alias field="height_max" index="63" name="hauteur max"/>
-        <alias field="fire_valve" index="64" name="vanne incendie"/>
-        <alias field="fire_remote" index="65" name="télécommande incendie"/>
-        <alias field="_litrepercm" index="66" name="litres par cm"/>
-        <alias field="cistern1_fk_type" index="67" name="type"/>
-        <alias field="cistern1_dimension_1" index="68" name="diamètre/largeur"/>
-        <alias field="cistern1_dimension_2" index="69" name="longueur"/>
-        <alias field="cistern1_storage" index="70" name="volume"/>
-        <alias field="_cistern1_litrepercm" index="71" name="cuve 1 litres par cm"/>
-        <alias field="cistern2_fk_type" index="72" name="type"/>
-        <alias field="cistern2_dimension_1" index="73" name="diamètre/largeur"/>
-        <alias field="cistern2_dimension_2" index="74" name="longueur"/>
-        <alias field="cistern2_storage" index="75" name="volume"/>
-        <alias field="_cistern2_litrepercm" index="76" name="cuve 2 litres par cm"/>
-        <alias field="sanitization_uv" index="77" name="désinfection UV"/>
-        <alias field="sanitization_chlorine_liquid" index="78" name="désinfection chlore liquide"/>
-        <alias field="sanitization_chlorine_gazeous" index="79" name="désinfection chlore gazeux"/>
-        <alias field="sanitization_ozone" index="80" name="désinfection ozone"/>
-        <alias field="filtration_membrane" index="81" name="filtration membranaire"/>
-        <alias field="filtration_sandorgravel" index="82" name="filtration à sable"/>
-        <alias field="flocculation" index="83" name="flocculation"/>
-        <alias field="activatedcharcoal" index="84" name="charbon actif"/>
-        <alias field="settling" index="85" name="décantation"/>
-        <alias field="treatment_capacity" index="86" name="cpacité de traitment"/>
-        <alias field="networkseparation" index="87" name="séparation de réseau"/>
-        <alias field="flow_meter" index="88" name="débitmètre"/>
-        <alias field="water_meter" index="89" name="compteur"/>
-        <alias field="manometer" index="90" name="manomètre"/>
-        <alias field="depth" index="91" name=""/>
+        <alias field="storage_total" index="58" name="Réserve totale"/>
+        <alias field="storage_supply" index="59" name="Réserve utile"/>
+        <alias field="storage_fire" index="60" name="Réserve incendie"/>
+        <alias field="altitude_overflow" index="61" name="Altitude trop-plein"/>
+        <alias field="altitude_apron" index="62" name="Altitude radier"/>
+        <alias field="height_max" index="63" name="Hauteur max"/>
+        <alias field="fire_valve" index="64" name="Vanne incendie"/>
+        <alias field="fire_remote" index="65" name="Télécommande incendie"/>
+        <alias field="_litrepercm" index="66" name=""/>
+        <alias field="cistern1_fk_type" index="67" name=""/>
+        <alias field="cistern1_dimension_1" index="68" name="Cuve 1 - diamètre/largeur"/>
+        <alias field="cistern1_dimension_2" index="69" name="Cuve 1 - longueur"/>
+        <alias field="cistern1_storage" index="70" name="Cuve 1 - volume"/>
+        <alias field="_cistern1_litrepercm" index="71" name=""/>
+        <alias field="cistern2_fk_type" index="72" name=""/>
+        <alias field="cistern2_dimension_1" index="73" name="Cuve 2 - diamètre/largeur"/>
+        <alias field="cistern2_dimension_2" index="74" name="Cuve 2 - longueur"/>
+        <alias field="cistern2_storage" index="75" name="Cuve 2 - volume"/>
+        <alias field="_cistern2_litrepercm" index="76" name=""/>
+        <alias field="sanitization_uv" index="77" name="Désinfection UV"/>
+        <alias field="sanitization_chlorine_liquid" index="78" name="Désinfection chlore liquide"/>
+        <alias field="sanitization_chlorine_gazeous" index="79" name="Désinfection chlore gazeux"/>
+        <alias field="sanitization_ozone" index="80" name="Désinfection ozone"/>
+        <alias field="filtration_membrane" index="81" name="Filtration membranaire"/>
+        <alias field="filtration_sandorgravel" index="82" name="Filtration à sable"/>
+        <alias field="flocculation" index="83" name="Flocculation"/>
+        <alias field="activatedcharcoal" index="84" name="Charbon actif"/>
+        <alias field="settling" index="85" name="Décantation"/>
+        <alias field="treatment_capacity" index="86" name="Capacité de traitment"/>
+        <alias field="networkseparation" index="87" name="Séparation de réseau"/>
+        <alias field="flow_meter" index="88" name="Débitmètre"/>
+        <alias field="water_meter" index="89" name="Compteur"/>
+        <alias field="manometer" index="90" name="Manomètre"/>
+        <alias field="depth" index="91" name="Profondeur"/>
         <alias field="no_valves" index="92" name=""/>
-        <alias field="fk_pressurecontrol_type" index="93" name="type de régulation"/>
-        <alias field="status_value_fr" index="94" name=""/>
+        <alias field="fk_pressurecontrol_type" index="93" name=""/>
+        <alias field="status_value_fr" index="94" name="Etat"/>
         <alias field="status_active" index="95" name=""/>
         <alias field="status_functional" index="96" name=""/>
         <alias field="pump_type_value_fr" index="97" name=""/>
         <alias field="cistern2_value_fr" index="98" name=""/>
         <alias field="tank_firestorage_value_fr" index="99" name=""/>
-        <alias field="cistern1_value_fr" index="100" name="type"/>
+        <alias field="cistern1_value_fr" index="100" name=""/>
         <alias field="source_type_value_fr" index="101" name=""/>
         <alias field="source_quality_value_fr" index="102" name=""/>
-        <alias field="distributor_name" index="103" name=""/>
+        <alias field="distributor_name" index="103" name="Distributeur"/>
         <alias field="overflow_value_fr" index="104" name=""/>
         <alias field="pressurecontrol_type_value_fr" index="105" name=""/>
         <alias field="remote_value_fr" index="106" name=""/>
-        <alias field="district_name" index="107" name=""/>
-        <alias field="district_shortname" index="108" name=""/>
-        <alias field="district_zip" index="109" name=""/>
-        <alias field="district_land_registry" index="110" name=""/>
-        <alias field="district_prefix" index="111" name=""/>
-        <alias field="pressurezone_name" index="112" name=""/>
-        <alias field="folder_identification" index="113" name=""/>
+        <alias field="district_name" index="107" name="Nom"/>
+        <alias field="district_shortname" index="108" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="109" name="Code postal"/>
+        <alias field="district_land_registry" index="110" name="Numéro de commune"/>
+        <alias field="district_prefix" index="111" name="Préfixe commune"/>
+        <alias field="pressurezone_name" index="112" name="Zone de pression"/>
+        <alias field="folder_identification" index="113" name="Dossier technique"/>
         <alias field="folder_description" index="114" name=""/>
         <alias field="folder_date_start" index="115" name=""/>
         <alias field="folder_date_end" index="116" name=""/>
@@ -12465,21 +12556,26 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS>
         <attribute>_pipe_schema_visible</attribute>
         <attribute>fk_overflow</attribute>
+        <attribute>folder_description</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>status_functional</attribute>
         <attribute>fk_precisionalti</attribute>
         <attribute>fk_watertype</attribute>
         <attribute>fk_source_type</attribute>
+        <attribute>folder_date_start</attribute>
         <attribute>label_1_rotation</attribute>
         <attribute>fk_pipe_out</attribute>
+        <attribute>no_valves</attribute>
         <attribute>fk_remote</attribute>
         <attribute>fk_object_reference</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>_pipe_orientation</attribute>
+        <attribute>pump_operating_value_fr</attribute>
         <attribute>fk_folder</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>fk_district</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>year_end</attribute>
         <attribute>fk_pump_type</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_x</attribute>
@@ -12487,6 +12583,7 @@ def my_form_open(dialog, layer, feature):
         <attribute>_cistern2_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>orientation</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>fk_precision</attribute>
         <attribute>status_active</attribute>
         <attribute>_litrepercm</attribute>
@@ -12495,10 +12592,11 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_1_x</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_y</attribute>
-        <attribute>fk_tank_firestorage</attribute>
+        <attribute>altitude</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>cistern2_fk_type</attribute>
+        <attribute>fk_tank_firestorage</attribute>
         <attribute>fk_printmap</attribute>
+        <attribute>cistern2_fk_type</attribute>
         <attribute>fk_parent</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>label_2_text</attribute>
@@ -12508,7 +12606,6 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pipe_in</attribute>
         <attribute>fk_pressurecontrol_type</attribute>
         <attribute>_cistern1_litrepercm</attribute>
-        <attribute>_printmaps</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -13728,29 +13825,29 @@ END&#xd;
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="lien" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="fk_district" index="2" name="commune"/>
-        <alias field="fk_pressurezone" index="3" name="zone de pression"/>
-        <alias field="fk_printmap" index="4" name="folio"/>
-        <alias field="_printmaps" index="5" name="folios"/>
+        <alias field="lien" index="0" name="Lien"/>
+        <alias field="id" index="1" name="ID"/>
+        <alias field="fk_district" index="2" name=""/>
+        <alias field="fk_pressurezone" index="3" name=""/>
+        <alias field="fk_printmap" index="4" name=""/>
+        <alias field="_printmaps" index="5" name="Folio"/>
         <alias field="_geometry_alt1_used" index="6" name=""/>
         <alias field="_geometry_alt2_used" index="7" name=""/>
         <alias field="_pipe_orientation" index="8" name=""/>
         <alias field="_pipe_schema_visible" index="9" name=""/>
-        <alias field="identification" index="10" name=""/>
-        <alias field="fk_distributor" index="11" name="distributeur"/>
-        <alias field="fk_status" index="12" name="statut"/>
-        <alias field="fk_folder" index="13" name="dossier technique"/>
-        <alias field="fk_locationtype" index="14" name="emplacement"/>
-        <alias field="fk_precision" index="15" name="précision"/>
-        <alias field="fk_precisionalti" index="16" name="précis. alti."/>
-        <alias field="fk_object_reference" index="17" name="point de référence"/>
+        <alias field="identification" index="10" name="Identifiant"/>
+        <alias field="fk_distributor" index="11" name=""/>
+        <alias field="fk_status" index="12" name=""/>
+        <alias field="fk_folder" index="13" name=""/>
+        <alias field="fk_locationtype" index="14" name=""/>
+        <alias field="fk_precision" index="15" name=""/>
+        <alias field="fk_precisionalti" index="16" name=""/>
+        <alias field="fk_object_reference" index="17" name=""/>
         <alias field="altitude" index="18" name=""/>
-        <alias field="year" index="19" name="année"/>
-        <alias field="year_end" index="20" name="année fin"/>
+        <alias field="year" index="19" name="Année"/>
+        <alias field="year_end" index="20" name=""/>
         <alias field="orientation" index="21" name=""/>
-        <alias field="remark" index="22" name="remarques"/>
+        <alias field="remark" index="22" name="Remarque"/>
         <alias field="label_1_visible" index="23" name=""/>
         <alias field="label_1_x" index="24" name=""/>
         <alias field="label_1_y" index="25" name=""/>
@@ -13761,87 +13858,87 @@ END&#xd;
         <alias field="label_2_y" index="30" name=""/>
         <alias field="label_2_rotation" index="31" name=""/>
         <alias field="label_2_text" index="32" name=""/>
-        <alias field="installation_type" index="33" name=""/>
-        <alias field="name" index="34" name=""/>
-        <alias field="fk_parent" index="35" name="ouvrage principal"/>
+        <alias field="installation_type" index="33" name="Type d'ouvrage"/>
+        <alias field="name" index="34" name="Nom"/>
+        <alias field="fk_parent" index="35" name=""/>
         <alias field="fk_remote" index="36" name=""/>
         <alias field="fk_watertype" index="37" name=""/>
-        <alias field="parcel" index="38" name=""/>
-        <alias field="eca" index="39" name=""/>
-        <alias field="open_water_surface" index="40" name="eau de surface"/>
+        <alias field="parcel" index="38" name="Parcelle"/>
+        <alias field="eca" index="39" name="ECA"/>
+        <alias field="open_water_surface" index="40" name="Eau de surface"/>
         <alias field="geometry_polygon" index="41" name=""/>
-        <alias field="fk_source_type" index="42" name="type de source"/>
-        <alias field="fk_source_quality" index="43" name="qualité"/>
-        <alias field="flow_lowest" index="44" name="débit étiage"/>
-        <alias field="flow_average" index="45" name="débit moyen"/>
-        <alias field="flow_concession" index="46" name="débit concession"/>
-        <alias field="contract_end" index="47" name="fin de contrat"/>
-        <alias field="gathering_chamber" index="48" name="chambre de rassemblement"/>
-        <alias field="fk_pump_type" index="49" name="type de pompage"/>
+        <alias field="fk_source_type" index="42" name=""/>
+        <alias field="fk_source_quality" index="43" name=""/>
+        <alias field="flow_lowest" index="44" name="Débit étiage"/>
+        <alias field="flow_average" index="45" name="Débit moyen"/>
+        <alias field="flow_concession" index="46" name="Débit concession"/>
+        <alias field="contract_end" index="47" name="Fin de contrat"/>
+        <alias field="gathering_chamber" index="48" name="Chambre de rassemblement"/>
+        <alias field="fk_pump_type" index="49" name=""/>
         <alias field="fk_pipe_in" index="50" name=""/>
         <alias field="fk_pipe_out" index="51" name=""/>
-        <alias field="fk_pump_operating" index="52" name="mode de pompage"/>
-        <alias field="no_pumps" index="53" name="nb. de pompes"/>
-        <alias field="rejected_flow" index="54" name="débit refoulé"/>
-        <alias field="manometric_height" index="55" name="hauteur manométrique"/>
+        <alias field="fk_pump_operating" index="52" name=""/>
+        <alias field="no_pumps" index="53" name="Nombre de pompes"/>
+        <alias field="rejected_flow" index="54" name="Débit refoulé"/>
+        <alias field="manometric_height" index="55" name="Hauteur manométrique"/>
         <alias field="fk_overflow" index="56" name=""/>
         <alias field="fk_tank_firestorage" index="57" name=""/>
-        <alias field="storage_total" index="58" name="réserve totale"/>
-        <alias field="storage_supply" index="59" name="réserve utile"/>
-        <alias field="storage_fire" index="60" name="réserve incendie"/>
-        <alias field="altitude_overflow" index="61" name="altitude trop-plein"/>
-        <alias field="altitude_apron" index="62" name="altitude radier"/>
-        <alias field="height_max" index="63" name="hauteur max"/>
-        <alias field="fire_valve" index="64" name="vanne incendie"/>
-        <alias field="fire_remote" index="65" name="télécommande incendie"/>
-        <alias field="_litrepercm" index="66" name="litres par cm"/>
-        <alias field="cistern1_fk_type" index="67" name="type"/>
-        <alias field="cistern1_dimension_1" index="68" name="diamètre/largeur"/>
-        <alias field="cistern1_dimension_2" index="69" name="longueur"/>
-        <alias field="cistern1_storage" index="70" name="volume"/>
-        <alias field="_cistern1_litrepercm" index="71" name="cuve 1 litres par cm"/>
-        <alias field="cistern2_fk_type" index="72" name="type"/>
-        <alias field="cistern2_dimension_1" index="73" name="diamètre/largeur"/>
-        <alias field="cistern2_dimension_2" index="74" name="longueur"/>
-        <alias field="cistern2_storage" index="75" name="volume"/>
-        <alias field="_cistern2_litrepercm" index="76" name="cuve 2 litres par cm"/>
-        <alias field="sanitization_uv" index="77" name="désinfection UV"/>
-        <alias field="sanitization_chlorine_liquid" index="78" name="désinfection chlore liquide"/>
-        <alias field="sanitization_chlorine_gazeous" index="79" name="désinfection chlore gazeux"/>
-        <alias field="sanitization_ozone" index="80" name="désinfection ozone"/>
-        <alias field="filtration_membrane" index="81" name="filtration membranaire"/>
-        <alias field="filtration_sandorgravel" index="82" name="filtration à sable"/>
-        <alias field="flocculation" index="83" name="flocculation"/>
-        <alias field="activatedcharcoal" index="84" name="charbon actif"/>
-        <alias field="settling" index="85" name="décantation"/>
-        <alias field="treatment_capacity" index="86" name="cpacité de traitment"/>
-        <alias field="networkseparation" index="87" name="séparation de réseau"/>
-        <alias field="flow_meter" index="88" name="débitmètre"/>
-        <alias field="water_meter" index="89" name="compteur"/>
-        <alias field="manometer" index="90" name="manomètre"/>
-        <alias field="depth" index="91" name=""/>
+        <alias field="storage_total" index="58" name="Réserve totale"/>
+        <alias field="storage_supply" index="59" name="Réserve utile"/>
+        <alias field="storage_fire" index="60" name="Réserve incendie"/>
+        <alias field="altitude_overflow" index="61" name="Altitude trop-plein"/>
+        <alias field="altitude_apron" index="62" name="Altitude radier"/>
+        <alias field="height_max" index="63" name="Hauteur max"/>
+        <alias field="fire_valve" index="64" name="Vanne incendie"/>
+        <alias field="fire_remote" index="65" name="Télécommande incendie"/>
+        <alias field="_litrepercm" index="66" name=""/>
+        <alias field="cistern1_fk_type" index="67" name=""/>
+        <alias field="cistern1_dimension_1" index="68" name="Cuve 1 - diamètre/largeur"/>
+        <alias field="cistern1_dimension_2" index="69" name="Cuve 1 - longueur"/>
+        <alias field="cistern1_storage" index="70" name="Cuve - volume"/>
+        <alias field="_cistern1_litrepercm" index="71" name=""/>
+        <alias field="cistern2_fk_type" index="72" name=""/>
+        <alias field="cistern2_dimension_1" index="73" name="Cuve 2 - diamètre/largeur"/>
+        <alias field="cistern2_dimension_2" index="74" name="Cuve 2 - longueur"/>
+        <alias field="cistern2_storage" index="75" name="Cuve 2 - volume"/>
+        <alias field="_cistern2_litrepercm" index="76" name=""/>
+        <alias field="sanitization_uv" index="77" name="Désinfection UV"/>
+        <alias field="sanitization_chlorine_liquid" index="78" name="Désinfection chlore liquide"/>
+        <alias field="sanitization_chlorine_gazeous" index="79" name="Désinfection chlore gazeux"/>
+        <alias field="sanitization_ozone" index="80" name="Désinfection ozone"/>
+        <alias field="filtration_membrane" index="81" name="Filtration membranaire"/>
+        <alias field="filtration_sandorgravel" index="82" name="Filtration à sable"/>
+        <alias field="flocculation" index="83" name="Flocculation"/>
+        <alias field="activatedcharcoal" index="84" name="Charbon actif"/>
+        <alias field="settling" index="85" name="Décantation"/>
+        <alias field="treatment_capacity" index="86" name="Capacité de traitment"/>
+        <alias field="networkseparation" index="87" name="Séparation de réseau"/>
+        <alias field="flow_meter" index="88" name="Débitmètre"/>
+        <alias field="water_meter" index="89" name="Compteur"/>
+        <alias field="manometer" index="90" name="Manomètre"/>
+        <alias field="depth" index="91" name="Profondeur"/>
         <alias field="no_valves" index="92" name=""/>
-        <alias field="fk_pressurecontrol_type" index="93" name="type de régulation"/>
-        <alias field="status_value_fr" index="94" name=""/>
+        <alias field="fk_pressurecontrol_type" index="93" name=""/>
+        <alias field="status_value_fr" index="94" name="Etat"/>
         <alias field="status_active" index="95" name=""/>
         <alias field="status_functional" index="96" name=""/>
         <alias field="pump_type_value_fr" index="97" name=""/>
         <alias field="cistern2_value_fr" index="98" name=""/>
         <alias field="tank_firestorage_value_fr" index="99" name=""/>
-        <alias field="cistern1_value_fr" index="100" name="type"/>
+        <alias field="cistern1_value_fr" index="100" name=""/>
         <alias field="source_type_value_fr" index="101" name=""/>
         <alias field="source_quality_value_fr" index="102" name=""/>
-        <alias field="distributor_name" index="103" name=""/>
+        <alias field="distributor_name" index="103" name="Distributeur"/>
         <alias field="overflow_value_fr" index="104" name=""/>
         <alias field="pressurecontrol_type_value_fr" index="105" name=""/>
         <alias field="remote_value_fr" index="106" name=""/>
-        <alias field="district_name" index="107" name=""/>
-        <alias field="district_shortname" index="108" name=""/>
-        <alias field="district_zip" index="109" name=""/>
-        <alias field="district_land_registry" index="110" name=""/>
-        <alias field="district_prefix" index="111" name=""/>
-        <alias field="pressurezone_name" index="112" name=""/>
-        <alias field="folder_identification" index="113" name=""/>
+        <alias field="district_name" index="107" name="Nom"/>
+        <alias field="district_shortname" index="108" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="109" name="Code postal"/>
+        <alias field="district_land_registry" index="110" name="Numéro de commune"/>
+        <alias field="district_prefix" index="111" name="Préfixe commune"/>
+        <alias field="pressurezone_name" index="112" name="Zone de pression"/>
+        <alias field="folder_identification" index="113" name="Dossier technique"/>
         <alias field="folder_description" index="114" name=""/>
         <alias field="folder_date_start" index="115" name=""/>
         <alias field="folder_date_end" index="116" name=""/>
@@ -13850,21 +13947,26 @@ END&#xd;
       <excludeAttributesWMS>
         <attribute>_pipe_schema_visible</attribute>
         <attribute>fk_overflow</attribute>
+        <attribute>folder_description</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>status_functional</attribute>
         <attribute>fk_precisionalti</attribute>
         <attribute>fk_watertype</attribute>
         <attribute>fk_source_type</attribute>
+        <attribute>folder_date_start</attribute>
         <attribute>label_1_rotation</attribute>
         <attribute>fk_pipe_out</attribute>
+        <attribute>no_valves</attribute>
         <attribute>fk_remote</attribute>
         <attribute>fk_object_reference</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>_pipe_orientation</attribute>
+        <attribute>pump_operating_value_fr</attribute>
         <attribute>fk_folder</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>fk_district</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>year_end</attribute>
         <attribute>fk_pump_type</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_x</attribute>
@@ -13872,6 +13974,7 @@ END&#xd;
         <attribute>_cistern2_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>orientation</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>fk_precision</attribute>
         <attribute>status_active</attribute>
         <attribute>_litrepercm</attribute>
@@ -13880,10 +13983,11 @@ END&#xd;
         <attribute>label_1_x</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_y</attribute>
-        <attribute>fk_tank_firestorage</attribute>
+        <attribute>altitude</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>cistern2_fk_type</attribute>
+        <attribute>fk_tank_firestorage</attribute>
         <attribute>fk_printmap</attribute>
+        <attribute>cistern2_fk_type</attribute>
         <attribute>fk_parent</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>label_2_text</attribute>
@@ -14627,7 +14731,7 @@ END&#xd;
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -14658,7 +14762,7 @@ END&#xd;
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="1"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -14816,14 +14920,14 @@ END&#xd;
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="fk_district" index="1" name=""/>
         <alias field="fk_pressurezone" index="2" name=""/>
         <alias field="fk_printmap" index="3" name=""/>
         <alias field="_printmaps" index="4" name=""/>
         <alias field="_pipe_orientation" index="5" name=""/>
         <alias field="_pipe_schema_visible" index="6" name=""/>
-        <alias field="identification" index="7" name=""/>
+        <alias field="identification" index="7" name="Identifiant"/>
         <alias field="fk_distributor" index="8" name=""/>
         <alias field="fk_status" index="9" name=""/>
         <alias field="fk_folder" index="10" name=""/>
@@ -14835,7 +14939,7 @@ END&#xd;
         <alias field="year" index="16" name=""/>
         <alias field="year_end" index="17" name=""/>
         <alias field="orientation" index="18" name=""/>
-        <alias field="remark" index="19" name=""/>
+        <alias field="remark" index="19" name="Remarque"/>
         <alias field="label_1_visible" index="20" name=""/>
         <alias field="label_1_x" index="21" name=""/>
         <alias field="label_1_y" index="22" name=""/>
@@ -14851,35 +14955,76 @@ END&#xd;
         <alias field="fk_model_inf" index="32" name=""/>
         <alias field="fk_material" index="33" name=""/>
         <alias field="fk_output" index="34" name=""/>
-        <alias field="underground" index="35" name=""/>
+        <alias field="underground" index="35" name="Souterraine"/>
         <alias field="marked" index="36" name=""/>
-        <alias field="pressure_static" index="37" name=""/>
-        <alias field="pressure_dynamic" index="38" name=""/>
-        <alias field="flow" index="39" name=""/>
-        <alias field="observation_date" index="40" name=""/>
-        <alias field="observation_source" index="41" name=""/>
-        <alias field="status_value_fr" index="42" name=""/>
+        <alias field="pressure_static" index="37" name="Pression statique"/>
+        <alias field="pressure_dynamic" index="38" name="Pression dynamique"/>
+        <alias field="flow" index="39" name="Débit"/>
+        <alias field="observation_date" index="40" name="Date de mesure"/>
+        <alias field="observation_source" index="41" name="Origine des mesures"/>
+        <alias field="status_value_fr" index="42" name="Etat"/>
         <alias field="status_functional" index="43" name=""/>
-        <alias field="district_name" index="44" name=""/>
-        <alias field="district_shortname" index="45" name=""/>
-        <alias field="district_zip" index="46" name=""/>
-        <alias field="district_land_registry" index="47" name=""/>
-        <alias field="district_prefix" index="48" name=""/>
-        <alias field="model_inf_value_fr" index="49" name=""/>
-        <alias field="pressurezone_name" index="50" name=""/>
+        <alias field="district_name" index="44" name="Commune"/>
+        <alias field="district_shortname" index="45" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="46" name="Code postal"/>
+        <alias field="district_land_registry" index="47" name="Numéro de commune"/>
+        <alias field="district_prefix" index="48" name="Préfixe commune"/>
+        <alias field="model_inf_value_fr" index="49" name="Modèle inf."/>
+        <alias field="pressurezone_name" index="50" name="Zone de pression"/>
         <alias field="pressurezone_colorcode" index="51" name=""/>
-        <alias field="material_value_fr" index="52" name=""/>
+        <alias field="material_value_fr" index="52" name="Matériau"/>
         <alias field="precision_value_fr" index="53" name=""/>
-        <alias field="model_sup_value_fr" index="54" name=""/>
-        <alias field="provider_value_fr" index="55" name=""/>
-        <alias field="distributor_name" index="56" name=""/>
+        <alias field="model_sup_value_fr" index="54" name="Modèle sup."/>
+        <alias field="provider_value_fr" index="55" name="Fournisseur"/>
+        <alias field="distributor_name" index="56" name="Distributeur"/>
         <alias field="output_value_fr" index="57" name=""/>
-        <alias field="folder_identification" index="58" name=""/>
+        <alias field="folder_identification" index="58" name="Dossier technique"/>
         <alias field="folder_description" index="59" name=""/>
         <alias field="folder_date_start" index="60" name=""/>
         <alias field="folder_date_end" index="61" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>_pipe_schema_visible</attribute>
+        <attribute>year</attribute>
+        <attribute>fk_model_inf</attribute>
+        <attribute>folder_description</attribute>
+        <attribute>status_functional</attribute>
+        <attribute>fk_precisionalti</attribute>
+        <attribute>folder_date_start</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>fk_provider</attribute>
+        <attribute>fk_model_sup</attribute>
+        <attribute>fk_output</attribute>
+        <attribute>fk_object_reference</attribute>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>fk_folder</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>year_end</attribute>
+        <attribute>fk_material</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>marked</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>orientation</attribute>
+        <attribute>folder_date_end</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>pressurezone_colorcode</attribute>
+        <attribute>precision_value_fr</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>altitude</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>fk_printmap</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>output_value_fr</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>_printmaps</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('hydrant20130304110004848',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -15195,7 +15340,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -15226,7 +15371,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -15382,10 +15527,10 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="fk_cause" index="1" name="Cause"/>
         <alias field="fk_pipe" index="2" name="Conduite"/>
-        <alias field="widespread_damage" index="3" name=""/>
+        <alias field="widespread_damage" index="3" name="Dommages étendus"/>
         <alias field="detection_date" index="4" name="Date de détection"/>
         <alias field="repair_date" index="5" name="Date de réparation"/>
         <alias field="_repaired" index="6" name="Réparé"/>
@@ -15393,7 +15538,7 @@ def my_form_open(dialog, layer, feature):
         <alias field="pipe_replaced" index="8" name="Conduite remplacée"/>
         <alias field="description" index="9" name="Description"/>
         <alias field="repair" index="10" name="Réparation"/>
-        <alias field="cause_value_fr" index="11" name=""/>
+        <alias field="cause_value_fr" index="11" name="Cause"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>fk_cause</attribute>
@@ -16021,7 +16166,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fieldName" value="'télécommande'"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value=".SF NS Text"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -16048,7 +16193,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="4294967295"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -16190,18 +16335,18 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
+        <alias field="id" index="0" name="ID"/>
         <alias field="fk_distributor" index="1" name=""/>
         <alias field="fk_status" index="2" name=""/>
         <alias field="fk_precision" index="3" name=""/>
         <alias field="fk_material" index="4" name=""/>
-        <alias field="identification" index="5" name=""/>
-        <alias field="year" index="6" name=""/>
-        <alias field="origin" index="7" name=""/>
-        <alias field="destination" index="8" name=""/>
-        <alias field="folder" index="9" name=""/>
-        <alias field="plan" index="10" name=""/>
-        <alias field="remark" index="11" name=""/>
+        <alias field="identification" index="5" name="Identification"/>
+        <alias field="year" index="6" name="Année"/>
+        <alias field="origin" index="7" name="Origine"/>
+        <alias field="destination" index="8" name="Destination"/>
+        <alias field="folder" index="9" name="Dossier"/>
+        <alias field="plan" index="10" name="Plan"/>
+        <alias field="remark" index="11" name="Remarque"/>
         <alias field="label_1_visible" index="12" name=""/>
         <alias field="label_1_x" index="13" name=""/>
         <alias field="label_1_y" index="14" name=""/>
@@ -16212,7 +16357,7 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_y" index="19" name=""/>
         <alias field="label_2_rotation" index="20" name=""/>
         <alias field="label_2_text" index="21" name=""/>
-        <alias field="distributor_name" index="22" name=""/>
+        <alias field="distributor_name" index="22" name="Distributeur"/>
         <alias field="status_value_fr" index="23" name=""/>
         <alias field="material_value_fr" index="24" name=""/>
       </aliases>
@@ -16220,9 +16365,11 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_rotation</attribute>
         <attribute>label_2_text</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>material_value_fr</attribute>
         <attribute>label_1_x</attribute>
         <attribute>label_1_y</attribute>
         <attribute>label_2_x</attribute>
+        <attribute>status_value_fr</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_y</attribute>
         <attribute>label_1_rotation</attribute>
@@ -16441,7 +16588,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/drawLabels" value="true"/>
         <property key="labeling/enabled" value="true"/>
-        <property key="labeling/fieldName" value=" &quot;subscriber_identification&quot;"/>
+        <property key="labeling/fieldName" value="subscriber_identification"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
@@ -16461,7 +16608,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/isExpression" value="false"/>
         <property key="labeling/labelOffsetInMapUnits" value="false"/>
         <property key="labeling/labelOffsetMapUnitMaxScale" value="0"/>
         <property key="labeling/labelOffsetMapUnitMinScale" value="0"/>
@@ -16636,9 +16783,11 @@ def my_form_open(dialog, layer, feature):
       <aliases>
         <alias field="id" index="0" name="ID"/>
         <alias field="fk_subscriber" index="1" name=""/>
-        <alias field="subscriber_identification" index="2" name=""/>
+        <alias field="subscriber_identification" index="2" name="Référence identifiant"/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>fk_subscriber</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('subscriber20130304110011459',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -17549,7 +17698,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -17580,7 +17729,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="1"/>
         <property key="labeling/multilineHeight" value="1.2"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -17738,27 +17887,27 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="lien" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="fk_district" index="2" name="commune"/>
-        <alias field="fk_pressurezone" index="3" name="zone de pression"/>
-        <alias field="fk_printmap" index="4" name="folios"/>
-        <alias field="_printmaps" index="5" name="folios"/>
+        <alias field="lien" index="0" name="Lien"/>
+        <alias field="id" index="1" name="ID"/>
+        <alias field="fk_district" index="2" name=""/>
+        <alias field="fk_pressurezone" index="3" name=""/>
+        <alias field="fk_printmap" index="4" name=""/>
+        <alias field="_printmaps" index="5" name="Folio"/>
         <alias field="_pipe_orientation" index="6" name=""/>
         <alias field="_pipe_schema_visible" index="7" name=""/>
-        <alias field="identification" index="8" name="idenitifcation"/>
-        <alias field="fk_distributor" index="9" name="distributezr"/>
-        <alias field="fk_status" index="10" name="statut"/>
-        <alias field="fk_folder" index="11" name="dossier technique"/>
-        <alias field="fk_locationtype" index="12" name="emplacement"/>
-        <alias field="fk_precision" index="13" name="précisison"/>
-        <alias field="fk_precisionalti" index="14" name="précision alti."/>
-        <alias field="fk_object_reference" index="15" name="point de référence"/>
-        <alias field="altitude" index="16" name="altitude"/>
-        <alias field="year" index="17" name="année"/>
-        <alias field="year_end" index="18" name="année fin"/>
+        <alias field="identification" index="8" name="Identifiant"/>
+        <alias field="fk_distributor" index="9" name=""/>
+        <alias field="fk_status" index="10" name=""/>
+        <alias field="fk_folder" index="11" name=""/>
+        <alias field="fk_locationtype" index="12" name=""/>
+        <alias field="fk_precision" index="13" name=""/>
+        <alias field="fk_precisionalti" index="14" name=""/>
+        <alias field="fk_object_reference" index="15" name=""/>
+        <alias field="altitude" index="16" name=""/>
+        <alias field="year" index="17" name=""/>
+        <alias field="year_end" index="18" name=""/>
         <alias field="orientation" index="19" name=""/>
-        <alias field="remark" index="20" name="remarque"/>
+        <alias field="remark" index="20" name="Remarque"/>
         <alias field="label_1_visible" index="21" name=""/>
         <alias field="label_1_x" index="22" name=""/>
         <alias field="label_1_y" index="23" name=""/>
@@ -17769,25 +17918,58 @@ def my_form_open(dialog, layer, feature):
         <alias field="label_2_y" index="28" name=""/>
         <alias field="label_2_rotation" index="29" name=""/>
         <alias field="label_2_text" index="30" name=""/>
-        <alias field="fk_subscriber_type" index="31" name="type"/>
-        <alias field="fk_pipe" index="32" name="conduite"/>
-        <alias field="parcel" index="33" name="parcelle"/>
-        <alias field="flow_current" index="34" name="débit actuel"/>
-        <alias field="flow_planned" index="35" name="débit prévu"/>
-        <alias field="district_name" index="36" name=""/>
-        <alias field="district_shortname" index="37" name=""/>
-        <alias field="district_zip" index="38" name=""/>
-        <alias field="district_land_registry" index="39" name=""/>
-        <alias field="district_prefix" index="40" name="préfixe commune"/>
-        <alias field="pressurezone_name" index="41" name=""/>
-        <alias field="subscriber_type_value_fr" index="42" name=""/>
-        <alias field="distributor_name" index="43" name=""/>
-        <alias field="folder_identification" index="44" name=""/>
+        <alias field="fk_subscriber_type" index="31" name=""/>
+        <alias field="fk_pipe" index="32" name=""/>
+        <alias field="parcel" index="33" name="Parcelle"/>
+        <alias field="flow_current" index="34" name="Débit actuel"/>
+        <alias field="flow_planned" index="35" name="Débit prévu"/>
+        <alias field="district_name" index="36" name="Commune"/>
+        <alias field="district_shortname" index="37" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="38" name="Code postal"/>
+        <alias field="district_land_registry" index="39" name="Numéro de commune"/>
+        <alias field="district_prefix" index="40" name="Préfixe commune"/>
+        <alias field="pressurezone_name" index="41" name="Zone de pression"/>
+        <alias field="subscriber_type_value_fr" index="42" name="Type d'abonné"/>
+        <alias field="distributor_name" index="43" name="Distributeur"/>
+        <alias field="folder_identification" index="44" name="Dossier technique"/>
         <alias field="folder_description" index="45" name=""/>
         <alias field="folder_date_start" index="46" name=""/>
         <alias field="folder_date_end" index="47" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>fk_precisionalti</attribute>
+        <attribute>_pipe_schema_visible</attribute>
+        <attribute>fk_folder</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_pipe</attribute>
+        <attribute>label_1_y</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>folder_date_end</attribute>
+        <attribute>altitude</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>fk_subscriber_type</attribute>
+        <attribute>year_end</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>orientation</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>fk_object_reference</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>folder_description</attribute>
+        <attribute>identification</attribute>
+        <attribute>year</attribute>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>folder_date_start</attribute>
+        <attribute>fk_printmap</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('subscriber20130304110011459',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -17800,7 +17982,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="fk_pressurezone"/>
           <column width="-1" hidden="0" type="field" name="fk_printmap"/>
           <column width="-1" hidden="0" type="field" name="_printmaps"/>
-          <column width="-1" hidden="0" type="field" name="_pipe_node_type"/>
           <column width="-1" hidden="0" type="field" name="_pipe_orientation"/>
           <column width="-1" hidden="0" type="field" name="_pipe_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="identification"/>
@@ -17844,6 +18025,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="folder_description"/>
           <column width="-1" hidden="0" type="field" name="folder_date_start"/>
           <column width="-1" hidden="0" type="field" name="folder_date_end"/>
+          <column width="-1" hidden="0" type="field" name="lien"/>
         </columns>
       </attributetableconfig>
       <editform>./ui_forms/subscriber.ui</editform>
@@ -18585,7 +18767,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -18616,7 +18798,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -18775,75 +18957,122 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name="ID"/>
-        <alias field="fk_valve_type" index="1" name="Type"/>
-        <alias field="fk_valve_function" index="2" name="Fonction"/>
-        <alias field="fk_valve_actuation" index="3" name="Actionnement"/>
-        <alias field="fk_pipe" index="4" name="conduite"/>
-        <alias field="fk_handle_precision" index="5" name="Précision de la tige"/>
-        <alias field="fk_handle_precisionalti" index="6" name="Précision altimétrique de la tige"/>
-        <alias field="fk_maintenance" index="7" name="entretien"/>
-        <alias field="diameter_nominal" index="8" name="diamètre nominal"/>
-        <alias field="closed" index="9" name="fermée"/>
-        <alias field="networkseparation" index="10" name="séparation de réseau"/>
-        <alias field="fk_district" index="11" name="commune"/>
-        <alias field="fk_pressurezone" index="12" name="zone de pression"/>
+        <alias field="fk_valve_type" index="1" name=""/>
+        <alias field="fk_valve_function" index="2" name=""/>
+        <alias field="fk_valve_actuation" index="3" name=""/>
+        <alias field="fk_pipe" index="4" name=""/>
+        <alias field="fk_handle_precision" index="5" name=""/>
+        <alias field="fk_handle_precisionalti" index="6" name=""/>
+        <alias field="fk_maintenance" index="7" name=""/>
+        <alias field="diameter_nominal" index="8" name=""/>
+        <alias field="closed" index="9" name="Fermée"/>
+        <alias field="networkseparation" index="10" name="Séparation de réseau"/>
+        <alias field="fk_district" index="11" name=""/>
+        <alias field="fk_pressurezone" index="12" name=""/>
         <alias field="fk_distributor" index="13" name=""/>
-        <alias field="fk_precision" index="14" name="précision"/>
-        <alias field="fk_precisionalti" index="15" name="précision altimétrique"/>
-        <alias field="fk_status" index="16" name="Statut"/>
-        <alias field="fk_object_reference" index="17" name="Pt. de réf."/>
-        <alias field="fk_folder" index="18" name="Dossier technique"/>
-        <alias field="year" index="19" name="année"/>
-        <alias field="year_end" index="20" name="année fin"/>
+        <alias field="fk_precision" index="14" name=""/>
+        <alias field="fk_precisionalti" index="15" name=""/>
+        <alias field="fk_status" index="16" name=""/>
+        <alias field="fk_object_reference" index="17" name=""/>
+        <alias field="fk_folder" index="18" name=""/>
+        <alias field="year" index="19" name="Année"/>
+        <alias field="year_end" index="20" name=""/>
         <alias field="altitude" index="21" name=""/>
         <alias field="orientation" index="22" name=""/>
-        <alias field="identification" index="23" name=""/>
-        <alias field="remark" index="24" name="remarques"/>
+        <alias field="identification" index="23" name="Identifiant"/>
+        <alias field="remark" index="24" name="Remarque"/>
         <alias field="_pipe_orientation" index="25" name=""/>
         <alias field="_pipe_schema_visible" index="26" name=""/>
-        <alias field="_printmaps" index="27" name="folios"/>
-        <alias field="schema_force_visible" index="28" name="visibilité schéma"/>
+        <alias field="_printmaps" index="27" name="Folio"/>
+        <alias field="schema_force_visible" index="28" name="Visibilité schéma"/>
         <alias field="_schema_visible" index="29" name=""/>
-        <alias field="label_1_visible" index="30" name="visibilité 1/250"/>
+        <alias field="label_1_visible" index="30" name=""/>
         <alias field="label_1_x" index="31" name=""/>
         <alias field="label_1_y" index="32" name=""/>
         <alias field="label_1_rotation" index="33" name=""/>
-        <alias field="label_1_text" index="34" name="étiquette 1/250"/>
-        <alias field="label_2_visible" index="35" name="visibilité 1/5000"/>
+        <alias field="label_1_text" index="34" name=""/>
+        <alias field="label_2_visible" index="35" name=""/>
         <alias field="label_2_x" index="36" name=""/>
         <alias field="label_2_y" index="37" name=""/>
         <alias field="label_2_rotation" index="38" name=""/>
-        <alias field="label_2_text" index="39" name="étiquette 1/5000"/>
-        <alias field="status_value_fr" index="40" name=""/>
+        <alias field="label_2_text" index="39" name=""/>
+        <alias field="status_value_fr" index="40" name="Etat"/>
         <alias field="status_description_fr" index="41" name=""/>
         <alias field="status_active" index="42" name=""/>
         <alias field="status_functional" index="43" name=""/>
-        <alias field="district_name" index="44" name=""/>
-        <alias field="district_shortname" index="45" name=""/>
-        <alias field="district_zip" index="46" name=""/>
-        <alias field="district_land_registry" index="47" name=""/>
-        <alias field="district_prefix" index="48" name=""/>
-        <alias field="pressurezone_name" index="49" name=""/>
+        <alias field="district_name" index="44" name="Commune"/>
+        <alias field="district_shortname" index="45" name="Commune - abbréviation"/>
+        <alias field="district_zip" index="46" name="Code postal"/>
+        <alias field="district_land_registry" index="47" name="Numéro de commune"/>
+        <alias field="district_prefix" index="48" name="Préfixe commune"/>
+        <alias field="pressurezone_name" index="49" name="Zone de pression"/>
         <alias field="valve_function_short_fr" index="50" name=""/>
-        <alias field="valve_function_value_fr" index="51" name=""/>
+        <alias field="valve_function_value_fr" index="51" name="Vanne - fonction"/>
         <alias field="valve_function_description_fr" index="52" name=""/>
         <alias field="precision_value_fr" index="53" name=""/>
         <alias field="precision_description_fr" index="54" name=""/>
-        <alias field="distributor_name" index="55" name=""/>
+        <alias field="distributor_name" index="55" name="Distributeur"/>
         <alias field="valve_type_short_fr" index="56" name=""/>
-        <alias field="valve_type_value_fr" index="57" name=""/>
+        <alias field="valve_type_value_fr" index="57" name="Vanne - type"/>
         <alias field="valve_type_description_fr" index="58" name=""/>
         <alias field="object_reference_value_fr" index="59" name=""/>
         <alias field="valve_actuation_short_fr" index="60" name=""/>
-        <alias field="valve_actuation_value_fr" index="61" name=""/>
-        <alias field="folder_identification" index="62" name=""/>
+        <alias field="valve_actuation_value_fr" index="61" name="Vanne - actionnement"/>
+        <alias field="folder_identification" index="62" name="Dossier technique"/>
         <alias field="folder_description" index="63" name=""/>
         <alias field="folder_date_start" index="64" name=""/>
         <alias field="folder_date_end" index="65" name=""/>
         <alias field="precisionalti_value_fr" index="66" name=""/>
       </aliases>
       <excludeAttributesWMS>
+        <attribute>_pipe_schema_visible</attribute>
+        <attribute>precision_description_fr</attribute>
+        <attribute>folder_description</attribute>
+        <attribute>diameter_nominal</attribute>
+        <attribute>status_functional</attribute>
+        <attribute>fk_precisionalti</attribute>
+        <attribute>folder_date_start</attribute>
+        <attribute>distributor_name</attribute>
+        <attribute>label_1_rotation</attribute>
+        <attribute>precisionalti_value_fr</attribute>
+        <attribute>fk_object_reference</attribute>
+        <attribute>schema_force_visible</attribute>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>fk_valve_type</attribute>
+        <attribute>fk_folder</attribute>
+        <attribute>valve_function_short_fr</attribute>
+        <attribute>fk_pipe</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>year_end</attribute>
+        <attribute>status_description_fr</attribute>
+        <attribute>fk_handle_precision</attribute>
+        <attribute>valve_type_short_fr</attribute>
+        <attribute>fk_maintenance</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>fk_valve_function</attribute>
+        <attribute>label_2_x</attribute>
+        <attribute>label_2_y</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>folder_date_end</attribute>
+        <attribute>valve_function_description_fr</attribute>
+        <attribute>_schema_visible</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>precision_value_fr</attribute>
+        <attribute>status_active</attribute>
+        <attribute>label_1_x</attribute>
+        <attribute>valve_type_description_fr</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>altitude</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>label_2_rotation</attribute>
+        <attribute>fk_handle_precisionalti</attribute>
+        <attribute>object_reference_value_fr</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_valve_actuation</attribute>
+        <attribute>valve_actuation_short_fr</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
@@ -18856,7 +19085,6 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="fk_district"/>
           <column width="-1" hidden="0" type="field" name="fk_pressurezone"/>
           <column width="-1" hidden="0" type="field" name="_printmaps"/>
-          <column width="-1" hidden="0" type="field" name="_pipe_node_type"/>
           <column width="-1" hidden="0" type="field" name="orientation"/>
           <column width="-1" hidden="0" type="field" name="_pipe_orientation"/>
           <column width="-1" hidden="0" type="field" name="_pipe_schema_visible"/>
@@ -18916,7 +19144,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="folder_date_start"/>
           <column width="-1" hidden="0" type="field" name="folder_date_end"/>
           <column width="-1" hidden="0" type="field" name="precisionalti_value_fr"/>
-          <column width="-1" hidden="0" type="field" name="as _schema_visible"/>
+          <column width="-1" hidden="0" type="field" name="_schema_visible"/>
+          <column width="-1" hidden="0" type="field" name="valve_function_short_fr"/>
+          <column width="-1" hidden="0" type="field" name="valve_type_short_fr"/>
+          <column width="-1" hidden="0" type="field" name="valve_actuation_short_fr"/>
         </columns>
       </attributetableconfig>
       <editform>./ui_forms/valve.ui</editform>
@@ -19061,81 +19292,84 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
   </projectlayers>
   <properties>
-    <Variables>
-      <variableNames type="QStringList"/>
-      <variableValues type="QStringList"/>
-    </Variables>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUrl type="QString"></WMSUrl>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:2056</ProjectCrs>
+      <ProjectCRSID type="int">1919</ProjectCRSID>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <RandomColors type="bool">true</RandomColors>
+      <AlphaInt type="int">255</AlphaInt>
+      <ColorRamp type="QString"></ColorRamp>
+    </DefaultStyles>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <quickfinder_plugin>
       <qftsfilepath type="QString"></qftsfilepath>
       <project type="bool">false</project>
       <refreshDelay type="int">15</refreshDelay>
       <refreshAuto type="bool">true</refreshAuto>
     </quickfinder_plugin>
-    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
-    <WMSKeywordList type="QStringList">
-      <value></value>
-    </WMSKeywordList>
-    <WFSUrl type="QString"></WFSUrl>
-    <Paths>
-      <Absolute type="bool">false</Absolute>
-    </Paths>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList">
-      <value>croquis_reseau20170914153941848</value>
-      <value>crossing20170912143156180</value>
-      <value>hydrant20170912112103216</value>
-      <value>installation20170912103810982</value>
-      <value>meter20170912075821953</value>
-      <value>node20170821111240113</value>
-      <value>part20170912113448062</value>
-      <value>pipe20170817163039703</value>
-      <value>pipe_copy20170821075917185</value>
-      <value>pipe_copy20170821075918952</value>
-      <value>qwat_annotation_line20170919102956179</value>
-      <value>qwat_annotation_point20170919102956209</value>
-      <value>qwat_consumptionzone20170919113125033</value>
-      <value>qwat_folder20170919112604553</value>
-      <value>qwat_pressurezone20170919102956224</value>
-      <value>qwat_printmap20170919102956238</value>
-      <value>sige_qgis_qwat_hydrant20171020105757789</value>
-      <value>sige_qgis_qwat_leak20170928162343618</value>
-      <value>subscriber20170911155257972</value>
-      <value>valve20170829165258108</value>
-    </WFSLayers>
     <WMSContactMail type="QString"></WMSContactMail>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-      <DegreeFormat type="QString">MU</DegreeFormat>
-    </PositionPrecision>
-    <WCSUrl type="QString"></WCSUrl>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WFSLayersPrecision>
+      <sige_qgis_qwat_hydrant20171020105757789 type="int">8</sige_qgis_qwat_hydrant20171020105757789>
+      <sige_qgis_qwat_remote20171122094212805 type="int">8</sige_qgis_qwat_remote20171122094212805>
+      <sige_qgis_qwat_subscriber_reference_mn9520180810140843075 type="int">8</sige_qgis_qwat_subscriber_reference_mn9520180810140843075>
+      <qwat_printmap20170919102956238 type="int">8</qwat_printmap20170919102956238>
+      <qwat_annotation_line20170919102956179 type="int">8</qwat_annotation_line20170919102956179>
+      <installation20170912103810982 type="int">8</installation20170912103810982>
+      <node20170821111240113 type="int">8</node20170821111240113>
+      <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
+      <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
+      <sige_qgis_qwat_meter_reference_mn9520180810140843109 type="int">8</sige_qgis_qwat_meter_reference_mn9520180810140843109>
+      <meter20170912075821953 type="int">8</meter20170912075821953>
+      <part20170912113448062 type="int">8</part20170912113448062>
+      <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
+      <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
+      <pipe20170817163039703 type="int">8</pipe20170817163039703>
+      <sige_qgis_ouvrage_copier_copier20180214142459666 type="int">8</sige_qgis_ouvrage_copier_copier20180214142459666>
+      <qwat_folder20170919112604553 type="int">8</qwat_folder20170919112604553>
+      <crossing20170912143156180 type="int">8</crossing20170912143156180>
+      <qwat_annotation_point20170919102956209 type="int">8</qwat_annotation_point20170919102956209>
+      <qwat_consumptionzone20170919113125033 type="int">8</qwat_consumptionzone20170919113125033>
+      <qwat_pressurezone20170919102956224 type="int">8</qwat_pressurezone20170919102956224>
+      <valve20170829165258108 type="int">8</valve20170829165258108>
+      <sige_qgis_qwat_leak20170928162343618 type="int">8</sige_qgis_qwat_leak20170928162343618>
+      <sige_qgis_ouvrage_copier_copier20180214142612527 type="int">8</sige_qgis_ouvrage_copier_copier20180214142612527>
+      <sige_qgis_waterhardness_mn9520181001165211151 type="int">8</sige_qgis_waterhardness_mn9520181001165211151>
+      <croquis_reseau20170914153941848 type="int">8</croquis_reseau20170914153941848>
+    </WFSLayersPrecision>
+    <WMSRestrictedComposers type="QStringList"/>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WMSContactPhone type="QString"></WMSContactPhone>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSContactPosition type="QString"></WMSContactPosition>
-    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
-    <Measure>
-      <Ellipsoid type="QString">bessel</Ellipsoid>
-    </Measure>
-    <WMSPrecision type="QString">8</WMSPrecision>
-    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <WFSTLayers>
       <Insert type="QStringList"/>
       <Update type="QStringList"/>
       <Delete type="QStringList"/>
     </WFSTLayers>
-    <Gui>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-    </Gui>
+    <WCSLayers type="QStringList"/>
+    <WMSRestrictedLayers type="QStringList"/>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSPrecision type="QString">8</WMSPrecision>
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
@@ -19283,28 +19517,6 @@ def my_form_open(dialog, layer, feature):
         <value>0.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
-    <WFSLayersPrecision>
-      <sige_qgis_qwat_hydrant20171020105757789 type="int">8</sige_qgis_qwat_hydrant20171020105757789>
-      <qwat_printmap20170919102956238 type="int">8</qwat_printmap20170919102956238>
-      <qwat_annotation_line20170919102956179 type="int">8</qwat_annotation_line20170919102956179>
-      <installation20170912103810982 type="int">8</installation20170912103810982>
-      <node20170821111240113 type="int">8</node20170821111240113>
-      <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
-      <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
-      <part20170912113448062 type="int">8</part20170912113448062>
-      <meter20170912075821953 type="int">8</meter20170912075821953>
-      <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
-      <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
-      <pipe20170817163039703 type="int">8</pipe20170817163039703>
-      <qwat_folder20170919112604553 type="int">8</qwat_folder20170919112604553>
-      <crossing20170912143156180 type="int">8</crossing20170912143156180>
-      <qwat_annotation_point20170919102956209 type="int">8</qwat_annotation_point20170919102956209>
-      <qwat_consumptionzone20170919113125033 type="int">8</qwat_consumptionzone20170919113125033>
-      <qwat_pressurezone20170919102956224 type="int">8</qwat_pressurezone20170919102956224>
-      <valve20170829165258108 type="int">8</valve20170829165258108>
-      <sige_qgis_qwat_leak20170928162343618 type="int">8</sige_qgis_qwat_leak20170928162343618>
-      <croquis_reseau20170914153941848 type="int">8</croquis_reseau20170914153941848>
-    </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList">
         <value>crossing20170912143156180</value>
@@ -19314,35 +19526,68 @@ def my_form_open(dialog, layer, feature):
         <value>qwat_printmap20170919102956238</value>
       </disabledLayers>
     </Identify>
-    <Macros>
-      <pythonCode type="QString"></pythonCode>
-    </Macros>
-    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
-    <WCSLayers type="QStringList"/>
-    <Legend>
-      <filterByMap type="bool">false</filterByMap>
-    </Legend>
-    <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
-      <ProjectCrs type="QString">EPSG:2056</ProjectCrs>
-      <ProjectCRSID type="int">1919</ProjectCRSID>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
-    <DefaultStyles>
-      <Fill type="QString"></Fill>
-      <Line type="QString"></Line>
-      <Marker type="QString"></Marker>
-      <RandomColors type="bool">true</RandomColors>
-      <AlphaInt type="int">255</AlphaInt>
-      <ColorRamp type="QString"></ColorRamp>
-    </DefaultStyles>
-    <WMSFees type="QString">conditions unknown</WMSFees>
-    <WMSImageQuality type="int">90</WMSImageQuality>
-    <Measurement>
-      <DistanceUnits type="QString">meters</DistanceUnits>
-      <AreaUnits type="QString">m2</AreaUnits>
-    </Measurement>
-    <WMSUrl type="QString"></WMSUrl>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+    </Gui>
+    <Measure>
+      <Ellipsoid type="QString">bessel</Ellipsoid>
+    </Measure>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WFSLayers type="QStringList">
+      <value>croquis_reseau20170914153941848</value>
+      <value>crossing20170912143156180</value>
+      <value>hydrant20170912112103216</value>
+      <value>installation20170912103810982</value>
+      <value>meter20170912075821953</value>
+      <value>node20170821111240113</value>
+      <value>part20170912113448062</value>
+      <value>pipe20170817163039703</value>
+      <value>pipe_copy20170821075917185</value>
+      <value>pipe_copy20170821075918952</value>
+      <value>qwat_annotation_line20170919102956179</value>
+      <value>qwat_annotation_point20170919102956209</value>
+      <value>qwat_consumptionzone20170919113125033</value>
+      <value>qwat_folder20170919112604553</value>
+      <value>qwat_pressurezone20170919102956224</value>
+      <value>qwat_printmap20170919102956238</value>
+      <value>sige_qgis_ouvrage_copier_copier20180214142459666</value>
+      <value>sige_qgis_ouvrage_copier_copier20180214142612527</value>
+      <value>sige_qgis_qwat_hydrant20171020105757789</value>
+      <value>sige_qgis_qwat_leak20170928162343618</value>
+      <value>sige_qgis_qwat_meter_reference_mn9520180810140843109</value>
+      <value>sige_qgis_qwat_remote20171122094212805</value>
+      <value>sige_qgis_qwat_subscriber_reference_mn9520180810140843075</value>
+      <value>sige_qgis_waterhardness_mn9520181001165211151</value>
+      <value>subscriber20170911155257972</value>
+      <value>valve20170829165258108</value>
+    </WFSLayers>
+    <WFSUrl type="QString"></WFSUrl>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
   </properties>
   <visibility-presets/>
 </qgis>
