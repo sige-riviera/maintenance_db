@@ -44,7 +44,7 @@
         </property>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="sige_qgis_ouvrage_copier_copier20180214142612527" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_installation_mn95&quot; (geometry) sql=fk_distributor != 1" name="sige_qgis_ouvrage_etranger">
+    <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="sige_qgis_ouvrage_copier_copier20180214142612527" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_installation_mn95&quot; (geometry) sql=fk_distributor != 1" name="sige_qgis_ouvrage_etranger">
       <customproperties>
         <property key="expandedLegendNodes">
           <value>{2c3f2183-dc95-44bf-a07e-fd3a221a1e0f}</value>
@@ -116,10 +116,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2548291.41113594174385071</xmin>
-      <ymin>1137185.72960906033404171</ymin>
-      <xmax>2572493.00126436352729797</xmax>
-      <ymax>1152757.49210910801775753</ymax>
+      <xmin>2544425.16534172696992755</xmin>
+      <ymin>1136024.57060313178226352</ymin>
+      <xmax>2568626.75547014875337481</xmax>
+      <ymax>1151596.33310317946597934</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -216,9 +216,9 @@
         <legendlayerfile isInOverview="0" layerid="sige_qgis_ouvrage_copier_copier20180214142459666" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_ouvrage_etranger" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="sige_qgis_ouvrage_etranger" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="sige_qgis_ouvrage_copier_copier20180214142612527" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="sige_qgis_ouvrage_copier_copier20180214142612527" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="sige_qgis_compteur_reseau" showFeatureCount="0">
@@ -1555,7 +1555,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>status_description_fr</displayfield>
+      <displayfield>status_value_fr</displayfield>
       <label>0</label>
       <labelattributes>
         <label fieldname="" text="Label"/>
@@ -3795,7 +3795,7 @@ END&#xd;
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontBold" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -3826,7 +3826,7 @@ END&#xd;
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="1"/>
         <property key="labeling/multilineHeight" value="1.2"/>
-        <property key="labeling/namedStyle" value="Regular"/>
+        <property key="labeling/namedStyle" value="Normal"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -4028,7 +4028,10 @@ END&#xd;
         <alias field="folder_date_start" index="41" name=""/>
         <alias field="folder_date_end" index="42" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>_pipe_orientation</attribute>
+        <attribute>_pipe_schema_visible</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS/>
       <attributeactions default="0">
         <actionsetting showInAttributeTable="1" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('subscriber20130304110011459',[% $id %])" icon="" capture="0" type="1" name="History audit" shortTitle=""/>
@@ -4040,7 +4043,6 @@ END&#xd;
           <column width="-1" hidden="0" type="field" name="fk_pressurezone"/>
           <column width="-1" hidden="0" type="field" name="fk_printmap"/>
           <column width="-1" hidden="0" type="field" name="_printmaps"/>
-          <column width="-1" hidden="0" type="field" name="_pipe_node_type"/>
           <column width="-1" hidden="0" type="field" name="_pipe_orientation"/>
           <column width="-1" hidden="0" type="field" name="_pipe_schema_visible"/>
           <column width="-1" hidden="0" type="field" name="identification"/>
@@ -10316,7 +10318,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>name</displayfield>
+      <displayfield>identification</displayfield>
       <label>0</label>
       <labelattributes>
         <label fieldname="" text="Label"/>
@@ -17136,7 +17138,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>name</displayfield>
+      <displayfield>sqwh_hardness_median</displayfield>
       <label>0</label>
       <labelattributes>
         <label fieldname="" text="Étiquette"/>
@@ -19032,8 +19034,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>status_functional</attribute>
         <attribute>fk_precisionalti</attribute>
         <attribute>folder_date_start</attribute>
-        <attribute>distributor_name</attribute>
         <attribute>label_1_rotation</attribute>
+        <attribute>distributor_name</attribute>
         <attribute>precisionalti_value_fr</attribute>
         <attribute>fk_object_reference</attribute>
         <attribute>schema_force_visible</attribute>
@@ -19048,19 +19050,20 @@ def my_form_open(dialog, layer, feature):
         <attribute>year_end</attribute>
         <attribute>status_description_fr</attribute>
         <attribute>fk_handle_precision</attribute>
-        <attribute>valve_type_short_fr</attribute>
         <attribute>fk_maintenance</attribute>
+        <attribute>valve_type_short_fr</attribute>
         <attribute>fk_status</attribute>
         <attribute>fk_valve_function</attribute>
         <attribute>label_2_x</attribute>
         <attribute>label_2_y</attribute>
         <attribute>fk_distributor</attribute>
-        <attribute>folder_date_end</attribute>
+        <attribute>orientation</attribute>
         <attribute>valve_function_description_fr</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>_schema_visible</attribute>
         <attribute>fk_precision</attribute>
-        <attribute>precision_value_fr</attribute>
         <attribute>status_active</attribute>
+        <attribute>precision_value_fr</attribute>
         <attribute>label_1_x</attribute>
         <attribute>valve_type_description_fr</attribute>
         <attribute>label_1_y</attribute>
