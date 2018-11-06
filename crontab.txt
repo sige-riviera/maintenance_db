@@ -42,3 +42,6 @@ MAILTO="kevin.andre@sige.ch,jonas.graf@sige.ch"
 # every day croquis_reseau + abonnes (simple copy)
 0 20 * * * /home/sige/maintenance_db/cartoriviera/abonnes.sh>/dev/null
 0 22 * * * /home/sige/maintenance_db/cartoriviera/croquis_reseau.sh>/dev/null
+
+# disk usage information
+0 0 * * mon /home/sige/maintenance_db/disk_usage.sh>/dev/null
