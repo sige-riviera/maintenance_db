@@ -48,7 +48,7 @@ for commune in "${COMMUNES[@]}"; do
     filename="${fullfile##*/}"
     extension="${filename##*.}"
     strippedfilename="${filename%.*}"
-    if [[ $filename =~ Thumbs.db$|\.xlsx$ ]]; then
+    if [[ $filename =~ Thumbs.db$|\.xlsx$|plot.log$ ]]; then
       continue
     fi
     result=$(PGUSER=sige PGDATABASE=sige_commun psql -t -q -c "select file from distribution.croquis_reseau where file = '${filename}'")
