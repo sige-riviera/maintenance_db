@@ -7,7 +7,7 @@ drop table if exists cartoriviera.sige_qgis_croquis_reseau_mn95;
 
 create table cartoriviera.sige_qgis_croquis_reseau_mn95 as
 select
-  '<a href=javascript:app.openInfoWindow("https://www.cartoriviera.ch/sige/reseau/COMMUNES/' ||
+  '<a href=javascript:sitnExterns.openWindow("Croquis_reseau","https://www.cartoriviera.ch/sige/reseau/COMMUNES/' ||
   CASE
   WHEN "file" ~ '^82_' THEN  'Blonay'
   WHEN "file" ~ '^84_' THEN  'Chardonne'
@@ -23,7 +23,7 @@ select
   WHEN "file" ~ '^50_' THEN  'Veytaux'
   WHEN "file" ~ '^37_' THEN  'Villeneuve-Noville'
   ELSE regexp_replace("file", '^(^[A-Za-z]+)_.*$', '\\1')
-  END || '/Croquis_reseau/' || file || '","Croquis_reseau",600,600)>'||file||'</a>' AS croquis,
+  END || '/Croquis_reseau/' || file || '",600,600)>'||file||'</a>' AS croquis,
   *
 from distribution.croquis_reseau;
 

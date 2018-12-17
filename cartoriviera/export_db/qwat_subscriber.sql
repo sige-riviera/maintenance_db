@@ -7,7 +7,7 @@ drop table if exists cartoriviera.sige_qgis_qwat_subscriber_mn95;
 
 create table cartoriviera.sige_qgis_qwat_subscriber_mn95 as
 select
-    '<a href=javascript:app.openInfoWindow("https://www.cartoriviera.ch/sige/www/gallery.php?type=abonne&abonne='||identification||'&commune='||district_prefix||'","Abonne",600,600)>croquis/photos</a>' as lien,
+    '<a href=javascript:sitnExterns.openWindow("Abonne","https://www.cartoriviera.ch/sige/www/gallery.php?type=abonne&abonne='||identification||'&commune='||district_prefix||'",600,600)>croquis/photos</a>' as lien,
     id,
     fk_district,
     fk_pressurezone,
