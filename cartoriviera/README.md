@@ -7,7 +7,7 @@ Les scripts fonctionnent depuis le serveur 171.74.172.203
 
 S'assurer que cartoriviera est bien été monté avec:
 ```
-sshfs drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
+sshfs drouzaud@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
 ```
 
 une clef ssh est autorisée pour l'utilisateur drouzaud avec denis.rouzaud@sige.ch pour la connexion sur cartoriviera.vevey.ch.

@@ -56,6 +56,6 @@ done
 
 # mettre à jour sur cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
-mountpoint -q -- /home/sige/mount/cartoriviera || sshfs drouzaud@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
+rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s /home/sige/data/carto/data_ouvrage/ drouzaud@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
+mountpoint -q -- /home/sige/mount/cartoriviera || sshfs drouzaud@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
 chmod -R 755 /home/sige/mount/cartoriviera/ouvrages
