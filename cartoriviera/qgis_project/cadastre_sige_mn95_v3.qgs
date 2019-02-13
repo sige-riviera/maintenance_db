@@ -1,0 +1,1862 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.2.2-Bonn" projectname="">
+  <homePath path=""/>
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>47</srsid>
+      <srid>2056</srid>
+      <authid>EPSG:2056</authid>
+      <description>CH1903+ / LV95</description>
+      <projectionacronym>somerc</projectionacronym>
+      <ellipsoidacronym>bessel</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" name="sige_qgis_enquete" id="sige_qgis_enquete20170928170530822" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_enquete_mn95&quot; (geometry) sql=" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" name="sige_qgis_enquete_camac" id="sige_qgis_enquete_camac20171003142415834" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_enquete_camac_mn95&quot; (geometry) sql=" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" name="sige_qgis_servitude_ligne" id="sige_qgis_servitude_ligne20170928170530878" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_servitude_ligne_mn95&quot; (geometry) sql=" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" name="sige_qgis_servitude_zone" id="sige_qgis_servitude_zone20170928170530892" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiPolygon table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_servitude_zone_mn95&quot; (geometry) sql=" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>sige_qgis_enquete20170928170530822</item>
+      <item>sige_qgis_servitude_ligne20170928170530878</item>
+      <item>sige_qgis_servitude_zone20170928170530892</item>
+      <item>sige_qgis_enquete_camac20171003142415834</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings unit="2" mode="1" type="1" enabled="0" intersection-snapping="0" tolerance="0">
+    <individual-layer-settings>
+      <layer-setting id="sige_qgis_servitude_zone20170928170530892" type="1" enabled="0" units="1" tolerance="12"/>
+      <layer-setting id="sige_qgis_servitude_ligne20170928170530878" type="1" enabled="0" units="1" tolerance="12"/>
+      <layer-setting id="sige_qgis_enquete20170928170530822" type="1" enabled="0" units="1" tolerance="12"/>
+      <layer-setting id="sige_qgis_enquete_camac20171003142415834" type="1" enabled="0" units="1" tolerance="12"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+    <units>meters</units>
+    <extent>
+      <xmin>2554575.24399326276034117</xmin>
+      <ymin>1141035.99392336094751954</ymin>
+      <xmax>2560216.02689121197909117</xmax>
+      <ymax>1150591.06016939366236329</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>47</srsid>
+        <srid>2056</srid>
+        <authid>EPSG:2056</authid>
+        <description>CH1903+ / LV95</description>
+        <projectionacronym>somerc</projectionacronym>
+        <ellipsoidacronym>bessel</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" name="sige_qgis_enquete" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" layerid="sige_qgis_enquete20170928170530822" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" name="sige_qgis_enquete_camac" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" layerid="sige_qgis_enquete_camac20171003142415834" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" name="sige_qgis_servitude_ligne" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" layerid="sige_qgis_servitude_ligne20170928170530878" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" name="sige_qgis_servitude_zone" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" layerid="sige_qgis_servitude_zone20170928170530892" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <projectlayers>
+    <maplayer autoRefreshEnabled="0" labelsEnabled="1" simplifyAlgorithm="0" simplifyLocal="0" minScale="3001" refreshOnNotifyEnabled="0" readOnly="0" type="vector" geometry="Line" hasScaleBasedVisibilityFlag="1" autoRefreshTime="0" simplifyDrawingTol="3.6" simplifyMaxScale="1" maxScale="0" refreshOnNotifyMessage="" simplifyDrawingHints="0">
+      <extent>
+        <xmin>2547186.25</xmin>
+        <ymin>1132986.25</ymin>
+        <xmax>2566601.5</xmax>
+        <ymax>1154578.25</ymax>
+      </extent>
+      <id>sige_qgis_enquete20170928170530822</id>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table="sige_qgis_cartoriviera"."sige_qgis_enquete_mn95" (geometry) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sige_qgis_enquete</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" symbollevels="0" enableorderby="0" forceraster="0">
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" name="0" type="line">
+            <layer pass="0" enabled="1" locked="0" class="SimpleLine">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="85,255,127,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.26"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+        <effect type="effectStack" enabled="0">
+          <effect type="drawSource">
+            <prop k="blend_mode" v="0"/>
+            <prop k="draw_mode" v="2"/>
+            <prop k="enabled" v="1"/>
+            <prop k="opacity" v="1"/>
+          </effect>
+        </effect>
+      </renderer-v2>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory enabled="0" maxScaleDenominator="1e+8" lineSizeType="MM" height="15" sizeScale="3x:0,0,0,0,0,0" width="15" scaleBasedVisibility="0" labelPlacementMethod="XHeight" barWidth="5" backgroundAlpha="255" penWidth="0" sizeType="MM" rotationOffset="270" diagramOrientation="Up" penAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="inf" penColor="#000000" opacity="1" backgroundColor="#ffffff" scaleDependency="Area" minimumSize="0">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" zIndex="0" linePlacementFlags="10" placement="2" dist="0" priority="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option name="name" value="" type="QString"/>
+            <Option name="properties"/>
+            <Option name="type" value="collection" type="QString"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="remarque">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="remarque" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="id" expression=""/>
+        <default applyOnUpdate="0" field="remarque" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint field="id" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="remarque" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="remarque" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+        <actionsetting capture="0" isEnabledOnlyWhenEditable="0" notificationMessage="" name="History audit" id="{fe8959f7-5c6a-4c17-9e46-b05748ca734d}" type="1" shortTitle="" action="qgis.utils.plugins['postgres91plusauditor'].audit('cadastre20140312152032371',[% $id %])" icon="">
+          <actionScope id="Feature"/>
+          <actionScope id="Canvas"/>
+          <actionScope id="Field"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column name="id" type="field" width="-1" hidden="0"/>
+          <column name="remarque" type="field" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>opt/QGIS2/build</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer autoRefreshEnabled="0" labelsEnabled="1" simplifyAlgorithm="0" simplifyLocal="1" minScale="4000" refreshOnNotifyEnabled="0" readOnly="0" type="vector" geometry="Point" hasScaleBasedVisibilityFlag="1" autoRefreshTime="0" simplifyDrawingTol="1" simplifyMaxScale="1" maxScale="0" refreshOnNotifyMessage="" simplifyDrawingHints="0">
+      <extent>
+        <xmin>2547186.75</xmin>
+        <ymin>1133033.625</ymin>
+        <xmax>2566595.75</xmax>
+        <ymax>1154567.125</ymax>
+      </extent>
+      <id>sige_qgis_enquete_camac20171003142415834</id>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table="sige_qgis_cartoriviera"."sige_qgis_enquete_camac_mn95" (geometry) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sige_qgis_enquete_camac</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="RuleRenderer" symbollevels="0" enableorderby="0" forceraster="0">
+        <rules key="{138f6436-9bd1-41b9-99e5-f35fb4b10b1a}">
+          <rule key="{ecc9c06e-65a8-4652-9db7-5ab6a0efbb6d}" symbol="0"/>
+        </rules>
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" name="0" type="marker">
+            <layer pass="0" enabled="1" locked="0" class="SimpleMarker">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="255,255,255,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="diamond"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.4"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="12"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <effect type="effectStack" enabled="0">
+          <effect type="drawSource">
+            <prop k="blend_mode" v="0"/>
+            <prop k="draw_mode" v="2"/>
+            <prop k="enabled" v="1"/>
+            <prop k="opacity" v="1"/>
+          </effect>
+        </effect>
+      </renderer-v2>
+      <labeling type="simple">
+        <settings>
+          <text-style fontItalic="0" isExpression="0" fontStrikeout="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" previewBkgrdColor="#ffffff" multilineHeight="1" blendMode="0" fontWordSpacing="0" fontLetterSpacing="0" fieldName="camac" fontSizeUnit="Point" fontWeight="50" fontFamily="MS Shell Dlg 2" fontSize="8" textOpacity="1" namedStyle="Regular" textColor="0,0,0,255" useSubstitutions="0" fontCapitals="0" fontUnderline="0">
+            <text-buffer bufferColor="255,255,255,255" bufferSize="1" bufferSizeUnits="MM" bufferNoFill="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferOpacity="1" bufferDraw="0" bufferJoinStyle="64" bufferBlendMode="0"/>
+            <background shapeSizeType="0" shapeRotationType="0" shapeOffsetUnit="MM" shapeJoinStyle="64" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeOffsetY="0" shapeSizeX="0" shapeOpacity="1" shapeSVGFile="" shapeRadiiUnit="MM" shapeBorderColor="128,128,128,255" shapeSizeY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeFillColor="255,255,255,255" shapeDraw="0" shapeRadiiY="0" shapeBorderWidth="0" shapeBorderWidthUnit="MM" shapeOffsetX="0" shapeType="0" shapeBlendMode="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeSizeUnit="MM" shapeSizeMapUnitScale="3x:0,0,0,0,0,0"/>
+            <shadow shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusAlphaOnly="0" shadowDraw="0" shadowRadiusUnit="MM" shadowOpacity="0.7" shadowOffsetGlobal="1" shadowRadius="1.5" shadowScale="100" shadowColor="0,0,0,255" shadowOffsetAngle="135" shadowOffsetUnit="MM" shadowOffsetDist="1" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowBlendMode="6"/>
+            <substitutions/>
+          </text-style>
+          <text-format multilineAlign="0" rightDirectionSymbol=">" leftDirectionSymbol="&lt;" decimals="3" addDirectionSymbol="0" plussign="0" placeDirectionSymbol="0" reverseDirectionSymbol="0" wrapChar="" formatNumbers="0"/>
+          <placement repeatDistance="0" preserveRotation="1" xOffset="0" rotationAngle="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placement="1" centroidWhole="0" priority="5" distMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" offsetUnits="MM" yOffset="0" centroidInside="0" fitInPolygonOnly="0" placementFlags="0" maxCurvedCharAngleIn="20" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" offsetType="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" dist="0" distUnits="MM" quadOffset="4" maxCurvedCharAngleOut="-20"/>
+          <rendering fontMinPixelSize="3" minFeatureSize="0" scaleVisibility="0" fontMaxPixelSize="10000" scaleMin="1" obstacleFactor="1" mergeLines="0" drawLabels="1" upsidedownLabels="0" displayAll="0" obstacleType="0" zIndex="0" scaleMax="10000" fontLimitPixelSize="0" limitNumLabels="0" obstacle="1" labelPerPart="0" maxNumLabels="2000"/>
+          <dd_properties>
+            <Option type="Map">
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties"/>
+              <Option name="type" value="collection" type="QString"/>
+            </Option>
+          </dd_properties>
+        </settings>
+      </labeling>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory enabled="0" maxScaleDenominator="1e+8" lineSizeType="MM" height="15" sizeScale="3x:0,0,0,0,0,0" width="15" scaleBasedVisibility="0" labelPlacementMethod="XHeight" barWidth="5" backgroundAlpha="255" penWidth="0" sizeType="MM" rotationOffset="270" diagramOrientation="Up" penAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="inf" penColor="#000000" opacity="1" backgroundColor="#ffffff" scaleDependency="Area" minimumSize="0">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" zIndex="0" linePlacementFlags="10" placement="0" dist="0" priority="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option name="name" value="" type="QString"/>
+            <Option name="properties"/>
+            <Option name="type" value="collection" type="QString"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="camac">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="date_recu">
+          <editWidget type="DateTime">
+            <config>
+              <Option type="Map">
+                <Option name="allow_null" value="0" type="QString"/>
+                <Option name="calendar_popup" value="1" type="QString"/>
+                <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+                <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="date_traite">
+          <editWidget type="DateTime">
+            <config>
+              <Option type="Map">
+                <Option name="allow_null" value="0" type="QString"/>
+                <Option name="calendar_popup" value="1" type="QString"/>
+                <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+                <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="date_fin">
+          <editWidget type="DateTime">
+            <config>
+              <Option type="Map">
+                <Option name="allow_null" value="0" type="QString"/>
+                <Option name="calendar_popup" value="1" type="QString"/>
+                <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+                <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="construction">
+          <editWidget type="CheckBox">
+            <config>
+              <Option type="Map">
+                <Option name="CheckedState" value="t" type="QString"/>
+                <Option name="UncheckedState" value="f" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="remarque">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="1" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="camac" name=""/>
+        <alias index="2" field="date_recu" name=""/>
+        <alias index="3" field="date_traite" name=""/>
+        <alias index="4" field="date_fin" name=""/>
+        <alias index="5" field="construction" name=""/>
+        <alias index="6" field="remarque" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="id" expression=""/>
+        <default applyOnUpdate="0" field="camac" expression=""/>
+        <default applyOnUpdate="0" field="date_recu" expression=""/>
+        <default applyOnUpdate="0" field="date_traite" expression=""/>
+        <default applyOnUpdate="0" field="date_fin" expression=""/>
+        <default applyOnUpdate="0" field="construction" expression=""/>
+        <default applyOnUpdate="0" field="remarque" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint field="id" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="camac" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="date_recu" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="date_traite" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="date_fin" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="construction" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="remarque" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="camac" exp="" desc=""/>
+        <constraint field="date_recu" exp="" desc=""/>
+        <constraint field="date_traite" exp="" desc=""/>
+        <constraint field="date_fin" exp="" desc=""/>
+        <constraint field="construction" exp="" desc=""/>
+        <constraint field="remarque" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <actionsetting capture="0" isEnabledOnlyWhenEditable="0" notificationMessage="" name="History audit" id="{af051def-eb8b-4426-9a23-4b5a29ef2b78}" type="1" shortTitle="" action="qgis.utils.plugins['postgres91plusauditor'].audit('camac20140107104722685',[% $id %])" icon="">
+          <actionScope id="Feature"/>
+          <actionScope id="Canvas"/>
+          <actionScope id="Field"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column name="id" type="field" width="-1" hidden="0"/>
+          <column name="camac" type="field" width="-1" hidden="0"/>
+          <column name="date_recu" type="field" width="-1" hidden="0"/>
+          <column name="date_traite" type="field" width="-1" hidden="0"/>
+          <column name="date_fin" type="field" width="-1" hidden="0"/>
+          <column name="construction" type="field" width="-1" hidden="0"/>
+          <column name="remarque" type="field" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform tolerant="1">.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>uifilelayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>"id"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer autoRefreshEnabled="0" labelsEnabled="1" simplifyAlgorithm="0" simplifyLocal="1" minScale="1e+8" refreshOnNotifyEnabled="0" readOnly="0" type="vector" geometry="Line" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingTol="1" simplifyMaxScale="1" maxScale="0" refreshOnNotifyMessage="" simplifyDrawingHints="0">
+      <extent>
+        <xmin>2550791.75</xmin>
+        <ymin>1133621.75</ymin>
+        <xmax>2564165.75</xmax>
+        <ymax>1152317.875</ymax>
+      </extent>
+      <id>sige_qgis_servitude_ligne20170928170530878</id>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString table="sige_qgis_cartoriviera"."sige_qgis_servitude_ligne_mn95" (geometry) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sige_qgis_servitude_ligne</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="RuleRenderer" symbollevels="0" enableorderby="0" forceraster="0">
+        <rules key="{f3ccdd35-7fd8-4b9f-b9f8-3350d86f1ea8}">
+          <rule key="{be8744b1-363c-49ad-8643-53626d1389cd}" symbol="0" label="à modifier" filter="fk_statut in (1,2,3,4)"/>
+          <rule key="{caeb8342-3456-4739-9f86-d9dc6a3f56bf}" symbol="1" label="à inscrire" filter="fk_statut = 5"/>
+          <rule key="{9ee2fb69-7a7f-423d-969f-d613851f1801}" symbol="2" label="inscrites" filter="fk_statut is null"/>
+        </rules>
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" name="0" type="line">
+            <layer pass="0" enabled="1" locked="0" class="SimpleLine">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="188,173,201,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1.4"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="1" name="1" type="line">
+            <layer pass="0" enabled="1" locked="0" class="SimpleLine">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="216,123,86,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1.4"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="1" name="2" type="line">
+            <layer pass="0" enabled="1" locked="0" class="SimpleLine">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="230,209,50,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1.4"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <effect type="effectStack" enabled="0">
+          <effect type="drawSource">
+            <prop k="blend_mode" v="0"/>
+            <prop k="draw_mode" v="2"/>
+            <prop k="enabled" v="1"/>
+            <prop k="opacity" v="1"/>
+          </effect>
+        </effect>
+      </renderer-v2>
+      <labeling type="simple">
+        <settings>
+          <text-style fontItalic="0" isExpression="0" fontStrikeout="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" previewBkgrdColor="#ffffff" multilineHeight="1" blendMode="0" fontWordSpacing="0" fontLetterSpacing="0" fieldName="numero" fontSizeUnit="Point" fontWeight="50" fontFamily="MS Shell Dlg 2" fontSize="8" textOpacity="1" namedStyle="Regular" textColor="111,110,110,255" useSubstitutions="0" fontCapitals="0" fontUnderline="0">
+            <text-buffer bufferColor="255,255,255,255" bufferSize="1" bufferSizeUnits="MM" bufferNoFill="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferOpacity="1" bufferDraw="0" bufferJoinStyle="64" bufferBlendMode="0"/>
+            <background shapeSizeType="0" shapeRotationType="0" shapeOffsetUnit="MM" shapeJoinStyle="64" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeOffsetY="0" shapeSizeX="0" shapeOpacity="1" shapeSVGFile="" shapeRadiiUnit="MM" shapeBorderColor="128,128,128,255" shapeSizeY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeFillColor="255,255,255,255" shapeDraw="0" shapeRadiiY="0" shapeBorderWidth="0" shapeBorderWidthUnit="MM" shapeOffsetX="0" shapeType="0" shapeBlendMode="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeSizeUnit="MM" shapeSizeMapUnitScale="3x:0,0,0,0,0,0"/>
+            <shadow shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusAlphaOnly="0" shadowDraw="0" shadowRadiusUnit="MM" shadowOpacity="0.7" shadowOffsetGlobal="1" shadowRadius="1.5" shadowScale="100" shadowColor="0,0,0,255" shadowOffsetAngle="135" shadowOffsetUnit="MM" shadowOffsetDist="1" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowBlendMode="6"/>
+            <substitutions/>
+          </text-style>
+          <text-format multilineAlign="0" rightDirectionSymbol=">" leftDirectionSymbol="&lt;" decimals="3" addDirectionSymbol="0" plussign="0" placeDirectionSymbol="0" reverseDirectionSymbol="0" wrapChar="" formatNumbers="0"/>
+          <placement repeatDistance="0" preserveRotation="1" xOffset="0" rotationAngle="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placement="2" centroidWhole="0" priority="5" distMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" offsetUnits="MapUnit" yOffset="0" centroidInside="0" fitInPolygonOnly="0" placementFlags="10" maxCurvedCharAngleIn="20" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" offsetType="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" dist="0" distUnits="MM" quadOffset="4" maxCurvedCharAngleOut="-20"/>
+          <rendering fontMinPixelSize="3" minFeatureSize="0" scaleVisibility="0" fontMaxPixelSize="10000" scaleMin="1" obstacleFactor="1" mergeLines="0" drawLabels="1" upsidedownLabels="0" displayAll="0" obstacleType="0" zIndex="0" scaleMax="10000000" fontLimitPixelSize="0" limitNumLabels="0" obstacle="1" labelPerPart="0" maxNumLabels="2000"/>
+          <dd_properties>
+            <Option type="Map">
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties"/>
+              <Option name="type" value="collection" type="QString"/>
+            </Option>
+          </dd_properties>
+        </settings>
+      </labeling>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory enabled="0" maxScaleDenominator="1e+8" lineSizeType="MM" height="15" sizeScale="3x:0,0,0,0,0,0" width="15" scaleBasedVisibility="0" labelPlacementMethod="XHeight" barWidth="5" backgroundAlpha="255" penWidth="0" sizeType="MM" rotationOffset="270" diagramOrientation="Up" penAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="inf" penColor="#000000" opacity="1" backgroundColor="#ffffff" scaleDependency="Area" minimumSize="0">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" zIndex="0" linePlacementFlags="10" placement="2" dist="0" priority="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option name="name" value="" type="QString"/>
+            <Option name="properties"/>
+            <Option name="type" value="collection" type="QString"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="type">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="etat">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="statut">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ouvrage">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="collecteur">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="partenaire">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="commune">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="type_numero">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="numero">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="date_inscription">
+          <editWidget type="DateTime">
+            <config>
+              <Option type="Map">
+                <Option name="allow_null" value="1" type="QString"/>
+                <Option name="calendar_popup" value="1" type="QString"/>
+                <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+                <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="parcelle">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="beneficiaire">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="modifie">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="modifie_par">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="numero_serv_original">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="remarque">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="document">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="type" name=""/>
+        <alias index="2" field="etat" name=""/>
+        <alias index="3" field="statut" name=""/>
+        <alias index="4" field="ouvrage" name=""/>
+        <alias index="5" field="collecteur" name=""/>
+        <alias index="6" field="partenaire" name=""/>
+        <alias index="7" field="commune" name=""/>
+        <alias index="8" field="type_numero" name=""/>
+        <alias index="9" field="numero" name=""/>
+        <alias index="10" field="date_inscription" name=""/>
+        <alias index="11" field="parcelle" name=""/>
+        <alias index="12" field="beneficiaire" name=""/>
+        <alias index="13" field="modifie" name=""/>
+        <alias index="14" field="modifie_par" name=""/>
+        <alias index="15" field="numero_serv_original" name=""/>
+        <alias index="16" field="remarque" name=""/>
+        <alias index="17" field="document" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="id" expression=""/>
+        <default applyOnUpdate="0" field="type" expression=""/>
+        <default applyOnUpdate="0" field="etat" expression=""/>
+        <default applyOnUpdate="0" field="statut" expression=""/>
+        <default applyOnUpdate="0" field="ouvrage" expression=""/>
+        <default applyOnUpdate="0" field="collecteur" expression=""/>
+        <default applyOnUpdate="0" field="partenaire" expression=""/>
+        <default applyOnUpdate="0" field="commune" expression=""/>
+        <default applyOnUpdate="0" field="type_numero" expression=""/>
+        <default applyOnUpdate="0" field="numero" expression=""/>
+        <default applyOnUpdate="0" field="date_inscription" expression=""/>
+        <default applyOnUpdate="0" field="parcelle" expression=""/>
+        <default applyOnUpdate="0" field="beneficiaire" expression=""/>
+        <default applyOnUpdate="0" field="modifie" expression=""/>
+        <default applyOnUpdate="0" field="modifie_par" expression=""/>
+        <default applyOnUpdate="0" field="numero_serv_original" expression=""/>
+        <default applyOnUpdate="0" field="remarque" expression=""/>
+        <default applyOnUpdate="0" field="document" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint field="id" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="type" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="etat" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="statut" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="ouvrage" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="collecteur" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="partenaire" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="commune" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="type_numero" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="numero" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="date_inscription" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="parcelle" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="beneficiaire" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="modifie" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="modifie_par" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="numero_serv_original" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="remarque" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="document" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="type" exp="" desc=""/>
+        <constraint field="etat" exp="" desc=""/>
+        <constraint field="statut" exp="" desc=""/>
+        <constraint field="ouvrage" exp="" desc=""/>
+        <constraint field="collecteur" exp="" desc=""/>
+        <constraint field="partenaire" exp="" desc=""/>
+        <constraint field="commune" exp="" desc=""/>
+        <constraint field="type_numero" exp="" desc=""/>
+        <constraint field="numero" exp="" desc=""/>
+        <constraint field="date_inscription" exp="" desc=""/>
+        <constraint field="parcelle" exp="" desc=""/>
+        <constraint field="beneficiaire" exp="" desc=""/>
+        <constraint field="modifie" exp="" desc=""/>
+        <constraint field="modifie_par" exp="" desc=""/>
+        <constraint field="numero_serv_original" exp="" desc=""/>
+        <constraint field="remarque" exp="" desc=""/>
+        <constraint field="document" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <actionsetting capture="0" isEnabledOnlyWhenEditable="0" notificationMessage="" name="History audit" id="{ae55c459-2098-45f2-99b9-c1405509aead}" type="1" shortTitle="" action="qgis.utils.plugins['postgres91plusauditor'].audit('servitude20150109080436604',[% $id %])" icon="">
+          <actionScope id="Feature"/>
+          <actionScope id="Canvas"/>
+          <actionScope id="Field"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortExpression="&quot;id_ouvrage&quot;" actionWidgetStyle="dropDown" sortOrder="1">
+        <columns>
+          <column name="id" type="field" width="-1" hidden="0"/>
+          <column name="type_numero" type="field" width="-1" hidden="0"/>
+          <column name="numero" type="field" width="-1" hidden="0"/>
+          <column name="date_inscription" type="field" width="-1" hidden="0"/>
+          <column name="parcelle" type="field" width="-1" hidden="0"/>
+          <column name="beneficiaire" type="field" width="-1" hidden="0"/>
+          <column name="modifie" type="field" width="-1" hidden="0"/>
+          <column name="modifie_par" type="field" width="-1" hidden="0"/>
+          <column name="numero_serv_original" type="field" width="-1" hidden="0"/>
+          <column name="remarque" type="field" width="-1" hidden="0"/>
+          <column name="document" type="field" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+          <column name="type" type="field" width="-1" hidden="0"/>
+          <column name="etat" type="field" width="-1" hidden="0"/>
+          <column name="statut" type="field" width="-1" hidden="0"/>
+          <column name="ouvrage" type="field" width="-1" hidden="0"/>
+          <column name="collecteur" type="field" width="-1" hidden="0"/>
+          <column name="partenaire" type="field" width="-1" hidden="0"/>
+          <column name="commune" type="field" width="-1" hidden="0"/>
+        </columns>
+      </attributetableconfig>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>opt/QGIS2/build</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer autoRefreshEnabled="0" labelsEnabled="1" simplifyAlgorithm="0" simplifyLocal="1" minScale="1e+8" refreshOnNotifyEnabled="0" readOnly="0" type="vector" geometry="Polygon" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingTol="1" simplifyMaxScale="1" maxScale="0" refreshOnNotifyMessage="" simplifyDrawingHints="0">
+      <extent>
+        <xmin>2551896.5</xmin>
+        <ymin>1133972.625</ymin>
+        <xmax>2564306</xmax>
+        <ymax>1151194.5</ymax>
+      </extent>
+      <id>sige_qgis_servitude_zone20170928170530892</id>
+      <datasource>service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiPolygon table="sige_qgis_cartoriviera"."sige_qgis_servitude_zone_mn95" (geometry) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sige_qgis_servitude_zone</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="défaut">
+        <map-layer-style name="défaut"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="RuleRenderer" symbollevels="0" enableorderby="0" forceraster="0">
+        <rules key="{d9f59999-3adb-4dfe-b344-88abd048752c}">
+          <rule key="{de3a9131-1deb-46d7-857e-d8eda979e698}" symbol="0" label="à modifier" filter="fk_statut in (1,2,3,4)"/>
+          <rule key="{65f6c6eb-9819-40c9-b5e6-1bf740881f15}" symbol="1" label="à inscrire" filter="fk_statut = 5"/>
+          <rule key="{44f33559-83ce-45d8-a765-d695c22c111e}" symbol="2" label="inscrites" filter="fk_statut is null"/>
+        </rules>
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" name="0" type="fill">
+            <layer pass="0" enabled="1" locked="0" class="SimpleFill">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="188,173,201,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="1" name="1" type="fill">
+            <layer pass="0" enabled="1" locked="0" class="SimpleFill">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="216,123,86,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="1" name="2" type="fill">
+            <layer pass="0" enabled="1" locked="0" class="SimpleFill">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="230,209,50,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <effect type="effectStack" enabled="0">
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <effect type="effectStack" enabled="0">
+          <effect type="drawSource">
+            <prop k="blend_mode" v="0"/>
+            <prop k="draw_mode" v="2"/>
+            <prop k="enabled" v="1"/>
+            <prop k="opacity" v="1"/>
+          </effect>
+        </effect>
+      </renderer-v2>
+      <labeling type="simple">
+        <settings>
+          <text-style fontItalic="0" isExpression="0" fontStrikeout="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" previewBkgrdColor="#ffffff" multilineHeight="1" blendMode="0" fontWordSpacing="0" fontLetterSpacing="0" fieldName="numero" fontSizeUnit="Point" fontWeight="50" fontFamily="MS Shell Dlg 2" fontSize="8" textOpacity="1" namedStyle="Regular" textColor="0,0,0,255" useSubstitutions="0" fontCapitals="0" fontUnderline="0">
+            <text-buffer bufferColor="255,255,255,255" bufferSize="1" bufferSizeUnits="MM" bufferNoFill="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferOpacity="1" bufferDraw="0" bufferJoinStyle="64" bufferBlendMode="0"/>
+            <background shapeSizeType="0" shapeRotationType="0" shapeOffsetUnit="MM" shapeJoinStyle="64" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeOffsetY="0" shapeSizeX="0" shapeOpacity="1" shapeSVGFile="" shapeRadiiUnit="MM" shapeBorderColor="128,128,128,255" shapeSizeY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeFillColor="255,255,255,255" shapeDraw="0" shapeRadiiY="0" shapeBorderWidth="0" shapeBorderWidthUnit="MM" shapeOffsetX="0" shapeType="0" shapeBlendMode="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeSizeUnit="MM" shapeSizeMapUnitScale="3x:0,0,0,0,0,0"/>
+            <shadow shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusAlphaOnly="0" shadowDraw="0" shadowRadiusUnit="MM" shadowOpacity="0.7" shadowOffsetGlobal="1" shadowRadius="1.5" shadowScale="100" shadowColor="0,0,0,255" shadowOffsetAngle="135" shadowOffsetUnit="MM" shadowOffsetDist="1" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowBlendMode="6"/>
+            <substitutions/>
+          </text-style>
+          <text-format multilineAlign="0" rightDirectionSymbol=">" leftDirectionSymbol="&lt;" decimals="3" addDirectionSymbol="0" plussign="0" placeDirectionSymbol="0" reverseDirectionSymbol="0" wrapChar="" formatNumbers="0"/>
+          <placement repeatDistance="0" preserveRotation="1" xOffset="0" rotationAngle="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placement="0" centroidWhole="0" priority="5" distMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" offsetUnits="MapUnit" yOffset="0" centroidInside="0" fitInPolygonOnly="0" placementFlags="0" maxCurvedCharAngleIn="20" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" offsetType="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" dist="4" distUnits="MM" quadOffset="4" maxCurvedCharAngleOut="-20"/>
+          <rendering fontMinPixelSize="3" minFeatureSize="0" scaleVisibility="0" fontMaxPixelSize="10000" scaleMin="1" obstacleFactor="1" mergeLines="0" drawLabels="1" upsidedownLabels="0" displayAll="1" obstacleType="0" zIndex="0" scaleMax="10000000" fontLimitPixelSize="0" limitNumLabels="0" obstacle="1" labelPerPart="1" maxNumLabels="2000"/>
+          <dd_properties>
+            <Option type="Map">
+              <Option name="name" value="" type="QString"/>
+              <Option name="properties"/>
+              <Option name="type" value="collection" type="QString"/>
+            </Option>
+          </dd_properties>
+        </settings>
+      </labeling>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory enabled="0" maxScaleDenominator="1e+8" lineSizeType="MM" height="15" sizeScale="3x:0,0,0,0,0,0" width="15" scaleBasedVisibility="0" labelPlacementMethod="XHeight" barWidth="5" backgroundAlpha="255" penWidth="0" sizeType="MM" rotationOffset="270" diagramOrientation="Up" penAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="inf" penColor="#000000" opacity="1" backgroundColor="#ffffff" scaleDependency="Area" minimumSize="0">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings obstacle="0" zIndex="0" linePlacementFlags="10" placement="0" dist="0" priority="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option name="name" value="" type="QString"/>
+            <Option name="properties"/>
+            <Option name="type" value="collection" type="QString"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="type">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="etat">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="statut">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ouvrage">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="collecteur">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="partenaire">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="commune">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="type_numero">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="numero">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="date_inscription">
+          <editWidget type="DateTime">
+            <config>
+              <Option type="Map">
+                <Option name="allow_null" value="1" type="QString"/>
+                <Option name="calendar_popup" value="1" type="QString"/>
+                <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+                <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="parcelle">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="beneficiaire">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="modifie">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="modifie_par">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="numero_serv_original">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="remarque">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="document">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" value="0" type="QString"/>
+                <Option name="UseHtml" value="0" type="QString"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="type" name=""/>
+        <alias index="2" field="etat" name=""/>
+        <alias index="3" field="statut" name=""/>
+        <alias index="4" field="ouvrage" name=""/>
+        <alias index="5" field="collecteur" name=""/>
+        <alias index="6" field="partenaire" name=""/>
+        <alias index="7" field="commune" name=""/>
+        <alias index="8" field="type_numero" name=""/>
+        <alias index="9" field="numero" name=""/>
+        <alias index="10" field="date_inscription" name=""/>
+        <alias index="11" field="parcelle" name=""/>
+        <alias index="12" field="beneficiaire" name=""/>
+        <alias index="13" field="modifie" name=""/>
+        <alias index="14" field="modifie_par" name=""/>
+        <alias index="15" field="numero_serv_original" name=""/>
+        <alias index="16" field="remarque" name=""/>
+        <alias index="17" field="document" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="id" expression=""/>
+        <default applyOnUpdate="0" field="type" expression=""/>
+        <default applyOnUpdate="0" field="etat" expression=""/>
+        <default applyOnUpdate="0" field="statut" expression=""/>
+        <default applyOnUpdate="0" field="ouvrage" expression=""/>
+        <default applyOnUpdate="0" field="collecteur" expression=""/>
+        <default applyOnUpdate="0" field="partenaire" expression=""/>
+        <default applyOnUpdate="0" field="commune" expression=""/>
+        <default applyOnUpdate="0" field="type_numero" expression=""/>
+        <default applyOnUpdate="0" field="numero" expression=""/>
+        <default applyOnUpdate="0" field="date_inscription" expression=""/>
+        <default applyOnUpdate="0" field="parcelle" expression=""/>
+        <default applyOnUpdate="0" field="beneficiaire" expression=""/>
+        <default applyOnUpdate="0" field="modifie" expression=""/>
+        <default applyOnUpdate="0" field="modifie_par" expression=""/>
+        <default applyOnUpdate="0" field="numero_serv_original" expression=""/>
+        <default applyOnUpdate="0" field="remarque" expression=""/>
+        <default applyOnUpdate="0" field="document" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint field="id" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="type" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="etat" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="statut" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="ouvrage" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="collecteur" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="partenaire" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="commune" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="type_numero" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="numero" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="date_inscription" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="parcelle" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="beneficiaire" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="modifie" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="modifie_par" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="numero_serv_original" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="remarque" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="document" exp_strength="0" notnull_strength="0" constraints="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="type" exp="" desc=""/>
+        <constraint field="etat" exp="" desc=""/>
+        <constraint field="statut" exp="" desc=""/>
+        <constraint field="ouvrage" exp="" desc=""/>
+        <constraint field="collecteur" exp="" desc=""/>
+        <constraint field="partenaire" exp="" desc=""/>
+        <constraint field="commune" exp="" desc=""/>
+        <constraint field="type_numero" exp="" desc=""/>
+        <constraint field="numero" exp="" desc=""/>
+        <constraint field="date_inscription" exp="" desc=""/>
+        <constraint field="parcelle" exp="" desc=""/>
+        <constraint field="beneficiaire" exp="" desc=""/>
+        <constraint field="modifie" exp="" desc=""/>
+        <constraint field="modifie_par" exp="" desc=""/>
+        <constraint field="numero_serv_original" exp="" desc=""/>
+        <constraint field="remarque" exp="" desc=""/>
+        <constraint field="document" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <actionsetting capture="0" isEnabledOnlyWhenEditable="0" notificationMessage="" name="History audit" id="{ecf37082-5307-410b-8126-3838a9f8d20d}" type="1" shortTitle="" action="qgis.utils.plugins['postgres91plusauditor'].audit('servitude20150109080436650',[% $id %])" icon="">
+          <actionScope id="Feature"/>
+          <actionScope id="Canvas"/>
+          <actionScope id="Field"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column name="id" type="field" width="-1" hidden="0"/>
+          <column name="type_numero" type="field" width="-1" hidden="0"/>
+          <column name="numero" type="field" width="-1" hidden="0"/>
+          <column name="date_inscription" type="field" width="-1" hidden="0"/>
+          <column name="parcelle" type="field" width="-1" hidden="0"/>
+          <column name="beneficiaire" type="field" width="-1" hidden="0"/>
+          <column name="modifie" type="field" width="-1" hidden="0"/>
+          <column name="modifie_par" type="field" width="-1" hidden="0"/>
+          <column name="numero_serv_original" type="field" width="-1" hidden="0"/>
+          <column name="remarque" type="field" width="-1" hidden="0"/>
+          <column name="document" type="field" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+          <column name="type" type="field" width="-1" hidden="0"/>
+          <column name="etat" type="field" width="-1" hidden="0"/>
+          <column name="statut" type="field" width="-1" hidden="0"/>
+          <column name="ouvrage" type="field" width="-1" hidden="0"/>
+          <column name="collecteur" type="field" width="-1" hidden="0"/>
+          <column name="partenaire" type="field" width="-1" hidden="0"/>
+          <column name="commune" type="field" width="-1" hidden="0"/>
+        </columns>
+      </attributetableconfig>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>opt/QGIS2/build</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>"id"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="sige_qgis_enquete20170928170530822"/>
+    <layer id="sige_qgis_servitude_ligne20170928170530878"/>
+    <layer id="sige_qgis_servitude_zone20170928170530892"/>
+    <layer id="sige_qgis_enquete_camac20171003142415834"/>
+  </layerorder>
+  <properties>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <PositionPrecision>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+    </PositionPrecision>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+    </Gui>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:2056</ProjectCrs>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+      <ProjectCRSID type="int">47</ProjectCRSID>
+    </SpatialRefSys>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WFSTLayers>
+      <Delete type="QStringList"/>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+    </WFSTLayers>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WCSLayers type="QStringList"/>
+    <DefaultStyles>
+      <Marker type="QString"></Marker>
+      <Line type="QString"></Line>
+      <ColorRamp type="QString"></ColorRamp>
+      <RandomColors type="bool">true</RandomColors>
+      <Fill type="QString"></Fill>
+      <AlphaInt type="int">255</AlphaInt>
+    </DefaultStyles>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <Variables>
+      <variableValues type="QStringList"/>
+      <variableNames type="QStringList"/>
+    </Variables>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <Measure>
+      <Ellipsoid type="QString">NONE</Ellipsoid>
+    </Measure>
+    <WFSUrl type="QString"></WFSUrl>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <Digitizing>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+      <SnappingMode type="QString">current_layer</SnappingMode>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
+      <DefaultSnapType type="QString">off</DefaultSnapType>
+    </Digitizing>
+    <WFSLayersPrecision>
+      <sige_qgis_servitude_ligne20170928170530878 type="int">8</sige_qgis_servitude_ligne20170928170530878>
+      <sige_qgis_enquete20170928170530822 type="int">8</sige_qgis_enquete20170928170530822>
+      <sige_qgis_enquete_camac20171003142415834 type="int">8</sige_qgis_enquete_camac20171003142415834>
+      <sige_qgis_servitude_zone20170928170530892 type="int">8</sige_qgis_servitude_zone20170928170530892>
+    </WFSLayersPrecision>
+    <PAL>
+      <SearchMethod type="int">0</SearchMethod>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <CandidatesLine type="int">50</CandidatesLine>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+    </PAL>
+    <WMSUrl type="QString"></WMSUrl>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WFSLayers type="QStringList">
+      <value>sige_qgis_enquete20170928170530822</value>
+      <value>sige_qgis_enquete_camac20171003142415834</value>
+      <value>sige_qgis_servitude_ligne20170928170530878</value>
+      <value>sige_qgis_servitude_zone20170928170530892</value>
+    </WFSLayers>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <projectMetadata>
+    <identifier></identifier>
+    <parentidentifier></parentidentifier>
+    <language></language>
+    <type></type>
+    <title></title>
+    <abstract></abstract>
+    <links/>
+    <author></author>
+    <creation></creation>
+  </projectMetadata>
+  <Annotations/>
+  <Layouts/>
+</qgis>

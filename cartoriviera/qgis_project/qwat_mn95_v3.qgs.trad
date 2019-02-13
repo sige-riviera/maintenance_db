@@ -1,0 +1,396 @@
+msgid "_length2d"
+msgstr "Longueur 2D"
+
+msgid "_length3d"
+msgstr "Longueur 3D"
+
+msgid "_printmaps"
+msgstr "folios"
+
+msgid "_repaired"
+msgstr "Réparé"
+
+msgid "_sum_population"
+msgstr "Population totale"
+
+msgid "_sum_subscriber"
+msgstr "Nb. abonnés total"
+
+msgid "_valve_closed"
+msgstr "Fermée par vanne"
+
+msgid "_valve_count"
+msgstr "Nombre de vannes"
+
+msgid "activatedcharcoal"
+msgstr "Charbon actif"
+
+msgid "address"
+msgstr "Adresse"
+
+msgid "altitude_apron"
+msgstr "Altitude radier"
+
+msgid "altitude_overflow"
+msgstr "Altitude trop-plein"
+
+msgid "annotation"
+msgstr "Annotation"
+
+msgid "cause_value_fr"
+msgstr "Cause"
+
+msgid "cistern1_dimension_1"
+msgstr "Cuve 1 - diamètre/largeur"
+
+msgid "cistern1_dimension_2"
+msgstr "Cuve 1 - longueur"
+
+msgid "cistern1_storage"
+msgstr "Cuve 1 - volume"
+
+msgid "cistern2_dimension_1"
+msgstr "Cuve 2 - diamètre/largeur"
+
+msgid "cistern2_dimension_2"
+msgstr "Cuve 2 - longueur"
+
+msgid "cistern2_storage"
+msgstr "Cuve 2 - volume"
+
+msgid "closed"
+msgstr "Fermée"
+
+msgid "contract_end"
+msgstr "Fin de contrat"
+
+msgid "croquis"
+msgstr "Lien"
+
+msgid "date_end"
+msgstr "Date de fin"
+
+msgid "date_start"
+msgstr "Date de début"
+
+msgid "depth"
+msgstr "Profondeur"
+
+msgid "description"
+msgstr "Description"
+
+msgid "destination"
+msgstr "Destination"
+
+msgid "detection_date"
+msgstr "Date de détection"
+
+msgid "distributor_name"
+msgstr "Distributeur"
+
+msgid "district_land_registry"
+msgstr "Numéro de commune"
+
+msgid "district_name"
+msgstr "Commune"
+
+msgid "district_prefix"
+msgstr "Préfixe commune"
+
+msgid "district_shortname"
+msgstr "Commune - abbréviation"
+
+msgid "district_zip"
+msgstr "Code postal"
+
+msgid "eca"
+msgstr "ECA"
+
+msgid "file"
+msgstr "Nom de fichier"
+
+msgid "filtration_membrane"
+msgstr "Filtration membranaire"
+
+msgid "filtration_sandorgravel"
+msgstr "Filtration à sable"
+
+msgid "fire_remote"
+msgstr "Télécommande incendie"
+
+msgid "fire_valve"
+msgstr "Vanne incendie"
+
+msgid "fk_cause"
+msgstr "Cause"
+
+msgid "fk_distributor"
+msgstr "distributeur"
+
+msgid "fk_district"
+msgstr "commune"
+
+msgid "fk_folder"
+msgstr "dossier technique"
+
+msgid "fk_locationtype"
+msgstr "emplacement"
+
+msgid "fk_pipe"
+msgstr "conduite"
+
+msgid "fk_precision"
+msgstr "précision"
+
+msgid "fk_pressurezone"
+msgstr "zone de pression"
+
+msgid "fk_printmap"
+msgstr "folios"
+
+msgid "fk_status"
+msgstr "statut"
+
+msgid "flocculation"
+msgstr "Flocculation"
+
+msgid "flow"
+msgstr "Débit"
+
+msgid "flow_average"
+msgstr "Débit moyen"
+
+msgid "flow_concession"
+msgstr "Débit concession"
+
+msgid "flow_current"
+msgstr "Débit actuel"
+
+msgid "flow_lowest"
+msgstr "Débit étiage"
+
+msgid "flow_meter"
+msgstr "Débitmètre"
+
+msgid "flow_planned"
+msgstr "Débit prévu"
+
+msgid "folder"
+msgstr "Dossier"
+
+msgid "folder_identification"
+msgstr "Dossier technique"
+
+msgid "gathering_chamber"
+msgstr "Chambre de rassemblement"
+
+msgid "height_max"
+msgstr "Hauteur max"
+
+msgid "id"
+msgstr "ID"
+
+msgid "identification"
+msgstr "Identifiant"
+
+msgid "installation_type"
+msgstr "Type d'ouvrage"
+
+msgid "lien"
+msgstr "Lien"
+
+msgid "manometer"
+msgstr "Manomètre"
+
+msgid "manometric_height"
+msgstr "Hauteur manométrique"
+
+msgid "material_value_fr"
+msgstr "Matériau"
+
+msgid "model_inf_value_fr"
+msgstr "Modèle inf."
+
+msgid "model_sup_value_fr"
+msgstr "Modèle sup."
+
+msgid "name"
+msgstr "Nom"
+
+msgid "networkseparation"
+msgstr "Séparation de réseau"
+
+msgid "no_pumps"
+msgstr "Nombre de pompes"
+
+msgid "observation_date"
+msgstr "Date de mesure"
+
+msgid "observation_source"
+msgstr "Origine des mesures"
+
+msgid "open_water_surface"
+msgstr "Eau de surface"
+
+msgid "origin"
+msgstr "Origine"
+
+msgid "parcel"
+msgstr "parcelle"
+
+msgid "pipe_function_value_fr"
+msgstr "Fonction"
+
+msgid "pipe_material__displayname_fr"
+msgstr "Materiau"
+
+msgid "pipe_material_diameter"
+msgstr "Diamètre"
+
+msgid "pipe_material_diameter_external"
+msgstr "Diamètre externe"
+
+msgid "pipe_material_diameter_internal"
+msgstr "Diamètre interne"
+
+msgid "pipe_material_diameter_nominal"
+msgstr "Diamètre nominal"
+
+msgid "pipe_material_pressure_nominal"
+msgstr "Pression nominale"
+
+msgid "pipe_replaced"
+msgstr "Conduite remplacée"
+
+msgid "plan"
+msgstr "Plan"
+
+msgid "pressure_dynamic"
+msgstr "Pression dynamique"
+
+msgid "pressure_nominal"
+msgstr "Pression nominale"
+
+msgid "pressure_static"
+msgstr "Pression statique"
+
+msgid "pressurezone_name"
+msgstr "Zone de pression"
+
+msgid "print_scale"
+msgstr "Echelle d'impression"
+
+msgid "protection_value_fr"
+msgstr "Protection"
+
+msgid "provider_value_fr"
+msgstr "Fournisseur"
+
+msgid "rejected_flow"
+msgstr "Débit refoulé"
+
+msgid "remark"
+msgstr "Remarque"
+
+msgid "repair"
+msgstr "Réparation"
+
+msgid "repair_date"
+msgstr "Date de réparation"
+
+msgid "sanitization_chlorine_gazeous"
+msgstr "Désinfection chlore gazeux"
+
+msgid "sanitization_chlorine_liquid"
+msgstr "Désinfection chlore liquide"
+
+msgid "sanitization_ozone"
+msgstr "Désinfection ozone"
+
+msgid "sanitization_uv"
+msgstr "Désinfection UV"
+
+msgid "schema_force_visible"
+msgstr "Visibilité schéma"
+
+msgid "settling"
+msgstr "Décantation"
+
+msgid "sqwh_appreciation"
+msgstr "Appréciation"
+
+msgid "sqwh_classification"
+msgstr "Classification"
+
+msgid "sqwh_hardness_max"
+msgstr "Dureté max. observée"
+
+msgid "sqwh_hardness_median"
+msgstr "Dureté moyenne"
+
+msgid "sqwh_hardness_min"
+msgstr "Dureté min. observée"
+
+msgid "sqwh_name"
+msgstr "Nom de la zone"
+
+msgid "status_active"
+msgstr "Active"
+
+msgid "status_functional"
+msgstr "Fonctionnelle"
+
+msgid "status_value_fr"
+msgstr "Etat"
+
+msgid "storage_fire"
+msgstr "Réserve incendie"
+
+msgid "storage_supply"
+msgstr "Réserve utile"
+
+msgid "storage_total"
+msgstr "Réserve totale"
+
+msgid "subscriber_identification"
+msgstr "Référence identifiant"
+
+msgid "subscriber_type_value_fr"
+msgstr "Type d'abonné"
+
+msgid "treatment_capacity"
+msgstr "Capacité de traitment"
+
+msgid "tunnel_or_bridge"
+msgstr "Tunnel ou pont"
+
+msgid "underground"
+msgstr "Souterraine"
+
+msgid "valve_actuation_value_fr"
+msgstr "Vanne - actionnement"
+
+msgid "valve_function_value_fr"
+msgstr "Vanne - fonction"
+
+msgid "valve_type_value_fr"
+msgstr "Vanne - type"
+
+msgid "version_date"
+msgstr "Date MAJ"
+
+msgid "water_meter"
+msgstr "Compteur"
+
+msgid "widespread_damage"
+msgstr "Dommages étendus"
+
+msgid "year"
+msgstr "année"
+
+msgid "year_end"
+msgstr "année fin"
+
+msgid "year_rehabilitation"
+msgstr "Année de réhabilitation"
+
