@@ -30,7 +30,7 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
       FROM  sige_qgis_cartoriviera.sige_qgis_qwat_subscriber
   UNION
     SELECT 'EP Compteur'::text AS layer_name,
-        COALESCE(district_prefix::text || '_'::text) || identification::text AS search_text,
+        'Compteur ' || COALESCE(district_prefix::text || '_'::text, ''::text) || identification::text AS search_text,
         st_force2d(geometry) AS geometry
       FROM sige_qgis_cartoriviera.sige_qgis_qwat_meter
       WHERE identification IS NOT NULL
