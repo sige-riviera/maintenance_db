@@ -92,7 +92,7 @@
     <layer-tree-layer providerKey="postgres" expanded="0" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_node_mn95&quot; (geometry) sql=" id="node20170821111240113" name="sige_qgis_noeud" checked="Qt::Unchecked">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" expanded="0" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe_mn95&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot;='oui'" id="pipe20170817163039703" name="sige_qgis_conduite_fonctionnelle" checked="Qt::Checked">
+    <layer-tree-layer providerKey="postgres" expanded="0" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_pipe_mn95&quot; (geometry) sql=fk_distributor = 1 and &quot;status_functional&quot;='oui'" id="pipe20170817163039703" name="sige_qgis_conduite_fonctionnelle" checked="Qt::Unchecked">
       <customproperties>
         <property key="expandedLegendNodes">
           <value>{910e17ef-555c-4f81-950b-6712050f1cf2}</value>
@@ -193,10 +193,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>2548582.0119208712130785</xmin>
-      <ymin>1137279.80840752017684281</ymin>
-      <xmax>2567698.1577737033367157</xmax>
-      <ymax>1150886.94564039329998195</ymax>
+      <xmin>2548546.45853541931137443</xmin>
+      <ymin>1139137.67950316448695958</ymin>
+      <xmax>2567662.60438825143501163</xmax>
+      <ymax>1152744.81673604040406644</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -304,9 +304,9 @@
         <legendlayerfile layerid="node20170821111240113" visible="0" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer name="sige_qgis_conduite_fonctionnelle" showFeatureCount="0" open="false" checked="Qt::Checked" drawingOrder="-1">
+    <legendlayer name="sige_qgis_conduite_fonctionnelle" showFeatureCount="0" open="false" checked="Qt::Unchecked" drawingOrder="-1">
       <filegroup open="false" hidden="false">
-        <legendlayerfile layerid="pipe20170817163039703" visible="1" isInOverview="0"/>
+        <legendlayerfile layerid="pipe20170817163039703" visible="0" isInOverview="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer name="sige_qgis_conduite_non_fonctionnelle" showFeatureCount="0" open="false" checked="Qt::Unchecked" drawingOrder="-1">
@@ -24635,8 +24635,128 @@ def my_form_open(dialog, layer, feature):
         <alias field="folder_date_start" index="59" name=""/>
         <alias field="folder_date_end" index="60" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
+      <excludeAttributesWMS>
+        <attribute>fk_folder</attribute>
+        <attribute>pipe_material_pressure_nominal</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
+        <attribute>distributor_name</attribute>
+        <attribute>pressure_nominal</attribute>
+        <attribute>pipe_material__displayname_fr</attribute>
+        <attribute>year</attribute>
+        <attribute>fk_installmethod</attribute>
+        <attribute>_printmaps</attribute>
+        <attribute>status_functional</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>fk_bedding</attribute>
+        <attribute>fk_protection</attribute>
+        <attribute>fk_node_a</attribute>
+        <attribute>fk_watertype</attribute>
+        <attribute>fk_printmap</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>fk_node_b</attribute>
+        <attribute>precision_value_fr</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>pipe_material_diameter_nominal</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>_length2d</attribute>
+        <attribute>fk_parent</attribute>
+        <attribute>year_end</attribute>
+        <attribute>folder_identification</attribute>
+        <attribute>id</attribute>
+        <attribute>protection_value_fr</attribute>
+        <attribute>district_name</attribute>
+        <attribute>pipe_function_value_fr</attribute>
+        <attribute>pressurezone_subscriber</attribute>
+        <attribute>pressurezone_colorcode</attribute>
+        <attribute>folder_description</attribute>
+        <attribute>_schema_visible</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>pipe_function_major</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>folder_date_start</attribute>
+        <attribute>folder_date_end</attribute>
+        <attribute>schema_visible</attribute>
+        <attribute>_valve_count</attribute>
+        <attribute>pipe_material_diameter_external</attribute>
+        <attribute>fk_function</attribute>
+        <attribute>_length3d</attribute>
+        <attribute>_diff_elevation</attribute>
+        <attribute>pipe_material_diameter_internal</attribute>
+        <attribute>remark</attribute>
+        <attribute>_valve_closed</attribute>
+        <attribute>tunnel_or_bridge</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>year_rehabilitation</attribute>
+        <attribute>pipe_material_diameter</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_material</attribute>
+        <attribute>status_value_fr</attribute>
+        <attribute>pressurezone_population</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>pipe_material_short_fr</attribute>
+        <attribute>status_active</attribute>
+      </excludeAttributesWMS>
+      <excludeAttributesWFS>
+        <attribute>fk_folder</attribute>
+        <attribute>pipe_material_pressure_nominal</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
+        <attribute>distributor_name</attribute>
+        <attribute>pressure_nominal</attribute>
+        <attribute>pipe_material__displayname_fr</attribute>
+        <attribute>year</attribute>
+        <attribute>fk_installmethod</attribute>
+        <attribute>_printmaps</attribute>
+        <attribute>status_functional</attribute>
+        <attribute>label_2_text</attribute>
+        <attribute>fk_bedding</attribute>
+        <attribute>fk_protection</attribute>
+        <attribute>fk_node_a</attribute>
+        <attribute>fk_watertype</attribute>
+        <attribute>fk_printmap</attribute>
+        <attribute>label_1_text</attribute>
+        <attribute>fk_node_b</attribute>
+        <attribute>precision_value_fr</attribute>
+        <attribute>fk_pressurezone</attribute>
+        <attribute>pipe_material_diameter_nominal</attribute>
+        <attribute>fk_precision</attribute>
+        <attribute>_length2d</attribute>
+        <attribute>fk_parent</attribute>
+        <attribute>year_end</attribute>
+        <attribute>folder_identification</attribute>
+        <attribute>id</attribute>
+        <attribute>protection_value_fr</attribute>
+        <attribute>district_name</attribute>
+        <attribute>pipe_function_value_fr</attribute>
+        <attribute>pressurezone_subscriber</attribute>
+        <attribute>pressurezone_colorcode</attribute>
+        <attribute>folder_description</attribute>
+        <attribute>_schema_visible</attribute>
+        <attribute>fk_distributor</attribute>
+        <attribute>pipe_function_major</attribute>
+        <attribute>label_2_visible</attribute>
+        <attribute>folder_date_start</attribute>
+        <attribute>folder_date_end</attribute>
+        <attribute>schema_visible</attribute>
+        <attribute>_valve_count</attribute>
+        <attribute>pipe_material_diameter_external</attribute>
+        <attribute>_length3d</attribute>
+        <attribute>_diff_elevation</attribute>
+        <attribute>pipe_material_diameter_internal</attribute>
+        <attribute>remark</attribute>
+        <attribute>_valve_closed</attribute>
+        <attribute>tunnel_or_bridge</attribute>
+        <attribute>fk_district</attribute>
+        <attribute>year_rehabilitation</attribute>
+        <attribute>pipe_material_diameter</attribute>
+        <attribute>label_1_visible</attribute>
+        <attribute>fk_material</attribute>
+        <attribute>status_value_fr</attribute>
+        <attribute>pressurezone_population</attribute>
+        <attribute>fk_locationtype</attribute>
+        <attribute>pipe_material_short_fr</attribute>
+        <attribute>fk_status</attribute>
+        <attribute>status_active</attribute>
+      </excludeAttributesWFS>
       <defaults>
         <default expression="" field="id" applyOnUpdate="0"/>
         <default expression="" field="fk_parent" applyOnUpdate="0"/>
