@@ -24694,6 +24694,7 @@ def my_form_open(dialog, layer, feature):
         <attribute>pressurezone_population</attribute>
         <attribute>fk_locationtype</attribute>
         <attribute>pipe_material_short_fr</attribute>
+        <attribute>fk_status</attribute>
         <attribute>status_active</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
@@ -24739,6 +24740,7 @@ def my_form_open(dialog, layer, feature):
         <attribute>schema_visible</attribute>
         <attribute>_valve_count</attribute>
         <attribute>pipe_material_diameter_external</attribute>
+        <attribute>fk_function</attribute>
         <attribute>_length3d</attribute>
         <attribute>_diff_elevation</attribute>
         <attribute>pipe_material_diameter_internal</attribute>
