@@ -193,10 +193,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>2550243.93311525136232376</xmin>
-      <ymin>1139124.9538809300865978</ymin>
-      <xmax>2565632.09979761391878128</xmax>
-      <ymax>1150078.46393575915135443</ymax>
+      <xmin>2550630.62165731284767389</xmin>
+      <ymin>1139255.29424563841894269</ymin>
+      <xmax>2566018.78833967540413141</xmax>
+      <ymax>1150208.80430048331618309</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -24053,7 +24053,12 @@ def my_form_open(dialog, layer, feature):
       </flags>
       <renderer-v2 type="RuleRenderer" forceraster="0" enableorderby="0" symbollevels="0">
         <rules key="{34c36a59-bc75-4035-b496-7eeb1cbfada5}">
-          <rule key="{af6c3e90-27eb-4453-98a0-00eb4e520c4e}" symbol="0"/>
+          <rule key="{9908a878-002e-4e0b-9e29-0ed89a3c8438}" filter="&quot;pipe_function_major&quot; = 'oui'" label="Réseau">
+            <rule key="{f3023b96-c666-411a-9910-4406b7b4920c}" symbol="0"/>
+          </rule>
+          <rule key="{3d6bc741-dd8b-48cd-bd3d-024f138632e2}" scalemindenom="1" scalemaxdenom="3000" filter="&quot;pipe_function_major&quot; = 'non'" label="Branchements">
+            <rule key="{2d7d9a40-628a-412e-a475-e19a6747b7f4}" symbol="1"/>
+          </rule>
         </rules>
         <symbols>
           <symbol type="line" alpha="1" name="0" clip_to_extent="1" force_rhr="0">
@@ -24066,7 +24071,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="bevel" k="joinstyle"/>
               <prop v="204,204,204,255" k="line_color"/>
               <prop v="solid" k="line_style"/>
-              <prop v="0.6" k="line_width"/>
+              <prop v="1" k="line_width"/>
               <prop v="MM" k="line_width_unit"/>
               <prop v="0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -24085,7 +24090,55 @@ def my_form_open(dialog, layer, feature):
                     </Option>
                     <Option type="Map" name="outlineColor">
                       <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#fba2af'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#ffd07f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#a4dd9a'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#82a5ba'&#xd;&#xa;END" name="expression"/>
+                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
+                      <Option type="int" value="3" name="type"/>
+                    </Option>
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" value="true" name="active"/>
+                      <Option type="QString" value="CASE WHEN &quot;pipe_material_diameter_nominal&quot; IS NOT NULL OR &quot;pipe_material_diameter_external&quot; IS NOT NULL&#xd;&#xa;THEN min(1.0,max(.6,&#xd;&#xa;&#x9;abs(&#xd;&#xa;&#x9;&#x9;(to_real(COALESCE(&quot;pipe_material_diameter_external&quot;,&quot;pipe_material_diameter_nominal&quot;))-100) / 300 + 0.6&#xd;&#xa;&#x9;)&#xd;&#xa;))&#xd;&#xa;ELSE 0.6&#xd;&#xa;END" name="expression"/>
+                      <Option type="int" value="3" name="type"/>
+                    </Option>
+                  </Option>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol type="line" alpha="1" name="1" clip_to_extent="1" force_rhr="0">
+            <layer locked="0" pass="0" class="SimpleLine" enabled="1">
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="204,204,204,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="1" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option type="Map" name="properties">
+                    <Option type="Map" name="customDash">
+                      <Option type="bool" value="true" name="active"/>
+                      <Option type="QString" value="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')" name="expression"/>
+                      <Option type="int" value="3" name="type"/>
+                    </Option>
+                    <Option type="Map" name="outlineColor">
+                      <Option type="bool" value="true" name="active"/>
+                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
+                      <Option type="int" value="3" name="type"/>
+                    </Option>
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" value="true" name="active"/>
+                      <Option type="QString" value="CASE WHEN &quot;pipe_material_diameter_nominal&quot; IS NOT NULL OR &quot;pipe_material_diameter_external&quot; IS NOT NULL&#xd;&#xa;THEN min(1.0,max(.6,&#xd;&#xa;&#x9;abs(&#xd;&#xa;&#x9;&#x9;(to_real(COALESCE(&quot;pipe_material_diameter_external&quot;,&quot;pipe_material_diameter_nominal&quot;))-100) / 300 + 0.6&#xd;&#xa;&#x9;)&#xd;&#xa;))&#xd;&#xa;ELSE 0.6&#xd;&#xa;END" name="expression"/>
                       <Option type="int" value="3" name="type"/>
                     </Option>
                   </Option>
@@ -24098,7 +24151,7 @@ def my_form_open(dialog, layer, feature):
       </renderer-v2>
       <labeling type="simple">
         <settings>
-          <text-style namedStyle="Normal" fontItalic="0" fontLetterSpacing="0" textColor="0,80,255,255" blendMode="0" fontSizeUnit="Point" previewBkgrdColor="#ffffff" useSubstitutions="0" fontFamily="MS Shell Dlg 2" fontSizeMapUnitScale="3x:0,0,0,0,0,0" isExpression="1" fontStrikeout="0" fontUnderline="0" textOpacity="1" fontWordSpacing="0" fieldName=" replace( &quot;pipe_material_short_fr&quot;||' ','Inconnu ','') ||  &quot;pipe_material_diameter&quot;&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN COALESCE('\n' || &quot;protection_value_fr&quot;,'') ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN if (&quot;remark&quot;='', '', COALESCE('\n' || trim(&quot;remark&quot;),'')) ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN '\n' || coalesce(&quot;year&quot;,'')  ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 AND &quot;fk_precision&quot; IN (1101,1103,1105) THEN ' Imprécis' ELSE '' END" multilineHeight="1" fontCapitals="0" fontSize="8" fontWeight="50">
+          <text-style namedStyle="Normal" fontItalic="0" fontLetterSpacing="0" textColor="0,80,255,255" blendMode="0" fontSizeUnit="Point" previewBkgrdColor="#ffffff" useSubstitutions="0" fontFamily="MS Shell Dlg 2" fontSizeMapUnitScale="3x:0,0,0,0,0,0" isExpression="1" fontStrikeout="0" fontUnderline="0" textOpacity="1" fontWordSpacing="0" fieldName=" replace( &quot;pipe_material_short_fr&quot;||' ','Inconnu ','') ||  &quot;pipe_material_diameter&quot;&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN COALESCE('\n' || &quot;protection_value_fr&quot;,'') ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN if (&quot;remark&quot;='', '', COALESCE('\n' || trim(&quot;remark&quot;),'')) ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 501 THEN '\n' || coalesce(&quot;year&quot;,'')  ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 501 AND &quot;fk_precision&quot; IN (1101,1103,1105) THEN ' Imprécis' ELSE '' END" multilineHeight="1" fontCapitals="0" fontSize="8" fontWeight="50">
             <text-buffer bufferSizeUnits="MM" bufferJoinStyle="128" bufferSize="1" bufferColor="255,255,255,255" bufferOpacity="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferDraw="0" bufferNoFill="0" bufferBlendMode="0"/>
             <background shapeRotation="0" shapeOffsetX="0" shapeJoinStyle="64" shapeSizeY="0" shapeRadiiY="0" shapeSVGFile="" shapeBorderColor="128,128,128,255" shapeDraw="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeRadiiUnit="MM" shapeOffsetUnit="MM" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeSizeX="0" shapeSizeType="0" shapeBlendMode="0" shapeOffsetY="0" shapeSizeUnit="MM" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotationType="0" shapeType="0" shapeBorderWidth="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthUnit="MM" shapeOpacity="1"/>
             <shadow shadowOffsetAngle="135" shadowOffsetUnit="MM" shadowRadiusUnit="MM" shadowOffsetDist="1" shadowRadius="1.5" shadowRadiusAlphaOnly="0" shadowOpacity="0.7" shadowScale="100" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowDraw="0" shadowUnder="0" shadowBlendMode="6" shadowColor="0,0,0,255" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetGlobal="1"/>
@@ -24118,7 +24171,7 @@ def my_form_open(dialog, layer, feature):
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#fba2af'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#ffd07f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#a4dd9a'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#82a5ba'&#xd;&#xa;END" name="expression"/>
+                  <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Show">
@@ -24653,8 +24706,8 @@ def my_form_open(dialog, layer, feature):
       </aliases>
       <excludeAttributesWMS>
         <attribute>fk_installmethod</attribute>
-        <attribute>pipe_material_diameter_internal</attribute>
         <attribute>pressure_nominal</attribute>
+        <attribute>pipe_material_diameter_internal</attribute>
         <attribute>fk_parent</attribute>
         <attribute>fk_printmap</attribute>
         <attribute>pipe_material_diameter_nominal</attribute>
@@ -24668,16 +24721,16 @@ def my_form_open(dialog, layer, feature):
         <attribute>_diff_elevation</attribute>
         <attribute>status_value_fr</attribute>
         <attribute>pipe_material_pressure_nominal</attribute>
-        <attribute>pressurezone_colorcode</attribute>
         <attribute>fk_bedding</attribute>
+        <attribute>pressurezone_colorcode</attribute>
+        <attribute>fk_pressurezone</attribute>
         <attribute>fk_precision</attribute>
         <attribute>year</attribute>
-        <attribute>fk_pressurezone</attribute>
         <attribute>_valve_closed</attribute>
         <attribute>fk_node_b</attribute>
+        <attribute>fk_protection</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>precision_value_fr</attribute>
-        <attribute>fk_protection</attribute>
         <attribute>pipe_function_value_fr</attribute>
         <attribute>id</attribute>
         <attribute>pipe_material__displayname_fr</attribute>
@@ -24688,22 +24741,22 @@ def my_form_open(dialog, layer, feature):
         <attribute>tunnel_or_bridge</attribute>
         <attribute>folder_identification</attribute>
         <attribute>distributor_name</attribute>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_district</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_folder</attribute>
         <attribute>_length2d</attribute>
         <attribute>fk_material</attribute>
         <attribute>fk_node_a</attribute>
         <attribute>schema_visible</attribute>
         <attribute>_printmaps</attribute>
-        <attribute>pressurezone_population</attribute>
         <attribute>fk_status</attribute>
         <attribute>remark</attribute>
-        <attribute>pipe_material_diameter</attribute>
+        <attribute>pressurezone_population</attribute>
         <attribute>_valve_count</attribute>
+        <attribute>pipe_material_diameter</attribute>
         <attribute>district_name</attribute>
-        <attribute>status_active</attribute>
         <attribute>_schema_visible</attribute>
+        <attribute>status_active</attribute>
         <attribute>folder_description</attribute>
         <attribute>pipe_function_major</attribute>
         <attribute>label_2_text</attribute>
@@ -24715,8 +24768,8 @@ def my_form_open(dialog, layer, feature):
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>fk_installmethod</attribute>
-        <attribute>pipe_material_diameter_internal</attribute>
         <attribute>pressure_nominal</attribute>
+        <attribute>pipe_material_diameter_internal</attribute>
         <attribute>fk_parent</attribute>
         <attribute>fk_printmap</attribute>
         <attribute>pipe_material_diameter_nominal</attribute>
@@ -24730,16 +24783,16 @@ def my_form_open(dialog, layer, feature):
         <attribute>_diff_elevation</attribute>
         <attribute>status_value_fr</attribute>
         <attribute>pipe_material_pressure_nominal</attribute>
-        <attribute>pressurezone_colorcode</attribute>
         <attribute>fk_bedding</attribute>
+        <attribute>pressurezone_colorcode</attribute>
+        <attribute>fk_pressurezone</attribute>
         <attribute>fk_precision</attribute>
         <attribute>year</attribute>
-        <attribute>fk_pressurezone</attribute>
         <attribute>_valve_closed</attribute>
         <attribute>fk_node_b</attribute>
+        <attribute>fk_protection</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>precision_value_fr</attribute>
-        <attribute>fk_protection</attribute>
         <attribute>pipe_function_value_fr</attribute>
         <attribute>id</attribute>
         <attribute>pipe_material__displayname_fr</attribute>
@@ -24750,22 +24803,22 @@ def my_form_open(dialog, layer, feature):
         <attribute>tunnel_or_bridge</attribute>
         <attribute>folder_identification</attribute>
         <attribute>distributor_name</attribute>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_district</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>fk_folder</attribute>
         <attribute>_length2d</attribute>
         <attribute>fk_material</attribute>
         <attribute>fk_node_a</attribute>
         <attribute>schema_visible</attribute>
         <attribute>_printmaps</attribute>
-        <attribute>pressurezone_population</attribute>
         <attribute>fk_status</attribute>
         <attribute>remark</attribute>
-        <attribute>pipe_material_diameter</attribute>
+        <attribute>pressurezone_population</attribute>
         <attribute>_valve_count</attribute>
+        <attribute>pipe_material_diameter</attribute>
         <attribute>district_name</attribute>
-        <attribute>status_active</attribute>
         <attribute>_schema_visible</attribute>
+        <attribute>status_active</attribute>
         <attribute>folder_description</attribute>
         <attribute>pipe_function_major</attribute>
         <attribute>label_2_text</attribute>
