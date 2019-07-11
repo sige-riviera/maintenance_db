@@ -165,33 +165,33 @@
   </layer-tree-group>
   <snapping-settings tolerance="0" enabled="0" unit="2" mode="1" type="2" intersection-snapping="0">
     <individual-layer-settings>
-      <layer-setting tolerance="0" enabled="0" id="valve20170829165258108" type="2" units="2"/>
       <layer-setting tolerance="0" enabled="0" id="croquis_reseau20170914153941848" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="qwat_printmap20170919102956238" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="crossing20170912143156180" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="node20170821111240113" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_leak20170928162343618" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="pipe20170817163039703" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="qwat_folder20170919112604553" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="pipe_copy20170821075917185" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="pipe_copy20170821075918952" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="hydrant20170912112103216" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_ouvrage_copier_copier20180214142612527" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="qwat_annotation_point20170919102956209" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_meter_reference_mn9520180810140843109" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="qwat_annotation_line20170919102956179" type="2" units="2"/>
       <layer-setting tolerance="0" enabled="0" id="part20170912113448062" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_ouvrage_copier_copier20180214142459666" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="qwat_folder20170919112604553" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="node20170821111240113" type="2" units="2"/>
       <layer-setting tolerance="0" enabled="0" id="meter20170912075821953" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_leak20170928162343618" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="pipe_copy20170821075917185" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="crossing20170912143156180" type="2" units="2"/>
       <layer-setting tolerance="0" enabled="0" id="sige_qgis_waterhardness_mn9520181001165211151" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="subscriber20170911155257972" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="valve20170829165258108" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="qwat_annotation_point20170919102956209" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_ouvrage_copier_copier20180214142612527" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_remote20171122094212805" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_hydrant20171020105757789" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_meter_reference_mn9520180810140843109" type="2" units="2"/>
       <layer-setting tolerance="0" enabled="0" id="installation20170912103810982" type="2" units="2"/>
       <layer-setting tolerance="50" enabled="1" id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6" type="2" units="1"/>
-      <layer-setting tolerance="0" enabled="0" id="qwat_pressurezone20170919102956224" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_remote20171122094212805" type="2" units="2"/>
       <layer-setting tolerance="0" enabled="0" id="qwat_consumptionzone20170919113125033" type="2" units="2"/>
-      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_hydrant20171020105757789" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="qwat_annotation_line20170919102956179" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="pipe_copy20170821075918952" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="hydrant20170912112103216" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="qwat_printmap20170919102956238" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="sige_qgis_ouvrage_copier_copier20180214142459666" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="qwat_pressurezone20170919102956224" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="pipe20170817163039703" type="2" units="2"/>
+      <layer-setting tolerance="0" enabled="0" id="subscriber20170911155257972" type="2" units="2"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
@@ -28178,22 +28178,24 @@ def my_form_open(dialog, layer, feature):
       </flags>
       <renderer-v2 forceraster="0" enableorderby="0" symbollevels="0" type="RuleRenderer">
         <rules key="{8ac6d04b-1bb5-46e9-b2fb-236cb107ffc9}">
-          <rule symbol="0" label="réseau" filter="status_active = 'oui' AND fk_valve_function != 6105 AND fk_valve_function != 6108" key="{7a025dab-c7fe-4c7c-9f0b-25a39f73abd8}" scalemindenom="-2147483648" scalemaxdenom="10000" description="toutes les vannes sauf organe réseau et vanne d'hydrant">
+          <rule symbol="0" label="réseau" filter="status_functional = 'oui' AND fk_valve_function != 6105 AND fk_valve_function != 6108" key="{7a025dab-c7fe-4c7c-9f0b-25a39f73abd8}" scalemindenom="-2147483648" scalemaxdenom="10000" description="toutes les vannes sauf organe réseau et vanne d'hydrant">
             <rule symbol="1" label="Fermée" filter="closed = 'oui'" key="{edf1c363-d849-4700-82d0-34d494178d4d}"/>
             <rule symbol="2" label="papillon" filter="&quot;fk_valve_type&quot; = 6311" key="{bc5a6d3d-49b8-4e93-9b3d-778a904aee99}"/>
             <rule symbol="3" label="arrêt" filter="&quot;fk_valve_type&quot; = 6313" key="{6c48a279-b0d9-428b-819c-2fc5371720fe}"/>
             <rule symbol="4" label="1/2 tour" filter="&quot;fk_valve_type&quot; = 6316" key="{e71e4974-7976-4d17-873e-fc75661ea9ca}"/>
             <rule symbol="5" label="elgelf" filter="&quot;fk_valve_type&quot; = 6312" key="{d0844c45-0803-481a-96ff-3f49f8727c3b}"/>
             <rule symbol="6" label="vidange" filter=" &quot;valve_function_value_fr&quot; IN ( 'vidange' ,  'vidange-ventouse' )" key="{3bf2a10c-e2fe-43c6-9287-c4055baec2a1}"/>
+            <rule symbol="7" label="Hors-service" filter=" &quot;fk_status&quot; = 1302" key="{6abb1ab2-b7ed-4276-b04b-558453799cad}"/>
           </rule>
-          <rule symbol="7" label="abonné" filter="status_active = 'oui' AND fk_valve_function = 6105 OR fk_valve_function = 6108" key="{143022c7-b3e1-4c03-80d5-58520da677c2}" scalemindenom="-2147483648" scalemaxdenom="1000">
-            <rule symbol="8" label="Fermée" filter="closed = 'oui'" key="{ee4ed8dd-20ae-42fb-b43b-a4c02c5399e9}"/>
-            <rule symbol="9" label="arrêt" filter="&quot;fk_valve_type&quot; =6313" key="{b149b2b9-3783-416c-b413-7a6f7de74e1d}"/>
-            <rule symbol="10" label="1/2 tour" filter="fk_valve_type = 6316" key="{909d41e6-5467-45a8-992d-c01bb4f578ee}"/>
-            <rule symbol="11" label="elgelf" filter="fk_valve_type = 6312" key="{07b8c3d9-6983-45ed-8704-723dc263bc49}"/>
-            <rule symbol="12" label="vidange" filter=" &quot;valve_function_value_fr&quot; IN ( 'vidange' ,  'vidange-ventouse' )" key="{a0c08631-a6ac-4d0b-b538-41bb1efe2315}"/>
+          <rule symbol="8" label="abonné" filter="status_functional = 'oui' AND fk_valve_function = 6105 OR fk_valve_function = 6108" key="{143022c7-b3e1-4c03-80d5-58520da677c2}" scalemindenom="-2147483648" scalemaxdenom="1000">
+            <rule symbol="9" label="Fermée" filter="closed = 'oui'" key="{ee4ed8dd-20ae-42fb-b43b-a4c02c5399e9}"/>
+            <rule symbol="10" label="arrêt" filter="&quot;fk_valve_type&quot; = 6313" key="{b149b2b9-3783-416c-b413-7a6f7de74e1d}"/>
+            <rule symbol="11" label="1/2 tour" filter="fk_valve_type = 6316" key="{909d41e6-5467-45a8-992d-c01bb4f578ee}"/>
+            <rule symbol="12" label="elgelf" filter="fk_valve_type = 6312" key="{07b8c3d9-6983-45ed-8704-723dc263bc49}"/>
+            <rule symbol="13" label="vidange" filter=" &quot;valve_function_value_fr&quot; IN ( 'vidange' ,  'vidange-ventouse' )" key="{a0c08631-a6ac-4d0b-b538-41bb1efe2315}"/>
+            <rule symbol="14" label="Hors-service" filter=" &quot;fk_status&quot; = 1302" key="{03ba3d74-9861-4182-87be-00a8b1280e8b}"/>
           </rule>
-          <rule symbol="13" label="inactive" filter="status_active = 'non'" key="{0e58d6c7-b1a4-4712-9ab5-68675c588c6d}" checkstate="0"/>
+          <rule symbol="15" label="non fonctionnelle" filter="status_functional = 'non'" key="{0e58d6c7-b1a4-4712-9ab5-68675c588c6d}" checkstate="0"/>
         </rules>
         <symbols>
           <symbol clip_to_extent="1" name="0" force_rhr="0" type="marker" alpha="1">
@@ -28279,6 +28281,43 @@ def my_form_open(dialog, layer, feature):
           <symbol clip_to_extent="1" name="10" force_rhr="0" type="marker" alpha="1">
             <layer pass="2" enabled="1" class="SimpleMarker" locked="0">
               <prop v="0" k="angle"/>
+              <prop v="0,140,255,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="cross2" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0,140,255,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.3" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="area" k="scale_method"/>
+              <prop v="1.2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <effect enabled="0" type="effectStack">
+                <effect type="drawSource">
+                  <prop v="0" k="blend_mode"/>
+                  <prop v="2" k="draw_mode"/>
+                  <prop v="1" k="enabled"/>
+                  <prop v="1" k="opacity"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties"/>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" name="11" force_rhr="0" type="marker" alpha="1">
+            <layer pass="2" enabled="1" class="SimpleMarker" locked="0">
+              <prop v="0" k="angle"/>
               <prop v="0,0,0,255" k="color"/>
               <prop v="1" k="horizontal_anchor_point"/>
               <prop v="bevel" k="joinstyle"/>
@@ -28319,7 +28358,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" name="11" force_rhr="0" type="marker" alpha="1">
+          <symbol clip_to_extent="1" name="12" force_rhr="0" type="marker" alpha="1">
             <layer pass="2" enabled="1" class="SimpleMarker" locked="0">
               <prop v="0" k="angle"/>
               <prop v="0,140,255,255" k="color"/>
@@ -28362,7 +28401,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" name="12" force_rhr="0" type="marker" alpha="1">
+          <symbol clip_to_extent="1" name="13" force_rhr="0" type="marker" alpha="1">
             <layer pass="0" enabled="1" class="SvgMarker" locked="0">
               <prop v="0" k="angle"/>
               <prop v="0,0,0,255" k="color"/>
@@ -28404,7 +28443,41 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" name="13" force_rhr="0" type="marker" alpha="1">
+          <symbol clip_to_extent="1" name="14" force_rhr="0" type="marker" alpha="1">
+            <layer pass="1" enabled="1" class="SvgMarker" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="217,0,0,255" k="color"/>
+              <prop v="0" k="fixedAspectRatio"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="./symbols/installations/valve_hs.svg" k="name"/>
+              <prop v="0,12" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="Pixel" k="offset_unit"/>
+              <prop v="255,0,0,255" k="outline_color"/>
+              <prop v="1" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="6" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties" type="Map">
+                    <Option name="angle" type="Map">
+                      <Option name="active" value="true" type="bool"/>
+                      <Option name="field" value="orientation" type="QString"/>
+                      <Option name="type" value="2" type="int"/>
+                    </Option>
+                  </Option>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" name="15" force_rhr="0" type="marker" alpha="1">
             <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
               <prop v="0" k="angle"/>
               <prop v="138,68,107,255" k="color"/>
@@ -28746,6 +28819,40 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol clip_to_extent="1" name="7" force_rhr="0" type="marker" alpha="1">
+            <layer pass="1" enabled="1" class="SvgMarker" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="217,0,0,255" k="color"/>
+              <prop v="0" k="fixedAspectRatio"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="./symbols/installations/valve_hs.svg" k="name"/>
+              <prop v="0,12" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="Pixel" k="offset_unit"/>
+              <prop v="255,0,0,255" k="outline_color"/>
+              <prop v="1" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="6" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" value="" type="QString"/>
+                  <Option name="properties" type="Map">
+                    <Option name="angle" type="Map">
+                      <Option name="active" value="true" type="bool"/>
+                      <Option name="field" value="orientation" type="QString"/>
+                      <Option name="type" value="2" type="int"/>
+                    </Option>
+                  </Option>
+                  <Option name="type" value="collection" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" name="8" force_rhr="0" type="marker" alpha="1">
             <layer pass="1" enabled="1" class="SimpleMarker" locked="0">
               <prop v="0" k="angle"/>
               <prop v="255,255,255,255" k="color"/>
@@ -28782,7 +28889,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" name="8" force_rhr="0" type="marker" alpha="1">
+          <symbol clip_to_extent="1" name="9" force_rhr="0" type="marker" alpha="1">
             <layer pass="3" enabled="1" class="SimpleMarker" locked="0">
               <prop v="0" k="angle"/>
               <prop v="255,0,0,255" k="color"/>
@@ -28820,43 +28927,6 @@ def my_form_open(dialog, layer, feature):
                       <Option name="type" value="2" type="int"/>
                     </Option>
                   </Option>
-                  <Option name="type" value="collection" type="QString"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol clip_to_extent="1" name="9" force_rhr="0" type="marker" alpha="1">
-            <layer pass="2" enabled="1" class="SimpleMarker" locked="0">
-              <prop v="0" k="angle"/>
-              <prop v="0,140,255,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="cross2" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0,140,255,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.3" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="area" k="scale_method"/>
-              <prop v="1.2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
-              <effect enabled="0" type="effectStack">
-                <effect type="drawSource">
-                  <prop v="0" k="blend_mode"/>
-                  <prop v="2" k="draw_mode"/>
-                  <prop v="1" k="enabled"/>
-                  <prop v="1" k="opacity"/>
-                </effect>
-              </effect>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" value="" type="QString"/>
-                  <Option name="properties"/>
                   <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
@@ -30054,7 +30124,7 @@ def my_form_open(dialog, layer, feature):
       <expressionfields/>
       <attributeactions>
         <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
-        <actionsetting id="{1a0dd6d5-e57b-4312-9ed7-a359b0672007}" name="History audit" notificationMessage="" icon="" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('valve20130304110011497',[% $id %])" shortTitle="" capture="0" type="1" isEnabledOnlyWhenEditable="0">
+        <actionsetting id="{22c86097-9f31-42b1-99ec-742595e6d903}" name="History audit" notificationMessage="" icon="" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('valve20130304110011497',[% $id %])" shortTitle="" capture="0" type="1" isEnabledOnlyWhenEditable="0">
           <actionScope id="Feature"/>
           <actionScope id="Canvas"/>
           <actionScope id="Field"/>
