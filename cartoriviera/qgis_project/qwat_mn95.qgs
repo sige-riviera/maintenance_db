@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.23">
+<qgis projectname="" version="2.18.28">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -345,6 +345,12 @@
         <edittype widgetv2type="TextEdit" name="file">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="as_built_plan_name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="is_as_built_plan">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
@@ -577,6 +583,8 @@
         <alias field="croquis" index="0" name="Lien"/>
         <alias field="id" index="1" name="ID"/>
         <alias field="file" index="2" name="Nom de fichier"/>
+        <alias field="as_built_plan_name" index="3" name=""/>
+        <alias field="is_as_built_plan" index="4" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -621,6 +629,8 @@ def my_form_open(dialog, layer, feature):
         <default field="croquis" expression=""/>
         <default field="id" expression=""/>
         <default field="file" expression=""/>
+        <default field="as_built_plan_name" expression=""/>
+        <default field="is_as_built_plan" expression=""/>
       </defaults>
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
@@ -19301,7 +19311,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
   </projectlayers>
   <properties>
-    <WMSUrl type="QString"></WMSUrl>
+    <WMSUrl type="QString">https://map.cartoriviera.ch/mapserv_proxy?transparent=true&amp;ogcserver=qgis%2Fqwat_mn95</WMSUrl>
     <SpatialRefSys>
       <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
       <ProjectCrs type="QString">EPSG:2056</ProjectCrs>
@@ -19341,11 +19351,11 @@ def my_form_open(dialog, layer, feature):
       <qwat_annotation_line20170919102956179 type="int">8</qwat_annotation_line20170919102956179>
       <installation20170912103810982 type="int">8</installation20170912103810982>
       <node20170821111240113 type="int">8</node20170821111240113>
-      <sige_qgis_qwat_meter_reference_mn9520180810140843109 type="int">8</sige_qgis_qwat_meter_reference_mn9520180810140843109>
       <pipe_copy20170821075917185 type="int">8</pipe_copy20170821075917185>
       <pipe_copy20170821075918952 type="int">8</pipe_copy20170821075918952>
-      <part20170912113448062 type="int">8</part20170912113448062>
+      <sige_qgis_qwat_meter_reference_mn9520180810140843109 type="int">8</sige_qgis_qwat_meter_reference_mn9520180810140843109>
       <meter20170912075821953 type="int">8</meter20170912075821953>
+      <part20170912113448062 type="int">8</part20170912113448062>
       <subscriber20170911155257972 type="int">8</subscriber20170911155257972>
       <hydrant20170912112103216 type="int">8</hydrant20170912112103216>
       <pipe20170817163039703 type="int">8</pipe20170817163039703>
@@ -19562,6 +19572,10 @@ def my_form_open(dialog, layer, feature):
       <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
       <CanvasColorBluePart type="int">255</CanvasColorBluePart>
     </Gui>
+    <Measure>
+      <Ellipsoid type="QString">bessel</Ellipsoid>
+    </Measure>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WFSLayers type="QStringList">
       <value>croquis_reseau20170914153941848</value>
       <value>crossing20170912143156180</value>
@@ -19590,11 +19604,7 @@ def my_form_open(dialog, layer, feature):
       <value>subscriber20170911155257972</value>
       <value>valve20170829165258108</value>
     </WFSLayers>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <Measure>
-      <Ellipsoid type="QString">bessel</Ellipsoid>
-    </Measure>
-    <WFSUrl type="QString"></WFSUrl>
+    <WFSUrl type="QString">https://map.cartoriviera.ch/mapserv_proxy?transparent=true&amp;ogcserver=qgis%2Fqwat_mn95</WFSUrl>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
   </properties>
