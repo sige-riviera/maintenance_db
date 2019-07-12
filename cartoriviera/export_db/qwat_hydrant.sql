@@ -162,7 +162,8 @@ select
     folder_identification,
     folder_description,
     folder_date_start,
-    folder_date_end
+    folder_date_end,
+    third_party_supply
     -- precisionalti_vl_active,
     -- precisionalti_short_fr,
     -- precisionalti_short_en,
