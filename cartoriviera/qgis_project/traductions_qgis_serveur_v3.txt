@@ -1,44 +1,101 @@
-msgid "_length2d"
-msgstr "Longueur 2D"
+msgid "croquis"
+msgstr "Lien"
 
-msgid "_length3d"
-msgstr "Longueur 3D"
+msgid "file"
+msgstr "Nom de fichier"
+
+msgid "id"
+msgstr "ID"
+
+msgid "is_as_built_plan"
+msgstr "Schéma d'exécution"
 
 msgid "_printmaps"
-msgstr "folios"
+msgstr "Folio"
 
-msgid "_repaired"
-msgstr "Réparé"
+msgid "distributor_name"
+msgstr "Distributeur"
 
-msgid "_sum_population"
-msgstr "Population totale"
+msgid "district_name"
+msgstr "Commune"
 
-msgid "_sum_subscriber"
-msgstr "Nb. abonnés total"
+msgid "district_prefix"
+msgstr "Préfixe de commune"
 
-msgid "_valve_closed"
-msgstr "Fermée par vanne"
+msgid "district_shortname"
+msgstr "Commune - abbréviation"
 
-msgid "_valve_count"
-msgstr "Nombre de vannes"
+msgid "district_zip"
+msgstr "Code postal"
+
+msgid "flow"
+msgstr "Débit"
+
+msgid "folder_identification"
+msgstr "Dossier technique"
+
+msgid "identification"
+msgstr "Identifiant"
+
+msgid "marked"
+msgstr "Marqué"
+
+msgid "material_value_fr"
+msgstr "Matériau"
+
+msgid "model_inf_value_fr"
+msgstr "Modèle inf."
+
+msgid "model_sup_value_fr"
+msgstr "Modèle sup."
+
+msgid "observation_date"
+msgstr "Date de mesure"
+
+msgid "observation_source"
+msgstr "Origine des mesures"
+
+msgid "pressure_dynamic"
+msgstr "Pression dynamique"
+
+msgid "pressure_static"
+msgstr "Pression statique"
+
+msgid "pressurezone_name"
+msgstr "Zone de pression"
+
+msgid "provider_value_fr"
+msgstr "Fournisseur"
+
+msgid "remark"
+msgstr "Remarque"
+
+msgid "status_functional"
+msgstr "Fonctionnel"
+
+msgid "status_value_fr"
+msgstr "Etat"
+
+msgid "third_party_supply"
+msgstr "Alimenté par tiers"
+
+msgid "underground"
+msgstr "Souterraine"
+
+msgid "year"
+msgstr "Année"
 
 msgid "activatedcharcoal"
 msgstr "Charbon actif"
 
-msgid "address"
-msgstr "Adresse"
+msgid "altitude"
+msgstr "Altitude"
 
 msgid "altitude_apron"
 msgstr "Altitude radier"
 
 msgid "altitude_overflow"
 msgstr "Altitude trop-plein"
-
-msgid "annotation"
-msgstr "Annotation"
-
-msgid "cause_value_fr"
-msgstr "Cause"
 
 msgid "cistern1_dimension_1"
 msgstr "Cuve 1 - diamètre/largeur"
@@ -58,56 +115,14 @@ msgstr "Cuve 2 - longueur"
 msgid "cistern2_storage"
 msgstr "Cuve 2 - volume"
 
-msgid "closed"
-msgstr "Fermée"
-
 msgid "contract_end"
 msgstr "Fin de contrat"
-
-msgid "croquis"
-msgstr "Lien"
-
-msgid "date_end"
-msgstr "Date de fin"
-
-msgid "date_start"
-msgstr "Date de début"
 
 msgid "depth"
 msgstr "Profondeur"
 
-msgid "description"
-msgstr "Description"
-
-msgid "destination"
-msgstr "Destination"
-
-msgid "detection_date"
-msgstr "Date de détection"
-
-msgid "distributor_name"
-msgstr "Distributeur"
-
-msgid "district_land_registry"
-msgstr "Numéro de commune"
-
-msgid "district_name"
-msgstr "Commune"
-
-msgid "district_prefix"
-msgstr "Préfixe commune"
-
-msgid "district_shortname"
-msgstr "Commune - abbréviation"
-
-msgid "district_zip"
-msgstr "Code postal"
-
 msgid "eca"
 msgstr "ECA"
-
-msgid "file"
-msgstr "Nom de fichier"
 
 msgid "filtration_membrane"
 msgstr "Filtration membranaire"
@@ -121,41 +136,8 @@ msgstr "Télécommande incendie"
 msgid "fire_valve"
 msgstr "Vanne incendie"
 
-msgid "fk_cause"
-msgstr "Cause"
-
-msgid "fk_distributor"
-msgstr "distributeur"
-
-msgid "fk_district"
-msgstr "commune"
-
-msgid "fk_folder"
-msgstr "dossier technique"
-
-msgid "fk_locationtype"
-msgstr "emplacement"
-
-msgid "fk_pipe"
-msgstr "conduite"
-
-msgid "fk_precision"
-msgstr "précision"
-
-msgid "fk_pressurezone"
-msgstr "zone de pression"
-
-msgid "fk_printmap"
-msgstr "folios"
-
-msgid "fk_status"
-msgstr "statut"
-
 msgid "flocculation"
 msgstr "Flocculation"
-
-msgid "flow"
-msgstr "Débit"
 
 msgid "flow_average"
 msgstr "Débit moyen"
@@ -163,35 +145,17 @@ msgstr "Débit moyen"
 msgid "flow_concession"
 msgstr "Débit concession"
 
-msgid "flow_current"
-msgstr "Débit actuel"
-
 msgid "flow_lowest"
 msgstr "Débit étiage"
 
 msgid "flow_meter"
 msgstr "Débitmètre"
 
-msgid "flow_planned"
-msgstr "Débit prévu"
-
-msgid "folder"
-msgstr "Dossier"
-
-msgid "folder_identification"
-msgstr "Dossier technique"
-
 msgid "gathering_chamber"
 msgstr "Chambre de rassemblement"
 
 msgid "height_max"
 msgstr "Hauteur max"
-
-msgid "id"
-msgstr "ID"
-
-msgid "identification"
-msgstr "Identifiant"
 
 msgid "installation_type"
 msgstr "Type d'ouvrage"
@@ -205,15 +169,6 @@ msgstr "Manomètre"
 msgid "manometric_height"
 msgstr "Hauteur manométrique"
 
-msgid "material_value_fr"
-msgstr "Matériau"
-
-msgid "model_inf_value_fr"
-msgstr "Modèle inf."
-
-msgid "model_sup_value_fr"
-msgstr "Modèle sup."
-
 msgid "name"
 msgstr "Nom"
 
@@ -223,26 +178,62 @@ msgstr "Séparation de réseau"
 msgid "no_pumps"
 msgstr "Nombre de pompes"
 
-msgid "observation_date"
-msgstr "Date de mesure"
-
-msgid "observation_source"
-msgstr "Origine des mesures"
-
 msgid "open_water_surface"
 msgstr "Eau de surface"
 
-msgid "origin"
-msgstr "Origine"
-
 msgid "parcel"
-msgstr "parcelle"
+msgstr "Parcelle"
+
+msgid "rejected_flow"
+msgstr "Débit refoulé"
+
+msgid "sanitization_chlorine_gazeous"
+msgstr "Désinfection chlore gazeux"
+
+msgid "sanitization_chlorine_liquid"
+msgstr "Désinfection chlore liquide"
+
+msgid "sanitization_ozone"
+msgstr "Désinfection ozone"
+
+msgid "sanitization_uv"
+msgstr "Désinfection UV"
+
+msgid "settling"
+msgstr "Décantation"
+
+msgid "storage_fire"
+msgstr "Réserve incendie"
+
+msgid "storage_supply"
+msgstr "Réserve utile"
+
+msgid "storage_total"
+msgstr "Réserve totale"
+
+msgid "treatment_capacity"
+msgstr "Capacité de traitement"
+
+msgid "water_meter"
+msgstr "Compteur"
+
+msgid "_length2d"
+msgstr "Longueur 2d"
+
+msgid "_length3d"
+msgstr "Longueur 3d"
+
+msgid "_valve_closed"
+msgstr "Fermée par vanne"
+
+msgid "_valve_count"
+msgstr "Nombre de vannes"
 
 msgid "pipe_function_value_fr"
 msgstr "Fonction"
 
 msgid "pipe_material__displayname_fr"
-msgstr "Materiau"
+msgstr "Matériau"
 
 msgid "pipe_material_diameter"
 msgstr "Diamètre"
@@ -259,38 +250,68 @@ msgstr "Diamètre nominal"
 msgid "pipe_material_pressure_nominal"
 msgstr "Pression nominale"
 
-msgid "pipe_replaced"
-msgstr "Conduite remplacée"
-
-msgid "plan"
-msgstr "Plan"
-
-msgid "pressure_dynamic"
-msgstr "Pression dynamique"
+msgid "precision_value_fr"
+msgstr "Précision"
 
 msgid "pressure_nominal"
 msgstr "Pression nominale"
 
-msgid "pressure_static"
-msgstr "Pression statique"
-
-msgid "pressurezone_name"
-msgstr "Zone de pression"
-
-msgid "print_scale"
-msgstr "Echelle d'impression"
-
 msgid "protection_value_fr"
 msgstr "Protection"
 
-msgid "provider_value_fr"
-msgstr "Fournisseur"
+msgid "schema_visible"
+msgstr "Visibilité schématique"
 
-msgid "rejected_flow"
-msgstr "Débit refoulé"
+msgid "tunnel_or_bridge"
+msgstr "Tunnel ou pont"
 
-msgid "remark"
-msgstr "Remarque"
+msgid "year_end"
+msgstr "Année de fin"
+
+msgid "year_rehabilitation"
+msgstr "Année de réhabilitation"
+
+msgid "annotation"
+msgstr "Annotation"
+
+msgid "_sum_population"
+msgstr "Population totale"
+
+msgid "_sum_subscriber"
+msgstr "Nb. abonnés total"
+
+msgid "date_end"
+msgstr "Date de fin"
+
+msgid "date_start"
+msgstr "Date de début"
+
+msgid "description"
+msgstr "Description"
+
+msgid "population"
+msgstr "Population"
+
+msgid "_repaired"
+msgstr "Réparé"
+
+msgid "address"
+msgstr "Adresse"
+
+msgid "cause_value_fr"
+msgstr "Cause"
+
+msgid "detection_date"
+msgstr "Date de détection"
+
+msgid "fk_cause"
+msgstr "Cause"
+
+msgid "fk_pipe"
+msgstr "ID conduite"
+
+msgid "pipe_replaced"
+msgstr "Conduite remplacée"
 
 msgid "repair"
 msgstr "Réparation"
@@ -298,23 +319,26 @@ msgstr "Réparation"
 msgid "repair_date"
 msgstr "Date de réparation"
 
-msgid "sanitization_chlorine_gazeous"
-msgstr "Désinfection chlore gazeux"
+msgid "widespread_damage"
+msgstr "Dommages étendus"
 
-msgid "sanitization_chlorine_liquid"
-msgstr "Désinfection chlore liquide"
+msgid "meter_identification"
+msgstr "Référence identifiant"
 
-msgid "sanitization_ozone"
-msgstr "Désinfection ozone"
+msgid "destination"
+msgstr "Destination"
 
-msgid "sanitization_uv"
-msgstr "Désinfection UV"
+msgid "folder"
+msgstr "Dossier"
 
-msgid "schema_force_visible"
-msgstr "Visibilité schéma"
+msgid "origin"
+msgstr "Origine"
 
-msgid "settling"
-msgstr "Décantation"
+msgid "plan"
+msgstr "Plan"
+
+msgid "subscriber_identification"
+msgstr "Référence identifiant"
 
 msgid "sqwh_appreciation"
 msgstr "Appréciation"
@@ -334,38 +358,29 @@ msgstr "Dureté min. observée"
 msgid "sqwh_name"
 msgstr "Nom de la zone"
 
-msgid "status_active"
-msgstr "Active"
+msgid "flow_current"
+msgstr "Débit actuel"
 
-msgid "status_functional"
-msgstr "Fonctionnelle"
-
-msgid "status_value_fr"
-msgstr "Etat"
-
-msgid "storage_fire"
-msgstr "Réserve incendie"
-
-msgid "storage_supply"
-msgstr "Réserve utile"
-
-msgid "storage_total"
-msgstr "Réserve totale"
-
-msgid "subscriber_identification"
-msgstr "Référence identifiant"
+msgid "flow_planned"
+msgstr "Débit prévu"
 
 msgid "subscriber_type_value_fr"
 msgstr "Type d'abonné"
 
-msgid "treatment_capacity"
-msgstr "Capacité de traitment"
+msgid "_pipe_schema_visible"
+msgstr "Visib. conduite schématique"
 
-msgid "tunnel_or_bridge"
-msgstr "Tunnel ou pont"
+msgid "_schema_visible"
+msgstr "Visib. schématique"
 
-msgid "underground"
-msgstr "Souterraine"
+msgid "closed"
+msgstr "Fermé"
+
+msgid "diameter_nominal"
+msgstr "Diamètre nominal"
+
+msgid "schema_force_visible"
+msgstr "Visib. schématique forcée"
 
 msgid "valve_actuation_value_fr"
 msgstr "Vanne - actionnement"
@@ -376,239 +391,170 @@ msgstr "Vanne - fonction"
 msgid "valve_type_value_fr"
 msgstr "Vanne - type"
 
-msgid "version_date"
-msgstr "Date MAJ"
-
-msgid "water_meter"
-msgstr "Compteur"
-
-msgid "widespread_damage"
-msgstr "Dommages étendus"
-
-msgid "year"
-msgstr "année"
-
-msgid "year_end"
-msgstr "année fin"
-
-msgid "year_rehabilitation"
-msgstr "Année de réhabilitation"
-
-msgid "absorption_capacity"
-msgstr "capacite_absorption_sol"
-
-msgid "accessibility"
-msgstr "acces"
-
-msgid "backflow_level"
-msgstr "cote_refoulement"
-
-msgid "bedding_encasement"
-msgstr "lit_de_pose"
-
-msgid "bottom_level"
-msgstr "cote_radier"
-
-msgid "brand"
-msgstr "fabricant"
-
-msgid "bypass"
-msgstr "bypass"
+msgid "accessibility_value_fr"
+msgstr "Accessibilité"
 
 msgid "clear_height"
-msgstr "hauteur_max_profil"
+msgstr "Hauteur max. profil"
 
 msgid "coefficient_of_friction"
 msgstr "k_strickler"
 
-msgid "connection_type"
-msgstr "raccordement"
+msgid "connection_type_abbr_de"
+msgstr "Type de connexion"
 
-msgid "contract_section"
-msgstr "lot_construction"
+msgid "elevation_determination_value_fr"
+msgstr "Détermination altimétrique"
 
-msgid "cover_shape"
-msgstr "forme_couvercle"
+msgid "financing_abbr_fr"
+msgstr "Financement"
 
-msgid "defects"
-msgstr "lacunes"
+msgid "function_hierarchic_value_fr"
+msgstr "Fonction hiérarchique"
 
-msgid "diameter"
-msgstr "diametre"
+msgid "function_hydraulic_value_fr"
+msgstr "Fonction hydraulique"
 
-msgid "dimension1"
-msgstr "dimension1"
-
-msgid "dimension2"
-msgstr "dimension2"
-
-msgid "distance_to_aquifer"
-msgstr "distance_aquifere"
-
-msgid "effective_area"
-msgstr "surface_utile"
-
-msgid "elevation_determination"
-msgstr "determination_altimetrique"
-
-msgid "emergency_spillway"
-msgstr "trop_plein_de_secours"
-
-msgid "fastening"
-msgstr "fermeture"
-
-msgid "financing"
-msgstr "financement"
-
-msgid "function_hierarchic"
-msgstr "fonction_hierarchique"
-
-msgid "function_hydraulic"
-msgstr "fonction_hydraulique"
-
-msgid "gross_costs"
-msgstr "couts_bruts"
-
-msgid "highwater_level"
-msgstr "cote_crue"
-
-msgid "horizontal_positioning"
-msgstr "determination_planimetrique"
+msgid "horizontal_positioning_value_fr"
+msgstr "Détermination planimétrique"
 
 msgid "identifier"
-msgstr "designation"
+msgstr "Désignation"
 
-msgid "inside_coating"
-msgstr "protection_interieure"
-
-msgid "inspection_interval"
-msgstr "intervalle_inspection"
-
-msgid "jetting_interval"
-msgstr "intervalle_curage"
-
-msgid "kind"
-msgstr "genre"
-
-msgid "labeling"
-msgstr "signalisation"
+msgid "inside_coating_value_fr"
+msgstr "Revetement intérieur"
 
 msgid "last_modification"
-msgstr "derniere_modification"
+msgstr "Dernière modification"
 
 msgid "length_effective"
-msgstr "l_effective"
+msgstr "Longueur effective"
 
-msgid "level"
-msgstr "cote"
+msgid "material_value_fr"
+msgstr "Matériau"
 
-msgid "location_name"
-msgstr "lieu_dit"
+msgid "obj_id"
+msgstr "ID"
 
-msgid "material"
-msgstr "materiau"
+msgid "owner_identifier"
+msgstr "Propriétaire"
 
-msgid "pipe_length"
-msgstr "l_tuyau"
+msgid "reliner_material_value_fr"
+msgstr "Chemisage - matériau"
 
-msgid "positional_accuracy"
-msgstr "determination_planimetrique"
+msgid "relining_construction_value_fr"
+msgstr "Chemisage - valeur"
 
-msgid "records"
-msgstr "dossier"
-
-msgid "relevance"
-msgstr "signifiance"
-
-msgid "reliner_material"
-msgstr "relining_materiaux"
-
-msgid "reliner_nominal_size"
-msgstr "reliner_diametre_nominale"
-
-msgid "relining_construction"
-msgstr "relining_technique"
-
-msgid "relining_kind"
-msgstr "relining_genre"
+msgid "relining_kind_value_fr"
+msgstr "Chemisage - type"
 
 msgid "remark"
-msgstr "remarque"
+msgstr "Remarque"
 
-msgid "renovation_demand"
-msgstr "remise_en_etat"
+msgid "renovation_necessity_value_fr"
+msgstr "Nécessité de rénovation"
 
-msgid "renovation_necessity"
-msgstr "necessite_assainir"
+msgid "rv_construction_type_value_fr"
+msgstr "Type rénovation"
 
-msgid "replacement_value"
-msgstr "valeur_remplacement"
+msgid "slope_per_mill"
+msgstr "Pente (pour mille)"
 
-msgid "ring_stiffness"
-msgstr "rigidite_annulaire"
+msgid "status_value_fr"
+msgstr "Etat"
 
-msgid "rv_base_year"
-msgstr "vr_annee_reference"
+msgid "structure_condition_value_fr"
+msgstr "Etat de l'ouvrage"
 
-msgid "rv_construction_type"
-msgstr "vr_type_construction"
+msgid "usage_current_value_fr"
+msgstr "Usage actuel"
 
-msgid "seepage_utilization"
-msgstr "eau_infiltration"
+msgid "usage_planned_abbr_fr"
+msgstr "Utilisation prévue"
 
-msgid "slope_building_plan"
-msgstr "pente_plan"
+msgid "width"
+msgstr "Largeur"
 
-msgid "sludge_bucket"
-msgstr "ramasse_boues"
+msgid "year_of_construction"
+msgstr "Année de construction"
 
-msgid "status"
-msgstr "etat"
+msgid "year_of_replacement"
+msgstr "Année de remplacement"
 
-msgid "stormwater_tank_arrangement"
-msgstr "bep_disposition"
+msgid "_depth"
+msgstr "Profondeur"
 
-msgid "structure_condition"
-msgstr "etat_constructif"
+msgid "_label"
+msgstr "Etiquette"
 
-msgid "subsidies"
-msgstr "subventions"
+msgid "backflow_level"
+msgstr "Cote - refoulement"
 
-msgid "surface_inflow"
-msgstr "arrivee_eaux_sup"
+msgid "bottom_level"
+msgstr "Cote - radier"
+
+msgid "cover_fastening_value_fr"
+msgstr "Couvercle - fixation"
+
+msgid "cover_material_value_fr"
+msgstr "Couvercle - matériau"
+
+msgid "cover_shape_value_fr"
+msgstr "Couvercle - forme"
+
+msgid "dimension1"
+msgstr "Dimension 1"
+
+msgid "dimension2"
+msgstr "Dimension 2"
+
+msgid "financing_value_fr"
+msgstr "Financement"
+
+msgid "highwater_level"
+msgstr "Cote - crue"
+
+msgid "manhole_function_value_fr"
+msgstr "Fonction du regard"
+
+msgid "positional_accuracy_value_fr"
+msgstr "Détermination planimétrique"
+
+msgid "renovation_demand_value_fr"
+msgstr "Demande de rénovation"
+
+msgid "special_structure_function_value_fr"
+msgstr "Fonction de la structure"
 
 msgid "terrain_level"
-msgstr "cote_terrain"
+msgstr "Cote - terrain"
 
 msgid "upper_elevation"
-msgstr "cote_plafond"
-
-msgid "usage_current"
-msgstr "genre_utilisation_actuel"
-
-msgid "usage_planned"
-msgstr "genre_utilisation_prevu"
+msgstr "Cote - plafond"
 
 msgid "vehicle_access"
 msgstr "vehicule_d_aspiration"
 
-msgid "venting"
-msgstr "aeration"
+msgid "venting_value_fr"
+msgstr "Ventilation"
 
-msgid "wall_roughness"
-msgstr "k_colebrook"
+msgid "id"
+msgstr "ID"
 
-msgid "waterlevel_hydraulic"
-msgstr "niveau_eau_hydraulique"
+msgid "remarque"
+msgstr "Remarque"
 
-msgid "watertightness"
-msgstr "etancheite"
+msgid "camac"
+msgstr "Demande de permis de constr. CAMAC"
 
-msgid "width"
-msgstr "largeur"
+msgid "construction"
+msgstr "Construction"
 
-msgid "year_of_construction"
-msgstr "annee_de_construction"
+msgid "date_fin"
+msgstr "Date de fin présumée"
 
-msgid "year_of_replacement"
-msgstr "annee_de_remplacement"
+msgid "date_recu"
+msgstr "Date de réception"
+
+msgid "date_traite"
+msgstr "Date de traitement"

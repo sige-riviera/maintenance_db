@@ -1,219 +1,147 @@
-msgid "absorption_capacity"
-msgstr "capacite_absorption_sol"
-
-msgid "accessibility"
-msgstr "acces"
-
-msgid "backflow_level"
-msgstr "cote_refoulement"
-
-msgid "bedding_encasement"
-msgstr "lit_de_pose"
-
-msgid "bottom_level"
-msgstr "cote_radier"
-
-msgid "brand"
-msgstr "fabricant"
-
-msgid "bypass"
-msgstr "bypass"
+msgid "accessibility_value_fr"
+msgstr "Accessibilité"
 
 msgid "clear_height"
-msgstr "hauteur_max_profil"
+msgstr "Hauteur max. profil"
 
 msgid "coefficient_of_friction"
 msgstr "k_strickler"
 
-msgid "connection_type"
-msgstr "raccordement"
+msgid "connection_type_abbr_de"
+msgstr "Type de connexion"
 
-msgid "contract_section"
-msgstr "lot_construction"
+msgid "elevation_determination_value_fr"
+msgstr "Détermination altimétrique"
 
-msgid "cover_shape"
-msgstr "forme_couvercle"
+msgid "financing_abbr_fr"
+msgstr "Financement"
 
-msgid "defects"
-msgstr "lacunes"
+msgid "function_hierarchic_value_fr"
+msgstr "Fonction hiérarchique"
 
-msgid "diameter"
-msgstr "diametre"
+msgid "function_hydraulic_value_fr"
+msgstr "Fonction hydraulique"
 
-msgid "dimension1"
-msgstr "dimension1"
-
-msgid "dimension2"
-msgstr "dimension2"
-
-msgid "distance_to_aquifer"
-msgstr "distance_aquifere"
-
-msgid "effective_area"
-msgstr "surface_utile"
-
-msgid "elevation_determination"
-msgstr "determination_altimetrique"
-
-msgid "emergency_spillway"
-msgstr "trop_plein_de_secours"
-
-msgid "fastening"
-msgstr "fermeture"
-
-msgid "financing"
-msgstr "financement"
-
-msgid "function_hierarchic"
-msgstr "fonction_hierarchique"
-
-msgid "function_hydraulic"
-msgstr "fonction_hydraulique"
-
-msgid "gross_costs"
-msgstr "couts_bruts"
-
-msgid "highwater_level"
-msgstr "cote_crue"
-
-msgid "horizontal_positioning"
-msgstr "determination_planimetrique"
+msgid "horizontal_positioning_value_fr"
+msgstr "Détermination planimétrique"
 
 msgid "identifier"
-msgstr "designation"
+msgstr "Désignation"
 
-msgid "inside_coating"
-msgstr "protection_interieure"
-
-msgid "inspection_interval"
-msgstr "intervalle_inspection"
-
-msgid "jetting_interval"
-msgstr "intervalle_curage"
-
-msgid "kind"
-msgstr "genre"
-
-msgid "labeling"
-msgstr "signalisation"
+msgid "inside_coating_value_fr"
+msgstr "Revetement intérieur"
 
 msgid "last_modification"
-msgstr "derniere_modification"
+msgstr "Dernière modification"
 
 msgid "length_effective"
-msgstr "l_effective"
+msgstr "Longueur effective"
 
-msgid "level"
-msgstr "cote"
+msgid "material_value_fr"
+msgstr "Matériau"
 
-msgid "location_name"
-msgstr "lieu_dit"
+msgid "obj_id"
+msgstr "ID"
 
-msgid "material"
-msgstr "materiau"
+msgid "owner_identifier"
+msgstr "Propriétaire"
 
-msgid "pipe_length"
-msgstr "l_tuyau"
+msgid "reliner_material_value_fr"
+msgstr "Chemisage - matériau"
 
-msgid "positional_accuracy"
-msgstr "determination_planimetrique"
+msgid "relining_construction_value_fr"
+msgstr "Chemisage - valeur"
 
-msgid "records"
-msgstr "dossier"
-
-msgid "relevance"
-msgstr "signifiance"
-
-msgid "reliner_material"
-msgstr "relining_materiaux"
-
-msgid "reliner_nominal_size"
-msgstr "reliner_diametre_nominale"
-
-msgid "relining_construction"
-msgstr "relining_technique"
-
-msgid "relining_kind"
-msgstr "relining_genre"
+msgid "relining_kind_value_fr"
+msgstr "Chemisage - type"
 
 msgid "remark"
-msgstr "remarque"
+msgstr "Remarque"
 
-msgid "renovation_demand"
-msgstr "remise_en_etat"
+msgid "renovation_necessity_value_fr"
+msgstr "Nécessité de rénovation"
 
-msgid "renovation_necessity"
-msgstr "necessite_assainir"
+msgid "rv_construction_type_value_fr"
+msgstr "Type rénovation"
 
-msgid "replacement_value"
-msgstr "valeur_remplacement"
+msgid "slope_per_mill"
+msgstr "Pente (pour mille)"
 
-msgid "ring_stiffness"
-msgstr "rigidite_annulaire"
+msgid "status_value_fr"
+msgstr "Etat"
 
-msgid "rv_base_year"
-msgstr "vr_annee_reference"
+msgid "structure_condition_value_fr"
+msgstr "Etat de l'ouvrage"
 
-msgid "rv_construction_type"
-msgstr "vr_type_construction"
+msgid "usage_current_value_fr"
+msgstr "Usage actuel"
 
-msgid "seepage_utilization"
-msgstr "eau_infiltration"
+msgid "usage_planned_abbr_fr"
+msgstr "Utilisation prévue"
 
-msgid "slope_building_plan"
-msgstr "pente_plan"
+msgid "width"
+msgstr "Largeur"
 
-msgid "sludge_bucket"
-msgstr "ramasse_boues"
+msgid "year_of_construction"
+msgstr "Année de construction"
 
-msgid "status"
-msgstr "etat"
+msgid "year_of_replacement"
+msgstr "Année de remplacement"
 
-msgid "stormwater_tank_arrangement"
-msgstr "bep_disposition"
+msgid "_depth"
+msgstr "Profondeur"
 
-msgid "structure_condition"
-msgstr "etat_constructif"
+msgid "_label"
+msgstr "Etiquette"
 
-msgid "subsidies"
-msgstr "subventions"
+msgid "backflow_level"
+msgstr "Cote - refoulement"
 
-msgid "surface_inflow"
-msgstr "arrivee_eaux_sup"
+msgid "bottom_level"
+msgstr "Cote - radier"
+
+msgid "cover_fastening_value_fr"
+msgstr "Couvercle - fixation"
+
+msgid "cover_material_value_fr"
+msgstr "Couvercle - matériau"
+
+msgid "cover_shape_value_fr"
+msgstr "Couvercle - forme"
+
+msgid "dimension1"
+msgstr "Dimension 1"
+
+msgid "dimension2"
+msgstr "Dimension 2"
+
+msgid "financing_value_fr"
+msgstr "Financement"
+
+msgid "highwater_level"
+msgstr "Cote - crue"
+
+msgid "manhole_function_value_fr"
+msgstr "Fonction du regard"
+
+msgid "positional_accuracy_value_fr"
+msgstr "Détermination planimétrique"
+
+msgid "renovation_demand_value_fr"
+msgstr "Demande de rénovation"
+
+msgid "special_structure_function_value_fr"
+msgstr "Fonction de la structure"
 
 msgid "terrain_level"
-msgstr "cote_terrain"
+msgstr "Cote - terrain"
 
 msgid "upper_elevation"
-msgstr "cote_plafond"
-
-msgid "usage_current"
-msgstr "genre_utilisation_actuel"
-
-msgid "usage_planned"
-msgstr "genre_utilisation_prevu"
+msgstr "Cote - plafond"
 
 msgid "vehicle_access"
 msgstr "vehicule_d_aspiration"
 
-msgid "venting"
-msgstr "aeration"
-
-msgid "wall_roughness"
-msgstr "k_colebrook"
-
-msgid "waterlevel_hydraulic"
-msgstr "niveau_eau_hydraulique"
-
-msgid "watertightness"
-msgstr "etancheite"
-
-msgid "width"
-msgstr "largeur"
-
-msgid "year_of_construction"
-msgstr "annee_de_construction"
-
-msgid "year_of_replacement"
-msgstr "annee_de_remplacement"
+msgid "venting_value_fr"
+msgstr "Ventilation"
 
