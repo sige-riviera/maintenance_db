@@ -92,7 +92,7 @@ select
     _cistern2_litrepercm,
     sanitization_uv,
     sanitization_chlorine_liquid,
-    sanitization_chlorine_gazeous,
+    sanitization_chlorine_gas,
     sanitization_ozone,
     filtration_membrane,
     filtration_sandorgravel,
