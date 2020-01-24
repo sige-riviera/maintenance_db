@@ -1,11 +1,9 @@
+
 msgid "croquis"
 msgstr "Lien"
 
 msgid "file"
 msgstr "Nom de fichier"
-
-msgid "id"
-msgstr "ID"
 
 msgid "is_as_built_plan"
 msgstr "Schéma d'exécution"
@@ -72,9 +70,6 @@ msgstr "Remarque"
 
 msgid "status_functional"
 msgstr "Fonctionnel"
-
-msgid "status_value_fr"
-msgstr "Etat"
 
 msgid "third_party_supply"
 msgstr "Alimenté par tiers"
@@ -430,9 +425,6 @@ msgstr "Dernière modification"
 msgid "length_effective"
 msgstr "Longueur effective"
 
-msgid "material_value_fr"
-msgstr "Matériau"
-
 msgid "obj_id"
 msgstr "ID"
 
@@ -447,9 +439,6 @@ msgstr "Chemisage - valeur"
 
 msgid "relining_kind_value_fr"
 msgstr "Chemisage - type"
-
-msgid "remark"
-msgstr "Remarque"
 
 msgid "renovation_necessity_value_fr"
 msgstr "Nécessité de rénovation"
