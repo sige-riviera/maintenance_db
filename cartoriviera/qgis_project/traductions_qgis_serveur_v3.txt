@@ -347,13 +347,13 @@ msgid "sqwh_classification"
 msgstr "Classification"
 
 msgid "sqwh_hardness_max"
-msgstr "Dureté max. observée"
+msgstr "Dureté max. observée [°fH]"
 
 msgid "sqwh_hardness_median"
-msgstr "Dureté moyenne"
+msgstr "Dureté moyenne [°fH]"
 
 msgid "sqwh_hardness_min"
-msgstr "Dureté min. observée"
+msgstr "Dureté min. observée [°fH]"
 
 msgid "sqwh_name"
 msgstr "Nom de la zone"
