@@ -19,6 +19,7 @@ select
     folder,
     plan,
     remark,
+    sige_cable_installed,
     -- _geometry_alt1_used,
     -- _geometry_alt2_used,
     -- update_geometry_alt1,
