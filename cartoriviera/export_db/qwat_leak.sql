@@ -77,7 +77,7 @@ select
     -- pipe_status_description_en,
     -- pipe_status_description_ro,
     -- pipe_status_active,
-    -- pipe_status_functional,
+    pipe_status_functional,
     -- pipe_status_code_sire,
     -- pipe_district_name,
     -- pipe_district_shortname,
