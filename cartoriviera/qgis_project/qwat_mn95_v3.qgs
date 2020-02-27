@@ -168,33 +168,33 @@
   </layer-tree-group>
   <snapping-settings unit="2" intersection-snapping="0" type="2" tolerance="0" enabled="0" mode="1">
     <individual-layer-settings>
-      <layer-setting id="pipe_copy20170821075917185" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_ouvrage_copier_copier20180214142612527" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="crossing20170912143156180" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6" type="2" tolerance="50" enabled="1" units="1"/>
-      <layer-setting id="qwat_pressurezone20170919102956224" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="node20170821111240113" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_qwat_leak20170928162343618" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_ouvrage_copier_copier20180214142459666" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="croquis_reseau20170914153941848" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="qwat_consumptionzone20170919113125033" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="pipe20170817163039703" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="subscriber20170911155257972" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_qwat_leak20170928162343618" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="qwat_annotation_point20170919102956209" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_qwat_meter_reference_mn9520180810140843109" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_qwat_remote20171122094212805" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="meter20170912075821953" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="qwat_annotation_line20170919102956179" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_qwat_hydrant20171020105757789" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="part20170912113448062" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="qwat_folder20170919112604553" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="meter20170912075821953" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="croquis_reseau20170914153941848" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_qwat_meter_reference_mn9520180810140843109" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="subscriber20170911155257972" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_qwat_hydrant20171020105757789" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_ouvrage_copier_copier20180214142459666" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="qwat_printmap20170919102956238" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="sige_qgis_qwat_remote20171122094212805" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="valve20170829165258108" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="hydrant20170912112103216" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="installation20170912103810982" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="qwat_annotation_point20170919102956209" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="qwat_annotation_line20170919102956179" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="sige_qgis_waterhardness_mn9520181001165211151" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="crossing20170912143156180" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="qwat_pressurezone20170919102956224" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="installation20170912103810982" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075" type="2" tolerance="0" enabled="0" units="2"/>
       <layer-setting id="pipe_copy20170821075918952" type="2" tolerance="0" enabled="0" units="2"/>
-      <layer-setting id="pipe20170817163039703" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_ouvrage_copier_copier20180214142612527" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6" type="2" tolerance="50" enabled="1" units="1"/>
+      <layer-setting id="qwat_printmap20170919102956238" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="valve20170829165258108" type="2" tolerance="0" enabled="0" units="2"/>
+      <layer-setting id="pipe_copy20170821075917185" type="2" tolerance="0" enabled="0" units="2"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
@@ -26989,7 +26989,7 @@ def my_form_open(dialog, layer, feature):
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
+                  <Option type="QString" value="@symbol_color" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Show">
