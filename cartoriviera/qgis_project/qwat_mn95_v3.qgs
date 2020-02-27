@@ -26838,12 +26838,8 @@ def my_form_open(dialog, layer, feature):
       </flags>
       <renderer-v2 type="RuleRenderer" forceraster="0" symbollevels="0" enableorderby="0">
         <rules key="{34c36a59-bc75-4035-b496-7eeb1cbfada5}">
-          <rule label="Réseau" key="{9908a878-002e-4e0b-9e29-0ed89a3c8438}" filter="&quot;pipe_function_major&quot; = 'oui'">
-            <rule symbol="0" key="{f3023b96-c666-411a-9910-4406b7b4920c}"/>
-          </rule>
-          <rule scalemaxdenom="3000" scalemindenom="1" label="Branchements" key="{3d6bc741-dd8b-48cd-bd3d-024f138632e2}" filter="&quot;pipe_function_major&quot; = 'non'">
-            <rule symbol="1" key="{2d7d9a40-628a-412e-a475-e19a6747b7f4}"/>
-          </rule>
+          <rule symbol="0" label="Réseau" key="{a276b10d-9d10-43a5-a237-9e8d0be31538}" filter="&quot;pipe_function_major&quot; = 'oui'"/>
+          <rule symbol="1" label="Branchements" key="{a9993b41-733a-4718-a31e-b5002145707b}" filter="&quot;pipe_function_major&quot; = 'non'"/>
         </rules>
         <symbols>
           <symbol type="line" alpha="1" clip_to_extent="1" force_rhr="0" name="0">
@@ -26869,13 +26865,13 @@ def my_form_open(dialog, layer, feature):
                   <Option type="QString" value="" name="name"/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="customDash">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" value="false" name="active"/>
+                      <Option type="int" value="1" name="type"/>
+                      <Option type="QString" value="" name="val"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
                       <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
+                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#ff1c1f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#ff7500'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#34e914'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#25a3f1'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 5 THEN '#a637c4'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 6 THEN '#e62ca2'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 7 THEN '#b74825'&#xd;&#xa;&#x9;ELSE '#000000'&#xd;&#xa;END" name="expression"/>
                       <Option type="int" value="3" name="type"/>
                     </Option>
                     <Option type="Map" name="outlineWidth">
@@ -26892,7 +26888,7 @@ def my_form_open(dialog, layer, feature):
           <symbol type="line" alpha="1" clip_to_extent="1" force_rhr="0" name="1">
             <layer class="SimpleLine" pass="0" locked="0" enabled="1">
               <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
+              <prop v="2;2" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="draw_inside_polygon"/>
@@ -26905,20 +26901,20 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="0" k="ring_filter"/>
-              <prop v="0" k="use_custom_dash"/>
+              <prop v="1" k="use_custom_dash"/>
               <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" value="" name="name"/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="customDash">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="if( &quot;pipe_function_major&quot; = 'oui', '1;0', '2;2')" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" value="false" name="active"/>
+                      <Option type="int" value="1" name="type"/>
+                      <Option type="QString" value="" name="val"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
                       <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
+                      <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#ff1c1f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#ff7500'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#34e914'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#25a3f1'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 5 THEN '#a637c4'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 6 THEN '#e62ca2'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 7 THEN '#b74825'&#xd;&#xa;&#x9;ELSE '#000000'&#xd;&#xa;END" name="expression"/>
                       <Option type="int" value="3" name="type"/>
                     </Option>
                     <Option type="Map" name="outlineWidth">
@@ -26938,35 +26934,49 @@ def my_form_open(dialog, layer, feature):
         <settings calloutType="simple">
           <text-style multilineHeight="1" useSubstitutions="0" namedStyle="Normal" fieldName=" replace( &quot;pipe_material_short_fr&quot;||' ','Inconnu ','') ||  &quot;pipe_material_diameter&quot;&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN COALESCE('\n' || &quot;protection_value_fr&quot;,'') ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 1501 THEN if (&quot;remark&quot;='', '', COALESCE('\n' || trim(&quot;remark&quot;),'')) ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 501 THEN '\n' || coalesce(&quot;year&quot;,'')  ELSE '' END&#xd;&#xa;  || CASE WHEN @map_scale &lt; 501 AND &quot;fk_precision&quot; IN (1101,1103,1105) THEN ' Imprécis' ELSE '' END" isExpression="1" previewBkgrdColor="255,255,255,255" textColor="0,80,255,255" blendMode="0" fontKerning="1" fontStrikeout="0" fontWordSpacing="0" fontSize="8" fontCapitals="0" fontSizeUnit="Point" textOpacity="1" fontLetterSpacing="0" fontUnderline="0" textOrientation="horizontal" fontWeight="50" fontItalic="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontFamily="MS Shell Dlg 2">
             <text-buffer bufferSizeUnits="MM" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferNoFill="0" bufferSize="1" bufferOpacity="1" bufferDraw="0" bufferJoinStyle="128" bufferBlendMode="0" bufferColor="255,255,255,255"/>
-            <background shapeFillColor="255,255,255,255" shapeRotationType="0" shapeSizeY="0" shapeSizeUnit="MM" shapeOffsetX="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeSVGFile="" shapeBorderWidthUnit="MM" shapeSizeType="0" shapeOpacity="1" shapeRadiiUnit="MM" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeSizeX="0" shapeBorderColor="128,128,128,255" shapeDraw="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeBorderWidth="0" shapeBlendMode="0" shapeOffsetY="0" shapeType="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeOffsetUnit="MM" shapeJoinStyle="64"/>
+            <background shapeFillColor="255,255,255,255" shapeRotationType="0" shapeSizeY="0" shapeSizeUnit="MM" shapeOffsetX="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeSVGFile="" shapeBorderWidthUnit="MM" shapeSizeType="0" shapeOpacity="1" shapeRadiiUnit="MM" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeSizeX="0" shapeBorderColor="128,128,128,255" shapeDraw="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeBorderWidth="0" shapeBlendMode="0" shapeOffsetY="0" shapeType="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeOffsetUnit="MM" shapeJoinStyle="64">
+              <symbol type="marker" alpha="1" clip_to_extent="1" force_rhr="0" name="markerSymbol">
+                <layer class="SimpleMarker" pass="0" locked="0" enabled="1">
+                  <prop v="0" k="angle"/>
+                  <prop v="152,125,183,255" k="color"/>
+                  <prop v="1" k="horizontal_anchor_point"/>
+                  <prop v="bevel" k="joinstyle"/>
+                  <prop v="circle" k="name"/>
+                  <prop v="0,0" k="offset"/>
+                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                  <prop v="MM" k="offset_unit"/>
+                  <prop v="35,35,35,255" k="outline_color"/>
+                  <prop v="solid" k="outline_style"/>
+                  <prop v="0" k="outline_width"/>
+                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+                  <prop v="MM" k="outline_width_unit"/>
+                  <prop v="diameter" k="scale_method"/>
+                  <prop v="2" k="size"/>
+                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+                  <prop v="MM" k="size_unit"/>
+                  <prop v="1" k="vertical_anchor_point"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option type="QString" value="" name="name"/>
+                      <Option name="properties"/>
+                      <Option type="QString" value="collection" name="type"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </background>
             <shadow shadowScale="100" shadowOpacity="0.7" shadowColor="0,0,0,255" shadowRadiusAlphaOnly="0" shadowOffsetUnit="MM" shadowDraw="0" shadowRadius="1.5" shadowOffsetAngle="135" shadowRadiusUnit="MM" shadowUnder="0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetDist="1" shadowBlendMode="6" shadowOffsetGlobal="1"/>
             <dd_properties>
               <Option type="Map">
                 <Option type="QString" value="" name="name"/>
-                <Option type="Map" name="properties">
-                  <Option type="Map" name="AlwaysShow">
-                    <Option type="bool" value="true" name="active"/>
-                    <Option type="QString" value="CASE WHEN  &quot;label_1_visible&quot; = 2 THEN 1 ELSE 0 END" name="expression"/>
-                    <Option type="int" value="3" name="type"/>
-                  </Option>
-                  <Option type="Map" name="Color">
-                    <Option type="bool" value="true" name="active"/>
-                    <Option type="QString" value="CASE&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 1 THEN '#f25f5f'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 2 THEN '#f28d00'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 3 THEN '#00ad76'&#xd;&#xa;&#x9;WHEN &quot;pressurezone_colorcode&quot; = 4 THEN '#2f96cb'&#xd;&#xa;END" name="expression"/>
-                    <Option type="int" value="3" name="type"/>
-                  </Option>
-                  <Option type="Map" name="Show">
-                    <Option type="bool" value="true" name="active"/>
-                    <Option type="QString" value="label_1_visible" name="field"/>
-                    <Option type="int" value="2" name="type"/>
-                  </Option>
-                </Option>
+                <Option name="properties"/>
                 <Option type="QString" value="collection" name="type"/>
               </Option>
             </dd_properties>
             <substitutions/>
           </text-style>
           <text-format wrapChar="" useMaxLineLengthForAutoWrap="1" placeDirectionSymbol="0" decimals="3" leftDirectionSymbol="&lt;" reverseDirectionSymbol="0" multilineAlign="4294967295" autoWrapLength="0" rightDirectionSymbol=">" plussign="0" addDirectionSymbol="0" formatNumbers="0"/>
-          <placement layerType="UnknownGeometry" distUnits="MM" centroidWhole="0" priority="5" centroidInside="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" maxCurvedCharAngleOut="-25" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorEnabled="0" maxCurvedCharAngleIn="25" repeatDistanceUnits="MM" overrunDistance="0" placement="2" xOffset="0" quadOffset="4" yOffset="0" fitInPolygonOnly="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorType="PointGeometry" rotationAngle="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placementFlags="14" offsetType="0" dist="1" preserveRotation="1" offsetUnits="MapUnit" geometryGenerator="" distMapUnitScale="3x:0,0,0,0,0,0" overrunDistanceUnit="MM" repeatDistance="100"/>
+          <placement layerType="LineGeometry" distUnits="MM" centroidWhole="0" priority="5" centroidInside="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" maxCurvedCharAngleOut="-25" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorEnabled="0" maxCurvedCharAngleIn="25" repeatDistanceUnits="MM" overrunDistance="0" placement="2" xOffset="0" quadOffset="4" yOffset="0" fitInPolygonOnly="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorType="PointGeometry" rotationAngle="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placementFlags="14" offsetType="0" dist="1" preserveRotation="1" offsetUnits="MapUnit" geometryGenerator="" distMapUnitScale="3x:0,0,0,0,0,0" overrunDistanceUnit="MM" repeatDistance="100"/>
           <rendering displayAll="1" fontMinPixelSize="3" obstacleType="0" obstacleFactor="1" fontMaxPixelSize="10000" fontLimitPixelSize="0" upsidedownLabels="0" limitNumLabels="0" obstacle="1" mergeLines="0" zIndex="0" scaleMax="2500" minFeatureSize="7" labelPerPart="0" maxNumLabels="2000" scaleMin="1" drawLabels="1" scaleVisibility="0"/>
           <dd_properties>
             <Option type="Map">
@@ -27543,17 +27553,17 @@ def my_form_open(dialog, layer, feature):
         <attribute>tunnel_or_bridge</attribute>
         <attribute>pipe_function_value_fr</attribute>
         <attribute>_schema_visible</attribute>
-        <attribute>pipe_function_major</attribute>
         <attribute>label_2_text</attribute>
-        <attribute>district_name</attribute>
+        <attribute>pipe_function_major</attribute>
         <attribute>_valve_count</attribute>
+        <attribute>district_name</attribute>
         <attribute>year_rehabilitation</attribute>
         <attribute>status_value_fr</attribute>
         <attribute>remark</attribute>
         <attribute>_printmaps</attribute>
         <attribute>pressurezone_colorcode</attribute>
-        <attribute>precision_value_fr</attribute>
         <attribute>id</attribute>
+        <attribute>precision_value_fr</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>status_active</attribute>
         <attribute>_length3d</attribute>
@@ -27561,8 +27571,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>_length2d</attribute>
         <attribute>_valve_closed</attribute>
         <attribute>pipe_material_diameter_external</attribute>
-        <attribute>folder_description</attribute>
         <attribute>fk_node_b</attribute>
+        <attribute>folder_description</attribute>
         <attribute>fk_status</attribute>
         <attribute>fk_function</attribute>
         <attribute>pipe_material_diameter</attribute>
@@ -27575,22 +27585,22 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_visible</attribute>
         <attribute>folder_identification</attribute>
         <attribute>pressurezone_population</attribute>
-        <attribute>folder_date_end</attribute>
         <attribute>year_end</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>pressure_nominal</attribute>
         <attribute>fk_printmap</attribute>
         <attribute>year</attribute>
         <attribute>label_1_visible</attribute>
-        <attribute>pipe_material_short_fr</attribute>
         <attribute>pressurezone_subscriber</attribute>
+        <attribute>pipe_material_short_fr</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>fk_folder</attribute>
         <attribute>pipe_material__displayname_fr</attribute>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>pipe_material_pressure_nominal</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>status_functional</attribute>
-        <attribute>fk_parent</attribute>
         <attribute>fk_district</attribute>
+        <attribute>fk_parent</attribute>
         <attribute>folder_date_start</attribute>
         <attribute>fk_material</attribute>
         <attribute>protection_value_fr</attribute>
@@ -27605,17 +27615,17 @@ def my_form_open(dialog, layer, feature):
         <attribute>tunnel_or_bridge</attribute>
         <attribute>pipe_function_value_fr</attribute>
         <attribute>_schema_visible</attribute>
-        <attribute>pipe_function_major</attribute>
         <attribute>label_2_text</attribute>
-        <attribute>district_name</attribute>
+        <attribute>pipe_function_major</attribute>
         <attribute>_valve_count</attribute>
+        <attribute>district_name</attribute>
         <attribute>year_rehabilitation</attribute>
         <attribute>status_value_fr</attribute>
         <attribute>remark</attribute>
         <attribute>_printmaps</attribute>
         <attribute>pressurezone_colorcode</attribute>
-        <attribute>precision_value_fr</attribute>
         <attribute>id</attribute>
+        <attribute>precision_value_fr</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>status_active</attribute>
         <attribute>_length3d</attribute>
@@ -27623,8 +27633,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>_length2d</attribute>
         <attribute>_valve_closed</attribute>
         <attribute>pipe_material_diameter_external</attribute>
-        <attribute>folder_description</attribute>
         <attribute>fk_node_b</attribute>
+        <attribute>folder_description</attribute>
         <attribute>fk_status</attribute>
         <attribute>fk_function</attribute>
         <attribute>pipe_material_diameter</attribute>
@@ -27637,22 +27647,22 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_visible</attribute>
         <attribute>folder_identification</attribute>
         <attribute>pressurezone_population</attribute>
-        <attribute>folder_date_end</attribute>
         <attribute>year_end</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>pressure_nominal</attribute>
         <attribute>fk_printmap</attribute>
         <attribute>year</attribute>
         <attribute>label_1_visible</attribute>
-        <attribute>pipe_material_short_fr</attribute>
         <attribute>pressurezone_subscriber</attribute>
+        <attribute>pipe_material_short_fr</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>fk_folder</attribute>
         <attribute>pipe_material__displayname_fr</attribute>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>pipe_material_pressure_nominal</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>status_functional</attribute>
-        <attribute>fk_parent</attribute>
         <attribute>fk_district</attribute>
+        <attribute>fk_parent</attribute>
         <attribute>folder_date_start</attribute>
         <attribute>fk_material</attribute>
         <attribute>protection_value_fr</attribute>
