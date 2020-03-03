@@ -182,7 +182,7 @@ msgstr "Parcelle"
 msgid "rejected_flow"
 msgstr "Débit refoulé"
 
-msgid "sanitization_chlorine_gazeous"
+msgid "sanitization_chlorine_gaz"
 msgstr "Désinfection chlore gazeux"
 
 msgid "sanitization_chlorine_liquid"
@@ -331,6 +331,9 @@ msgstr "Origine"
 
 msgid "plan"
 msgstr "Plan"
+
+msgid "sige_cable_installed"
+msgstr "Câble installé"
 
 msgid "subscriber_identification"
 msgstr "Référence identifiant"
@@ -547,3 +550,117 @@ msgstr "Date de réception"
 
 msgid "date_traite"
 msgstr "Date de traitement"
+
+msgid "sige"
+msgstr "Sige"
+
+msgid "sige_assainissement"
+msgstr "Assainissement"
+
+msgid "sige_autres_reseaux"
+msgstr "Autres réseaux"
+
+msgid "sige_cadastre"
+msgstr "Cadastre"
+
+msgid "sige_distribution"
+msgstr "Distribution"
+
+msgid "sige_qgis_abonne"
+msgstr "Abonné"
+
+msgid "sige_qgis_abonne_renvoi"
+msgstr "Abonnés – renvoi"
+
+msgid "sige_qgis_annotation"
+msgstr "Annotation"
+
+msgid "sige_qgis_annotation_point"
+msgstr "Annotation"
+
+msgid "sige_qgis_annotation_ligne"
+msgstr "Annotation"
+
+msgid "sige_qgis_chambres"
+msgstr "Chambre"
+
+msgid "sige_qgis_collecteurs"
+msgstr "Collecteur"
+
+msgid "sige_qgis_compteur_reseau_renvoi"
+msgstr "Compteur réseau - renvoi"
+
+msgid "sige_qgis_compteur_reseau"
+msgstr "Compteur réseau"
+
+msgid "sige_qgis_conduite_en_service"
+msgstr "Conduite en service"
+
+msgid "sige_qgis_conduite_hors_service"
+msgstr "Conduite hors service"
+
+msgid "sige_qgis_conduite_en_attente"
+msgstr "Conduite en attente"
+
+msgid "sige_qgis_conduite_désaffecté"
+msgstr "Conduite désaffectée"
+
+msgid "sige_qgis_conduite_projet"
+msgstr "Conduite en projet"
+
+msgid "sige_qgis_conduite_etranger"
+msgstr "Conduite réseau étranger"
+
+msgid "sige_qgis_conduite_zone_pression"
+msgstr "Conduites par zones de pressions"
+
+msgid "sige_qgis_croquis_reseau"
+msgstr "Croquis réseau"
+
+msgid "sige_qgis_dossier_technique"
+msgstr "Dossier technique"
+
+msgid "sige_qgis_durete_eau"
+msgstr "Dureté moyenne de l'eau"
+
+msgid "sige_qgis_durete_eau_v2"
+msgstr "Dureté moy. de l'eau (communes SIGE)"
+
+msgid "sige_qgis_enquete"
+msgstr "Enquête"
+
+msgid "sige_qgis_enquete_camac"
+msgstr "Enquête CAMAC"
+
+msgid "sige_qgis_folios"
+msgstr "Folios"
+
+msgid "sige_qgis_hydrante"
+msgstr "Hydrante"
+
+msgid "sige_qgis_hydrante_pression"
+msgstr "Hydrante - Pression statique"
+
+msgid "sige_qgis_ouvrage_etranger"
+msgstr "Ouvrage étranger"
+
+msgid "sige_qgis_ouvrage_fonctionnel"
+msgstr "Ouvrage fonctionnel"
+
+msgid "sige_qgis_ouvrage_non_fonctionnel"
+msgstr "Ouvrage non fonctionnel"
+
+msgid "sige_qgis_qwat_fuite"
+msgstr "Fuite"
+
+msgid "sige_qgis_qwat_remote"
+msgstr "Télécommande"
+
+msgid "sige_qgis_vanne"
+msgstr "Vanne"
+
+msgid "sige_qgis_zone_consommation"
+msgstr "Zone de consommation"
+
+msgid "sige_qgis_zone_pression"
+msgstr "Zone de pression"
