@@ -461,9 +461,6 @@ msgstr "Etat de l'ouvrage"
 msgid "usage_current_value_fr"
 msgstr "Usage actuel"
 
-msgid "usage_planned_abbr_fr"
-msgstr "Utilisation prévue"
-
 msgid "width"
 msgstr "Largeur"
 
