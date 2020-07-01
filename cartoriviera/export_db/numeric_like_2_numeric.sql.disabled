@@ -1,0 +1,13 @@
+
+DO
+$$
+DECLARE
+rec record;
+BEGIN
+--FOR rec IN SELECT * FROM information_schema.columns WHERE table_schema = 'sige_qgis_cartoriviera' AND table_name LIKE '%_mn95' AND data_type IN ('integer','double precision','smallint','bigint') LOOP
+FOR rec IN SELECT * FROM information_schema.columns WHERE table_schema = 'sige_qgis_cartoriviera' AND table_name LIKE '%_mn95' AND data_type IN ('integer','double precision','smallint','bigint') AND table_name = 'sige_qgis_qwat_installation_mn95' LOOP
+		RAISE NOTICE 'Column is %', rec.column_name;
+    EXECUTE format('ALTER TABLE sige_qgis_cartoriviera.%1$I ALTER COLUMN %2$I type numeric;', rec.table_name, rec.column_name);
+	END LOOP;
+END
+$$;

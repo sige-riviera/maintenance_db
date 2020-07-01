@@ -1,0 +1,13 @@
+
+DO
+$$
+DECLARE
+rec record;
+BEGIN
+FOR rec IN SELECT * FROM information_schema.columns WHERE table_schema = 'sige_qgis_cartoriviera' AND table_name LIKE '%_mn95' AND data_type NOT IN ('USER-DEFINED') AND column_name NOT LIKE '%geom%' LOOP
+		RAISE NOTICE 'Column is %', rec.column_name;
+    --EXECUTE format('ALTER TABLE sige_qgis_cartoriviera.%1$I ALTER COLUMN %2$I type text using CASE WHEN %2$I IS NULL THEN ''-'' END;', rec.table_name, rec.column_name);
+    --EXECUTE format('ALTER TABLE sige_qgis_cartoriviera.%1$I ALTER COLUMN %2$I CASE WHEN %2$I IS NULL THEN ''-'' END;', rec.table_name, rec.column_name);
+	END LOOP;
+END
+$$;
