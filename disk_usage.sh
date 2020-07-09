@@ -10,3 +10,4 @@ diskUsage=$(df -hT /home)
 echo "Info: disk usage dedicated to database backups on s2laveyre:" 1>&2
 echo "$diskUsage" 1>&2
 
+echo "End of script file." 1>&2

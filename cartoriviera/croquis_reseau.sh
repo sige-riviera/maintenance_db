@@ -3,12 +3,15 @@
 # Exit on error
 set -e
 
+SRCFOLDERPATH=/home/sitadmin/sit/mount/reseau
+DESTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera
 
 # to show progress, add: --progcrress
 rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s \
 --include=/{,'COMMUNES/'{,'*/'{,Croquis_reseau/{,'**'}}}} --exclude='*' \
-/home/sige/mount/reseau/COMMUNES drouzaud@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/reseau
+$SRCFOLDERPATH/COMMUNES kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/reseau
 
+mountpoint -q -- $DESTFOLDERPATH || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige $DESTFOLDERPATH
+# chmod -R 755 $DESTFOLDERPATH/reseau
 
-mountpoint -q -- /home/sige/mount/cartoriviera || sshfs drouzaud@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
-# chmod -R 755 /home/sige/mount/cartoriviera/reseau
+echo "End of the script file." 1>&2

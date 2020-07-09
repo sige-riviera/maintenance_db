@@ -5,33 +5,36 @@ FULL=${1:-simple}
 # Exit on error
 set -e
 
+SRCBACKUPPATH=/home/sitadmin/sit/production/data/backup/
+DESTBACKUPPATH=/home/sitadmin/sit/mount/backup_sbk_pierrier/
+
 TODAY=`date '+%Y%m%d'`
 YEAR=`date '+%Y'`
 MONTH=`date '+%m'`
 
-mkdir -p /home/sige/data/backup/$YEAR
-mkdir -p /home/sige/data/backup/$YEAR/$MONTH
-cd /home/sige/data/backup/
+mkdir -p $SRCBACKUPPATH/$YEAR
+mkdir -p $SRCBACKUPPATH/$YEAR/$MONTH
+cd $SRCBACKUPPATH
 
 export PGOPTIONS='--client-min-messages=warning'
 
-# backup on other server
+# Backup on SIGE main backup server
 # creation of directories are not working at the moment on this server
 # folders are created up to 2019
-#mkdir -p /home/sige/mount/backup_sbk_pierrier/$YEAR
-#mkdir -p /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH
+#mkdir -p $DESTBACKUPPATH/$YEAR
+#mkdir -p $DESTBACKUPPATH/$YEAR/$MONTH
 
 
 # QWAT
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_od_$TODAY.backup" --schema "qwat_od" "qwat"
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_vl_$TODAY.backup" --schema "qwat_vl" "qwat"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_od_$TODAY.backup" --schema "qwat_od" "qwat_prod"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_vl_$TODAY.backup" --schema "qwat_vl" "qwat_prod"
 if [[ $FULL =~ ^full$ ]]; then
-  pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_sys_$TODAY.backup" --schema "qwat_sys" "qwat"
+  pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_sys_$TODAY.backup" --schema "qwat_sys" "qwat_prod"
 fi
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "/home/sige/data/backup/qwat_dr_$TODAY.backup" --schema "qwat_dr" "qwat"
-#pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "/home/sige/data/backup/qwat_all_$TODAY.backup" "qwat"
-pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "/home/sige/data/backup/sige_commun_$TODAY.backup" "sige_commun"
-pg_dumpall -h localhost -r -f /home/sige/data/backup/qwat_roles_$TODAY.sql
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_dr_$TODAY.backup" --schema "qwat_dr" "qwat_prod"
+#pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/qwat_all_$TODAY.backup" "qwat_prod"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/sige_commun_$TODAY.backup" "sige_commun"
+pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qwat_roles_$TODAY.sql
 
 files="qwat_od_$TODAY.backup qwat_vl_$TODAY.backup qwat_dr_$TODAY.backup sige_commun_$TODAY.backup qwat_roles_$TODAY.sql"
 
@@ -40,7 +43,6 @@ if [[ $FULL =~ ^full$ ]]; then
 fi
 
 zip -r $YEAR/$MONTH/qwat_$TODAY.zip $files
-
 
 rm qwat_od_$TODAY.backup
 rm qwat_vl_$TODAY.backup
@@ -53,13 +55,12 @@ rm sige_commun_$TODAY.backup
 rm qwat_roles_$TODAY.sql
 
 # backup on other server
-cp /home/sige/data/backup/$YEAR/$MONTH/qwat_$TODAY.zip /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH/qwat_$TODAY.zip
-
+cp $SRCBACKUPPATH/$YEAR/$MONTH/qwat_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qwat_$TODAY.zip
 
 
 # QGEP
-pg_dump --host 172.24.173.216 --port 5432 --username "sige" --no-password --format tar --file "/home/sige/data/backup/qgep_all_$TODAY.backup" "qgep_prod"
-pg_dumpall -h 172.24.173.216  -r -f /home/sige/data/backup/qgep_roles_$TODAY.sql
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/qgep_all_$TODAY.backup" "qgep_prod"
+pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qgep_roles_$TODAY.sql
 
 zip -r $YEAR/$MONTH/qgep_$TODAY.zip \
 qgep_all_$TODAY.backup  \
@@ -69,4 +70,6 @@ rm qgep_all_$TODAY.backup
 rm qgep_roles_$TODAY.sql
 
 # backup on other server
-cp /home/sige/data/backup/$YEAR/$MONTH/qgep_$TODAY.zip /home/sige/mount/backup_sbk_pierrier/$YEAR/$MONTH/qgep_$TODAY.zip
+cp $SRCBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip
+
+echo "End of the script file" 1>&2

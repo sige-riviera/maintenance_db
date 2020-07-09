@@ -21,30 +21,47 @@
 #
 # m h  dom mon dow   command
 
-MAILTO="example@company.ch"
+# ADDITIONNAL NOTES
+# - Keep in mind that this crontab installation does not log stdout (1)
+#   therefore one must use >&2 to redirect all outputs (standard and normal)
+#   to stderr (2).
+# - Use > $FOLDERPATH/data_maintenance.sh>log.txt to log outputs to a file
+# - For testing, use * * * * mon,tue,wed,thu,fri $FOLDERPATH/a_test_script.sh>&2
+# - Keep in mind that while testing, if the cron job is run every minute,
+#   it might not send an email at such frequency  if the task takes more time
+#   than a minute.
+
+MAILTO='example@company.ch'
+FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 
 # maintenance db + backup + export qwat DB to cartoriviera
-0 0 * * mon,tue,wed,thu,fri /home/sige/maintenance_db/data_maintenance.sh>/dev/null
-30 0 * * mon,tue,wed,thu,fri /home/sige/maintenance_db/data_maintenance2.sh>/dev/null
-0 1 * * mon,tue,wed,thu,fri /home/sige/maintenance_db/cartoriviera/export_db/export_db.sh>/dev/null
-30 1 * * mon /home/sige/maintenance_db/controle_croquis_reseau.sh >/dev/null
-0 2 * * mon,tue,wed,thu,fri /home/sige/maintenance_db/backup.sh>/dev/null
+0 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance.sh>/dev/null
+30 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance2.sh>/dev/null
+#0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db.sh>/dev/null # DO NOT ACTIVATE THIS COMMAND : POSTGRESQL VERSIONS CONFLITS (9.6.18 cs 9.6.17) WITH VEVEY FOR CUSTOM EXPORT FORMAT
+0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db_workaround.sh>/dev/null
+30 1 * * mon $FOLDERPATH/controle_croquis_reseau.sh>/dev/null
+0 2 * * mon,tue,wed,thu,fri $FOLDERPATH/backup.sh>/dev/null
 
-# run full backup once a month but a sunday (with logged actions)
-0 3  1-7 *   *   [ "$(date '+\%a')" = "Sun" ] && /home/sige/maintenance_db/backup.sh full>/dev/null
+# Run full backup once a month but a sunday (with logged actions)
+0 3  1-7 *   *   [ "$(date '+\%a')" = "Sun" ] && $FOLDERPATH/backup.sh full>/dev/null
 
-0 4 * * sat /home/sige/maintenance_db/bouveret.sh>/dev/null
+# Export data to the surveying company for data integration into Port-Valais mapping application (convention)
+0 4 * * sat $FOLDERPATH/bouveret.sh>/dev/null
 
-# export data to cartoriviera
+# Export data to cartoriviera
 # once a week: ouvrages (heavy computing with thumbnails creation)
-0 5 * * sun /home/sige/maintenance_db/cartoriviera/ouvrages.sh>/dev/null
+0 5 * * sun $FOLDERPATH/cartoriviera/ouvrages.sh>/dev/null
 
-# every day croquis_reseau + abonnes (simple copy)
-0 20 * * * /home/sige/maintenance_db/cartoriviera/abonnes.sh>/dev/null
-0 22 * * * /home/sige/maintenance_db/cartoriviera/croquis_reseau.sh>/dev/null
+# Every day croquis_reseau + abonnes (simple copy)
+0 20 * * * $FOLDERPATH/cartoriviera/abonnes.sh>/dev/null
+0 22 * * * $FOLDERPATH/cartoriviera/croquis_reseau.sh>/dev/null
 
-# disk usage information
-0 6 * * mon /home/sige/maintenance_db/disk_usage.sh>/dev/null
+# Remount disks once a month (to prevent user/pwd authentification problems every 3 months)
+#0 1 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
 
-# remount disks once a month (to prevent user/pwd authentification problems every 3 months)
-0 1 1 * * /home/sige/maintenance_db/backup.sh>/dev/null
+# Disk usage information
+0 6 * * mon $FOLDERPATH/disk_usage.sh>/dev/null
+
+# Testing a script every minute
+#* * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>&2
+#* * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>/dev/null

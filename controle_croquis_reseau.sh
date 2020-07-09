@@ -4,6 +4,8 @@
 
 set -e
 
+FOLDERPATH=/home/sitadmin/sit/mount/reseau
+
 declare -A COMMUNES=( ["Attalens"]="Attalens" \
                       ["82"]="Blonay" \
                       ["84"]="Chardonne" \
@@ -25,7 +27,7 @@ FILE_NOT_FOUND=false
 for file in $(PGUSER=sige PGDATABASE=sige_commun psql -t -q -c "select file from distribution.croquis_reseau order by file asc"); do
   code=$(sed -r 's/^([^_]+)_.*$/\1/' <<< $file)
   commune=$(sed -r 's/ //g' <<< ${COMMUNES[$code]})
-  filepath="/home/sige/mount/reseau/COMMUNES/${commune}/Croquis_reseau/$file"
+  filepath="$FOLDERPATH/COMMUNES/${commune}/Croquis_reseau/$file"
   if [[ ! -f $filepath ]]; then
     if [[ $FILE_NOT_FOUND =~ false ]]; then
           echo "****************************************************" 1>&2
@@ -41,7 +43,7 @@ done
 DB_NOT_FOUND=false
 for commune in "${COMMUNES[@]}"; do
   DIRECTORY_DISPLAYED=false
-  for fullfile in ~/mount/reseau/COMMUNES/${commune}/Croquis_reseau/* ; do
+  for fullfile in $FOLDERPATH/COMMUNES/${commune}/Croquis_reseau/* ; do
     if [[ ! -f $fullfile ]]; then
       continue
     fi
@@ -67,3 +69,5 @@ for commune in "${COMMUNES[@]}"; do
     fi
   done
 done
+
+echo "End of script file." 1>&2
