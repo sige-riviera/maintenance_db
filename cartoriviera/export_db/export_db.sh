@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+#set -e
 
 VERBOSE=no
 
@@ -64,7 +64,7 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/expor
 
 
 # Final dump
-/usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format custom $VERBOSE_CMD --file "/home/sitadmin/sit/production/maintenance_db/cartoriviera/export_db/sige.backup" --schema "sige_qgis_cartoriviera" "sige_commun"
+/usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format p $VERBOSE_CMD --file "/home/sitadmin/sit/production/maintenance_db/cartoriviera/export_db/sige.backup" --schema "sige_qgis_cartoriviera" "sige_commun"
 # /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format plain $VERBOSE_CMD --file "/home/rouzaudd/Documents/sige.sql" --schema "sige_qgis_cartoriviera" "sige_commun"
 
 
