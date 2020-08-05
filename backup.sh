@@ -72,4 +72,4 @@ rm qgep_roles_$TODAY.sql
 # backup on other server
 cp $SRCBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip
 
-echo "End of the script file" 1>&2
+echo "End of the script file." 1>&2
