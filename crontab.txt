@@ -31,14 +31,14 @@
 #   it might not send an email at such frequency  if the task takes more time
 #   than a minute.
 
-MAILTO='example@company.ch'
+MAILTO='kevin.andre@sige.ch'
 FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 
 # maintenance db + backup + export qwat DB to cartoriviera
 0 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance.sh>/dev/null
 30 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance2.sh>/dev/null
-#0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db.sh>/dev/null # DO NOT ACTIVATE THIS COMMAND : POSTGRESQL VERSIONS CONFLITS (9.6.18 cs 9.6.17) WITH VEVEY FOR CUSTOM EXPORT FORMAT
-0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db_workaround.sh>/dev/null
+# CAREFULLY ACTIVATE THE FOLLOWING COMMAND : POSTGRESQL VERSIONS CONFLITS (9.6.18 cs 9.6.17) WITH VEVEY FOR CUSTOM EXPORT FORMAT
+0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db.sh>/dev/null
 30 1 * * mon $FOLDERPATH/controle_croquis_reseau.sh>/dev/null
 0 2 * * mon,tue,wed,thu,fri $FOLDERPATH/backup.sh>/dev/null
 
@@ -57,7 +57,7 @@ FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 0 22 * * * $FOLDERPATH/cartoriviera/croquis_reseau.sh>/dev/null
 
 # Remount disks once a month (to prevent user/pwd authentification problems every 3 months)
-#0 1 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
+0 1 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
 
 # Disk usage information
 0 6 * * mon $FOLDERPATH/disk_usage.sh>/dev/null

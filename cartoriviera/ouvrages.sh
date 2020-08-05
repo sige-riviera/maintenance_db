@@ -21,12 +21,14 @@ for directory in "${directories[@]}"; do
       continue
     fi
     echo "Ouvrage $num"
+
     # directories creation (it might already exist)
     mkdir -p $PROCESSFOLDERPATH/$num
     mkdir -p $PROCESSFOLDERPATH/$num/pdf
     mkdir -p $PROCESSFOLDERPATH/$num/images
     mkdir -p $PROCESSFOLDERPATH/$num/images/large
     mkdir -p $PROCESSFOLDERPATH/$num/images/small
+
     # copy files
     echo " * Copying pictures ..."
     if [[ ! -d $ouvrage_path/_ETAT_ACTUEL/Photos/ ]]; then
@@ -40,8 +42,10 @@ for directory in "${directories[@]}"; do
       find "$ouvrage_path/_ETAT_ACTUEL/Plans/" -iregex '.*\(jpg\|png\)' -exec cp {} $PROCESSFOLDERPATH/$num/images/large/ \;
       find "$ouvrage_path/_ETAT_ACTUEL/Plans/" -iregex '.*\(pdf\)' -exec cp {} $PROCESSFOLDERPATH/$num/pdf/ \;
     fi
+
     # apply rights
     chmod -R 755 $PROCESSFOLDERPATH/$num
+
     # resize pictures
     shopt -s nullglob dotglob
     files=($PROCESSFOLDERPATH/$num/images/large/*)
@@ -53,13 +57,10 @@ for directory in "${directories[@]}"; do
   done
 done
 
-echo "END"
-return
-
-# mettre à jour sur cartoriviera
+# update data on cartoriviera
 # to show progress, add: --progress
 rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH/ kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
 mountpoint -q -- $DESTFOLDERPATH || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige $DESTFOLDERPATH
 chmod -R 755 $DESTFOLDERPATH/ouvrages
 
-echo "End of script file." 1>&2
+echo "End of the script file." 1>&2
