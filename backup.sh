@@ -20,18 +20,20 @@ export PGOPTIONS='--client-min-messages=warning'
 
 # Backup on SIGE main backup server
 # creation of directories are not working at the moment on this server
-# folders are created up to 2019
+# folders are created up to 2020
 #mkdir -p $DESTBACKUPPATH/$YEAR
 #mkdir -p $DESTBACKUPPATH/$YEAR/$MONTH
 
 
-# QWAT
+# QWAT and SIGE_COMMUN
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_od_$TODAY.backup" --schema "qwat_od" "qwat_prod"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_vl_$TODAY.backup" --schema "qwat_vl" "qwat_prod"
 if [[ $FULL =~ ^full$ ]]; then
   pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_sys_$TODAY.backup" --schema "qwat_sys" "qwat_prod"
 fi
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_dr_$TODAY.backup" --schema "qwat_dr" "qwat_prod"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/qwat_ch_vd_sire_$TODAY.backup" --schema "qwat_ch_vd_sire" "qwat_prod"
+pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/statistics_$TODAY.backup" --schema "statistics" "qwat_prod"
 #pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/qwat_all_$TODAY.backup" "qwat_prod"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/sige_commun_$TODAY.backup" "sige_commun"
 pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qwat_roles_$TODAY.sql
@@ -50,6 +52,8 @@ if [[ $FULL =~ ^full$ ]]; then
   rm qwat_sys_$TODAY.backup
 fi
 rm qwat_dr_$TODAY.backup
+rm qwat_ch_vd_sire_$TODAY.backup
+rm statistics_$TODAY.backup
 #rm qwat_all_$TODAY.backup
 rm sige_commun_$TODAY.backup
 rm qwat_roles_$TODAY.sql
