@@ -4,7 +4,7 @@
 import os
 import codecs
 
-file = '{0}{1}'.format(os.path.splitext(QgsProject.instance().fileName())[0],'_v23.qgs.trad')
+file = '{0}{1}'.format(os.path.splitext(QgsProject.instance().fileName())[0],'_sige_cartoriviera.qgs.trad')
 fo = codecs.open(file, 'w', 'utf-8')
 
 uniqueAliases = {}
