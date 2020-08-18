@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Ce script contrôle que tous les croquis présents sur le disque ont une entrée dans la BD et réciproquement
+# Ce script contrôle que tous les croquis présents sur le serveur de fichier (partage dao_saisie$ sur s3aviron ont une entrée dans la base de données géographique et réciproquement
 
 set -e
 
@@ -31,8 +31,8 @@ for file in $(PGUSER=sige PGDATABASE=sige_commun psql -t -q -c "select file from
   if [[ ! -f $filepath ]]; then
     if [[ $FILE_NOT_FOUND =~ false ]]; then
           echo "****************************************************" 1>&2
-          echo "*** Croquis présent dans la base de données PostGIS" 1>&2
-          echo "*** mais pas de fichier correspondant sur le serveur dao_saisie$" 1>&2
+          echo "*** Croquis présent sur QGIS" 1>&2
+          echo "*** mais pas de fichier correspondant sur W:" 1>&2
           FILE_NOT_FOUND=true
     fi
     echo "${commune}: $file" 1>&2
@@ -57,8 +57,8 @@ for commune in "${COMMUNES[@]}"; do
     if [[ -z $result ]]; then
       if [[ $DB_NOT_FOUND =~ false ]]; then
         echo "***************************************" 1>&2
-        echo "*** Croquis présent sur le serveur dao_saisie$ mais" 1>&2
-        echo "*** sans entrée dans la base de données PostGIS" 1>&2
+        echo "*** Croquis présent sur W: mais" 1>&2
+        echo "*** sans entrée sur QGIS" 1>&2
         DB_NOT_FOUND=true
         if [[ $DIRECTORY_DISPLAYED =~ false ]]; then
           echo "*** ${commune}" 1>&2

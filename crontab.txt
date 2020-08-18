@@ -50,7 +50,7 @@ FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 
 # Export data to cartoriviera
 # once a week: ouvrages (heavy computing with thumbnails creation)
-0 5 * * sun $FOLDERPATH/cartoriviera/ouvrages.sh>/dev/null
+0 4 * * sun $FOLDERPATH/cartoriviera/ouvrages.sh>/dev/null
 
 # Every day croquis_reseau + abonnes (simple copy)
 0 20 * * * $FOLDERPATH/cartoriviera/abonnes.sh>/dev/null
