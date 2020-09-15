@@ -70,4 +70,7 @@ for commune in "${COMMUNES[@]}"; do
   done
 done
 
-echo "End of script file." 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi

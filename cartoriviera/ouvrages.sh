@@ -63,4 +63,7 @@ rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDE
 mountpoint -q -- $DESTFOLDERPATH || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige $DESTFOLDERPATH
 chmod -R 755 $DESTFOLDERPATH/ouvrages
 
-echo "End of the script file." 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi

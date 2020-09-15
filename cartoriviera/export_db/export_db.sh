@@ -82,4 +82,7 @@ put $FOLDERPATH/cartoriviera/export_db/sige.backup sige.backup
 bye
 EOF
 
-echo "End of the script file." 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi

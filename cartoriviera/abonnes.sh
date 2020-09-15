@@ -12,4 +12,7 @@ rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $SRCFOLDERPAT
 # mountpoint -q -- /home/sitadmin/sit/mount/cartoriviera || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sitadmin/sit/mount/cartoriviera
 # chmod -R 755 /home/sitadmin/sit/mount/cartoriviera/abonnes
 
-echo "End of the script file." 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi

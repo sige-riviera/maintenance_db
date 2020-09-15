@@ -56,4 +56,7 @@ put $SRCFOLDERPATH/donnees_sige_$TODAY.zip donnees_sige_$TODAY.zip
 bye
 EOF
 
-echo "End of the script file." 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi

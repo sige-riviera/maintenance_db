@@ -14,4 +14,7 @@ $SRCFOLDERPATH/COMMUNES kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartori
 mountpoint -q -- $DESTFOLDERPATH || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige $DESTFOLDERPATH
 # chmod -R 755 $DESTFOLDERPATH/reseau
 
-echo "End of the script file." 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi

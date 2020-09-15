@@ -3,4 +3,7 @@
 . unmount_drives.sh
 . mount_drives.sh
 
-echo "End of script file" 1>&2
+# Redirect stdout to stderr
+if [[ $MAILSTDOUT = true ]]; then
+  echo "End of the script file." 1>&2
+fi
