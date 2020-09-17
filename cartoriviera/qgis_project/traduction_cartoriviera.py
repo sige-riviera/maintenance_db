@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# This script write translations values between fields and alias for projects used in Cartoriviera
+
 import os
 import codecs
 import time
 
-# Parameters
+# General parameters
 wmsAttributesOnly = True
+
+# Parameters to write translations for a list of projects (translateProjects = False) instead of the current project
 translateProjects = True
 folderpath = 'C:/qgis/maintenance_db/cartoriviera/qgis_project/'
 projects = ['qwat_sige_cartoriviera.qgs','qgep_sige_cartoriviera.qgs','cadastre_sige_cartoriviera.qgs']
