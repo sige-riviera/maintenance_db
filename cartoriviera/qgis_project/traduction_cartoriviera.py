@@ -20,6 +20,8 @@ def main():
             generateTranslationFile(f)
             print('Translation file generated: ' + f)
             
+        QgsProject.instance().clear()
+        
     else:
         f = '{0}{1}'.format(os.path.splitext(QgsProject.instance().fileName())[0],'.qgs.trad')
         print('Translation file generated: ' + f)
