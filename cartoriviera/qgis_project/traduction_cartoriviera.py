@@ -5,31 +5,45 @@ import os
 import codecs
 import time
 
+# TODO : filter only fields that are set to be exported trhough wms in each QGIS project.
+
 # Parameters
 translateProjects = True
 folderpath = 'C:/qgis/maintenance_db/cartoriviera/qgis_project/'
 projects = ['qwat_sige_cartoriviera.qgs','qgep_sige_cartoriviera.qgs','cadastre_sige_cartoriviera.qgs']
+mergeTranslationFile = 'traductions_qgis_server.txt'
 
 def main():
     if translateProjects == True:
         QgsProject.instance().clear()
+        filepaths = []
         for p in projects:
-            q = QgsProject.instance().read(folderpath + p)
-            #time.sleep(5)
-            f = folderpath + p + '.trad'
-            generateTranslationFile(f)
-            print('Translation file generated: ' + f)
+            QgsProject.instance().read(folderpath + p)
+            #time.sleep(5) # Not needed because synchronous ?
+            filepath = folderpath +  p + '.trad'
+            filepaths.append(filepath)
+            generateTranslationFile(filepath)
+            print('Translation file generated: ' + filepath)
             
         QgsProject.instance().clear()
         
+        # Merge translation files
+        with open(folderpath + mergeTranslationFile, 'w') as outfile:
+            for fp in filepaths:
+                with open(fp) as infile:
+                    for line in infile:
+                        outfile.write(line)
+        print('Main translation file generated: ' + mergeTranslationFile)                
+                
     else:
-        f = '{0}{1}'.format(os.path.splitext(QgsProject.instance().fileName())[0],'.qgs.trad')
-        print('Translation file generated: ' + f)
+        filepath = '{0}{1}'.format(os.path.splitext(QgsProject.instance().fileName())[0],'.qgs.trad')
+        generateTranslationFile(filepath)
+        print('Translation file generated: ' + filepath)
         
     print('End of script execution')
 
 
-def generateTranslationFile(filepath):
+def generateTranslationFile(file):
     fo = codecs.open(file, 'w', 'utf-8')
 
     uniqueAliases = {}
