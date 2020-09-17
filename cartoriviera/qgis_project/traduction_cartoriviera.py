@@ -5,9 +5,8 @@ import os
 import codecs
 import time
 
-# TODO : filter only fields that are set to be exported trhough wms in each QGIS project.
-
 # Parameters
+wmsAttributesOnly = True
 translateProjects = True
 folderpath = 'C:/qgis/maintenance_db/cartoriviera/qgis_project/'
 projects = ['qwat_sige_cartoriviera.qgs','qgep_sige_cartoriviera.qgs','cadastre_sige_cartoriviera.qgs']
@@ -28,11 +27,7 @@ def main():
         QgsProject.instance().clear()
         
         # Merge translation files
-        with open(folderpath + mergeTranslationFile, 'w') as outfile:
-            for fp in filepaths:
-                with open(fp) as infile:
-                    for line in infile:
-                        outfile.write(line)
+        mergeTranslationFiles(filepaths, folderpath + mergeTranslationFile)
         print('Main translation file generated: ' + mergeTranslationFile)                
                 
     else:
@@ -42,7 +37,6 @@ def main():
         
     print('End of script execution')
 
-
 def generateTranslationFile(file):
     fo = codecs.open(file, 'w', 'utf-8')
 
@@ -50,8 +44,9 @@ def generateTranslationFile(file):
     for layer in QgsProject().instance().mapLayers().values():
         layerAliases = layer.attributeAliases()
         for key in layerAliases:
-            if key not in uniqueAliases:
-                uniqueAliases[key] = layerAliases[key]
+            if wmsAttributesOnly == False or isWmsAttribute(key, layer):
+                if key not in uniqueAliases:
+                    uniqueAliases[key] = layerAliases[key]
 
     for field in uniqueAliases:
         #print u'"{0}" "{1}",'.format(field, uniqueAliases[field])
@@ -61,4 +56,16 @@ def generateTranslationFile(file):
 
     fo.close()
 
+def isWmsAttribute(attribute, layerObject):
+    wmsExcludedAttributes = list(layerObject.excludeAttributesWms())
+    isWmsAttribute = attribute not in wmsExcludedAttributes
+    return isWmsAttribute
+
+def mergeTranslationFiles(inputFiles, outputFile):
+    with open(outputFile, 'w') as outfile:
+            for fp in inputFiles:
+                with open(fp) as infile:
+                    for line in infile:
+                        outfile.write(line)
+                        
 main()
