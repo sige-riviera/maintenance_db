@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 # This script write translations values between fields and alias for projects used in Cartoriviera
+# TODO: It could be interesting to prefix all fields names of Cartoriviera QGIS SIGE projects with 
+# something like 'sige_qwat_' in order to avoid any conflict with Cartoriviera main translation file. 
+# See with Cartoriviera manager.
 
 import os
 import codecs
@@ -14,7 +17,7 @@ wmsAttributesOnly = True
 translateProjects = True
 folderpath = 'C:/qgis/maintenance_db/cartoriviera/qgis_project/'
 projects = ['qwat_sige_cartoriviera.qgs','qgep_sige_cartoriviera.qgs','cadastre_sige_cartoriviera.qgs']
-mergeTranslationFile = 'traductions_qgis_server.txt'
+mergeTranslationFile = 'translations_sige_qgis_cartoriviera.txt'
 
 def main():
     if translateProjects == True:
