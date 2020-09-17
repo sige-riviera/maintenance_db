@@ -21,7 +21,7 @@ msgid "district_prefix"
 msgstr "Préfixe de commune"
 
 msgid "district_shortname"
-msgstr "Commune - abbréviation"
+msgstr "Commune - abréviation"
 
 msgid "district_zip"
 msgstr "Code postal"
@@ -132,7 +132,7 @@ msgid "fire_valve"
 msgstr "Vanne incendie"
 
 msgid "flocculation"
-msgstr "Flocculation"
+msgstr "Floculation"
 
 msgid "flow_average"
 msgstr "Débit moyen"
@@ -420,7 +420,7 @@ msgid "identifier"
 msgstr "Désignation"
 
 msgid "inside_coating_value_fr"
-msgstr "Revetement intérieur"
+msgstr "Revêtement intérieur"
 
 msgid "last_modification"
 msgstr "Dernière modification"
@@ -549,7 +549,7 @@ msgid "date_traite"
 msgstr "Date de traitement"
 
 msgid "sige"
-msgstr "Sige"
+msgstr "SIGE"
 
 msgid "sige_assainissement"
 msgstr "Assainissement"
