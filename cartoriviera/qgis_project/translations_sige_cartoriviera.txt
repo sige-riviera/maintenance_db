@@ -338,6 +338,30 @@ msgstr "Câble installé"
 msgid "subscriber_identification"
 msgstr "Référence identifiant"
 
+msgid "prj_point_specifications"
+msgstr "Caractéristiques"
+
+msgid "prj_point_plan_name"
+msgstr "Nom de chantier"
+
+msgid "prj_point_remark"
+msgstr "Remarques"
+
+msgid "prj_point_updated_at"
+msgstr "Date de mise à jour"
+
+msgid "prj_line_specifications"
+msgstr "Caractéristiques"
+
+msgid "prj_line_plan_name"
+msgstr "Nom de chantier"
+
+msgid "prj_line_remark"
+msgstr "Remarques"
+
+msgid "prj_line_updated_at"
+msgstr "Date de mise à jour"
+
 msgid "sqwh_appreciation"
 msgstr "Appréciation"
 
@@ -602,8 +626,8 @@ msgstr "Conduite en attente"
 msgid "sige_qgis_conduite_désaffecté"
 msgstr "Conduite désaffectée"
 
-msgid "sige_qgis_conduite_projet"
-msgstr "Conduite en projet"
+msgid "sige_qgis_conduite_projet_pdde"
+msgstr "Conduite PDDE"
 
 msgid "sige_qgis_conduite_etranger"
 msgstr "Conduite réseau étranger"
@@ -613,6 +637,9 @@ msgstr "Conduites par zones de pressions"
 
 msgid "sige_qgis_croquis_reseau"
 msgstr "Croquis réseau"
+
+msgid "sige_qgis_project"
+msgstr "Chantier réseau"
 
 msgid "sige_qgis_dossier_technique"
 msgstr "Dossier technique"
