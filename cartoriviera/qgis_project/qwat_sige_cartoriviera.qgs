@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="3.14.0-Pi" saveUser="andrek" saveUserFull="André Kevin" saveDateTime="2020-09-28T12:55:31" projectname="">
+<qgis version="3.14.0-Pi" saveUser="andrek" saveUserFull="André Kevin" saveDateTime="2020-09-28T13:03:02" projectname="">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -190,38 +190,38 @@
   </layer-tree-group>
   <snapping-settings intersection-snapping="0" maxScale="0" enabled="0" type="3" scaleDependencyMode="0" tolerance="0" self-snapping="0" minScale="0" mode="1" unit="2">
     <individual-layer-settings>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_annotation_line20170919102956179"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_annotation_point20170919102956209"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="subscriber20170911155257972"/>
-      <layer-setting maxScale="0" enabled="1" type="1" tolerance="10" units="1" minScale="0" id="sige_qgis_project_point_mn95_efd0a61c_054b_469a_9800_9b53dacdf1c5"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_printmap20170919102956238"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_ouvrage_copier_copier20180214142612527"/>
       <layer-setting maxScale="0" enabled="1" type="1" tolerance="10" units="1" minScale="0" id="sige_qgis_project_line_mn95_f9f67050_e172_4aa6_bb64_1cb2f5d36800"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="meter20170912075821953"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_pressurezone20170919102956224"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="pipe_copy20170821075918952"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="hydrant20170912112103216"/>
-      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_hors_service_23c0e8d5_f294_4a14_ae14_0c636e42d31b"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_leak20170928162343618"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="pipe20170817163039703"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_annotation_point20170919102956209"/>
+      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_désaffecté_98787bdb_8b2f_4e5d_92d5_8c8893e3d263"/>
+      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_en_attente_28bed277_1129_45df_9a6a_0a7d90ecc84a"/>
       <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_folder20170919112604553"/>
       <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_consumptionzone20170919113125033"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="part20170912113448062"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="croquis_reseau20170914153941848"/>
-      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_désaffecté_567faf44_123d_41cd_931e_4472cda6abd6"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_hydrant20171020105757789"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_leak20170928162343618"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_waterhardness_mn9520181001165211151"/>
-      <layer-setting maxScale="0" enabled="1" type="2" tolerance="50" units="1" minScale="0" id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_meter_reference_mn9520180810140843109"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_ouvrage_copier_copier20180214142459666"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="installation20170912103810982"/>
       <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="node20170821111240113"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_printmap20170919102956238"/>
+      <layer-setting maxScale="0" enabled="1" type="1" tolerance="10" units="1" minScale="0" id="sige_qgis_project_point_mn95_efd0a61c_054b_469a_9800_9b53dacdf1c5"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="pipe_copy20170821075918952"/>
+      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_hors_service_23c0e8d5_f294_4a14_ae14_0c636e42d31b"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_meter_reference_mn9520180810140843109"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="installation20170912103810982"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="hydrant20170912112103216"/>
       <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="crossing20170912143156180"/>
-      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_désaffecté_98787bdb_8b2f_4e5d_92d5_8c8893e3d263"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="pipe20170817163039703"/>
-      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_en_attente_28bed277_1129_45df_9a6a_0a7d90ecc84a"/>
-      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_remote20171122094212805"/>
+      <layer-setting maxScale="0" enabled="1" type="2" tolerance="20" units="1" minScale="0" id="sige_qgis_conduite_désaffecté_567faf44_123d_41cd_931e_4472cda6abd6"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075"/>
+      <layer-setting maxScale="0" enabled="1" type="2" tolerance="50" units="1" minScale="0" id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6"/>
       <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="valve20170829165258108"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_ouvrage_copier_copier20180214142459666"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_remote20171122094212805"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_waterhardness_mn9520181001165211151"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="croquis_reseau20170914153941848"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_annotation_line20170919102956179"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="qwat_pressurezone20170919102956224"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_ouvrage_copier_copier20180214142612527"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="sige_qgis_qwat_hydrant20171020105757789"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="part20170912113448062"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="meter20170912075821953"/>
+      <layer-setting maxScale="0" enabled="0" type="2" tolerance="0" units="2" minScale="0" id="subscriber20170911155257972"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
@@ -2418,23 +2418,23 @@ def my_form_open(dialog, layer, feature):
         <alias index="62" field="third_party_supply" name="Alimenté par tiers"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>output_value_fr</attribute>
-        <attribute>label_1_x</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
-        <attribute>fk_model_sup</attribute>
         <attribute>orientation</attribute>
-        <attribute>folder_date_end</attribute>
+        <attribute>fk_model_sup</attribute>
         <attribute>fk_distributor</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>label_2_y</attribute>
         <attribute>pressurezone_colorcode</attribute>
         <attribute>precision_value_fr</attribute>
         <attribute>folder_description</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>fk_material</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
         <attribute>fk_output</attribute>
         <attribute>fk_status</attribute>
@@ -2457,23 +2457,23 @@ def my_form_open(dialog, layer, feature):
         <attribute>altitude</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>output_value_fr</attribute>
-        <attribute>label_1_x</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
-        <attribute>fk_model_sup</attribute>
         <attribute>orientation</attribute>
-        <attribute>folder_date_end</attribute>
+        <attribute>fk_model_sup</attribute>
         <attribute>fk_distributor</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>label_2_y</attribute>
         <attribute>pressurezone_colorcode</attribute>
         <attribute>precision_value_fr</attribute>
         <attribute>folder_description</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>fk_material</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
         <attribute>fk_output</attribute>
         <attribute>fk_status</attribute>
@@ -5287,8 +5287,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_overflow</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
         <attribute>label_1_x</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_parent</attribute>
@@ -5296,8 +5296,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pump_type</attribute>
         <attribute>source_quality_value_fr</attribute>
         <attribute>fk_status</attribute>
-        <attribute>fk_printmap</attribute>
         <attribute>pump_type_value_fr</attribute>
+        <attribute>fk_printmap</attribute>
         <attribute>fk_tank_firestorage</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>_pipe_orientation</attribute>
@@ -5317,9 +5317,9 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pipe_out</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>_geometry_alt1_used</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_pressurezone</attribute>
@@ -5349,8 +5349,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_overflow</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
         <attribute>label_1_x</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_parent</attribute>
@@ -5358,8 +5358,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pump_type</attribute>
         <attribute>source_quality_value_fr</attribute>
         <attribute>fk_status</attribute>
-        <attribute>fk_printmap</attribute>
         <attribute>pump_type_value_fr</attribute>
+        <attribute>fk_printmap</attribute>
         <attribute>fk_tank_firestorage</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>_pipe_orientation</attribute>
@@ -5379,9 +5379,9 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pipe_out</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>_geometry_alt1_used</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_pressurezone</attribute>
@@ -7087,10 +7087,10 @@ END&#xd;&#xd;
         <alias index="42" field="folder_date_end" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
-        <attribute>label_1_x</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
         <attribute>orientation</attribute>
         <attribute>fk_distributor</attribute>
@@ -7099,8 +7099,8 @@ END&#xd;&#xd;
         <attribute>remark</attribute>
         <attribute>folder_description</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_pipe_schema_visible</attribute>
@@ -7121,10 +7121,10 @@ END&#xd;&#xd;
         <attribute>altitude</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
-        <attribute>label_1_x</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
         <attribute>orientation</attribute>
         <attribute>fk_distributor</attribute>
@@ -7133,8 +7133,8 @@ END&#xd;&#xd;
         <attribute>remark</attribute>
         <attribute>folder_description</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_pipe_schema_visible</attribute>
@@ -8874,18 +8874,18 @@ def my_form_open(dialog, layer, feature):
         <alias index="33" field="fk_pipe" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>label_2_rotation</attribute>
         <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
         <attribute>orientation</attribute>
         <attribute>fk_distributor</attribute>
-        <attribute>label_2_y</attribute>
         <attribute>_geometry_alt1_used</attribute>
+        <attribute>label_2_y</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_text</attribute>
         <attribute>identification</attribute>
@@ -8907,18 +8907,18 @@ def my_form_open(dialog, layer, feature):
         <attribute>altitude</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>label_2_rotation</attribute>
         <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
         <attribute>orientation</attribute>
         <attribute>fk_distributor</attribute>
-        <attribute>label_2_y</attribute>
         <attribute>_geometry_alt1_used</attribute>
+        <attribute>label_2_y</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_pipe_schema_visible</attribute>
@@ -15649,8 +15649,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_x</attribute>
         <attribute>label_1_rotation</attribute>
         <attribute>update_geometry_alt2</attribute>
-        <attribute>subscriber</attribute>
         <attribute>fk_consumptionzone</attribute>
+        <attribute>subscriber</attribute>
         <attribute>label_1_text</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>label_2_visible</attribute>
@@ -15671,8 +15671,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_x</attribute>
         <attribute>label_1_rotation</attribute>
         <attribute>update_geometry_alt2</attribute>
-        <attribute>subscriber</attribute>
         <attribute>fk_consumptionzone</attribute>
+        <attribute>subscriber</attribute>
         <attribute>label_1_text</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>label_2_visible</attribute>
@@ -16518,8 +16518,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>name</attribute>
         <attribute>x_min</attribute>
         <attribute>label_2_text</attribute>
-        <attribute>fk_district</attribute>
         <attribute>district_zip</attribute>
+        <attribute>fk_district</attribute>
         <attribute>y_min</attribute>
         <attribute>label_2_x</attribute>
         <attribute>label_1_rotation</attribute>
@@ -16544,8 +16544,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>name</attribute>
         <attribute>x_min</attribute>
         <attribute>label_2_text</attribute>
-        <attribute>fk_district</attribute>
         <attribute>district_zip</attribute>
+        <attribute>fk_district</attribute>
         <attribute>y_min</attribute>
         <attribute>label_2_x</attribute>
         <attribute>label_1_rotation</attribute>
@@ -25907,8 +25907,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_overflow</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
         <attribute>label_1_x</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_parent</attribute>
@@ -25916,8 +25916,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pump_type</attribute>
         <attribute>source_quality_value_fr</attribute>
         <attribute>fk_status</attribute>
-        <attribute>fk_printmap</attribute>
         <attribute>pump_type_value_fr</attribute>
+        <attribute>fk_printmap</attribute>
         <attribute>fk_tank_firestorage</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>_pipe_orientation</attribute>
@@ -25937,9 +25937,9 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pipe_out</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>_geometry_alt1_used</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_pressurezone</attribute>
@@ -25969,8 +25969,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_overflow</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
         <attribute>label_1_x</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_parent</attribute>
@@ -25978,8 +25978,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pump_type</attribute>
         <attribute>source_quality_value_fr</attribute>
         <attribute>fk_status</attribute>
-        <attribute>fk_printmap</attribute>
         <attribute>pump_type_value_fr</attribute>
+        <attribute>fk_printmap</attribute>
         <attribute>fk_tank_firestorage</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>_pipe_orientation</attribute>
@@ -25999,9 +25999,9 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pipe_out</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>_geometry_alt1_used</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_pressurezone</attribute>
@@ -28877,8 +28877,8 @@ END&#xd;&#xd;
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_overflow</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
         <attribute>label_1_x</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_parent</attribute>
@@ -28886,8 +28886,8 @@ END&#xd;&#xd;
         <attribute>fk_pump_type</attribute>
         <attribute>source_quality_value_fr</attribute>
         <attribute>fk_status</attribute>
-        <attribute>fk_printmap</attribute>
         <attribute>pump_type_value_fr</attribute>
+        <attribute>fk_printmap</attribute>
         <attribute>fk_tank_firestorage</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>_pipe_orientation</attribute>
@@ -28907,9 +28907,9 @@ END&#xd;&#xd;
         <attribute>fk_pipe_out</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>_geometry_alt1_used</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_pressurezone</attribute>
@@ -28939,8 +28939,8 @@ END&#xd;&#xd;
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_overflow</attribute>
         <attribute>label_2_y</attribute>
-        <attribute>label_1_rotation</attribute>
         <attribute>label_1_x</attribute>
+        <attribute>label_1_rotation</attribute>
         <attribute>fk_source_quality</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_parent</attribute>
@@ -28948,8 +28948,8 @@ END&#xd;&#xd;
         <attribute>fk_pump_type</attribute>
         <attribute>source_quality_value_fr</attribute>
         <attribute>fk_status</attribute>
-        <attribute>fk_printmap</attribute>
         <attribute>pump_type_value_fr</attribute>
+        <attribute>fk_printmap</attribute>
         <attribute>fk_tank_firestorage</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>_pipe_orientation</attribute>
@@ -28969,9 +28969,9 @@ END&#xd;&#xd;
         <attribute>fk_pipe_out</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>_geometry_alt1_used</attribute>
-        <attribute>_geometry_alt2_used</attribute>
         <attribute>fk_pump_operating</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>_geometry_alt2_used</attribute>
         <attribute>_litrepercm</attribute>
         <attribute>fk_distributor</attribute>
         <attribute>fk_pressurezone</attribute>
@@ -29846,7 +29846,7 @@ END&#xd;&#xd;
 || coalesce(name,'')</previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" readOnly="0" autoRefreshTime="0" labelsEnabled="1" autoRefreshEnabled="0" minScale="100000000" simplifyDrawingTol="1" styleCategories="AllStyleCategories" simplifyLocal="1" maxScale="0" type="vector" refreshOnNotifyMessage="" wkbType="LineString" geometry="Line">
+    <maplayer simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" readOnly="1" autoRefreshTime="0" labelsEnabled="1" autoRefreshEnabled="0" minScale="100000000" simplifyDrawingTol="1" styleCategories="AllStyleCategories" simplifyLocal="1" maxScale="0" type="vector" refreshOnNotifyMessage="" wkbType="LineString" geometry="Line">
       <extent>
         <xmin>2552776.76465809997171164</xmin>
         <ymin>1141031.58253628993406892</ymin>
@@ -30457,7 +30457,7 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>"prj_line_plan_name"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" readOnly="0" autoRefreshTime="0" labelsEnabled="0" autoRefreshEnabled="0" minScale="100000000" simplifyDrawingTol="1" styleCategories="AllStyleCategories" simplifyLocal="1" maxScale="0" type="vector" refreshOnNotifyMessage="" wkbType="Point" geometry="Point">
+    <maplayer simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" readOnly="1" autoRefreshTime="0" labelsEnabled="0" autoRefreshEnabled="0" minScale="100000000" simplifyDrawingTol="1" styleCategories="AllStyleCategories" simplifyLocal="1" maxScale="0" type="vector" refreshOnNotifyMessage="" wkbType="Point" geometry="Point">
       <extent>
         <xmin>2552776.76465809997171164</xmin>
         <ymin>1141032.59547930001281202</ymin>
@@ -32080,8 +32080,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_rotation</attribute>
         <attribute>fk_district</attribute>
         <attribute>orientation</attribute>
-        <attribute>altitude</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>altitude</attribute>
         <attribute>year_end</attribute>
         <attribute>output_value_fr</attribute>
         <attribute>fk_distributor</attribute>
@@ -32121,8 +32121,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_rotation</attribute>
         <attribute>fk_district</attribute>
         <attribute>orientation</attribute>
-        <attribute>altitude</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>altitude</attribute>
         <attribute>year_end</attribute>
         <attribute>output_value_fr</attribute>
         <attribute>fk_distributor</attribute>
@@ -34465,8 +34465,8 @@ def my_form_open(dialog, layer, feature):
         <alias index="60" field="folder_date_end" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>pipe_function_value_fr</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>_valve_closed</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>_printmaps</attribute>
@@ -34477,14 +34477,14 @@ def my_form_open(dialog, layer, feature):
         <attribute>precision_value_fr</attribute>
         <attribute>pressurezone_colorcode</attribute>
         <attribute>status_functional</attribute>
+        <attribute>pipe_material_short_fr</attribute>
         <attribute>fk_status</attribute>
         <attribute>fk_printmap</attribute>
-        <attribute>pipe_material_short_fr</attribute>
         <attribute>pipe_material_diameter_internal</attribute>
         <attribute>fk_node_b</attribute>
+        <attribute>_valve_count</attribute>
         <attribute>fk_installmethod</attribute>
         <attribute>folder_date_start</attribute>
-        <attribute>_valve_count</attribute>
         <attribute>fk_node_a</attribute>
         <attribute>fk_district</attribute>
         <attribute>_length2d</attribute>
@@ -34525,8 +34525,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>pipe_material__displayname_fr</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>pipe_function_schema_visible</attribute>
         <attribute>pipe_function_value_fr</attribute>
+        <attribute>pipe_function_schema_visible</attribute>
         <attribute>_valve_closed</attribute>
         <attribute>fk_bedding</attribute>
         <attribute>_printmaps</attribute>
@@ -34537,14 +34537,14 @@ def my_form_open(dialog, layer, feature):
         <attribute>precision_value_fr</attribute>
         <attribute>pressurezone_colorcode</attribute>
         <attribute>status_functional</attribute>
+        <attribute>pipe_material_short_fr</attribute>
         <attribute>fk_status</attribute>
         <attribute>fk_printmap</attribute>
-        <attribute>pipe_material_short_fr</attribute>
         <attribute>pipe_material_diameter_internal</attribute>
         <attribute>fk_node_b</attribute>
+        <attribute>_valve_count</attribute>
         <attribute>fk_installmethod</attribute>
         <attribute>folder_date_start</attribute>
-        <attribute>_valve_count</attribute>
         <attribute>fk_node_a</attribute>
         <attribute>fk_district</attribute>
         <attribute>_length2d</attribute>
@@ -37956,10 +37956,10 @@ def my_form_open(dialog, layer, feature):
         <alias index="47" field="folder_date_end" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
-        <attribute>label_1_x</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
         <attribute>orientation</attribute>
         <attribute>fk_distributor</attribute>
@@ -37967,8 +37967,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_y</attribute>
         <attribute>folder_description</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_pipe_schema_visible</attribute>
@@ -37989,10 +37989,10 @@ def my_form_open(dialog, layer, feature):
         <attribute>altitude</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>fk_precisionalti</attribute>
         <attribute>label_1_visible</attribute>
-        <attribute>label_1_x</attribute>
+        <attribute>fk_precisionalti</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>label_1_x</attribute>
         <attribute>fk_precision</attribute>
         <attribute>orientation</attribute>
         <attribute>fk_distributor</attribute>
@@ -38000,8 +38000,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>label_2_y</attribute>
         <attribute>folder_description</attribute>
         <attribute>fk_locationtype</attribute>
-        <attribute>label_1_y</attribute>
         <attribute>year_end</attribute>
+        <attribute>label_1_y</attribute>
         <attribute>fk_status</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_pipe_schema_visible</attribute>
@@ -40298,8 +40298,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>orientation</attribute>
         <attribute>status_description_fr</attribute>
         <attribute>valve_actuation_short_fr</attribute>
-        <attribute>altitude</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>altitude</attribute>
         <attribute>year_end</attribute>
         <attribute>fk_pipe</attribute>
         <attribute>valve_function_short_fr</attribute>
@@ -40307,8 +40307,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pressurezone</attribute>
         <attribute>precisionalti_value_fr</attribute>
         <attribute>fk_precisionalti</attribute>
-        <attribute>folder_date_end</attribute>
         <attribute>fk_handle_precisionalti</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>label_1_visible</attribute>
         <attribute>fk_object_reference</attribute>
@@ -40344,8 +40344,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>orientation</attribute>
         <attribute>status_description_fr</attribute>
         <attribute>valve_actuation_short_fr</attribute>
-        <attribute>altitude</attribute>
         <attribute>label_1_text</attribute>
+        <attribute>altitude</attribute>
         <attribute>year_end</attribute>
         <attribute>fk_pipe</attribute>
         <attribute>valve_function_short_fr</attribute>
@@ -40353,8 +40353,8 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_pressurezone</attribute>
         <attribute>precisionalti_value_fr</attribute>
         <attribute>fk_precisionalti</attribute>
-        <attribute>folder_date_end</attribute>
         <attribute>fk_handle_precisionalti</attribute>
+        <attribute>folder_date_end</attribute>
         <attribute>label_2_visible</attribute>
         <attribute>label_1_visible</attribute>
         <attribute>fk_object_reference</attribute>
