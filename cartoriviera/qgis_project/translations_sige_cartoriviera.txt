@@ -639,7 +639,7 @@ msgid "sige_qgis_croquis_reseau"
 msgstr "Croquis réseau"
 
 msgid "sige_qgis_project"
-msgstr "Chantier réseau"
+msgstr "Chantier réseau (en test)"
 
 msgid "sige_qgis_dossier_technique"
 msgstr "Dossier technique"
