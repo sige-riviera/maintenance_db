@@ -48,7 +48,7 @@ MAILSTDOUT=false
 0 2 * * mon,tue,wed,thu,fri $FOLDERPATH/backup.sh>/dev/null
 
 # Run full backup once a month but a sunday (with logged actions)
-0 3  1-7 *   *   [ "$(date '+\%a')" = "Sun" ] && $FOLDERPATH/backup.sh full>/dev/null
+0 3 1-7 * * [ "$(date '+\%a')" = "Sun" ] && $FOLDERPATH/backup.sh full>/dev/null
 
 # Export data to the surveying company for data integration into Port-Valais mapping application (convention)
 0 4 * * sat $FOLDERPATH/bouveret.sh>/dev/null
@@ -62,7 +62,7 @@ MAILSTDOUT=false
 0 22 * * * $FOLDERPATH/cartoriviera/croquis_reseau.sh>/dev/null
 
 # Remount disks once a month (to prevent user/pwd authentification problems every 3 months)
-0 1 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
+#0 1 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
 
 # Disk usage information
 0 6 * * mon $FOLDERPATH/disk_usage.sh>/dev/null
