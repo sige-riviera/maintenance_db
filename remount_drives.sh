@@ -1,7 +1,9 @@
 #!/bin/bash
 
-. unmount_drives.sh
-. mount_drives.sh
+FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
+
+. $FOLDERPATH/unmount_drives.sh
+. $FOLDERPATH/mount_drives.sh
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
