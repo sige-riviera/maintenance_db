@@ -8,7 +8,7 @@ NAME_BACKUP=`cat /home/sitadmin/sit/pass/name_backup_server`
 mkdir /home/sitadmin/sit/mount/abonnes
 mkdir /home/sitadmin/sit/mount/reseau
 mkdir /home/sitadmin/sit/mount/ouvrages
-mkdir /home/sitadmin/sit/mount/comm_tech_ro
+#mkdir /home/sitadmin/sit/mount/comm_tech_ro TODO enable when sitscripts account ready
 mkdir /home/sitadmin/sit/mount/cartoriviera
 
 sudo /bin/mount -t cifs //$NAME_MOUNT/dao_saisie$/01_DISTRIBUTION/ABONNES /home/sitadmin/sit/mount/abonnes -o user=infor,password=$PASS_MOUNT,dom=sige.ch,gid=1000,uid=1000

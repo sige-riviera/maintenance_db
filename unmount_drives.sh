@@ -9,8 +9,8 @@ rm -rf /home/sitadmin/sit/mount/reseau
 sudo /bin/umount /home/sitadmin/sit/mount/ouvrages
 rm -rf /home/sitadmin/sit/mount/ouvrages
 
-sudo /bin/umount /home/sitadmin/sit/mount/comm_tech_ro
-rm -rf /home/sitadmin/sit/mount/comm_tech_ro
+#sudo /bin/umount /home/sitadmin/sit/mount/comm_tech_ro TODO enable when sitscripts account ready
+#rm -rf /home/sitadmin/sit/mount/comm_tech_ro
 
 #sudo fusermount -u /home/sitadmin/sit/mount/cartoriviera
 sudo /bin/umount -l /home/sitadmin/sit/mount/cartoriviera
