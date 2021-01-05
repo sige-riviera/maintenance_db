@@ -19,10 +19,8 @@ cd $SRCBACKUPPATH
 export PGOPTIONS='--client-min-messages=warning'
 
 # Backup on SIGE main backup server
-# creation of directories are not working at the moment on this server
-# folders are created up to 2020
-#mkdir -p $DESTBACKUPPATH/$YEAR
-#mkdir -p $DESTBACKUPPATH/$YEAR/$MONTH
+mkdir -p $DESTBACKUPPATH/$YEAR
+mkdir -p $DESTBACKUPPATH/$YEAR/$MONTH
 
 
 # QWAT and SIGE_COMMUN
