@@ -182,7 +182,7 @@ msgstr "Parcelle"
 msgid "rejected_flow"
 msgstr "Débit refoulé"
 
-msgid "sanitization_chlorine_gaz"
+msgid "sanitization_chlorine_gas"
 msgstr "Désinfection chlore gazeux"
 
 msgid "sanitization_chlorine_liquid"

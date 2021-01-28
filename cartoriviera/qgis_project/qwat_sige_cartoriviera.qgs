@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="3.14.1-Pi" saveDateTime="2021-01-28T17:06:43" saveUser="andrek" saveUserFull="André Kevin">
+<qgis projectname="" version="3.14.1-Pi" saveDateTime="2021-01-28T17:21:33" saveUser="andrek" saveUserFull="André Kevin">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -2990,7 +2990,7 @@ def my_form_open(dialog, layer, feature):
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial crs="" minz="0" maxy="0" miny="0" maxx="0" maxz="0" dimensions="2" minx="0"/>
+          <spatial crs="EPSG:2056" minz="0" maxy="0" miny="0" maxx="0" maxz="0" dimensions="2" minx="0"/>
           <temporal>
             <period>
               <start></start>
@@ -3664,35 +3664,49 @@ def my_form_open(dialog, layer, feature):
           <text-style namedStyle="Normal" fontLetterSpacing="0" fontSize="11" blendMode="0" textOrientation="horizontal" fontFamily="MS Shell Dlg 2" fontWeight="50" fieldName="CASE&#xa;WHEN  &quot;installation_type&quot;  = 'chamber' THEN 'C. '&#xa;WHEN &quot;installation_type&quot;  = 'pressurecontrol' AND fk_pressurecontrol_type = 2801 THEN 'CR. '&#xa;WHEN  &quot;installation_type&quot;  = 'pressurecontrol' AND fk_pressurecontrol_type = 2802 THEN 'CCP. ' &#xa;WHEN  &quot;installation_type&quot;  = 'pressurecontrol' AND fk_pressurecontrol_type = 2803 THEN 'CRA. '&#xa;WHEN  &quot;installation_type&quot;  = 'pump' THEN 'P. ' &#xa;WHEN  &quot;installation_type&quot;  = 'source' THEN 'S. ' &#xa;WHEN  &quot;installation_type&quot;  = 'tank' THEN 'R. '&#xa;WHEN  &quot;installation_type&quot;  = 'treatment' THEN 'T. '&#xa;ELSE '' &#xa;END&#xa;|| coalesce(name, '')" fontCapitals="0" useSubstitutions="0" fontKerning="1" fontItalic="0" previewBkgrdColor="255,255,255,255" fontWordSpacing="0" textOpacity="1" multilineHeight="1" fontSizeUnit="Point" isExpression="1" fontStrikeout="0" allowHtml="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontUnderline="0" textColor="0,0,0,255">
             <text-buffer bufferBlendMode="0" bufferSizeUnits="MM" bufferJoinStyle="64" bufferSize="1" bufferDraw="1" bufferColor="255,255,255,255" bufferNoFill="0" bufferOpacity="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0"/>
             <text-mask maskSize="0" maskJoinStyle="128" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskType="0" maskedSymbolLayers="" maskEnabled="0" maskSizeUnits="MM" maskOpacity="1"/>
-            <background shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotationType="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeBorderColor="128,128,128,255" shapeType="0" shapeBorderWidthUnit="MM" shapeFillColor="255,255,255,255" shapeRadiiUnit="MM" shapeOffsetY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeSizeY="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeRadiiX="0" shapeOffsetX="0" shapeBorderWidth="0" shapeOpacity="1" shapeSizeX="0" shapeSVGFile="" shapeBlendMode="0" shapeSizeUnit="MM" shapeSizeType="0" shapeOffsetUnit="MM" shapeJoinStyle="64"/>
+            <background shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotationType="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeBorderColor="128,128,128,255" shapeType="0" shapeBorderWidthUnit="MM" shapeFillColor="255,255,255,255" shapeRadiiUnit="MM" shapeOffsetY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeSizeY="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeRadiiX="0" shapeOffsetX="0" shapeBorderWidth="0" shapeOpacity="1" shapeSizeX="0" shapeSVGFile="" shapeBlendMode="0" shapeSizeUnit="MM" shapeSizeType="0" shapeOffsetUnit="MM" shapeJoinStyle="64">
+              <symbol type="marker" alpha="1" clip_to_extent="1" force_rhr="0" name="markerSymbol">
+                <layer enabled="1" pass="0" class="SimpleMarker" locked="0">
+                  <prop v="0" k="angle"/>
+                  <prop v="133,182,111,255" k="color"/>
+                  <prop v="1" k="horizontal_anchor_point"/>
+                  <prop v="bevel" k="joinstyle"/>
+                  <prop v="circle" k="name"/>
+                  <prop v="0,0" k="offset"/>
+                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                  <prop v="MM" k="offset_unit"/>
+                  <prop v="35,35,35,255" k="outline_color"/>
+                  <prop v="solid" k="outline_style"/>
+                  <prop v="0" k="outline_width"/>
+                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+                  <prop v="MM" k="outline_width_unit"/>
+                  <prop v="diameter" k="scale_method"/>
+                  <prop v="2" k="size"/>
+                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+                  <prop v="MM" k="size_unit"/>
+                  <prop v="1" k="vertical_anchor_point"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option type="QString" value="" name="name"/>
+                      <Option name="properties"/>
+                      <Option type="QString" value="collection" name="type"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </background>
             <shadow shadowRadius="1.5" shadowRadiusAlphaOnly="0" shadowDraw="0" shadowUnder="0" shadowBlendMode="6" shadowColor="0,0,0,255" shadowOffsetDist="1" shadowOffsetUnit="MM" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetGlobal="1" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusUnit="MM" shadowOpacity="0.7" shadowOffsetAngle="135" shadowScale="100"/>
             <dd_properties>
               <Option type="Map">
                 <Option type="QString" value="" name="name"/>
-                <Option type="Map" name="properties">
-                  <Option type="Map" name="LabelRotation">
-                    <Option type="bool" value="true" name="active"/>
-                    <Option type="QString" value="360 - (&quot;label_1_rotation&quot;)" name="expression"/>
-                    <Option type="int" value="3" name="type"/>
-                  </Option>
-                  <Option type="Map" name="PositionX">
-                    <Option type="bool" value="true" name="active"/>
-                    <Option type="QString" value="label_1_x" name="field"/>
-                    <Option type="int" value="2" name="type"/>
-                  </Option>
-                  <Option type="Map" name="PositionY">
-                    <Option type="bool" value="true" name="active"/>
-                    <Option type="QString" value="label_1_y" name="field"/>
-                    <Option type="int" value="2" name="type"/>
-                  </Option>
-                </Option>
+                <Option name="properties"/>
                 <Option type="QString" value="collection" name="type"/>
               </Option>
             </dd_properties>
             <substitutions/>
           </text-style>
           <text-format reverseDirectionSymbol="0" multilineAlign="1" addDirectionSymbol="0" placeDirectionSymbol="0" useMaxLineLengthForAutoWrap="1" wrapChar="" decimals="3" rightDirectionSymbol=">" leftDirectionSymbol="&lt;" formatNumbers="0" plussign="0" autoWrapLength="0"/>
-          <placement overrunDistanceUnit="MM" layerType="UnknownGeometry" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" priority="5" centroidInside="0" maxCurvedCharAngleOut="-20" offsetType="0" maxCurvedCharAngleIn="20" placementFlags="10" dist="3" distUnits="MM" repeatDistance="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" placement="0" xOffset="0" geometryGenerator="" preserveRotation="1" rotationAngle="0" centroidWhole="0" offsetUnits="MapUnit" yOffset="0" distMapUnitScale="3x:0,0,0,0,0,0" quadOffset="4" polygonPlacementFlags="2" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" fitInPolygonOnly="0" overrunDistance="0" geometryGeneratorEnabled="0" geometryGeneratorType="PointGeometry"/>
+          <placement overrunDistanceUnit="MM" layerType="PointGeometry" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" priority="5" centroidInside="0" maxCurvedCharAngleOut="-20" offsetType="0" maxCurvedCharAngleIn="20" placementFlags="10" dist="3" distUnits="MM" repeatDistance="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" placement="0" xOffset="0" geometryGenerator="" preserveRotation="1" rotationAngle="0" centroidWhole="0" offsetUnits="MapUnit" yOffset="0" distMapUnitScale="3x:0,0,0,0,0,0" quadOffset="4" polygonPlacementFlags="2" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" fitInPolygonOnly="0" overrunDistance="0" geometryGeneratorEnabled="0" geometryGeneratorType="PointGeometry"/>
           <rendering labelPerPart="0" minFeatureSize="0" obstacleType="0" limitNumLabels="0" displayAll="1" scaleMax="20000" drawLabels="1" maxNumLabels="2000" zIndex="0" fontMinPixelSize="3" obstacleFactor="1" obstacle="1" mergeLines="0" fontMaxPixelSize="10000" scaleMin="1" upsidedownLabels="0" scaleVisibility="1" fontLimitPixelSize="0"/>
           <dd_properties>
             <Option type="Map">
@@ -4728,9 +4742,12 @@ def my_form_open(dialog, layer, feature):
           </editWidget>
         </field>
         <field name="sanitization_chlorine_gas">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
+              </Option>
             </config>
           </editWidget>
         </field>
@@ -5204,7 +5221,7 @@ def my_form_open(dialog, layer, feature):
         <alias index="76" field="_cistern2_litrepercm" name=""/>
         <alias index="77" field="sanitization_uv" name="Désinfection UV"/>
         <alias index="78" field="sanitization_chlorine_liquid" name="Désinfection chlore liquide"/>
-        <alias index="79" field="sanitization_chlorine_gas" name=""/>
+        <alias index="79" field="sanitization_chlorine_gas" name="Désinfection chlore gazeux"/>
         <alias index="80" field="sanitization_ozone" name="Désinfection ozone"/>
         <alias index="81" field="filtration_membrane" name="Filtration membranaire"/>
         <alias index="82" field="filtration_sandorgravel" name="Filtration à sable"/>
@@ -5245,11 +5262,11 @@ def my_form_open(dialog, layer, feature):
         <alias index="117" field="pump_operating_value_fr" name=""/>
       </aliases>
       <excludeAttributesWMS>
+        <attribute>fk_pipe_in</attribute>
         <attribute>fk_precisionalti</attribute>
         <attribute>_cistern1_litrepercm</attribute>
-        <attribute>fk_pipe_in</attribute>
-        <attribute>folder_description</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>folder_description</attribute>
         <attribute>folder_date_end</attribute>
         <attribute>_pipe_schema_visible</attribute>
         <attribute>status_active</attribute>
@@ -5262,40 +5279,40 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_tank_firestorage</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>label_1_text</attribute>
-        <attribute>label_2_visible</attribute>
         <attribute>fk_pump_operating</attribute>
+        <attribute>label_2_visible</attribute>
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_pump_type</attribute>
-        <attribute>_litrepercm</attribute>
         <attribute>fk_locationtype</attribute>
+        <attribute>_litrepercm</attribute>
         <attribute>label_1_x</attribute>
         <attribute>fk_parent</attribute>
         <attribute>label_1_rotation</attribute>
-        <attribute>cistern1_value_fr</attribute>
         <attribute>cistern1_fk_type</attribute>
+        <attribute>cistern1_value_fr</attribute>
         <attribute>fk_printmap</attribute>
         <attribute>label_2_y</attribute>
         <attribute>label_1_y</attribute>
-        <attribute>pump_operating_value_fr</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_geometry_alt1_used</attribute>
+        <attribute>pump_operating_value_fr</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_district</attribute>
         <attribute>distributor_name</attribute>
         <attribute>cistern2_fk_type</attribute>
         <attribute>fk_overflow</attribute>
+        <attribute>fk_distributor</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>folder_date_start</attribute>
-        <attribute>fk_distributor</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>geometry_polygon</attribute>
-        <attribute>district_land_registry</attribute>
         <attribute>fk_remote</attribute>
-        <attribute>source_quality_value_fr</attribute>
+        <attribute>district_land_registry</attribute>
         <attribute>fk_pressurecontrol_type</attribute>
-        <attribute>pump_type_value_fr</attribute>
+        <attribute>source_quality_value_fr</attribute>
         <attribute>no_valves</attribute>
+        <attribute>pump_type_value_fr</attribute>
         <attribute>fk_watertype</attribute>
         <attribute>overflow_value_fr</attribute>
         <attribute>fk_folder</attribute>
@@ -5307,11 +5324,11 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_source_quality</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
+        <attribute>fk_pipe_in</attribute>
         <attribute>fk_precisionalti</attribute>
         <attribute>_cistern1_litrepercm</attribute>
-        <attribute>fk_pipe_in</attribute>
-        <attribute>folder_description</attribute>
         <attribute>label_2_rotation</attribute>
+        <attribute>folder_description</attribute>
         <attribute>folder_date_end</attribute>
         <attribute>_pipe_schema_visible</attribute>
         <attribute>status_active</attribute>
@@ -5324,40 +5341,40 @@ def my_form_open(dialog, layer, feature):
         <attribute>fk_tank_firestorage</attribute>
         <attribute>fk_pressurezone</attribute>
         <attribute>label_1_text</attribute>
-        <attribute>label_2_visible</attribute>
         <attribute>fk_pump_operating</attribute>
+        <attribute>label_2_visible</attribute>
         <attribute>pressurecontrol_type_value_fr</attribute>
         <attribute>fk_pump_type</attribute>
-        <attribute>_litrepercm</attribute>
         <attribute>fk_locationtype</attribute>
+        <attribute>_litrepercm</attribute>
         <attribute>label_1_x</attribute>
         <attribute>fk_parent</attribute>
         <attribute>label_1_rotation</attribute>
-        <attribute>cistern1_value_fr</attribute>
         <attribute>cistern1_fk_type</attribute>
+        <attribute>cistern1_value_fr</attribute>
         <attribute>fk_printmap</attribute>
         <attribute>label_2_y</attribute>
         <attribute>label_1_y</attribute>
-        <attribute>pump_operating_value_fr</attribute>
         <attribute>label_2_text</attribute>
         <attribute>_geometry_alt1_used</attribute>
+        <attribute>pump_operating_value_fr</attribute>
         <attribute>fk_precision</attribute>
         <attribute>fk_district</attribute>
         <attribute>distributor_name</attribute>
         <attribute>cistern2_fk_type</attribute>
         <attribute>fk_overflow</attribute>
+        <attribute>fk_distributor</attribute>
         <attribute>_geometry_alt2_used</attribute>
         <attribute>cistern2_value_fr</attribute>
         <attribute>folder_date_start</attribute>
-        <attribute>fk_distributor</attribute>
         <attribute>remote_value_fr</attribute>
         <attribute>geometry_polygon</attribute>
-        <attribute>district_land_registry</attribute>
         <attribute>fk_remote</attribute>
-        <attribute>source_quality_value_fr</attribute>
+        <attribute>district_land_registry</attribute>
         <attribute>fk_pressurecontrol_type</attribute>
-        <attribute>pump_type_value_fr</attribute>
+        <attribute>source_quality_value_fr</attribute>
         <attribute>no_valves</attribute>
+        <attribute>pump_type_value_fr</attribute>
         <attribute>fk_watertype</attribute>
         <attribute>overflow_value_fr</attribute>
         <attribute>fk_folder</attribute>
@@ -5812,7 +5829,6 @@ def my_form_open(dialog, layer, feature):
           <column type="field" hidden="0" width="-1" name="_cistern2_litrepercm"/>
           <column type="field" hidden="0" width="-1" name="sanitization_uv"/>
           <column type="field" hidden="0" width="-1" name="sanitization_chlorine_liquid"/>
-          <column type="field" hidden="0" width="-1" name="sanitization_chlorine_gazeous"/>
           <column type="field" hidden="0" width="-1" name="sanitization_ozone"/>
           <column type="field" hidden="0" width="-1" name="filtration_membrane"/>
           <column type="field" hidden="0" width="-1" name="filtration_sandorgravel"/>
@@ -5853,6 +5869,7 @@ def my_form_open(dialog, layer, feature):
           <column type="field" hidden="0" width="-1" name="status_active"/>
           <column type="field" hidden="0" width="-1" name="status_functional"/>
           <column type="field" hidden="0" width="-1" name="lien"/>
+          <column type="field" hidden="0" width="-1" name="sanitization_chlorine_gas"/>
         </columns>
       </attributetableconfig>
       <conditionalstyles>
@@ -6056,6 +6073,7 @@ def my_form_open(dialog, layer, feature):
         <field editable="1" name="rejected_flow"/>
         <field editable="1" name="remark"/>
         <field editable="1" name="remote_value_fr"/>
+        <field editable="1" name="sanitization_chlorine_gas"/>
         <field editable="1" name="sanitization_chlorine_gazeous"/>
         <field editable="1" name="sanitization_chlorine_liquid"/>
         <field editable="1" name="sanitization_ozone"/>
@@ -6176,6 +6194,7 @@ def my_form_open(dialog, layer, feature):
         <field labelOnTop="0" name="rejected_flow"/>
         <field labelOnTop="0" name="remark"/>
         <field labelOnTop="0" name="remote_value_fr"/>
+        <field labelOnTop="0" name="sanitization_chlorine_gas"/>
         <field labelOnTop="0" name="sanitization_chlorine_gazeous"/>
         <field labelOnTop="0" name="sanitization_chlorine_liquid"/>
         <field labelOnTop="0" name="sanitization_ozone"/>
