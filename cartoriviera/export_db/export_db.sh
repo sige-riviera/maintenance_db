@@ -62,6 +62,8 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -c "ALTER SCHEMA cartoriviera REN
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/big_search_table.sql
 # Transform boolean to oui/non
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/boolean2str.sql
+# Set NULL text fields as '-' in identify
+# PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/show_null_empty_string.sql
 
 
 # Final dump
