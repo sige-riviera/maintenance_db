@@ -299,9 +299,6 @@ msgstr "Cause"
 msgid "detection_date"
 msgstr "Date de détection"
 
-msgid "fk_cause"
-msgstr "Cause"
-
 msgid "fk_pipe"
 msgstr "ID conduite"
 
@@ -639,6 +636,9 @@ msgid "sige_qgis_croquis_reseau"
 msgstr "Croquis réseau"
 
 msgid "sige_qgis_project"
+msgstr "Chantier réseau (en test)"
+
+msgid "sige_qgis_project_line"
 msgstr "Chantier réseau (en test)"
 
 msgid "sige_qgis_dossier_technique"
