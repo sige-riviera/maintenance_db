@@ -3,7 +3,7 @@ Ce répertoire contient l'ensemble des tâches exécutées automatique sur le se
 - données transformées et copiées pour cartriviera
 - opérations de maintenance et backup
 
-Les scripts fonctionnent depuis le serveur s2laveyre.
+Les scripts fonctionnent depuis le serveur virtuel sit sur aviron.
 
 S'assurer que cartoriviera est bien été monté avec:
 ```
