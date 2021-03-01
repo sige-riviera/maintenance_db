@@ -5,7 +5,8 @@ set -e
 
 SRCFOLDERPATH=/home/sitadmin/sit/mount/ouvrages # dao_saisie mounted disk
 PROCESSFOLDERPATH=/home/sitadmin/sit/production/data/carto/data_ouvrage
-DESTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera
+DESTFOLDERPATH=kandre@cartoriviera.vevey.ch:/var/sig/files/private/sige
+DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
 
 # creer dossier pour traitement d'images
 # repart à zéro à chaque fois, pas performant, mais plus simple.
@@ -59,9 +60,9 @@ done
 
 # update data on cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH/ kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/ouvrages/
-mountpoint -q -- $DESTFOLDERPATH || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige $DESTFOLDERPATH
-chmod -R 755 $DESTFOLDERPATH/ouvrages
+rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH $DESTFOLDERPATH/ouvrages
+#mountpoint -q -- $DESTMOUNTFOLDERPATH || sshfs $DESTFOLDERPATH $DESTMOUNTFOLDERPATH
+#chmod -R 755 $DESTMOUNTFOLDERPATH/ouvrages
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then

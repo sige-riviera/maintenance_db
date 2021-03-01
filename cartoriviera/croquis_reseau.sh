@@ -4,15 +4,16 @@
 set -e
 
 SRCFOLDERPATH=/home/sitadmin/sit/mount/reseau
-DESTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera
+DESTFOLDERPATH=kandre@cartoriviera.vevey.ch:/var/sig/files/private/sige
+DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
 
-# to show progress, add: --progcrress
+# to show progress, add: --progress
 rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s \
 --include=/{,'COMMUNES/'{,'*/'{,Croquis_reseau/{,'**'}}}} --exclude='*' \
-$SRCFOLDERPATH/COMMUNES kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige/reseau
+$SRCFOLDERPATH/COMMUNES $DESTFOLDERPATH/reseau
 
-mountpoint -q -- $DESTFOLDERPATH || sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige $DESTFOLDERPATH
-# chmod -R 755 $DESTFOLDERPATH/reseau
+# mountpoint -q -- $DESTMOUNTFOLDERPATH || sshfs $DESTFOLDERPATH $DESTMOUNTFOLDERPATH
+# chmod -R 755 $DESTMOUNTFOLDERPATH/reseau
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then

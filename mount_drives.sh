@@ -10,6 +10,7 @@ mkdir /home/sitadmin/sit/mount/reseau
 mkdir /home/sitadmin/sit/mount/ouvrages
 mkdir /home/sitadmin/sit/mount/comm_tech_ro
 mkdir /home/sitadmin/sit/mount/cartoriviera
+mkdir /home/sitadmin/sit/mount/cartoriviera_secured
 
 sudo /bin/mount -t cifs //$NAME_MOUNT/dao_saisie$/01_DISTRIBUTION/ABONNES /home/sitadmin/sit/mount/abonnes -o user=sitscripts,password=$PASS_MOUNT,dom=sige.ch,gid=1000,uid=1000
 sudo /bin/mount -t cifs //$NAME_MOUNT/dao_saisie$/01_DISTRIBUTION/RESEAU /home/sitadmin/sit/mount/reseau -o user=sitscripts,password=$PASS_MOUNT,dom=sige.ch,gid=1000,uid=1000
@@ -20,3 +21,5 @@ sudo /bin/mount -t cifs //$NAME_BACKUP/bk_laveyre/qgis /home/sitadmin/sit/mount/
 
 #fusermount -u /home/sitadmin/sit/mount/cartoriviera
 sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sitadmin/sit/mount/cartoriviera # SSH connection to cartoriviera infrastructure uses private and public keys ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub
+#fusermount -u /home/sitadmin/sit/mount/cartoriviera_secured
+sshfs kandre@cartoriviera.vevey.ch:/var/sig/files/private/sige /home/sitadmin/sit/mount/cartoriviera_secured # SSH connection to cartoriviera (password protected)  infrastructure uses private and public keys ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub

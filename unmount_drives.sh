@@ -16,3 +16,7 @@ rm -rf /home/sitadmin/sit/mount/comm_tech_ro
 sudo /bin/umount -l /home/sitadmin/sit/mount/cartoriviera
 rm -rf /home/sitadmin/sit/mount/cartoriviera
 
+#sudo fusermount -u /home/sitadmin/sit/mount/cartoriviera_secured
+sudo /bin/umount -l /home/sitadmin/sit/mount/cartoriviera_secured
+rm -rf /home/sitadmin/sit/mount/cartoriviera_secured
+
