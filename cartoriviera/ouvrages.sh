@@ -60,7 +60,7 @@ done
 
 # update data on cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH $DESTFOLDERPATH/ouvrages
+rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH/ $DESTFOLDERPATH/ouvrages
 #mountpoint -q -- $DESTMOUNTFOLDERPATH || sshfs $DESTFOLDERPATH $DESTMOUNTFOLDERPATH
 #chmod -R 755 $DESTMOUNTFOLDERPATH/ouvrages
 
