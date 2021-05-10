@@ -7,7 +7,7 @@ drop table if exists cartoriviera.sige_qgis_qwat_installation_mn95;
 
 create table cartoriviera.sige_qgis_qwat_installation_mn95 as
 select
-    '<a href=javascript:sitnExterns.openWindow("Ouvrage","https://www.cartoriviera.ch/sige/www/gallery.php?type=ouvrage&ouvrage='||identification||'",600,600)>croquis/photos</a>' as lien,
+    '<a href=javascript:sitnExterns.openWindow("Ouvrage","https://map.cartoriviera.ch/static/cache/sige/gallery.html?type=ouvrage&ouvrage='||identification||'",600,600)>croquis/photos</a>' as lien,
     id,
     fk_district,
     fk_pressurezone,
