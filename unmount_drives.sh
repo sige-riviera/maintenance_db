@@ -12,6 +12,9 @@ rm -rf /home/sitadmin/sit/mount/ouvrages
 sudo /bin/umount /home/sitadmin/sit/mount/comm_tech_ro
 rm -rf /home/sitadmin/sit/mount/comm_tech_ro
 
+sudo /bin/umount /home/sitadmin/sit/mount/backup_sbk_pierrier
+rm -rf /home/sitadmin/sit/mount/backup_sbk_pierrier
+
 #sudo fusermount -u /home/sitadmin/sit/mount/cartoriviera
 sudo /bin/umount -l /home/sitadmin/sit/mount/cartoriviera
 rm -rf /home/sitadmin/sit/mount/cartoriviera
