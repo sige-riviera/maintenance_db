@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUserFull="André Kevin" projectname="" saveUser="andrek" version="3.16.5-Hannover" saveDateTime="2021-07-05T13:42:15">
+<qgis saveUserFull="André Kevin" projectname="" saveUser="andrek" version="3.16.5-Hannover" saveDateTime="2021-07-05T14:05:03">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -29,7 +29,7 @@
     <layer-tree-layer source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_croquis_reseau_mn95&quot; (geometry)" patch_size="0,0" expanded="0" name="sige_qgis_croquis_reseau" id="croquis_reseau20170914153941848" legend_exp="" providerKey="postgres" checked="Qt::Unchecked" legend_split_behavior="0">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_remote_mn95&quot; (geometry)" patch_size="0,0" expanded="1" name="sige_qgis_qwat_remote" id="sige_qgis_qwat_remote20171122094212805" legend_exp="" providerKey="postgres" checked="Qt::Unchecked" legend_split_behavior="0">
+    <layer-tree-layer source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=MultiLineString checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_remote_mn95&quot; (geometry)" patch_size="0,0" expanded="1" name="sige_qgis_qwat_remote" id="sige_qgis_qwat_remote20171122094212805" legend_exp="" providerKey="postgres" checked="Qt::Checked" legend_split_behavior="0">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_qwat_annotation_line_mn95&quot; (geometry)" patch_size="0,0" expanded="1" name="sige_qgis_annotation_ligne" id="qwat_annotation_line20170919102956179" legend_exp="" providerKey="postgres" checked="Qt::Checked" legend_split_behavior="0">
@@ -190,38 +190,38 @@
   </layer-tree-group>
   <snapping-settings unit="2" maxScale="0" enabled="0" scaleDependencyMode="0" minScale="0" type="3" mode="1" tolerance="0" self-snapping="0" intersection-snapping="0">
     <individual-layer-settings>
-      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_printmap20170919102956238" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_pressurezone20170919102956224" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_leak20170928162343618" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="subscriber20170911155257972" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_folder20170919112604553" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="pipe20170817163039703" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_hydrant20171020105757789" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_désaffecté_98787bdb_8b2f_4e5d_92d5_8c8893e3d263" minScale="0" type="2" tolerance="20"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_annotation_line20170919102956179" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_annotation_point20170919102956209" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_ouvrage_copier_copier20180214142612527" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="hydrant20170912112103216" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_en_attente_28bed277_1129_45df_9a6a_0a7d90ecc84a" minScale="0" type="2" tolerance="20"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="subscriber20170911155257972" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_hydrant20171020105757789" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="meter20170912075821953" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="pipe20170817163039703" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_annotation_line20170919102956179" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_pressurezone20170919102956224" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="pipe_copy20170821075918952" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_hors_service_23c0e8d5_f294_4a14_ae14_0c636e42d31b" minScale="0" type="2" tolerance="20"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_meter_reference_mn9520180810140843109" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_printmap20170919102956238" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="node20170821111240113" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_en_attente_28bed277_1129_45df_9a6a_0a7d90ecc84a" minScale="0" type="2" tolerance="20"/>
+      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6" minScale="0" type="2" tolerance="50"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="hydrant20170912112103216" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_project_line_mn95_f9f67050_e172_4aa6_bb64_1cb2f5d36800" minScale="0" type="1" tolerance="10"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="installation20170912103810982" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="part20170912113448062" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_waterhardness_mn9520181001165211151" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_désaffecté_567faf44_123d_41cd_931e_4472cda6abd6" minScale="0" type="2" tolerance="20"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="meter20170912075821953" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_remote20171122094212805" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="crossing20170912143156180" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_consumptionzone20170919113125033" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="node20170821111240113" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="valve20170829165258108" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_project_line_mn95_f9f67050_e172_4aa6_bb64_1cb2f5d36800" minScale="0" type="1" tolerance="10"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_annotation_point20170919102956209" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_subscriber_reference_mn9520180810140843075" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_project_point_mn95_efd0a61c_054b_469a_9800_9b53dacdf1c5" minScale="0" type="1" tolerance="10"/>
-      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_hors_service_23c0e8d5_f294_4a14_ae14_0c636e42d31b" minScale="0" type="2" tolerance="20"/>
-      <layer-setting units="2" maxScale="0" enabled="0" id="installation20170912103810982" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="crossing20170912143156180" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_ouvrage_copier_copier20180214142459666" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_consumptionzone20170919113125033" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_conduite_désaffecté_567faf44_123d_41cd_931e_4472cda6abd6" minScale="0" type="2" tolerance="20"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_remote20171122094212805" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_project_point_mn95_efd0a61c_054b_469a_9800_9b53dacdf1c5" minScale="0" type="1" tolerance="10"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="valve20170829165258108" minScale="0" type="2" tolerance="0"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="qwat_folder20170919112604553" minScale="0" type="2" tolerance="0"/>
       <layer-setting units="2" maxScale="0" enabled="0" id="croquis_reseau20170914153941848" minScale="0" type="2" tolerance="0"/>
-      <layer-setting units="1" maxScale="0" enabled="1" id="sige_qgis_qwat_pipe_mn95_740e5e35_8f4c_4f65_8b67_32a31548b7f6" minScale="0" type="2" tolerance="50"/>
+      <layer-setting units="2" maxScale="0" enabled="0" id="sige_qgis_qwat_leak20170928162343618" minScale="0" type="2" tolerance="0"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
@@ -267,9 +267,9 @@
         <legendlayerfile layerid="croquis_reseau20170914153941848" visible="0" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer name="sige_qgis_qwat_remote" drawingOrder="-1" checked="Qt::Unchecked" open="true" showFeatureCount="0">
+    <legendlayer name="sige_qgis_qwat_remote" drawingOrder="-1" checked="Qt::Checked" open="true" showFeatureCount="0">
       <filegroup hidden="false" open="true">
-        <legendlayerfile layerid="sige_qgis_qwat_remote20171122094212805" visible="0" isInOverview="0"/>
+        <legendlayerfile layerid="sige_qgis_qwat_remote20171122094212805" visible="1" isInOverview="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer name="sige_qgis_annotation_ligne" drawingOrder="-1" checked="Qt::Checked" open="true" showFeatureCount="0">
@@ -432,7 +432,7 @@
         <description></description>
         <projectionacronym></projectionacronym>
         <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>true</geographicflag>
+        <geographicflag>false</geographicflag>
       </spatialrefsys>
     </srs>
     <resourceMetadata>
@@ -455,7 +455,7 @@
           <description></description>
           <projectionacronym></projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>true</geographicflag>
+          <geographicflag>false</geographicflag>
         </spatialrefsys>
       </crs>
       <extent/>
@@ -34076,8 +34076,8 @@ def my_form_open(dialog, layer, feature):
             <substitutions/>
           </text-style>
           <text-format addDirectionSymbol="0" rightDirectionSymbol=">" leftDirectionSymbol="&lt;" decimals="3" reverseDirectionSymbol="0" autoWrapLength="0" placeDirectionSymbol="0" multilineAlign="0" useMaxLineLengthForAutoWrap="1" wrapChar="" plussign="0" formatNumbers="0"/>
-          <placement overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorType="PointGeometry" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placement="2" maxCurvedCharAngleOut="-25" overrunDistanceUnit="MM" geometryGenerator="" offsetType="0" xOffset="0" polygonPlacementFlags="2" overrunDistance="0" lineAnchorType="0" geometryGeneratorEnabled="0" yOffset="0" dist="2" fitInPolygonOnly="0" rotationAngle="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" centroidWhole="0" placementFlags="14" repeatDistance="0" lineAnchorPercent="0.5" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" preserveRotation="1" distUnits="MM" quadOffset="4" priority="5" repeatDistanceUnits="MM" centroidInside="0" layerType="LineGeometry" offsetUnits="MapUnit" maxCurvedCharAngleIn="25" distMapUnitScale="3x:0,0,0,0,0,0"/>
-          <rendering displayAll="1" minFeatureSize="0" mergeLines="1" limitNumLabels="0" obstacleType="0" fontLimitPixelSize="0" zIndex="0" scaleVisibility="0" labelPerPart="0" obstacle="1" scaleMin="1" upsidedownLabels="0" drawLabels="1" obstacleFactor="1" scaleMax="10000000" fontMaxPixelSize="10000" maxNumLabels="2000" fontMinPixelSize="3"/>
+          <placement overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" geometryGeneratorType="PointGeometry" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placement="3" maxCurvedCharAngleOut="-25" overrunDistanceUnit="MM" geometryGenerator="" offsetType="0" xOffset="0" polygonPlacementFlags="2" overrunDistance="0" lineAnchorType="0" geometryGeneratorEnabled="0" yOffset="0" dist="1" fitInPolygonOnly="0" rotationAngle="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" centroidWhole="0" placementFlags="14" repeatDistance="50" lineAnchorPercent="0.5" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" preserveRotation="1" distUnits="MM" quadOffset="4" priority="5" repeatDistanceUnits="MM" centroidInside="0" layerType="LineGeometry" offsetUnits="MapUnit" maxCurvedCharAngleIn="25" distMapUnitScale="3x:0,0,0,0,0,0"/>
+          <rendering displayAll="1" minFeatureSize="0" mergeLines="1" limitNumLabels="0" obstacleType="0" fontLimitPixelSize="0" zIndex="0" scaleVisibility="1" labelPerPart="0" obstacle="1" scaleMin="0" upsidedownLabels="0" drawLabels="1" obstacleFactor="1" scaleMax="10000" fontMaxPixelSize="10000" maxNumLabels="2000" fontMinPixelSize="3"/>
           <dd_properties>
             <Option type="Map">
               <Option value="" name="name" type="QString"/>
