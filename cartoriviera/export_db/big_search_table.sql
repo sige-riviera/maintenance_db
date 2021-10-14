@@ -42,7 +42,7 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
       WHERE identification IS NOT NULL
   UNION
     SELECT 'EP Folios'::text AS layer_name,
-      'Folio ' || substr("district_name",1,1) || right("district_name",1)::text || '.'::text || name::text AS search_text,
+      'Folio ' || substr("district_name",1,1) || right("district_name",1)::text || ' '::text || name::text AS search_text,
       st_force2d(geometry) AS geometry
       FROM sige_qgis_cartoriviera.sige_qgis_qwat_printmap
       WHERE name IS NOT NULL
