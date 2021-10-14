@@ -9,6 +9,9 @@ rm -rf /home/sitadmin/sit/mount/reseau
 sudo /bin/umount /home/sitadmin/sit/mount/ouvrages
 rm -rf /home/sitadmin/sit/mount/ouvrages
 
+sudo /bin/umount /home/sitadmin/sit/mount/data_prod
+rm -rf /home/sitadmin/sit/mount/data_prod
+
 sudo /bin/umount /home/sitadmin/sit/mount/comm_tech_ro
 rm -rf /home/sitadmin/sit/mount/comm_tech_ro
 
