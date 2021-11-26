@@ -116,7 +116,7 @@ select
     folder_identification,
     folder_description,
     folder_date_start,
-    folder_date_end
+    folder_date_end,
     -- precisionalti_vl_active,
     -- precisionalti_short_fr,
     -- precisionalti_short_en,
@@ -127,7 +127,9 @@ select
     -- precisionalti_description_fr,
     -- precisionalti_description_en,
     -- precisionalti_description_ro,
-    -- precisionalti_code_sire
+    -- precisionalti_code_sire,
+    usr_external_meter,
+    usr_external_meter_remark
 from qwat_od.vw_export_subscriber;
 
 alter table cartoriviera.sige_qgis_qwat_subscriber_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
