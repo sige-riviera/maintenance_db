@@ -15,7 +15,7 @@ select
     fk_handle_precision,
     fk_handle_precisionalti,
     fk_maintenance,
-    diameter_nominal,
+    fk_nominal_diameter,
     closed,
     networkseparation,
     -- handle_altitude,
