@@ -1,24 +1,17 @@
 #!/bin/bash
 
-sudo /bin/umount /home/sitadmin/sit/mount/abonnes
-rm -rf /home/sitadmin/sit/mount/abonnes
+for internalMountName in abonnes reseau ouvrages data_prod comm_tech_ro backup_sbk_pierrier
+do
+  #ls -la /home/sitadmin/sit/mount/$externalMountName
+  sudo /bin/umount /home/sitadmin/sit/mount/$internalMountName || echo "Cannot unmount mounting point, skipping the statement."
+  rm -rf /home/sitadmin/sit/mount/$internalMountName || echo "Cannot delete mounting point folder, skipping the statement."
+done
 
-sudo /bin/umount /home/sitadmin/sit/mount/reseau
-rm -rf /home/sitadmin/sit/mount/reseau
+for externalMountName in cartoriviera_secured
+do
+  #sudo fusermount -u /home/sitadmin/sit/mount/$externalMountName || echo "Cannot unmount mounting point, skipping the statement."
+  sudo /bin/umount -l /home/sitadmin/sit/mount/$externalMountName || echo "Cannot unmount mounting point, skipping the statement."
+  rm -rf /home/sitadmin/sit/mount/$externalMountName || echo "Cannot delete mounting point folder, skipping the statement."
+done
 
-sudo /bin/umount /home/sitadmin/sit/mount/ouvrages
-rm -rf /home/sitadmin/sit/mount/ouvrages
-
-sudo /bin/umount /home/sitadmin/sit/mount/data_prod
-rm -rf /home/sitadmin/sit/mount/data_prod
-
-sudo /bin/umount /home/sitadmin/sit/mount/comm_tech_ro
-rm -rf /home/sitadmin/sit/mount/comm_tech_ro
-
-sudo /bin/umount /home/sitadmin/sit/mount/backup_sbk_pierrier
-rm -rf /home/sitadmin/sit/mount/backup_sbk_pierrier
-
-#sudo fusermount -u /home/sitadmin/sit/mount/cartoriviera_secured
-sudo /bin/umount -l /home/sitadmin/sit/mount/cartoriviera_secured
-rm -rf /home/sitadmin/sit/mount/cartoriviera_secured
 
