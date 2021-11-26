@@ -12,6 +12,7 @@ mkdir /home/sitadmin/sit/mount/reseau
 mkdir /home/sitadmin/sit/mount/ouvrages
 mkdir /home/sitadmin/sit/mount/data_prod
 mkdir /home/sitadmin/sit/mount/comm_tech_ro
+mkdir /home/sitadmin/sit/mount//backup_sbk_pierrier
 mkdir /home/sitadmin/sit/mount/cartoriviera_secured
 
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/dao_saisie$/01_DISTRIBUTION/ABONNES /home/sitadmin/sit/mount/abonnes -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000
