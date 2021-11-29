@@ -9,13 +9,13 @@ VERBOSE=no
 
 FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 
-PGSERVICE=sige_commun psql -c "DROP SCHEMA IF EXISTS cartoriviera CASCADE"
+PGSERVICE=sige_commun psql -c "DROP SCHEMA IF EXISTS usr_cartoriviera CASCADE"
 PGSERVICE=sige_commun psql -c "DROP SCHEMA IF EXISTS sige_qgis_cartoriviera CASCADE"
-PGSERVICE=sige_commun psql -c "CREATE SCHEMA cartoriviera"
+PGSERVICE=sige_commun psql -c "CREATE SCHEMA usr_cartoriviera"
 
 # QWAT copy data into dedicated schema
-PGSERVICE=qwat_prod psql -c "DROP SCHEMA IF EXISTS cartoriviera CASCADE"
-PGSERVICE=qwat_prod psql -c "CREATE SCHEMA cartoriviera"
+PGSERVICE=qwat_prod psql -c "DROP SCHEMA IF EXISTS usr_cartoriviera CASCADE"
+PGSERVICE=qwat_prod psql -c "CREATE SCHEMA usr_cartoriviera"
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_hydrant.sql
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_installation.sql
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_meter.sql
@@ -36,18 +36,18 @@ PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_folder.sql
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_protectionzone.sql
 
-# Dump qwat.cartoriviera schema
-/usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format custom $VERBOSE_CMD --file "$FOLDERPATH/cartoriviera/export_db/qwat.backup" --schema "cartoriviera" "qwat_prod"
-# Restore on sige_commun.cartoriviera
-/usr/bin/pg_restore --host localhost --port 5432 --username "sige" --dbname "sige_commun" --no-password  --schema cartoriviera $VERBOSE_CMD "$FOLDERPATH/cartoriviera/export_db/qwat.backup"
+# Dump qwat_prod.usr_cartoriviera schema
+/usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format custom $VERBOSE_CMD --file "$FOLDERPATH/cartoriviera/export_db/qwat.backup" --schema "usr_cartoriviera" "qwat_prod"
+# Restore on sige_commun.usr_cartoriviera
+/usr/bin/pg_restore --host localhost --port 5432 --username "sige" --dbname "sige_commun" --no-password  --schema usr_cartoriviera $VERBOSE_CMD "$FOLDERPATH/cartoriviera/export_db/qwat.backup"
 
 # QGEP copy data into dedicated schema
 PGSERVICE=qgep_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qgep_export.sql
-# Dump qgep.cartoriviera schema
-/usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format custom $VERBOSE_CMD --file "$FOLDERPATH/cartoriviera/export_db/qgep.backup" --schema "cartoriviera" "qgep_prod"
-# Restore on sige_commun.cartoriviera
-/usr/bin/pg_restore --host localhost --port 5432 --username "sige" --dbname "sige_commun" --no-password  --schema cartoriviera $VERBOSE_CMD "$FOLDERPATH/cartoriviera/export_db/qgep.backup"
-# Create crs:21781 qgep tables by transforming coordinates on sige.commun.cartoriviera
+# Dump qgep.usr_cartoriviera schema
+/usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format custom $VERBOSE_CMD --file "$FOLDERPATH/cartoriviera/export_db/qgep.backup" --schema "usr_cartoriviera" "qgep_prod"
+# Restore on sige_commun.usr_cartoriviera
+/usr/bin/pg_restore --host localhost --port 5432 --username "sige" --dbname "sige_commun" --no-password  --schema usr_cartoriviera $VERBOSE_CMD "$FOLDERPATH/cartoriviera/export_db/qgep.backup"
+# Create crs:21781 qgep tables by transforming coordinates on sige_commun.cartoriviera
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qgep_transform.sql
 
 # Also bring stuff from sige_commun in other schemas
@@ -57,7 +57,7 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/expor
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/chantier_project.sql
 
 # Rename schema
-PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -c "ALTER SCHEMA cartoriviera RENAME TO sige_qgis_cartoriviera"
+PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -c "ALTER SCHEMA usr_cartoriviera RENAME TO sige_qgis_cartoriviera"
 # Add big search table
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/big_search_table.sql
 # Transform boolean to oui/non
