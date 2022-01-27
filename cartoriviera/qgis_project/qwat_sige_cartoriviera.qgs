@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveDateTime="2022-01-27T12:04:19" projectname="" saveUserFull="André Kevin" version="3.16.11-Hannover" saveUser="andrek">
+<qgis saveDateTime="2022-01-27T12:07:46" projectname="" saveUserFull="André Kevin" version="3.16.11-Hannover" saveUser="andrek">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -15145,7 +15145,7 @@ def my_form_open(dialog, layer, feature):
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial dimensions="2" minz="0" crs="" miny="0" maxy="0" minx="0" maxx="0" maxz="0"/>
+          <spatial dimensions="2" minz="0" crs="EPSG:2056" miny="0" maxy="0" minx="0" maxx="0" maxz="0"/>
           <temporal>
             <period>
               <start></start>
@@ -15176,10 +15176,14 @@ def my_form_open(dialog, layer, feature):
       </temporal>
       <renderer-v2 type="categorizedSymbol" forceraster="0" enableorderby="0" symbollevels="0" attr="colorcode">
         <categories>
-          <category value="1" symbol="0" label="1" render="true"/>
-          <category value="2" symbol="1" label="2" render="true"/>
-          <category value="3" symbol="2" label="3" render="true"/>
-          <category value="4" symbol="3" label="4" render="true"/>
+          <category value="1" symbol="0" label="1 = Rouge" render="true"/>
+          <category value="2" symbol="1" label="2 = Orange" render="true"/>
+          <category value="3" symbol="2" label="3 = Vert" render="true"/>
+          <category value="4" symbol="3" label="4 = Bleu" render="true"/>
+          <category value="5" symbol="4" label="5 = Violet" render="true"/>
+          <category value="6" symbol="5" label="6 = Rose" render="true"/>
+          <category value="7" symbol="6" label="7 = Brun" render="true"/>
+          <category value="8" symbol="7" label="8 = Noir" render="true"/>
         </categories>
         <symbols>
           <symbol clip_to_extent="1" type="fill" alpha="0.392157" name="0" force_rhr="0">
@@ -15302,6 +15306,94 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
+          <symbol clip_to_extent="1" type="fill" alpha="0.4" name="4" force_rhr="0">
+            <layer class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="166,55,196,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" type="fill" alpha="0.4" name="5" force_rhr="0">
+            <layer class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="230,44,162,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" type="fill" alpha="0.4" name="6" force_rhr="0">
+            <layer class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="183,72,37,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" type="fill" alpha="0.4" name="7" force_rhr="0">
+            <layer class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="0,0,0,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
         </symbols>
         <source-symbol>
           <symbol clip_to_extent="1" type="fill" alpha="0.392157" name="0" force_rhr="0">
@@ -15357,7 +15449,37 @@ def my_form_open(dialog, layer, feature):
           <text-style textOrientation="horizontal" fontLetterSpacing="0" previewBkgrdColor="255,255,255,255" fieldName="name" textOpacity="1" fontWeight="50" textColor="0,0,0,255" fontFamily="MS Shell Dlg 2" fontStrikeout="0" fontUnderline="0" useSubstitutions="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontItalic="0" fontSize="10" fontWordSpacing="0" isExpression="0" fontKerning="1" blendMode="0" fontSizeUnit="Point" capitalization="0" namedStyle="Normal" multilineHeight="1" allowHtml="0">
             <text-buffer bufferNoFill="0" bufferJoinStyle="64" bufferBlendMode="0" bufferColor="255,255,255,255" bufferOpacity="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSize="0.40000000000000002" bufferSizeUnits="MM" bufferDraw="1"/>
             <text-mask maskedSymbolLayers="" maskJoinStyle="128" maskEnabled="0" maskSize="0" maskOpacity="1" maskSizeUnits="MM" maskType="0" maskSizeMapUnitScale="3x:0,0,0,0,0,0"/>
-            <background shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeOpacity="1" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeRadiiX="0" shapeBorderColor="128,128,128,255" shapeOffsetUnit="MM" shapeType="0" shapeRadiiUnit="MM" shapeOffsetY="0" shapeRotationType="0" shapeOffsetX="0" shapeFillColor="255,255,255,255" shapeSizeType="0" shapeSizeUnit="MM" shapeJoinStyle="64" shapeBorderWidthUnit="MM" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeBlendMode="0" shapeBorderWidth="0" shapeSizeY="0" shapeSVGFile="" shapeSizeX="0"/>
+            <background shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeOpacity="1" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeRadiiX="0" shapeBorderColor="128,128,128,255" shapeOffsetUnit="MM" shapeType="0" shapeRadiiUnit="MM" shapeOffsetY="0" shapeRotationType="0" shapeOffsetX="0" shapeFillColor="255,255,255,255" shapeSizeType="0" shapeSizeUnit="MM" shapeJoinStyle="64" shapeBorderWidthUnit="MM" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeBlendMode="0" shapeBorderWidth="0" shapeSizeY="0" shapeSVGFile="" shapeSizeX="0">
+              <symbol clip_to_extent="1" type="marker" alpha="1" name="markerSymbol" force_rhr="0">
+                <layer class="SimpleMarker" enabled="1" pass="0" locked="0">
+                  <prop v="0" k="angle"/>
+                  <prop v="141,90,153,255" k="color"/>
+                  <prop v="1" k="horizontal_anchor_point"/>
+                  <prop v="bevel" k="joinstyle"/>
+                  <prop v="circle" k="name"/>
+                  <prop v="0,0" k="offset"/>
+                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                  <prop v="MM" k="offset_unit"/>
+                  <prop v="35,35,35,255" k="outline_color"/>
+                  <prop v="solid" k="outline_style"/>
+                  <prop v="0" k="outline_width"/>
+                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+                  <prop v="MM" k="outline_width_unit"/>
+                  <prop v="diameter" k="scale_method"/>
+                  <prop v="2" k="size"/>
+                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+                  <prop v="MM" k="size_unit"/>
+                  <prop v="1" k="vertical_anchor_point"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option value="" type="QString" name="name"/>
+                      <Option name="properties"/>
+                      <Option value="collection" type="QString" name="type"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </background>
             <shadow shadowRadiusUnit="MM" shadowRadiusAlphaOnly="0" shadowOpacity="1" shadowScale="100" shadowOffsetAngle="135" shadowOffsetGlobal="1" shadowColor="0,0,0,255" shadowOffsetDist="0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowDraw="0" shadowOffsetUnit="MM" shadowUnder="0" shadowRadius="0"/>
             <dd_properties>
               <Option type="Map">
@@ -15369,7 +15491,7 @@ def my_form_open(dialog, layer, feature):
             <substitutions/>
           </text-style>
           <text-format rightDirectionSymbol=">" useMaxLineLengthForAutoWrap="1" leftDirectionSymbol="&lt;" decimals="0" plussign="0" formatNumbers="0" addDirectionSymbol="0" placeDirectionSymbol="0" wrapChar="" autoWrapLength="0" reverseDirectionSymbol="0" multilineAlign="0"/>
-          <placement dist="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" xOffset="0" placementFlags="0" yOffset="0" geometryGeneratorEnabled="0" overrunDistance="0" lineAnchorType="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleOut="-20" geometryGeneratorType="PointGeometry" layerType="UnknownGeometry" offsetUnits="MapUnit" priority="5" repeatDistanceUnits="MM" placement="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" distUnits="MM" fitInPolygonOnly="0" polygonPlacementFlags="2" maxCurvedCharAngleIn="20" geometryGenerator="" centroidWhole="0" repeatDistance="0" overrunDistanceUnit="MM" centroidInside="0" rotationAngle="0" lineAnchorPercent="0.5" distMapUnitScale="3x:0,0,0,0,0,0" offsetType="0" quadOffset="4" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" preserveRotation="1"/>
+          <placement dist="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" xOffset="0" placementFlags="0" yOffset="0" geometryGeneratorEnabled="0" overrunDistance="0" lineAnchorType="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleOut="-20" geometryGeneratorType="PointGeometry" layerType="PolygonGeometry" offsetUnits="MapUnit" priority="5" repeatDistanceUnits="MM" placement="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" distUnits="MM" fitInPolygonOnly="0" polygonPlacementFlags="2" maxCurvedCharAngleIn="20" geometryGenerator="" centroidWhole="0" repeatDistance="0" overrunDistanceUnit="MM" centroidInside="0" rotationAngle="0" lineAnchorPercent="0.5" distMapUnitScale="3x:0,0,0,0,0,0" offsetType="0" quadOffset="4" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" preserveRotation="1"/>
           <rendering fontMinPixelSize="3" obstacle="1" fontLimitPixelSize="0" limitNumLabels="0" obstacleFactor="1" displayAll="1" upsidedownLabels="0" obstacleType="0" drawLabels="1" mergeLines="0" scaleMin="1" minFeatureSize="5" scaleVisibility="0" scaleMax="10000000" zIndex="0" maxNumLabels="2000" fontMaxPixelSize="10000" labelPerPart="1"/>
           <dd_properties>
             <Option type="Map">
@@ -15462,7 +15584,13 @@ def my_form_open(dialog, layer, feature):
       </DiagramLayerSettings>
       <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
         <activeChecks/>
-        <checkConfiguration/>
+        <checkConfiguration type="Map">
+          <Option type="Map" name="QgsGeometryGapCheck">
+            <Option value="0" type="double" name="allowedGapsBuffer"/>
+            <Option value="false" type="bool" name="allowedGapsEnabled"/>
+            <Option value="" type="QString" name="allowedGapsLayer"/>
+          </Option>
+        </checkConfiguration>
       </geometryOptions>
       <legend type="default-vector"/>
       <referencedLayers/>
@@ -15807,7 +15935,7 @@ def my_form_open(dialog, layer, feature):
       <expressionfields/>
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
-        <actionsetting icon="" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('pressurezone20130417133612105',[% $id %])" id="{02c730d6-4eea-43b8-b3ae-591ecc91ec0d}" type="1" isEnabledOnlyWhenEditable="0" capture="0" notificationMessage="" shortTitle="" name="History audit">
+        <actionsetting icon="" action="qgis.utils.plugins['postgres91plusauditor'].showHistory('pressurezone20130417133612105',[% $id %])" id="{2cd59e2d-9382-4cc7-985b-8bd20b70e46b}" type="1" isEnabledOnlyWhenEditable="0" capture="0" notificationMessage="" shortTitle="" name="History audit">
           <actionScope id="Field"/>
           <actionScope id="Feature"/>
           <actionScope id="Canvas"/>
@@ -15921,7 +16049,7 @@ def my_form_open(dialog, layer, feature):
       </labelOnTop>
       <dataDefinedFieldProperties/>
       <widgets/>
-      <previewExpression>name</previewExpression>
+      <previewExpression>"name"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer refreshOnNotifyMessage="" wkbType="Polygon" simplifyDrawingTol="1" readOnly="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" simplifyLocal="1" maxScale="200" autoRefreshTime="0" type="vector" labelsEnabled="1" styleCategories="AllStyleCategories" minScale="250000" geometry="Polygon" simplifyDrawingHints="1" autoRefreshEnabled="0" simplifyMaxScale="1" simplifyAlgorithm="0">
@@ -40787,7 +40915,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent xmax="2560153.65400128299370408" xmin="2551571.59535139286890626" ymin="1143452.07644491153769195" ymax="1149471.23362085805274546">
+    <DefaultViewExtent xmax="2560090.66634731739759445" xmin="2551634.58300535846501589" ymin="1143437.77140160999260843" ymax="1149485.53866415959782898">
       <spatialrefsys>
         <wkt>PROJCRS["CH1903+ / LV95",BASEGEOGCRS["CH1903+",DATUM["CH1903+",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4150]],CONVERSION["Swiss Oblique Mercator 1995",METHOD["Hotine Oblique Mercator (variant B)",ID["EPSG",9815]],PARAMETER["Latitude of projection centre",46.9524055555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8811]],PARAMETER["Longitude of projection centre",7.43958333333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8812]],PARAMETER["Azimuth of initial line",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8813]],PARAMETER["Angle from Rectified to Skew Grid",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8814]],PARAMETER["Scale factor on initial line",1,SCALEUNIT["unity",1],ID["EPSG",8815]],PARAMETER["Easting at projection centre",2600000,LENGTHUNIT["metre",1],ID["EPSG",8816]],PARAMETER["Northing at projection centre",1200000,LENGTHUNIT["metre",1],ID["EPSG",8817]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Cadastre, engineering survey, topographic mapping (large and medium scale)."],AREA["Liechtenstein; Switzerland."],BBOX[45.82,5.96,47.81,10.49]],ID["EPSG",2056]]</wkt>
         <proj4>+proj=somerc +lat_0=46.9524055555556 +lon_0=7.43958333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
