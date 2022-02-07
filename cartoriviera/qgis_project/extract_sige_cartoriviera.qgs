@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUserFull="André Kevin" version="3.16.11-Hannover" saveDateTime="2022-02-07T15:17:04" projectname="" saveUser="andrek">
+<qgis saveUserFull="André Kevin" version="3.16.11-Hannover" saveDateTime="2022-02-07T16:17:56" projectname="" saveUser="andrek">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -43,10 +43,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>2552064.14957155892625451</xmin>
-      <ymin>1143412.90218884358182549</ymin>
-      <xmax>2559506.34957915032282472</xmax>
-      <ymax>1148262.38673983095213771</ymax>
+      <xmin>2551552.18082103598862886</xmin>
+      <ymin>1143782.5251058884896338</ymin>
+      <xmax>2558994.38082862738519907</xmax>
+      <ymax>1148632.00965687353163958</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -286,9 +286,9 @@
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="128,128,128,255"/>
+              <prop k="line_color" v="77,77,77,255"/>
               <prop k="line_style" v="solid"/>
-              <prop k="line_width" v="0.2"/>
+              <prop k="line_width" v="0.4"/>
               <prop k="line_width_unit" v="MM"/>
               <prop k="offset" v="0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
@@ -9492,7 +9492,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent ymax="1148447.4944669995456934" ymin="1143227.79446167498826981" xmax="2559506.34957915032282472" xmin="2552064.14957155892625451">
+    <DefaultViewExtent ymax="1148817.11738404328934848" ymin="1143597.41737871873192489" xmax="2558994.38082862738519907" xmin="2551552.18082103598862886">
       <spatialrefsys>
         <wkt>PROJCRS["CH1903+ / LV95",BASEGEOGCRS["CH1903+",DATUM["CH1903+",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4150]],CONVERSION["Swiss Oblique Mercator 1995",METHOD["Hotine Oblique Mercator (variant B)",ID["EPSG",9815]],PARAMETER["Latitude of projection centre",46.9524055555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8811]],PARAMETER["Longitude of projection centre",7.43958333333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8812]],PARAMETER["Azimuth of initial line",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8813]],PARAMETER["Angle from Rectified to Skew Grid",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8814]],PARAMETER["Scale factor on initial line",1,SCALEUNIT["unity",1],ID["EPSG",8815]],PARAMETER["Easting at projection centre",2600000,LENGTHUNIT["metre",1],ID["EPSG",8816]],PARAMETER["Northing at projection centre",1200000,LENGTHUNIT["metre",1],ID["EPSG",8817]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Cadastre, engineering survey, topographic mapping (large and medium scale)."],AREA["Liechtenstein; Switzerland."],BBOX[45.82,5.96,47.81,10.49]],ID["EPSG",2056]]</wkt>
         <proj4>+proj=somerc +lat_0=46.9524055555556 +lon_0=7.43958333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
