@@ -395,7 +395,7 @@ msgstr "Visib. schématique"
 msgid "closed"
 msgstr "Fermé"
 
-msgid "diameter_nominal"
+msgid "fk_nominal_diameter"
 msgstr "Diamètre nominal"
 
 msgid "schema_force_visible"
