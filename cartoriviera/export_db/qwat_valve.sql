@@ -150,13 +150,14 @@ select
     -- precisionalti_short_fr,
     -- precisionalti_short_en,
     -- precisionalti_short_ro,
-    precisionalti_value_fr
+    precisionalti_value_fr,
     -- precisionalti_value_en,
     -- precisionalti_value_ro,
     -- precisionalti_description_fr,
     -- precisionalti_description_en,
     -- precisionalti_description_ro,
     -- precisionalti_code_sire
+    nominal_diameter
 from qwat_od.vw_export_valve;
 
 alter table usr_cartoriviera.sige_qgis_qwat_valve_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
