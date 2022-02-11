@@ -4,7 +4,7 @@
 set -e
 
 SRCFOLDERPATH=/home/sitadmin/sit/mount/reseau
-DESTFOLDERPATH=kandre@cartoriviera.vevey.ch:/var/sig/files/private/sige
+DESTFOLDERPATH=kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige
 DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
 
 # to show progress, add: --progress
