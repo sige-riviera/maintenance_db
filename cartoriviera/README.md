@@ -8,7 +8,7 @@ Les scripts fonctionnent depuis le serveur virtuel sit sur aviron.
 S'assurer que cartoriviera est bien été monté avec:
 ```
 fusermount -u /home/sige/mount/cartoriviera
-sshfs kandre@cartoriviera.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
+sshfs kandre@cartoriviera3.vevey.ch:/var/www/vhosts/www.cartoriviera.ch/htdocs/sige /home/sige/mount/cartoriviera
 ```
 
 Une clef ssh est autorisée pour l'utilisateur kandre avec d'adresse email SIGE correspondante pour la connexion sur cartoriviera.vevey.ch.

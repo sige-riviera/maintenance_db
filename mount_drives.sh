@@ -24,4 +24,4 @@ sudo /bin/mount -t cifs //$NAME_DATA_SRV/comm_tech_ro$ /home/sitadmin/sit/mount/
 sudo /bin/mount -t cifs //$NAME_BACKUP_SRV/bk_laveyre/qgis /home/sitadmin/sit/mount/backup_sbk_pierrier/ -o user=intranet,password=$PASS_BACKUP_SRV,dom=sige.ch,gid=1000,uid=1000,vers=1.0
 
 #fusermount -u /home/sitadmin/sit/mount/cartoriviera_secured
-sshfs kandre@cartoriviera.vevey.ch:/var/sig/files/private/sige /home/sitadmin/sit/mount/cartoriviera_secured # SSH connection to cartoriviera (password protected) infrastructure uses private and public keys ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub
+sshfs kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige /home/sitadmin/sit/mount/cartoriviera_secured # SSH connection to cartoriviera (password protected) infrastructure uses private and public keys ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub
