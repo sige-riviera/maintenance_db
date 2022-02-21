@@ -5,7 +5,7 @@ set -e
 
 SRCFOLDERPATH=/home/sitadmin/sit/mount/ouvrages # dao_saisie mounted disk
 PROCESSFOLDERPATH=/home/sitadmin/sit/production/data/carto/data_ouvrage
-DESTFOLDERPATH=kandre@cartoriviera.vevey.ch:/var/sig/files/private/sige
+DESTFOLDERPATH=kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige
 DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
 
 # creer dossier pour traitement d'images
