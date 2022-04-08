@@ -5,10 +5,28 @@ FULL=${1:-simple}
 # Exit on error
 set -e
 
-# inform on disk space available
+# Info about disk space available
 diskUsage=$(df -hT /home)
-echo "Info: disk usage dedicated to database backups on s2laveyre:" 1>&2
+echo "Disk usage and space available on gis server:" 1>&2
 echo "$diskUsage" 1>&2
+echo
+
+# Check dead.letter file size
+fileToCheck=~/dead.letter
+fileSizeLimit=100 # in ko
+if [[ -f $fileToCheck ]]
+then
+  echo "Check $fileToCheck file size:"
+  fileInfo=$(ls -lh $fileToCheck)
+  echo $fileInfo
+  fileSize=$(stat -c "%s" $fileToCheck) # in ko
+  if [[ $fileSize -gt $fileSizeLimit ]]
+  then
+    echo "WARNING: the file $fileToCheck takes a too much disk space."
+  fi
+else
+  echo "File $fileToCheck to be checked does not exist"
+fi
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
