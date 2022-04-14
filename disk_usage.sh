@@ -13,7 +13,7 @@ echo
 
 # Check dead.letter file size
 fileToCheck=~/dead.letter
-fileSizeLimit=100 # in ko
+fileSizeLimit=10000 # in ko
 if [[ -f $fileToCheck ]]
 then
   echo "Check $fileToCheck file size:"
