@@ -14,18 +14,19 @@ echo
 # Check dead.letter file size
 fileToCheck=~/dead.letter
 fileSizeLimit=10000 # in ko
+echo "Check if $fileToCheck file size is too large:" 1>&2
 if [[ -f $fileToCheck ]]
 then
-  echo "Check $fileToCheck file size:"
+  echo "Check $fileToCheck file size:" 1>&2
   fileInfo=$(ls -lh $fileToCheck)
-  echo $fileInfo
+  echo $fileInfo 1>&2
   fileSize=$(stat -c "%s" $fileToCheck) # in ko
   if [[ $fileSize -gt $fileSizeLimit ]]
   then
-    echo "WARNING: the file $fileToCheck takes a too much disk space."
+    echo "WARNING: the file $fileToCheck takes a too much disk space." 1>&2
   fi
 else
-  echo "File $fileToCheck to be checked does not exist"
+  echo "File $fileToCheck to be checked does not exist" 1>&2
 fi
 
 # Redirect stdout to stderr
