@@ -6,7 +6,7 @@ FULL=${1:-simple}
 set -e
 
 SRCBACKUPPATH=/home/sitadmin/sit/production/data/backup/
-DESTBACKUPPATH=/home/sitadmin/sit/mount/backup_sbk_pierrier/
+DESTBACKUPPATH=/home/sitadmin/sit/mount/backup_server_nas
 
 TODAY=`date '+%Y%m%d'`
 YEAR=`date '+%Y'`
