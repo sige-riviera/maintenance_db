@@ -5,6 +5,9 @@ FULL=${1:-simple}
 # Exit on error
 set -e
 
+# Ubuntu seems to not have rights to write on destination server if not using root user: sudo -s
+sudo -s
+
 SRCBACKUPPATH=/home/sitadmin/sit/production/data/backup/
 DESTBACKUPPATH=/home/sitadmin/sit/mount/backup_server_nas
 
