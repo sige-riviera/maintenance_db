@@ -36,7 +36,7 @@ FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 
 # Define PATH as user's path to enforce cron to use the same libraries
 PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/postgresql/9.6/bin/psql'
-MAILSTDOUT=false
+MAILSTDOUT=true
 
 # maintenance db + backup + export qwat DB to cartoriviera
 0 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance.sh>/dev/null
@@ -65,10 +65,13 @@ MAILSTDOUT=false
 0 5 1 7 * $FOLDERPATH/export_cadastre_to_dxf.sh>&2
 
 # Remount disks once a month (to prevent user/pwd authentification problems every 3 months)
-#0 5 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
+#1 5 1 * * $FOLDERPATH/remount_drives.sh>/dev/null
 
 # Disk usage information
 0 6 * * mon $FOLDERPATH/disk_usage.sh>/dev/null
+
+# Archive qwat database for statistics on 1st january
+1 6 1 1 * $FOLDERPATH/archive_db_for_statistics.sh>/dev/null
 
 # Testing a script every minute
 #* * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>&2

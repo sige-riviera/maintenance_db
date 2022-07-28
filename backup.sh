@@ -6,7 +6,7 @@ FULL=${1:-simple}
 set -e
 
 # Ubuntu seems to not have rights to write on destination server if not using root user: sudo -s
-sudo -s
+#sudo -s
 
 SRCBACKUPPATH=/home/sitadmin/sit/production/data/backup/
 DESTBACKUPPATH=/home/sitadmin/sit/mount/backup_server_nas
@@ -37,7 +37,7 @@ pg_dump --host localhost --port 5432 --username "sige" --no-password --format ta
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --inserts --column-inserts --file "$SRCBACKUPPATH/statistics_$TODAY.backup" --schema "usr_sige" "qwat_prod"
 #pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/qwat_all_$TODAY.backup" "qwat_prod"
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/sige_commun_$TODAY.backup" "sige_commun"
-pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qwat_roles_$TODAY.sql
+pg_dumpall --host localhost --port 5432 --username "sige" --no-password -r -f $SRCBACKUPPATH/qwat_roles_$TODAY.sql
 
 files="qwat_od_$TODAY.backup qwat_vl_$TODAY.backup qwat_dr_$TODAY.backup sige_commun_$TODAY.backup qwat_roles_$TODAY.sql"
 
@@ -60,12 +60,15 @@ rm sige_commun_$TODAY.backup
 rm qwat_roles_$TODAY.sql
 
 # backup on other server
+echo AAA
 cp $SRCBACKUPPATH/$YEAR/$MONTH/qwat_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qwat_$TODAY.zip
+echo BBB
 
 
 # QGEP
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/qgep_all_$TODAY.backup" "qgep_prod"
-pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qgep_roles_$TODAY.sql
+#pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qgep_roles_$TODAY.sql
+pg_dumpall --host localhost --port 5432 --username "sige" --no-password -r -f $SRCBACKUPPATH/qgep_roles_$TODAY.sql
 
 zip -r $YEAR/$MONTH/qgep_$TODAY.zip \
 qgep_all_$TODAY.backup  \
@@ -75,7 +78,9 @@ rm qgep_all_$TODAY.backup
 rm qgep_roles_$TODAY.sql
 
 # backup on other server
+echo CCC
 cp $SRCBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip
+echo DDD
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
