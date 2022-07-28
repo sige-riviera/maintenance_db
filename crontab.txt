@@ -21,6 +21,13 @@
 #
 # m h  dom mon dow   command
 
+# NOTES
+
+# Production crontab is now executed by root to enable writing on:
+# - the backup server with backup.sh
+# - the dao_saisie (W:) server with export_cadastre_to_dxf.sh
+# Indeed it is not safe to execute a crontab script with sudo commands and password from a regular user account
+
 # ADDITIONNAL NOTES
 # - Keep in mind that this crontab installation does not log stdout (1)
 #   therefore one must use >&2 to redirect all outputs (standard and normal)

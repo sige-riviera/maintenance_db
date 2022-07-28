@@ -21,7 +21,7 @@ done
 ogr2ogr -f "DXF" -skipfailures $TEMPPATH/${OUTNAMEPREFIX}_${YEAR}.dxf PG:"host=localhost dbname=cadastre user=sige" -sql "SELECT geometry AS geom FROM cadastre.bf_immeuble UNION SELECT geometry AS geom FROM cadastre.od_element_surfacique UNION SELECT geometrie AS geom FROM cadastre.cs_couverture_sol"
 
 # Copy export to destination folder
-sudo cp $TEMPPATH/${OUTNAMEPREFIX}_${YEAR}.dxf $DESTPATH
+cp $TEMPPATH/${OUTNAMEPREFIX}_${YEAR}.dxf $DESTPATH
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
