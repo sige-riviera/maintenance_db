@@ -32,11 +32,11 @@
 #   than a minute.
 
 MAILTO='kevin.andre@sige.ch'
+MAILSTDOUT=true
 FOLDERPATH='/home/sitadmin/sit/production/maintenance_db'
 
 # Define PATH as user's path to enforce cron to use the same libraries
 PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/postgresql/9.6/bin/psql'
-MAILSTDOUT=true
 
 # maintenance db + backup + export qwat DB to cartoriviera
 0 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance.sh>/dev/null
