@@ -81,6 +81,7 @@ user carto_sige $PASS
 prompt
 binary
 cd QGIS_server
+mv sige.backup sige_previous.backup
 put $FOLDERPATH/cartoriviera/export_db/sige.backup sige.backup
 bye
 EOF
