@@ -5,9 +5,6 @@ FULL=${1:-simple}
 # Exit on error
 set -e
 
-# Ubuntu seems to not have rights to write on destination server if not using root user: sudo -s
-#sudo -s
-
 SRCBACKUPPATH=/home/sitadmin/sit/production/data/backup/
 DESTBACKUPPATH=/home/sitadmin/sit/mount/backup_server_nas
 
@@ -60,14 +57,11 @@ rm sige_commun_$TODAY.backup
 rm qwat_roles_$TODAY.sql
 
 # backup on other server
-echo AAA
 cp $SRCBACKUPPATH/$YEAR/$MONTH/qwat_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qwat_$TODAY.zip
-echo BBB
 
 
 # QGEP
 pg_dump --host localhost --port 5432 --username "sige" --no-password --format tar --file "$SRCBACKUPPATH/qgep_all_$TODAY.backup" "qgep_prod"
-#pg_dumpall -h localhost -r -f $SRCBACKUPPATH/qgep_roles_$TODAY.sql
 pg_dumpall --host localhost --port 5432 --username "sige" --no-password -r -f $SRCBACKUPPATH/qgep_roles_$TODAY.sql
 
 zip -r $YEAR/$MONTH/qgep_$TODAY.zip \
@@ -78,9 +72,7 @@ rm qgep_all_$TODAY.backup
 rm qgep_roles_$TODAY.sql
 
 # backup on other server
-echo CCC
 cp $SRCBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip $DESTBACKUPPATH/$YEAR/$MONTH/qgep_$TODAY.zip
-echo DDD
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
