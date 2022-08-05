@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Ce script contrôle que tous les croquis présents sur le serveur de fichier (partage dao_saisie$ sur s3aviron ont une entrée dans la base de données géographique et réciproquement
+# Ce script contrôle que tous les croquis réseau présents sur le serveur de fichier (partage dao_saisie$ sur s3aviron) ont une entrée dans la base de données géographique et réciproquement.
 
 set -e
 
