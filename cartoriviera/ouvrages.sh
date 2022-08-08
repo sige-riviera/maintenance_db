@@ -6,7 +6,8 @@ set -e
 SRCFOLDERPATH=/home/sitadmin/sit/mount/ouvrages # dao_saisie mounted disk
 PROCESSFOLDERPATH=/home/sitadmin/sit/production/data/carto/data_ouvrage
 DESTFOLDERPATH=kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige
-DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
+#DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
+SSHKEYFILEPATH=`cat /home/sitadmin/sit/pass/ssh_key_filepath`
 
 # creer dossier pour traitement d'images
 # repart à zéro à chaque fois, pas performant, mais plus simple.
@@ -58,9 +59,11 @@ for directory in "${directories[@]}"; do
   done
 done
 
-# update data on cartoriviera
+# Update data on cartoriviera
 # to show progress, add: --progress
-rsync -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH/ $DESTFOLDERPATH/ouvrages
+rsync -e "ssh -i $SSHKEYFILEPATH" -r -t -v --delete --size-only --omit-dir-times --times -u -s $PROCESSFOLDERPATH/ $DESTFOLDERPATH/ouvrages
+
+# Alternative to update data on cartoriviera
 #mountpoint -q -- $DESTMOUNTFOLDERPATH || sshfs $DESTFOLDERPATH $DESTMOUNTFOLDERPATH
 #chmod -R 755 $DESTMOUNTFOLDERPATH/ouvrages
 
