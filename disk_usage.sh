@@ -7,14 +7,14 @@ set -e
 
 # Info about disk space available
 diskUsage=$(df -hT /home)
-echo "Disk usage and space available on gis server:" 1>&2
+echo "*** Disk usage and space available on gis server: ***" 1>&2
 echo "$diskUsage" 1>&2
-echo
+echo "" 1>&2
 
 # Check dead.letter file size
 fileToCheck=~/dead.letter
 fileSizeLimit=10000 # in ko
-echo "Check if $fileToCheck file size is too large:" 1>&2
+echo "*** Check if $fileToCheck file size is too large: ***" 1>&2
 if [[ -f $fileToCheck ]]
 then
   echo "Check $fileToCheck file size:" 1>&2
@@ -28,6 +28,12 @@ then
 else
   echo "File $fileToCheck to be checked does not exist" 1>&2
 fi
+echo "" 1>&2
+
+# List 25 largest files and directories
+echo "*** Largest files and directories: ***" 1>&2
+du /home/sitadmin -ch -S --exclude=/home/sitadmin/sit/mount 2>&1 | grep -v 'denied' | sort -rh | head -25
+echo "" 1>&2
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
