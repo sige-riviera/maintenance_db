@@ -42,7 +42,24 @@ done
 
 echo "" 1>&2
 
-# TODO Critical check: list invalid geometries in pressures zones table
+# Critical check : list empty geometries in pressure zones table
+echo "*** Critical check: list pressurezone table geometries that are empty ***" 1>&2
+query4="SELECT id, name, ST_IsEmpty(geometry) AS is_empty FROM qwat_od.pressurezone WHERE ST_IsEmpty(geometry) IS true"
+for dbvalue in $(psql -t -q -U sige -d qwat_prod -c $query4); do
+  echo "$dbvalue" 1>&2
+done
+
+echo "" 1>&2
+
+# Critical check: list invalid geometries in pressures zones table
+
+echo "*** Critical check: list pressurezone table geometries that are not valid  ***" 1>&2
+query4="SELECT id, name, ST_IsValid(geometry) AS is_valid FROM qwat_od.pressurezone WHERE ST_IsValid(geometry) IS false"
+for dbvalue in $(psql -t -q -U sige -d qwat_prod -c $query4); do
+  echo "$dbvalue" 1>&2
+done
+
+echo "" 1>&2
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
