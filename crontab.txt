@@ -47,7 +47,8 @@ PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 
 # maintenance db + backup + export qwat DB to cartoriviera
 0 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance.sh>/dev/null
-30 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance2.sh>/dev/null
+15 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance2.sh>/dev/null
+
 0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db.sh>/dev/null
 45 0 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/data_validity_checks.sh>/dev/null
 25 1 * * mon $FOLDERPATH/controle_liens_fichiers_qgep.sh>/dev/null
@@ -80,6 +81,6 @@ PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 # Archive qwat database for statistics on 1st january
 1 6 1 1 * $FOLDERPATH/archive_db_for_statistics.sh>/dev/null
 
-# Testing a script every minute
-#* * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>&2
-#* * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>/dev/null
+# Testing a script every 5 minutes
+#*/2 * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>&2
+#*/2 * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>/dev/null
