@@ -65,11 +65,13 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/expor
 # Set NULL text fields as '-' in identify
 # PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/show_null_empty_string.sql
 
-
 # Final dump
 /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format p $VERBOSE_CMD --file "/home/sitadmin/sit/production/maintenance_db/cartoriviera/export_db/sige.backup" --schema "sige_qgis_cartoriviera" "sige_commun"
 # /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format plain $VERBOSE_CMD --file "/home/rouzaudd/Documents/sige.sql" --schema "sige_qgis_cartoriviera" "sige_commun"
 
+# Calculate file hash to allow Cartoriviera server to check file integrity
+md5=($(md5sum $FOLDERPATH/cartoriviera/export_db/sige.backup))
+echo $md5 > $FOLDERPATH/cartoriviera/export_db/sige.md5
 
 # Export
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -84,6 +86,7 @@ cd QGIS_server
 mdelete sige_previous.backup
 rename sige.backup sige_previous.backup
 put $FOLDERPATH/cartoriviera/export_db/sige.backup sige.backup
+put $FOLDERPATH/cartoriviera/export_db/sige.md5 sige.md5
 bye
 EOF
 
