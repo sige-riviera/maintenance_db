@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUser="andrek" projectname="" saveUserFull="André Kevin" version="3.28.12-Firenze" saveDateTime="2024-04-25T08:44:35">
+<qgis saveUser="andrek" projectname="" saveUserFull="André Kevin" version="3.28.12-Firenze" saveDateTime="2024-05-01T09:19:54">
   <homePath path=""/>
   <title></title>
   <transaction mode="Disabled"/>
@@ -21,12 +21,12 @@
     <customproperties>
       <Option/>
     </customproperties>
-    <layer-tree-layer id="sige_qgis_enquete20170928170530822" legend_split_behavior="0" providerKey="postgres" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_enquete_mn95&quot; (geometry)" name="sige_qgis_enquete" checked="Qt::Checked" patch_size="0,0" expanded="1" legend_exp="">
+    <layer-tree-layer id="sige_qgis_enquete20170928170530822" legend_split_behavior="0" providerKey="postgres" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_enquete_mn95&quot; (geometry)" name="sige_qgis_enquete_trace" checked="Qt::Checked" patch_size="0,0" expanded="1" legend_exp="">
       <customproperties>
         <Option/>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer id="sige_qgis_enquete_camac20171003142415834" legend_split_behavior="0" providerKey="postgres" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_enquete_camac_mn95&quot; (geometry) sql=&quot;canton&quot; IN (2,3)" name="sige_qgis_enquete_VS_FR" checked="Qt::Checked" patch_size="0,0" expanded="1" legend_exp="">
+    <layer-tree-layer id="sige_qgis_enquete_camac20171003142415834" legend_split_behavior="0" providerKey="postgres" source="service='sige_carto' sslmode=disable key='tid' srid=2056 type=Point checkPrimaryKeyUnicity='1' table=&quot;sige_qgis_cartoriviera&quot;.&quot;sige_qgis_enquete_camac_mn95&quot; (geometry) sql=&quot;canton&quot; IN (2,3)" name="sige_qgis_enquete_vs_fr" checked="Qt::Checked" patch_size="0,0" expanded="1" legend_exp="">
       <customproperties>
         <Option/>
       </customproperties>
@@ -38,8 +38,8 @@
   </layer-tree-group>
   <snapping-settings scaleDependencyMode="0" tolerance="0" self-snapping="0" mode="1" minScale="0" maxScale="0" unit="2" type="1" enabled="0" intersection-snapping="0">
     <individual-layer-settings>
-      <layer-setting id="sige_qgis_enquete_camac20171003142415834" tolerance="12" minScale="0" maxScale="0" units="1" type="1" enabled="0"/>
       <layer-setting id="sige_qgis_enquete20170928170530822" tolerance="12" minScale="0" maxScale="0" units="1" type="1" enabled="0"/>
+      <layer-setting id="sige_qgis_enquete_camac20171003142415834" tolerance="12" minScale="0" maxScale="0" units="1" type="1" enabled="0"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
@@ -71,12 +71,12 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" showFeatureCount="0" name="sige_qgis_enquete" checked="Qt::Checked">
+    <legendlayer drawingOrder="-1" open="true" showFeatureCount="0" name="sige_qgis_enquete_trace" checked="Qt::Checked">
       <filegroup hidden="false" open="true">
         <legendlayerfile isInOverview="0" visible="1" layerid="sige_qgis_enquete20170928170530822"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" showFeatureCount="0" name="sige_qgis_enquete_VS_FR" checked="Qt::Checked">
+    <legendlayer drawingOrder="-1" open="true" showFeatureCount="0" name="sige_qgis_enquete_vs_fr" checked="Qt::Checked">
       <filegroup hidden="false" open="true">
         <legendlayerfile isInOverview="0" visible="1" layerid="sige_qgis_enquete_camac20171003142415834"/>
       </filegroup>
@@ -177,7 +177,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>sige_qgis_enquete</layername>
+      <layername>sige_qgis_enquete_trace</layername>
       <srs>
         <spatialrefsys nativeFormat="Wkt">
           <wkt>PROJCRS["CH1903+ / LV95",BASEGEOGCRS["CH1903+",DATUM["CH1903+",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4150]],CONVERSION["Swiss Oblique Mercator 1995",METHOD["Hotine Oblique Mercator (variant B)",ID["EPSG",9815]],PARAMETER["Latitude of projection centre",46.9524055555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8811]],PARAMETER["Longitude of projection centre",7.43958333333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8812]],PARAMETER["Azimuth of initial line",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8813]],PARAMETER["Angle from Rectified to Skew Grid",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8814]],PARAMETER["Scale factor on initial line",1,SCALEUNIT["unity",1],ID["EPSG",8815]],PARAMETER["Easting at projection centre",2600000,LENGTHUNIT["metre",1],ID["EPSG",8816]],PARAMETER["Northing at projection centre",1200000,LENGTHUNIT["metre",1],ID["EPSG",8817]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Cadastre, engineering survey, topographic mapping (large and medium scale)."],AREA["Liechtenstein; Switzerland."],BBOX[45.82,5.96,47.81,10.49]],ID["EPSG",2056]]</wkt>
@@ -670,7 +670,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>sige_qgis_enquete_VS_FR</layername>
+      <layername>sige_qgis_enquete_vs_fr</layername>
       <srs>
         <spatialrefsys nativeFormat="Wkt">
           <wkt>PROJCRS["CH1903+ / LV95",BASEGEOGCRS["CH1903+",DATUM["CH1903+",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4150]],CONVERSION["Swiss Oblique Mercator 1995",METHOD["Hotine Oblique Mercator (variant B)",ID["EPSG",9815]],PARAMETER["Latitude of projection centre",46.9524055555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8811]],PARAMETER["Longitude of projection centre",7.43958333333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8812]],PARAMETER["Azimuth of initial line",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8813]],PARAMETER["Angle from Rectified to Skew Grid",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8814]],PARAMETER["Scale factor on initial line",1,SCALEUNIT["unity",1],ID["EPSG",8815]],PARAMETER["Easting at projection centre",2600000,LENGTHUNIT["metre",1],ID["EPSG",8816]],PARAMETER["Northing at projection centre",1200000,LENGTHUNIT["metre",1],ID["EPSG",8817]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Cadastre, engineering survey, topographic mapping (large and medium scale)."],AREA["Liechtenstein; Switzerland."],BBOX[45.82,5.96,47.81,10.49]],ID["EPSG",2056]]</wkt>
@@ -1076,8 +1076,8 @@ def my_form_open(dialog, layer, feature):
             <Option value="&quot;id&quot;" type="QString"/>
           </Option>
           <Option value="0" type="QString" name="embeddedWidgets/count"/>
-          <Option name="variableNames"/>
-          <Option name="variableValues"/>
+          <Option type="invalid" name="variableNames"/>
+          <Option type="invalid" name="variableValues"/>
         </Option>
       </customproperties>
       <blendMode>0</blendMode>
@@ -1541,7 +1541,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings rotation="0" UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent ymin="1136685.19773106300272048" ymax="1137272.46963481628336012" xmin="2555394.38442725455388427" xmax="2556199.83276452543213964">
+    <DefaultViewExtent ymin="1136685.19773106300272048" ymax="1137272.46963481628336012" xmin="2555393.63307619374245405" xmax="2556200.58411558624356985">
       <spatialrefsys nativeFormat="Wkt">
         <wkt>PROJCRS["CH1903+ / LV95",BASEGEOGCRS["CH1903+",DATUM["CH1903+",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4150]],CONVERSION["Swiss Oblique Mercator 1995",METHOD["Hotine Oblique Mercator (variant B)",ID["EPSG",9815]],PARAMETER["Latitude of projection centre",46.9524055555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8811]],PARAMETER["Longitude of projection centre",7.43958333333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8812]],PARAMETER["Azimuth of initial line",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8813]],PARAMETER["Angle from Rectified to Skew Grid",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8814]],PARAMETER["Scale factor on initial line",1,SCALEUNIT["unity",1],ID["EPSG",8815]],PARAMETER["Easting at projection centre",2600000,LENGTHUNIT["metre",1],ID["EPSG",8816]],PARAMETER["Northing at projection centre",1200000,LENGTHUNIT["metre",1],ID["EPSG",8817]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Cadastre, engineering survey, topographic mapping (large and medium scale)."],AREA["Liechtenstein; Switzerland."],BBOX[45.82,5.96,47.81,10.49]],ID["EPSG",2056]]</wkt>
         <proj4>+proj=somerc +lat_0=46.9524055555556 +lon_0=7.43958333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
