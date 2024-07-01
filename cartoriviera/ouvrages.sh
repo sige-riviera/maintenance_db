@@ -3,14 +3,14 @@
 # Exit on error
 set -e
 
-SRCFOLDERPATH=/home/sitadmin/sit/mount/ouvrages # dao_saisie mounted disk
-PROCESSFOLDERPATH=/home/sitadmin/sit/production/data/carto/data_ouvrage
-DESTFOLDERPATH=kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige
+SRCFOLDERPATH=/home/sitadmin/sit/mount/ouvrages # mounting point for drinking water installations folders and files
+PROCESSFOLDERPATH=/home/sitadmin/sit/production/data/carto/data_ouvrage # processing folder
+DESTFOLDERPATH=kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige # files destination folder after processing
 #DESTMOUNTFOLDERPATH=/home/sitadmin/sit/mount/cartoriviera_secured
 SSHKEYFILEPATH=`cat /home/sitadmin/sit/pass/ssh_key_filepath`
 
-# creer dossier pour traitement d'images
-# repart à zéro à chaque fois, pas performant, mais plus simple.
+# folder creation for image processing
+# starts from scratch each time, not efficient, but simpler.
 rm -rf $PROCESSFOLDERPATH
 mkdir $PROCESSFOLDERPATH
 
