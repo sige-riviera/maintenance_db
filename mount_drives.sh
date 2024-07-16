@@ -8,8 +8,7 @@ PASS_DATA_SRV=`cat /home/sitadmin/sit/pass/pass_data_server`
 NAME_BACKUP_SRV=`cat /home/sitadmin/sit/pass/name_backup_server`
 PASS_BACKUP_SRV=`cat /home/sitadmin/sit/pass/pass_backup_server`
 
-#for internalMountName in abonnes reseau ouvrages assainissement backup_server_nas
-for internalMountName in abonnes reseau ouvrages backup_server_nas #temporary until sitscripts get read-only access right onto N:\02_ASSAINISSEMENT\00_DOC_TECHNIQUE
+for internalMountName in abonnes reseau ouvrages assainissement backup_server_nas
 do
   mkdir /home/sitadmin/sit/mount/$internalMountName || echo "Cannot create folder $internalMountName, skipping the statement."
 done
@@ -22,7 +21,7 @@ done
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/01_EAU_POTABLE/00_DOC_TECHNIQUE/71_ABONNES /home/sitadmin/sit/mount/abonnes -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount abonnes folder"
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/01_EAU_POTABLE/00_DOC_TECHNIQUE/01_RESEAU /home/sitadmin/sit/mount/reseau -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount reseau reseau"
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/01_EAU_POTABLE/00_DOC_TECHNIQUE /home/sitadmin/sit/mount/ouvrages -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount ouvrages folder"
-#sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/02_ASSAINISSEMENT/00_DOC_TECHNIQUE /home/sitadmin/sit/mount/assainissement -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount assainissement folder" #temporary disabled until sitscripts get read-only access right onto N:\02_ASSAINISSEMENT\00_DOC_TECHNIQUE
+sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/02_ASSAINISSEMENT/00_DOC_TECHNIQUE /home/sitadmin/sit/mount/assainissement -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount assainissement folder"
 
 sudo /bin/mount -t cifs //$NAME_BACKUP_SRV/bk_laveyre/qgis /home/sitadmin/sit/mount/backup_server_nas/ -o user=intranet,password=$PASS_BACKUP_SRV,dom=sige.ch,gid=1000,uid=1000,vers=3.0 || echo "Cannot mount backup_server_nas folder" # vers=3.0 Win 2012+
 

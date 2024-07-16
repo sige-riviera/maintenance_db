@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#for internalMountName in abonnes reseau ouvrages assainissement backup_server_nas
-for internalMountName in abonnes reseau ouvrages backup_server_nas #temporary until sitscripts get read-only access right onto N:\02_ASSAINISSEMENT\00_DOC_TECHNIQUE
+for internalMountName in abonnes reseau ouvrages assainissement backup_server_nas
 do
   #ls -la /home/sitadmin/sit/mount/$externalMountName
   sudo /bin/umount /home/sitadmin/sit/mount/$internalMountName || echo "Cannot unmount mounting point, skipping the statement."
