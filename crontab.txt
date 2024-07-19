@@ -62,8 +62,8 @@ PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 0 4 * * sat $FOLDERPATH/bouveret.sh>/dev/null
 
 # Export data to cartoriviera
-# once a week: ouvrages (heavy computing with thumbnails creation, takes around 60 minutes)
-0 4 * * sun $FOLDERPATH/cartoriviera/ouvrages.sh>/dev/null
+# once a day but heavy computing with thumbnails creation, takes around 60 minutes, can be improved
+0 4 * * * $FOLDERPATH/cartoriviera/ouvrages.sh>/dev/null
 
 # Every day croquis_reseau + abonnes (simple copy)
 0 20 * * * $FOLDERPATH/cartoriviera/abonnes.sh>/dev/null
