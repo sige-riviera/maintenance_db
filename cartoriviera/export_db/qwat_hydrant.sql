@@ -67,7 +67,7 @@ select
     -- status_description_fr,
     -- status_description_en,
     -- status_description_ro,
-    -- status_active,
+    status_active,
     status_functional,
     -- status_code_sire,
     district_name,
