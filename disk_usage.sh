@@ -1,7 +1,5 @@
 #!/bin/bash
 
-FULL=${1:-simple}
-
 # Exit on error
 set -e
 
