@@ -29,12 +29,12 @@ echo "" 1>&2
 
 # Check ouvrage data processing folder size
 echo "*** Ouvrage data processing folder size: ***" 1>&2
-du -sh ~/sit/production/data/carto/data_ouvrage/ 1>&2
+du -sh /home/sitadmin/sit/production/data/carto/data_ouvrage/ 1>&2
 echo "" 1>&2
 
 # List 25 largest files and directories
 echo "*** Largest files and directories: ***" 1>&2
-du ~/ -ch -S --exclude=/home/sitadmin/sit/mount 2>&1 | grep -v 'denied' | sort -rh | head -25 1>&2
+du /home/sitadmin/ -ch -S --exclude=/home/sitadmin/sit/mount 2>&1 | grep -v 'denied' | sort -rh | head -25 1>&2
 echo "" 1>&2
 
 # Redirect stdout to stderr
