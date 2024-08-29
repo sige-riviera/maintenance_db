@@ -10,20 +10,21 @@ echo "$diskUsage" 1>&2
 echo "" 1>&2
 
 # Check dead.letter file size
-fileToCheck=~/dead.letter
-fileSizeLimit=10000 # in ko
+fileToCheck=/root/dead.letter
+fileSizeLimit=10 # in Mo
 echo "*** Check if $fileToCheck file size is too large: ***" 1>&2
+echo ""
 if [[ -f $fileToCheck ]]
 then
-  echo "Check $fileToCheck file size:" 1>&2
-  du -sh $fileToCheck
-  fileSize=$(stat -c "%s" $fileToCheck) # in ko
-  if [[ $fileSize -gt $fileSizeLimit ]]
+  fileSize=$(stat -c "%s" $fileToCheck) # in bytes
+  fileSizeInMB=$(echo "scale=2; $fileSize/1024/1024" | bc) # in Mb
+  echo "dead.letter file size is: $fileSizeInMB Mb" 1>&2
+  if (( $(echo "$fileSizeInMB > $fileSizeLimit" | bc -l) ))
   then
-    echo "WARNING: the file $fileToCheck takes a too much disk space." 1>&2
+    echo "WARNING: the file $fileToCheck takes too much disk space" 1>&2
   fi
 else
-  echo "File $fileToCheck to be checked does not exist" 1>&2
+  echo "File $fileToCheck does not exist" 1>&2
 fi
 echo "" 1>&2
 
