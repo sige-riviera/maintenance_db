@@ -47,13 +47,13 @@ PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 
 # maintenance db + backup + export qwat DB to cartoriviera
 0 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance.sh>/dev/null
-15 0 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance2.sh>/dev/null
+0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/data_maintenance2.sh>/dev/null
 
-0 1 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db.sh>/dev/null
-45 0 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/data_validity_checks.sh>/dev/null
-25 1 * * mon $FOLDERPATH/controle_liens_fichiers_qgep.sh>/dev/null
-30 1 * * mon $FOLDERPATH/controle_croquis_reseau.sh>/dev/null
-0 2 * * mon,tue,wed,thu,fri $FOLDERPATH/backup.sh>/dev/null
+0 2 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/export_db/export_db.sh>/dev/null
+45 2 * * mon,tue,wed,thu,fri $FOLDERPATH/cartoriviera/data_validity_checks.sh>/dev/null
+50 2 * * mon $FOLDERPATH/controle_liens_fichiers_qgep.sh>/dev/null
+55 2 * * mon $FOLDERPATH/controle_croquis_reseau.sh>/dev/null
+0 3 * * mon,tue,wed,thu,fri $FOLDERPATH/backup.sh>/dev/null
 
 # Run full backup once a month but a sunday (with logged actions)
 0 3 1-7 * * [ "$(date '+\%a')" = "Sun" ] && $FOLDERPATH/backup.sh full>/dev/null
