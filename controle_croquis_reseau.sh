@@ -24,8 +24,8 @@ declare -A COMMUNES=( ["Attalens"]="ATTALENS" \
 
 FILE_NOT_FOUND=false
 for file in $(PGUSER=sige PGDATABASE=sige_commun psql -t -q -c "select file from distribution.croquis_reseau order by file asc"); do
-  code=$(sed -r 's/^([^_]+)_.*$/\1/' <<< $file)
-  commune=$(sed -r 's/ //g' <<< ${COMMUNES[$code]})
+  code=$(sed -r 's/^([^_]+)_.*$/\1/' <<< $file) # -r active les regex, et la suite ne conserve que la partie de la chaine d'au moins un caractère avant le premier underscore
+  commune=$(sed -r 's/ //g' <<< ${COMMUNES[$code]}) # -r active les regex, s/ //g remplace toutes les occurences d'un espace insécable par rien
   filepath="$FOLDERPATH/COMMUNES/${commune}/Croquis_reseau/$file"
   if [[ ! -f $filepath ]]; then
     if [[ $FILE_NOT_FOUND =~ false ]]; then
