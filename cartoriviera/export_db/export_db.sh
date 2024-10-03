@@ -47,8 +47,6 @@ PGSERVICE=qgep_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_
 /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format custom $VERBOSE_CMD --file "$FOLDERPATH/cartoriviera/export_db/qgep.backup" --schema "usr_cartoriviera" "qgep_prod"
 # Restore on sige_commun.usr_cartoriviera
 /usr/bin/pg_restore --host localhost --port 5432 --username "sige" --dbname "sige_commun" --no-password  --schema usr_cartoriviera $VERBOSE_CMD "$FOLDERPATH/cartoriviera/export_db/qgep.backup"
-# Create crs:21781 qgep tables by transforming coordinates on sige_commun.cartoriviera
-PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qgep_transform.sql
 
 # Also bring stuff from sige_commun in other schemas
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/distribution_croquis_reseau.sql

@@ -2,7 +2,6 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_printmap;
 drop table if exists usr_cartoriviera.sige_qgis_qwat_printmap_mn95;
 
 create table usr_cartoriviera.sige_qgis_qwat_printmap_mn95 as
@@ -35,7 +34,3 @@ select
   district_prefix,
   district_colorcode
 from qwat_od.vw_export_printmap;
-
-create table usr_cartoriviera.sige_qgis_qwat_printmap as select * from usr_cartoriviera.sige_qgis_qwat_printmap_mn95;
-
-alter table usr_cartoriviera.sige_qgis_qwat_printmap alter column geometry type geometry('polygon', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));

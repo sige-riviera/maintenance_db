@@ -2,12 +2,7 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_waterhardness;
 drop table if exists usr_cartoriviera.sige_qgis_waterhardness_mn95;
 
 create table usr_cartoriviera.sige_qgis_waterhardness_mn95 as
 select id, name AS sqwh_name, hardness_median AS sqwh_hardness_median, hardness_min AS sqwh_hardness_min, hardness_max AS sqwh_hardness_max, classification AS sqwh_classification, appreciation AS sqwh_appreciation, geometry from sige.waterhardness where visible is true;
-
-create table usr_cartoriviera.sige_qgis_waterhardness as select * from usr_cartoriviera.sige_qgis_waterhardness_mn95;
-
-alter table usr_cartoriviera.sige_qgis_waterhardness alter column geometry type geometry('multipolygon', 21781) using st_geomfromewkb(st_fineltra(geometry, 'chenyx06.chenyx06_triangles', 'the_geom_lv95', 'the_geom_lv03'));
