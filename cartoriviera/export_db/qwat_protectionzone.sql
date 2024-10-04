@@ -2,9 +2,9 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_protectionzone_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_protectionzone;
 
-create table usr_cartoriviera.sige_qgis_qwat_protectionzone_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_protectionzone as
 select *
 from (SELECT protectionzone.id,
     protectionzone.fk_type,

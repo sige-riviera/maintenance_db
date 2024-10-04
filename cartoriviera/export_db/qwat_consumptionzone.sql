@@ -2,7 +2,7 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_consumptionzone_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_consumptionzone;
 
-create table usr_cartoriviera.sige_qgis_qwat_consumptionzone_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_consumptionzone as
 select * from qwat_od.vw_consumptionzone;

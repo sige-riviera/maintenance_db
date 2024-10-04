@@ -2,9 +2,9 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_leak_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_leak;
 
-create table usr_cartoriviera.sige_qgis_qwat_leak_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_leak as
 select
     id,
     fk_cause,
@@ -199,4 +199,4 @@ select
     -- cause_description_ro
 from qwat_od.vw_export_leak;
 
-alter table usr_cartoriviera.sige_qgis_qwat_leak_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+alter table usr_cartoriviera.sige_qgis_qwat_leak alter column geometry type geometry('point', 2056) using st_force2d(geometry);

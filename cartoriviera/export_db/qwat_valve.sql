@@ -2,9 +2,9 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_valve_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_valve;
 
-create table usr_cartoriviera.sige_qgis_qwat_valve_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_valve as
 select
     id,
     fk_valve_type,
@@ -159,4 +159,4 @@ select
     nominal_diameter
 from qwat_od.vw_export_valve;
 
-alter table usr_cartoriviera.sige_qgis_qwat_valve_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+alter table usr_cartoriviera.sige_qgis_qwat_valve alter column geometry type geometry('point', 2056) using st_force2d(geometry);

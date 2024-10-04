@@ -2,9 +2,9 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_installation_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_installation;
 
-create table usr_cartoriviera.sige_qgis_qwat_installation_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_installation as
 select
     '<a href=javascript:sitnExterns.openWindow("Ouvrage","https://map.cartoriviera.ch/static/cache/sige/gallery.html?type=ouvrage&ouvrage='||identification||'",600,600)>croquis/photos</a>' as lien,
     id,
@@ -289,5 +289,5 @@ select
     -- pump_operating_code_sire
 from qwat_od.vw_export_installation;
 
-alter table usr_cartoriviera.sige_qgis_qwat_installation_mn95 alter column installation_type type text USING installation_type::text;
-alter table usr_cartoriviera.sige_qgis_qwat_installation_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+alter table usr_cartoriviera.sige_qgis_qwat_installation alter column installation_type type text USING installation_type::text;
+alter table usr_cartoriviera.sige_qgis_qwat_installation alter column geometry type geometry('point', 2056) using st_force2d(geometry);

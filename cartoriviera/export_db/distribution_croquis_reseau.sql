@@ -2,9 +2,9 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_croquis_reseau_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_croquis_reseau;
 
-create table usr_cartoriviera.sige_qgis_croquis_reseau_mn95 as
+create table usr_cartoriviera.sige_qgis_croquis_reseau as
 select
   '<a href=javascript:sitnExterns.openWindow("Croquis_reseau","https://map.cartoriviera.ch/files/private/sige/reseau/COMMUNES/' ||
   CASE

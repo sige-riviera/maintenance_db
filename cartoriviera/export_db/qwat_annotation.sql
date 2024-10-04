@@ -2,8 +2,8 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_annotation_line_mn95;
-drop table if exists usr_cartoriviera.sige_qgis_qwat_annotation_point_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_annotation_line;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_annotation_point;
 
-create table usr_cartoriviera.sige_qgis_qwat_annotation_line_mn95 as select * from qwat_dr.annotationline;
-create table usr_cartoriviera.sige_qgis_qwat_annotation_point_mn95 as select * from qwat_dr.annotationpoint;
+create table usr_cartoriviera.sige_qgis_qwat_annotation_line as select * from qwat_dr.annotationline;
+create table usr_cartoriviera.sige_qgis_qwat_annotation_point as select * from qwat_dr.annotationpoint;

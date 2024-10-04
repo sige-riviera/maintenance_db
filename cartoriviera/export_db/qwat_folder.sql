@@ -2,10 +2,10 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_folder_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_folder;
 
-create table usr_cartoriviera.sige_qgis_qwat_folder_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_folder as
 select * from qwat_od.folder;
 
-alter table usr_cartoriviera.sige_qgis_qwat_folder_mn95 alter column geometry_line type geometry('MultiLineString', 2056) using st_force2d(geometry_line);
-alter table usr_cartoriviera.sige_qgis_qwat_folder_mn95 alter column geometry_polygon type geometry('MultiPolygon', 2056) using st_force2d(geometry_polygon);
+alter table usr_cartoriviera.sige_qgis_qwat_folder alter column geometry_line type geometry('MultiLineString', 2056) using st_force2d(geometry_line);
+alter table usr_cartoriviera.sige_qgis_qwat_folder alter column geometry_polygon type geometry('MultiPolygon', 2056) using st_force2d(geometry_polygon);

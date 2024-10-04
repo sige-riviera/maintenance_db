@@ -2,9 +2,9 @@
 
 create schema if not exists usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_part_mn95;
+drop table if exists usr_cartoriviera.sige_qgis_qwat_part;
 
-create table usr_cartoriviera.sige_qgis_qwat_part_mn95 as
+create table usr_cartoriviera.sige_qgis_qwat_part as
 select
 id,
 fk_district,
@@ -124,4 +124,4 @@ fk_pipe
 -- precisionalti_code_sire
 from qwat_od.vw_export_part;
 
-alter table usr_cartoriviera.sige_qgis_qwat_part_mn95 alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+alter table usr_cartoriviera.sige_qgis_qwat_part alter column geometry type geometry('point', 2056) using st_force2d(geometry);

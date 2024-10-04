@@ -1,8 +1,8 @@
 
 
-DROP  TABLE IF EXISTS sige_qgis_cartoriviera.sige_qgis_big_table_mn95;
+DROP  TABLE IF EXISTS sige_qgis_cartoriviera.sige_qgis_big_table;
 
-CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table_mn95 AS (
+CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
 --------------------
 --  QWAT
     SELECT 'EP Ouvrages'::text AS layer_name,
@@ -16,35 +16,35 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table_mn95 AS (
           ELSE NULL::text
         END AS search_text,
         st_force2d(geometry) AS geometry
-      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_installation_mn95
+      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_installation
       WHERE status_functional IS TRUE
   UNION
     SELECT 'EP Hydrantes'::text AS layer_name,
         (district_name::text || ' '::text) || identification::text AS search_text,
         st_force2d(geometry) AS geometry
-      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_hydrant_mn95
+      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_hydrant
   UNION
     SELECT 'EP Abonnés'::text AS layer_name,
         ((((subscriber_type_value_fr::text || ' '::text) || COALESCE(district_prefix::text || '_'::text, ''::text)) || identification::text) || ' '::text) || district_name::text AS search_text,
         st_force2d(geometry) AS geometry
-      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_subscriber_mn95
+      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_subscriber
   UNION
     SELECT 'EP Compteur'::text AS layer_name,
         'Compteur ' || COALESCE(district_prefix::text || '_'::text, ''::text) || identification::text AS search_text,
         st_force2d(geometry) AS geometry
-      FROM sige_qgis_cartoriviera.sige_qgis_qwat_meter_mn95
+      FROM sige_qgis_cartoriviera.sige_qgis_qwat_meter
       WHERE identification IS NOT NULL
   UNION
     SELECT 'EP Vannes'::text AS layer_name,
         (((valve_function_value_fr::text || ' '::text) || identification::text) || ' '::text) || district_name::text AS search_text,
         st_force2d(geometry) AS geometry
-      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_valve_mn95
+      FROM  sige_qgis_cartoriviera.sige_qgis_qwat_valve
       WHERE identification IS NOT NULL
   UNION
     SELECT 'EP Folios'::text AS layer_name,
       'Folio ' || substr("district_name",1,1) || right("district_name",1)::text || ' '::text || name::text AS search_text,
       st_force2d(geometry) AS geometry
-      FROM sige_qgis_cartoriviera.sige_qgis_qwat_printmap_mn95
+      FROM sige_qgis_cartoriviera.sige_qgis_qwat_printmap
       WHERE name IS NOT NULL
 -------------------
 --  QGEP
@@ -52,7 +52,7 @@ UNION
   SELECT 'AS Chambres' AS layer_name,
       co_identifier AS search_text,
       situation_geometry
-    FROM sige_qgis_cartoriviera.sige_qgis_qgep_wastewater_structure_mn95
+    FROM sige_qgis_cartoriviera.sige_qgis_qgep_wastewater_structure
     WHERE co_identifier IS NOT NULL
 -------------------
 --  CADASTRE PORT-VALAIS
