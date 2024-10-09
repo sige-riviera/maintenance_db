@@ -1,17 +1,9 @@
 
 BEGIN;
 
-CREATE TABLE usr_cartoriviera.sige_qgis_enquete AS
-SELECT *
-FROM cadastre.enquete_cadastre;
-
 CREATE TABLE usr_cartoriviera.sige_qgis_enquete_trace AS
 SELECT *
 FROM cadastre.enquete_cadastre;
-
-CREATE TABLE usr_cartoriviera.sige_qgis_enquete_camac AS
-SELECT *
-FROM cadastre.enquete_camac;
 
 CREATE TABLE usr_cartoriviera.sige_qgis_enquete_vs AS
 SELECT *
