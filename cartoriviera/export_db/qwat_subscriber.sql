@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_subscriber.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_subscriber;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_subscriber;
 
-create table usr_cartoriviera.sige_qgis_qwat_subscriber as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_subscriber AS
+SELECT
     '<a href=javascript:sitnExterns.openWindow("Abonne","https://map.cartoriviera.ch/static/cache/sige/gallery.html?type=abonne&abonne='||identification||'&commune='||district_prefix||'",600,600)>croquis/photos</a>' as lien,
     id,
     fk_district,
@@ -129,6 +129,6 @@ select
     -- precisionalti_code_sire,
     usr_external_meter,
     usr_external_meter_remark
-from qwat_od.vw_export_subscriber;
+FROM qwat_od.vw_export_subscriber;
 
-alter table usr_cartoriviera.sige_qgis_qwat_subscriber alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_subscriber ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);

@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_hydrant.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_hydrant;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_hydrant;
 
-create table usr_cartoriviera.sige_qgis_qwat_hydrant as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_hydrant AS
+SELECT
     id,
     fk_district,
     fk_pressurezone,
@@ -174,6 +174,6 @@ select
     -- precisionalti_description_en,
     -- precisionalti_description_ro,
     -- precisionalti_code_sire
-from qwat_od.vw_export_hydrant;
+FROM qwat_od.vw_export_hydrant;
 
-alter table usr_cartoriviera.sige_qgis_qwat_hydrant alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_hydrant ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);

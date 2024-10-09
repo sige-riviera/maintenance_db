@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_leak;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_leak;
 
-create table usr_cartoriviera.sige_qgis_qwat_leak as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_leak AS
+SELECT
     id,
     fk_cause,
     fk_pipe,
@@ -197,6 +197,6 @@ select
     -- cause_description_fr,
     -- cause_description_en,
     -- cause_description_ro
-from qwat_od.vw_export_leak;
+FROM qwat_od.vw_export_leak;
 
-alter table usr_cartoriviera.sige_qgis_qwat_leak alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_leak ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);

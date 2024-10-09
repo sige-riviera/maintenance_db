@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_valve.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE schema IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_valve;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_valve;
 
-create table usr_cartoriviera.sige_qgis_qwat_valve as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_valve AS
+SELECT
     id,
     fk_valve_type,
     fk_valve_function,
@@ -157,6 +157,6 @@ select
     -- precisionalti_description_ro,
     -- precisionalti_code_sire
     nominal_diameter
-from qwat_od.vw_export_valve;
+FROM qwat_od.vw_export_valve;
 
-alter table usr_cartoriviera.sige_qgis_qwat_valve alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_valve ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);

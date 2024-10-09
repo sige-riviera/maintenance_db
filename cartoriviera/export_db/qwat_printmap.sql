@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_printmap.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_printmap;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_printmap;
 
-create table usr_cartoriviera.sige_qgis_qwat_printmap as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_printmap AS
+SELECT
   id,
   name,
   fk_district,
@@ -33,4 +33,4 @@ select
   district_land_registry,
   district_prefix,
   district_colorcode
-from qwat_od.vw_export_printmap;
+FROM qwat_od.vw_export_printmap;

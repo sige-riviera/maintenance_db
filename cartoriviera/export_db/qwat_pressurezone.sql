@@ -1,8 +1,9 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_pressurezone.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_pressurezone;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_pressurezone;
 
-create table usr_cartoriviera.sige_qgis_qwat_pressurezone as
-select * from qwat_od.pressurezone;
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_pressurezone AS
+SELECT *
+FROM qwat_od.pressurezone;

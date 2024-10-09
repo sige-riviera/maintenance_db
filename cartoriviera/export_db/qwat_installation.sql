@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_installation.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_installation;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_installation;
 
-create table usr_cartoriviera.sige_qgis_qwat_installation as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_installation AS
+    SELECT
     '<a href=javascript:sitnExterns.openWindow("Ouvrage","https://map.cartoriviera.ch/static/cache/sige/gallery.html?type=ouvrage&ouvrage='||identification||'",600,600)>croquis/photos</a>' as lien,
     id,
     fk_district,
@@ -287,7 +287,7 @@ select
     -- pump_operating_description_en,
     -- pump_operating_description_ro,
     -- pump_operating_code_sire
-from qwat_od.vw_export_installation;
+FROM qwat_od.vw_export_installation;
 
-alter table usr_cartoriviera.sige_qgis_qwat_installation alter column installation_type type text USING installation_type::text;
-alter table usr_cartoriviera.sige_qgis_qwat_installation alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_installation ALTER COLUMN installation_type TYPE text USING installation_type::text;
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_installation ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);

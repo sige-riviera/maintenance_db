@@ -1,11 +1,11 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_remote;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_remote;
 
-create table usr_cartoriviera.sige_qgis_qwat_remote as
-select
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_remote AS
+SELECT
     id,
     fk_distributor,
     fk_status,
@@ -83,4 +83,4 @@ select
     -- precision_description_en,
     -- precision_description_ro,
     -- precision_code_sire
-from qwat_od.vw_export_remote;
+FROM qwat_od.vw_export_remote;

@@ -1,11 +1,15 @@
 --PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_meter_reference.sql
 
-create schema if not exists usr_cartoriviera;
+CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
-drop table if exists usr_cartoriviera.sige_qgis_qwat_meter_reference;
+DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_meter_reference;
 
-create table usr_cartoriviera.sige_qgis_qwat_meter_reference as
-select meter_reference.*, vw_export_meter.identification as meter_identification from qwat_od.meter_reference
-	left join qwat_od.vw_export_meter ON meter_reference.fk_meter = vw_export_meter.id;
+CREATE TABLE usr_cartoriviera.sige_qgis_qwat_meter_reference AS
+SELECT
+    meter_reference.*,
+    vw_export_meter.identification AS meter_identification
+FROM qwat_od.meter_reference 
+LEFT JOIN qwat_od.vw_export_meter
+ON meter_reference.fk_meter = vw_export_meter.id;
 
-alter table usr_cartoriviera.sige_qgis_qwat_meter_reference alter column geometry type geometry('point', 2056) using st_force2d(geometry);
+ALTER TABLE usr_cartoriviera.sige_qgis_qwat_meter_reference ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
