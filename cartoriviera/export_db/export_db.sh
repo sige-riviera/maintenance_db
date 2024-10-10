@@ -82,7 +82,9 @@ prompt
 binary
 cd QGIS_server
 mdelete sige_previous.backup
+mdelete sige_previous.md5
 rename sige.backup sige_previous.backup
+rename sige.md5 sige_previous.md5
 put $FOLDERPATH/cartoriviera/export_db/sige.backup sige.backup
 put $FOLDERPATH/cartoriviera/export_db/sige.md5 sige.md5
 bye
