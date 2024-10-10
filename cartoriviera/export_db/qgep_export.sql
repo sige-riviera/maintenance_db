@@ -12,8 +12,16 @@ FROM qgep_od.vw_export_reach;
 ALTER TABLE usr_cartoriviera.sige_qgis_qgep_reach ALTER COLUMN progression_geometry TYPE geometry(MultiLineString, 2056)
 USING ST_Force2D(ST_Multi(ST_CurveToLine(progression_geometry)));
 
+CREATE INDEX geoidx_sige_qgis_qgep_reach
+ON usr_cartoriviera.sige_qgis_qgep_reach
+USING gist (progression_geometry);
+
 CREATE TABLE usr_cartoriviera.sige_qgis_qgep_wastewater_structure AS
 SELECT *
 FROM qgep_od.vw_export_wastewater_structure;
+
+CREATE INDEX geoidx_sige_qgis_qgep_wastewater_structure
+ON usr_cartoriviera.sige_qgis_qgep_wastewater_structure
+USING gist (situation_geometry);
 
 COMMIT;

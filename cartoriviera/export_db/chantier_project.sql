@@ -17,6 +17,10 @@ SELECT
 FROM chantier.project_line
 WHERE visibility_carto IS TRUE;
 
+CREATE INDEX geoidx_sige_qgis_project_line
+ON usr_cartoriviera.sige_qgis_project_line
+USING gist (geometry);
+
 CREATE TABLE usr_cartoriviera.sige_qgis_project_point AS
 SELECT
     id,
@@ -30,3 +34,7 @@ SELECT
     geometry
 FROM chantier.project_point
 WHERE visibility_carto IS TRUE;
+
+CREATE INDEX geoidx_sige_qgis_project_point
+ON usr_cartoriviera.sige_qgis_project_point
+USING gist (geometry);

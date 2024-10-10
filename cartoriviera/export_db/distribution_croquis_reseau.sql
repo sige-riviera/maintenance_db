@@ -25,3 +25,7 @@ SELECT
     END || '/Croquis_reseau/' || file || '",600,600)>' || file || '</a>' AS croquis,
     *
 FROM distribution.croquis_reseau;
+
+CREATE INDEX geoidx_sige_qgis_croquis_reseau
+ON usr_cartoriviera.sige_qgis_croquis_reseau
+USING gist (geometry);

@@ -7,3 +7,7 @@ DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_qwat_consumptionzone;
 CREATE TABLE usr_cartoriviera.sige_qgis_qwat_consumptionzone AS
 SELECT *
 FROM qwat_od.vw_consumptionzone;
+
+CREATE INDEX geoidx_sige_qgis_qwat_consumptionzone
+ON usr_cartoriviera.sige_qgis_qwat_consumptionzone
+USING gist (geometry);

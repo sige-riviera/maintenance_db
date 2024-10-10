@@ -9,6 +9,14 @@ CREATE TABLE usr_cartoriviera.sige_qgis_qwat_annotation_line AS
 SELECT *
 FROM qwat_dr.annotationline;
 
+CREATE INDEX geoidx_sige_qgis_qwat_annotation_line
+ON usr_cartoriviera.sige_qgis_qwat_annotation_line
+USING gist (geometry);
+
 CREATE TABLE usr_cartoriviera.sige_qgis_qwat_annotation_point AS
 SELECT *
 FROM qwat_dr.annotationpoint;
+
+CREATE INDEX geoidx_sige_qgis_qwat_annotation_point
+ON usr_cartoriviera.sige_qgis_qwat_annotation_point
+USING gist (geometry);

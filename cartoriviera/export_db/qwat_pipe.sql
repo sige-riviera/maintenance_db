@@ -174,3 +174,7 @@ SELECT
     -- node_a_update_geometry_alt1,
     -- node_a_update_geometry_alt2
 FROM qwat_od.vw_export_pipe;
+
+CREATE INDEX geoidx_sige_qgis_qwat_pipe
+ON usr_cartoriviera.sige_qgis_qwat_pipe
+USING gist (geometry);

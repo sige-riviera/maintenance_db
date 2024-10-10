@@ -20,3 +20,7 @@ FROM (
     FROM qwat_od.protectionzone
     JOIN qwat_vl.protectionzone_type ON protectionzone.fk_type = protectionzone_type.id
 ) AS foo;
+
+CREATE INDEX geoidx_sige_qgis_qwat_protectionzone
+ON usr_cartoriviera.sige_qgis_qwat_protectionzone
+USING gist (geometry);

@@ -16,3 +16,7 @@ SELECT
     geometry
 FROM sige.waterhardness
 WHERE visible IS TRUE;
+
+CREATE INDEX geoidx_sige_qgis_waterhardness
+ON usr_cartoriviera.sige_qgis_waterhardness
+USING gist (geometry);

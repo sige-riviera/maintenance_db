@@ -125,3 +125,7 @@ SELECT
 FROM qwat_od.vw_export_part;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_part ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_part
+ON usr_cartoriviera.sige_qgis_qwat_part
+USING gist (geometry);

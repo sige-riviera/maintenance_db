@@ -84,3 +84,7 @@ SELECT
     -- precision_description_ro,
     -- precision_code_sire
 FROM qwat_od.vw_export_remote;
+
+CREATE INDEX geoidx_sige_qgis_qwat_remote
+ON usr_cartoriviera.sige_qgis_qwat_remote
+USING gist (geometry);

@@ -9,3 +9,7 @@ SELECT *
 FROM qwat_od.crossing;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_crossing ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_crossing
+ON usr_cartoriviera.sige_qgis_qwat_crossing
+USING gist (geometry);

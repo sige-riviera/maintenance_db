@@ -13,3 +13,7 @@ LEFT JOIN qwat_od.vw_export_meter
 ON meter_reference.fk_meter = vw_export_meter.id;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_meter_reference ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_meter_reference
+ON usr_cartoriviera.sige_qgis_qwat_meter_reference
+USING gist (geometry);

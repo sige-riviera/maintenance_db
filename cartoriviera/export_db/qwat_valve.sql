@@ -160,3 +160,7 @@ SELECT
 FROM qwat_od.vw_export_valve;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_valve ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_valve
+ON usr_cartoriviera.sige_qgis_qwat_valve
+USING gist (geometry);

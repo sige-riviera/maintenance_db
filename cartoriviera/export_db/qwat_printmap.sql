@@ -34,3 +34,7 @@ SELECT
   district_prefix,
   district_colorcode
 FROM qwat_od.vw_export_printmap;
+
+CREATE INDEX geoidx_sige_qgis_qwat_printmap
+ON usr_cartoriviera.sige_qgis_qwat_printmap
+USING gist (geometry);

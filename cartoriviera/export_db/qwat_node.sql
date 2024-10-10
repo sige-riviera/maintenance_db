@@ -14,3 +14,7 @@ WHERE _pipe_node_type IS NOT NULL;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_node ALTER COLUMN _pipe_node_type TYPE text USING _pipe_node_type::text;
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_node ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_node
+ON usr_cartoriviera.sige_qgis_qwat_node
+USING gist (geometry);

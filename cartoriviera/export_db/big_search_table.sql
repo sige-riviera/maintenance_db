@@ -75,3 +75,7 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
         geom AS geometry
     FROM cadastre.portvalais_bienfonds
 );
+
+CREATE INDEX geoidx_sige_qgis_big_table
+ON sige_qgis_cartoriviera.sige_qgis_big_table
+USING gist (geometry);

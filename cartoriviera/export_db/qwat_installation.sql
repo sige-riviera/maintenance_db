@@ -291,3 +291,7 @@ FROM qwat_od.vw_export_installation;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_installation ALTER COLUMN installation_type TYPE text USING installation_type::text;
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_installation ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_installation
+ON usr_cartoriviera.sige_qgis_qwat_installation
+USING gist (geometry);

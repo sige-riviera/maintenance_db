@@ -200,3 +200,7 @@ SELECT
 FROM qwat_od.vw_export_leak;
 
 ALTER TABLE usr_cartoriviera.sige_qgis_qwat_leak ALTER COLUMN geometry TYPE geometry('point', 2056) USING ST_Force2D(geometry);
+
+CREATE INDEX geoidx_sige_qgis_qwat_leak
+ON usr_cartoriviera.sige_qgis_qwat_leak
+USING gist (geometry);
