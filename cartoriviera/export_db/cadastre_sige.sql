@@ -1,4 +1,3 @@
-
 BEGIN;
 
 CREATE TABLE usr_cartoriviera.sige_qgis_enquete_trace AS

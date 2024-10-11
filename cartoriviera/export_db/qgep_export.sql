@@ -1,4 +1,3 @@
-
 BEGIN;
 
 DROP SCHEMA IF EXISTS usr_cartoriviera CASCADE;
