@@ -61,7 +61,7 @@ PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/expor
 # Transform boolean to oui/non
 PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/boolean2str.sql
 # Set NULL text fields as '-' in identify
-# PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/show_null_empty_string.sql
+# PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/null_empty_to_text.sql
 
 # Final dump
 /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --format p $VERBOSE_CMD --file "/home/sitadmin/sit/production/maintenance_db/cartoriviera/export_db/sige.backup" --schema "sige_qgis_cartoriviera" "sige_commun"

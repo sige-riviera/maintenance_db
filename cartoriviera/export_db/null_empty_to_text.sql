@@ -1,4 +1,4 @@
--- Set NULL values as '-' for text attributes only (not condidering numeric, dates, timestamps, array and geometry types.)
+-- Set NULL and empty strings values as '-' for text attributes only (not condidering numeric, dates, timestamps, array and geometry types.)
 
 DO
 $$
@@ -17,7 +17,7 @@ BEGIN
 
         -- Mise à jour des valeurs NULL
         EXECUTE FORMAT(
-            'ALTER TABLE sige_qgis_cartoriviera.%1$I ALTER COLUMN %2$I CASE WHEN %2$I IS NULL THEN ''-'' END;',
+            'UPDATE sige_qgis_cartoriviera.%1$I SET %2$I = ''-'' WHERE %2$I IS NULL;',
             rec_null.table_name,
             rec_null.column_name
         );
@@ -34,7 +34,7 @@ BEGIN
 
         -- Mise à jour des chaînes vides
         EXECUTE FORMAT(
-            'ALTER TABLE sige_qgis_cartoriviera.%1$I ALTER COLUMN %2$I CASE WHEN %2$I = '' THEN ''-'' END;',
+            'UPDATE sige_qgis_cartoriviera.%1$I SET %2$I = ''-'' WHERE %2$I = '''';',
             rec_empty.table_name,
             rec_empty.column_name
         );
