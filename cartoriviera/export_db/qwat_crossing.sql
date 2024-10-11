@@ -1,4 +1,4 @@
---PGSERVICE=qwat psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_crossing.sql
+-- PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/qwat_crossing.sql
 
 CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 

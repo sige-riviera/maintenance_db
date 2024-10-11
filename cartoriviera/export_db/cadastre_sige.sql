@@ -1,3 +1,5 @@
+-- PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/cadastre_sige.sql
+
 BEGIN;
 
 CREATE TABLE usr_cartoriviera.sige_qgis_enquete_trace AS

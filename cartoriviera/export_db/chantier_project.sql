@@ -1,3 +1,5 @@
+-- PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/chantier_project.sql
+
 CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 
 DROP TABLE IF EXISTS usr_cartoriviera.sige_qgis_project_line;

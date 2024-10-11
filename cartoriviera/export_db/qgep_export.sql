@@ -1,3 +1,5 @@
+-- PGSERVICE=qgep_prod psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/qgep_export.sql
+
 BEGIN;
 
 DROP SCHEMA IF EXISTS usr_cartoriviera CASCADE;

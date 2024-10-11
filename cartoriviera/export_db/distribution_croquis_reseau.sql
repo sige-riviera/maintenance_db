@@ -1,4 +1,4 @@
---PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f ~/Documents/qgis/qwat-sige/export_cartoriviera/export_croquis_reseau.sql
+-- PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/distribution_croquis_reseau.sql
 
 CREATE SCHEMA IF NOT EXISTS usr_cartoriviera;
 

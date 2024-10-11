@@ -1,3 +1,5 @@
+-- PGSERVICE=sige_commun psql -v ON_ERROR_STOP=on -f cartoriviera/export_db/big_search_table.sql
+
 DROP TABLE IF EXISTS sige_qgis_cartoriviera.sige_qgis_big_table;
 
 CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
