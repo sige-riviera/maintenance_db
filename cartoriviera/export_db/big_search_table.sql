@@ -61,21 +61,6 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
         situation_geometry
     FROM sige_qgis_cartoriviera.sige_qgis_qgep_wastewater_structure
     WHERE co_identifier IS NOT NULL
-    -------------------
-    --  CADASTRE PORT-VALAIS
-    UNION
-    SELECT
-        'Adresse Valais' AS layer_name,
-        rue || ' ' || numero || ', ' || commune AS search_text,
-        geometry
-    FROM adresse.geopost
-    WHERE commune = 'Bouveret' OR commune = 'Les Evouettes'
-    UNION
-    SELECT
-        'Cadastre Valais' AS layer_name,
-        'Parcelle ' || numero || ', Port-Valais' AS search_text,
-        geom AS geometry
-    FROM cadastre.portvalais_bienfonds
 );
 
 CREATE INDEX geoidx_sige_qgis_big_table
