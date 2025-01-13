@@ -78,8 +78,9 @@ PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 # Disk usage information
 0 6 * * mon $FOLDERPATH/disk_usage.sh>/dev/null
 
-# Archive qwat database for statistics on 1st january (and 1st of july of GER)
-1 6 1 1,7 * $FOLDERPATH/archive_db_for_statistics.sh>/dev/null
+# Archive qwat database for statistics on 1st january for yearly statistics and 1st of july for GER
+1 6 20 1 * $FOLDERPATH/archive_db_for_statistics.sh>/dev/null
+1 6 1 7 * $FOLDERPATH/archive_db_for_statistics.sh>/dev/null
 
 # Testing a script every 5 minutes on week days
 #*/2 * * * mon,tue,wed,thu,fri $FOLDERPATH/test.sh>&2
