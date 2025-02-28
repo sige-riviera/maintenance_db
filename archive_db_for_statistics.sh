@@ -7,16 +7,22 @@ export PGOPTIONS='--client-min-messages=warning'
 currentDay=`date +'%d'`
 currentMonth=`date +'%m'`
 currentYear=`date +'%Y'`
-sourceDb=qwat_prod
+sourceDB=qwat_prod
+archivedDB=qwat_prod_statistics_${currentYear}${currentMonth}${currentDay}
+archivedDBforClients=qwat_prod_statistics
 
-# Disconnect users to free databases (before that manually create a copy of prod db named qgep_prod_copy)
-psql -U sige -d postgres -c "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = '$sourceDb';"
+# Disconnect users to free databases (before that manually create a copy of production database named qgep_prod_copy)
+psql -U sige -d postgres -c "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = '$sourceDB';"
 
-# Create a archived database for statistics on 1st january
-if [[ $currentDay=01 && $currentMonth=01 ]]
-then
-  psql -U sige -d postgres -c "CREATE DATABASE qwat_prod_statistics_${currentYear}${currentMonth}${currentDay} WITH TEMPLATE $sourceDb;"
-fi
+# Create an archived database for statistics
+psql -U sige -d postgres -c "CREATE DATABASE $archivedDB WITH TEMPLATE $sourceDB;"
+
+# Drop archived database used by pg_service.conf on clients
+psql -U sige -d postgres -c "DROP DATABASE IF EXISTS $archivedDBforClients;"
+psql -U sige -d $archivedDB -c "CREATE MATERIALIZED VIEW usr_sige.statistics_metadata AS SELECT CURRENT_DATE AS archived_date,EXTRACT(YEAR FROM CURRENT_DATE)::INTEGER - 1 AS archived_year;"
+
+# Duplicate archived database to be used by pg_service.conf on clients
+psql -U sige -d postgres -c "CREATE DATABASE $archivedDBforClients WITH TEMPLATE $archivedDB;"
 
 # Redirect stdout to stderr
 if [[ $MAILSTDOUT = true ]]; then
