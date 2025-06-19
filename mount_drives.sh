@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# TODO: set usernames and host as variable
 # Note: version for cifs must be correct depending on the machine
 
 NAME_DATA_SRV=`cat /home/sitadmin/sit/pass/name_data_server`
