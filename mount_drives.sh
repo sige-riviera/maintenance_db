@@ -27,3 +27,5 @@ sudo /bin/mount -t cifs //$NAME_BACKUP_SRV/bk_laveyre/qgis /home/sitadmin/sit/mo
 
 #fusermount -u /home/sitadmin/sit/mount/cartoriviera_secured
 sshfs kandre@cartoriviera3.vevey.ch:/var/sig/files/private/sige /home/sitadmin/sit/mount/cartoriviera_secured # SSH connection to cartoriviera (password protected) infrastructure uses private and public keys ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub
+
+sshfs carto_sige@ftp.vevey.ch:/ /home/sitadmin/sit/mount/ftp_vevey

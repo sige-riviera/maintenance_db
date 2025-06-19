@@ -8,7 +8,7 @@ do
   sudo rmdir /home/sitadmin/sit/mount/$internalMountName || echo "Cannot delete mounting point folder, skipping the statement."
 done
 
-for externalMountName in cartoriviera_secured cartoriviera_unsecured
+for externalMountName in cartoriviera_secured cartoriviera_unsecured ftp_vevey
 do
   #sudo fusermount -u /home/sitadmin/sit/mount/$externalMountName || echo "Cannot unmount mounting point, skipping the statement."
   sudo /bin/umount -l /home/sitadmin/sit/mount/$externalMountName || echo "Cannot unmount mounting point, skipping the statement."
