@@ -35,6 +35,7 @@ PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_consumptionzone.sql
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_folder.sql
 PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_protectionzone.sql
+PGSERVICE=qwat_prod psql -v ON_ERROR_STOP=on -f $FOLDERPATH/cartoriviera/export_db/qwat_pipe_schema.sql
 
 # Dump qwat_prod.usr_cartoriviera schema
 /usr/bin/pg_dump --host localhost --port 5432 --username "sige" --no-password  --format custom $VERBOSE_CMD --file "$FOLDERPATH/cartoriviera/export_db/qwat.backup" --schema "usr_cartoriviera" "qwat_prod"

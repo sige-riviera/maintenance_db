@@ -45,6 +45,9 @@ CREATE TABLE usr_cartoriviera.sige_qgis_qwat_installation AS
     label_2_y,
     label_2_rotation,
     label_2_text,
+    qwat_ext_ch_vd_sire_etat_exploitation,
+    qwat_ext_ch_vd_sire_adesafecter,
+    --qwat_ext_ch_vd_sire_remarque
     installation_type,
     name,
     fk_parent,
