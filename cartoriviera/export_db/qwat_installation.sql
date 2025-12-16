@@ -19,7 +19,7 @@ CREATE TABLE usr_cartoriviera.sige_qgis_qwat_installation AS
     _pipe_schema_visible,
     geometry,
     -- geometry_alt1,
-    -- geometry_alt2,
+    geometry_alt2,
     -- update_geometry_alt1,
     -- update_geometry_alt2,
     identification,
