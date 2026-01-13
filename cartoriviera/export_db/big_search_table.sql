@@ -52,6 +52,13 @@ CREATE TABLE sige_qgis_cartoriviera.sige_qgis_big_table AS (
         ST_Force2D(geometry) AS geometry
     FROM sige_qgis_cartoriviera.sige_qgis_qwat_printmap
     WHERE name IS NOT NULL
+    UNION
+    SELECT
+        'EP Dossier technique'::text AS layer_name,
+        'Dossier ' || identification::text AS search_text,
+        ST_Force2D(geometry_line) AS geometry
+    FROM sige_qgis_cartoriviera.sige_qgis_qwat_folder
+    WHERE identification IS NOT NULL AND geometry_line IS NOT NULL
     -------------------
     --  QGEP
     UNION
