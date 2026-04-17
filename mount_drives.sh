@@ -22,7 +22,7 @@ done
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/01_EAU_POTABLE/00_DOC_TECHNIQUE/71_ABONNES /home/sitadmin/sit/mount/abonnes -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount abonnes folder"
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/01_EAU_POTABLE/00_DOC_TECHNIQUE/01_RESEAU /home/sitadmin/sit/mount/reseau -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount reseau reseau"
 sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/01_EAU_POTABLE/00_DOC_TECHNIQUE /home/sitadmin/sit/mount/ouvrages -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount ouvrages folder"
-sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/02_ASSAINISSEMENT/00_DOC_TECHNIQUE /home/sitadmin/sit/mount/assainissement -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount assainissement folder"
+sudo /bin/mount -t cifs //$NAME_DATA_SRV/EXPLOITATION/02_ASSAINISSEMENT/24_RESEAU_ASSAINISSEMENT /home/sitadmin/sit/mount/assainissement -o user=sitscripts,password=$PASS_DATA_SRV,dom=sige.ch,gid=1000,uid=1000 || echo "Cannot mount assainissement folder"
 
 sudo /bin/mount -t cifs //$NAME_BACKUP_SRV/bk_laveyre/qgis /home/sitadmin/sit/mount/backup_server_nas/ -o user=intranet,password=$PASS_BACKUP_SRV,dom=sige.ch,gid=1000,uid=1000,vers=3.0 || echo "Cannot mount backup_server_nas folder" # vers=3.0 Win 2012+
 

@@ -6,7 +6,7 @@
 
 # -- User parameters --
 
-MOUNTPATH=/home/sitadmin/sit/mount/comm_tech_ro
+MOUNTPATH=/home/sitadmin/sit/mount/assainissement
 DATABASE=qgep_prod
 CHECKTYPE=1 # 1,2,3 respectively for files only, folder only, or both
 
@@ -34,7 +34,10 @@ if [[ $CHECKTYPE = 1 || $CHECKTYPE = 3 ]]; then
   totalcounter=0
   for dbvalue in $(PGUSER=sige PGDATABASE=$DATABASE psql -t -q -c $SQLQUERYFOLDER); do
   strpart="$(cut -d':' -f2 <<<"$dbvalue")"
-  pathpart="${strpart//\\//}"
+  strpart="${strpart#\\}"                 # enlève le \ initial
+  strpart="${strpart#*\\}"               # enlève 1er dossier
+  strpart="${strpart#*\\}"               # enlève 2e dossier
+  pathpart="${strpart//\\//}"            # remplace \ par /
   folderpath=$MOUNTPATH/$pathpart
   ((totalcounter++))
   if [[ ! -d $folderpath ]]; then
