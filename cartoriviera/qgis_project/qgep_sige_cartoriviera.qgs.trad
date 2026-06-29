@@ -7,14 +7,11 @@ msgstr "Hauteur max. profil"
 msgid "coefficient_of_friction"
 msgstr "k_strickler"
 
-msgid "connection_type_abbr_de"
+msgid "connection_type_value_fr"
 msgstr "Type de connexion"
 
 msgid "elevation_determination_value_fr"
 msgstr "Détermination altimétrique"
-
-msgid "financing_abbr_fr"
-msgstr "Financement"
 
 msgid "function_hierarchic_value_fr"
 msgstr "Fonction hiérarchique"
@@ -58,15 +55,6 @@ msgstr "Chemisage - type"
 msgid "remark"
 msgstr "Remarque"
 
-msgid "renovation_necessity_value_fr"
-msgstr "Nécessité de rénovation"
-
-msgid "rv_construction_type_value_fr"
-msgstr "Type rénovation"
-
-msgid "slope_per_mill"
-msgstr "Pente (pour mille)"
-
 msgid "status_value_fr"
 msgstr "Etat"
 
@@ -76,29 +64,11 @@ msgstr "Etat de l'ouvrage"
 msgid "usage_current_value_fr"
 msgstr "Usage actuel"
 
-msgid "usage_planned_abbr_fr"
-msgstr "Utilisation prévue"
-
 msgid "width"
 msgstr "Largeur"
 
-msgid "year_of_construction"
-msgstr "Année de construction"
-
-msgid "year_of_replacement"
-msgstr "Année de remplacement"
-
 msgid "_depth"
 msgstr "Profondeur"
-
-msgid "_label"
-msgstr "Etiquette"
-
-msgid "backflow_level"
-msgstr "Cote - refoulement"
-
-msgid "bottom_level"
-msgstr "Cote - radier"
 
 msgid "cover_fastening_value_fr"
 msgstr "Couvercle - fixation"
@@ -109,39 +79,15 @@ msgstr "Couvercle - matériau"
 msgid "cover_shape_value_fr"
 msgstr "Couvercle - forme"
 
-msgid "dimension1"
-msgstr "Dimension 1"
-
-msgid "dimension2"
-msgstr "Dimension 2"
-
-msgid "financing_value_fr"
-msgstr "Financement"
-
-msgid "highwater_level"
-msgstr "Cote - crue"
-
-msgid "manhole_function_value_fr"
-msgstr "Fonction du regard"
-
 msgid "positional_accuracy_value_fr"
 msgstr "Détermination planimétrique"
 
-msgid "renovation_demand_value_fr"
-msgstr "Demande de rénovation"
-
-msgid "special_structure_function_value_fr"
-msgstr "Fonction de la structure"
-
-msgid "terrain_level"
-msgstr "Cote - terrain"
-
-msgid "upper_elevation"
-msgstr "Cote - plafond"
-
-msgid "vehicle_access"
-msgstr "vehicule_d_aspiration"
-
 msgid "venting_value_fr"
 msgstr "Ventilation"
+
+msgid "year_of_construction"
+msgstr "Année de construction"
+
+msgid "year_of_replacement"
+msgstr "Année de remplacement"
 

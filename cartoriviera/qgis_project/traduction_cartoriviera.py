@@ -17,7 +17,7 @@ wmsAttributesOnly = True
 translateProjects = True
 folderpath = 'C:/qgis/maintenance_db/cartoriviera/qgis_project/'
 projects = ['qwat_sige_cartoriviera.qgs','qgep_sige_cartoriviera.qgs','cadastre_sige_cartoriviera.qgs']
-mergeTranslationFile = 'translations_sige_qgis_cartoriviera.txt'
+mergeTranslationFile = 'traductions_sige.txt'
 
 def main():
     if translateProjects == True:
@@ -54,12 +54,15 @@ def generateTranslationFile(file):
             if wmsAttributesOnly == False or isWmsAttribute(key, layer):
                 if key not in uniqueAliases:
                     uniqueAliases[key] = layerAliases[key]
-
+    
     for field in uniqueAliases:
-        #print u'"{0}" "{1}",'.format(field, uniqueAliases[field])
-        fo.write( u'msgid "{0}"\n'.format(field))
-        fo.write( u'msgstr "{0}"\n'.format(uniqueAliases[field]))
-        fo.write( u'\n')
+    # Ignore les traductions vides
+        if not uniqueAliases[field]:
+            continue
+
+        fo.write(u'msgid "{0}"\n'.format(field))
+        fo.write(u'msgstr "{0}"\n'.format(uniqueAliases[field]))
+        fo.write(u'\n')
 
     fo.close()
 
@@ -69,10 +72,14 @@ def isWmsAttribute(attribute, layerObject):
     return isWmsAttribute
 
 def mergeTranslationFiles(inputFiles, outputFile):
-    with open(outputFile, 'w') as outfile:
-            for fp in inputFiles:
-                with open(fp) as infile:
-                    for line in infile:
-                        outfile.write(line)
+    with open(outputFile, 'w', encoding='utf-8') as outfile:
+        outfile.write('\n# DEBUT SIGE\n\n')
+
+        for fp in inputFiles:
+            with open(fp, encoding='utf-8') as infile:
+                for line in infile:
+                    outfile.write(line)
+
+        outfile.write('# FIN SIGE\n')
                         
 main()

@@ -187,7 +187,7 @@ msgstr "Parcelle"
 msgid "rejected_flow"
 msgstr "Débit refoulé"
 
-msgid "sanitization_chlorine_gazeous"
+msgid "sanitization_chlorine_gas"
 msgstr "Désinfection chlore gazeux"
 
 msgid "sanitization_chlorine_liquid"
@@ -265,9 +265,6 @@ msgstr "Visibilité schématique"
 msgid "tunnel_or_bridge"
 msgstr "Tunnel ou pont"
 
-msgid "year_end"
-msgstr "Année de fin"
-
 msgid "year_rehabilitation"
 msgstr "Année de réhabilitation"
 
@@ -292,6 +289,30 @@ msgstr "Description"
 msgid "population"
 msgstr "Population"
 
+msgid "prj_line_plan_name"
+msgstr "Nom de chantier"
+
+msgid "prj_line_remark"
+msgstr "Remarques"
+
+msgid "prj_line_specifications"
+msgstr "Caractéristiques"
+
+msgid "prj_line_updated_at"
+msgstr "Date de mise à jour"
+
+msgid "prj_point_plan_name"
+msgstr "Nom de chantier"
+
+msgid "prj_point_remark"
+msgstr "Remarques"
+
+msgid "prj_point_specifications"
+msgstr "Caractéristiques"
+
+msgid "prj_point_updated_at"
+msgstr "Date de mise à jour"
+
 msgid "_repaired"
 msgstr "Réparé"
 
@@ -303,9 +324,6 @@ msgstr "Cause"
 
 msgid "detection_date"
 msgstr "Date de détection"
-
-msgid "fk_cause"
-msgstr "Cause"
 
 msgid "fk_pipe"
 msgstr "ID conduite"
@@ -347,13 +365,13 @@ msgid "sqwh_classification"
 msgstr "Classification"
 
 msgid "sqwh_hardness_max"
-msgstr "Dureté max. observée"
+msgstr "Dureté max. observée [°fH]"
 
 msgid "sqwh_hardness_median"
-msgstr "Dureté moyenne"
+msgstr "Dureté moyenne [°fH]"
 
 msgid "sqwh_hardness_min"
-msgstr "Dureté min. observée"
+msgstr "Dureté min. observée [°fH]"
 
 msgid "sqwh_name"
 msgstr "Nom de la zone"
@@ -376,7 +394,7 @@ msgstr "Visib. schématique"
 msgid "closed"
 msgstr "Fermé"
 
-msgid "diameter_nominal"
+msgid "fk_nominal_diameter"
 msgstr "Diamètre nominal"
 
 msgid "schema_force_visible"

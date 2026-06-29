@@ -1,9 +1,14 @@
 
+# DEBUT SIGE
+
 msgid "croquis"
 msgstr "Lien"
 
 msgid "file"
 msgstr "Nom de fichier"
+
+msgid "id"
+msgstr "ID"
 
 msgid "is_as_built_plan"
 msgstr "Schéma d'exécution"
@@ -21,7 +26,7 @@ msgid "district_prefix"
 msgstr "Préfixe de commune"
 
 msgid "district_shortname"
-msgstr "Commune - abréviation"
+msgstr "Commune - abbréviation"
 
 msgid "district_zip"
 msgstr "Code postal"
@@ -70,6 +75,9 @@ msgstr "Remarque"
 
 msgid "status_functional"
 msgstr "Fonctionnel"
+
+msgid "status_value_fr"
+msgstr "Etat"
 
 msgid "third_party_supply"
 msgstr "Alimenté par tiers"
@@ -132,7 +140,7 @@ msgid "fire_valve"
 msgstr "Vanne incendie"
 
 msgid "flocculation"
-msgstr "Floculation"
+msgstr "Flocculation"
 
 msgid "flow_average"
 msgstr "Débit moyen"
@@ -260,9 +268,6 @@ msgstr "Visibilité schématique"
 msgid "tunnel_or_bridge"
 msgstr "Tunnel ou pont"
 
-msgid "year_end"
-msgstr "Année de fin"
-
 msgid "year_rehabilitation"
 msgstr "Année de réhabilitation"
 
@@ -286,6 +291,30 @@ msgstr "Description"
 
 msgid "population"
 msgstr "Population"
+
+msgid "prj_line_plan_name"
+msgstr "Nom de chantier"
+
+msgid "prj_line_remark"
+msgstr "Remarques"
+
+msgid "prj_line_specifications"
+msgstr "Caractéristiques"
+
+msgid "prj_line_updated_at"
+msgstr "Date de mise à jour"
+
+msgid "prj_point_plan_name"
+msgstr "Nom de chantier"
+
+msgid "prj_point_remark"
+msgstr "Remarques"
+
+msgid "prj_point_specifications"
+msgstr "Caractéristiques"
+
+msgid "prj_point_updated_at"
+msgstr "Date de mise à jour"
 
 msgid "_repaired"
 msgstr "Réparé"
@@ -329,35 +358,8 @@ msgstr "Origine"
 msgid "plan"
 msgstr "Plan"
 
-msgid "sige_cable_installed"
-msgstr "Câble installé"
-
 msgid "subscriber_identification"
 msgstr "Référence identifiant"
-
-msgid "prj_point_specifications"
-msgstr "Caractéristiques"
-
-msgid "prj_point_plan_name"
-msgstr "Nom de chantier"
-
-msgid "prj_point_remark"
-msgstr "Remarques"
-
-msgid "prj_point_updated_at"
-msgstr "Date de mise à jour"
-
-msgid "prj_line_specifications"
-msgstr "Caractéristiques"
-
-msgid "prj_line_plan_name"
-msgstr "Nom de chantier"
-
-msgid "prj_line_remark"
-msgstr "Remarques"
-
-msgid "prj_line_updated_at"
-msgstr "Date de mise à jour"
 
 msgid "sqwh_appreciation"
 msgstr "Appréciation"
@@ -419,14 +421,11 @@ msgstr "Hauteur max. profil"
 msgid "coefficient_of_friction"
 msgstr "k_strickler"
 
-msgid "connection_type_abbr_de"
+msgid "connection_type_value_fr"
 msgstr "Type de connexion"
 
 msgid "elevation_determination_value_fr"
 msgstr "Détermination altimétrique"
-
-msgid "financing_abbr_fr"
-msgstr "Financement"
 
 msgid "function_hierarchic_value_fr"
 msgstr "Fonction hiérarchique"
@@ -441,13 +440,16 @@ msgid "identifier"
 msgstr "Désignation"
 
 msgid "inside_coating_value_fr"
-msgstr "Revêtement intérieur"
+msgstr "Revetement intérieur"
 
 msgid "last_modification"
 msgstr "Dernière modification"
 
 msgid "length_effective"
 msgstr "Longueur effective"
+
+msgid "material_value_fr"
+msgstr "Matériau"
 
 msgid "obj_id"
 msgstr "ID"
@@ -464,14 +466,8 @@ msgstr "Chemisage - valeur"
 msgid "relining_kind_value_fr"
 msgstr "Chemisage - type"
 
-msgid "renovation_necessity_value_fr"
-msgstr "Nécessité de rénovation"
-
-msgid "rv_construction_type_value_fr"
-msgstr "Type rénovation"
-
-msgid "slope_per_mill"
-msgstr "Pente (pour mille)"
+msgid "remark"
+msgstr "Remarque"
 
 msgid "status_value_fr"
 msgstr "Etat"
@@ -485,23 +481,8 @@ msgstr "Usage actuel"
 msgid "width"
 msgstr "Largeur"
 
-msgid "year_of_construction"
-msgstr "Année de construction"
-
-msgid "year_of_replacement"
-msgstr "Année de remplacement"
-
 msgid "_depth"
 msgstr "Profondeur"
-
-msgid "_label"
-msgstr "Etiquette"
-
-msgid "backflow_level"
-msgstr "Cote - refoulement"
-
-msgid "bottom_level"
-msgstr "Cote - radier"
 
 msgid "cover_fastening_value_fr"
 msgstr "Couvercle - fixation"
@@ -512,41 +493,17 @@ msgstr "Couvercle - matériau"
 msgid "cover_shape_value_fr"
 msgstr "Couvercle - forme"
 
-msgid "dimension1"
-msgstr "Dimension 1"
-
-msgid "dimension2"
-msgstr "Dimension 2"
-
-msgid "financing_value_fr"
-msgstr "Financement"
-
-msgid "highwater_level"
-msgstr "Cote - crue"
-
-msgid "manhole_function_value_fr"
-msgstr "Fonction du regard"
-
 msgid "positional_accuracy_value_fr"
 msgstr "Détermination planimétrique"
 
-msgid "renovation_demand_value_fr"
-msgstr "Demande de rénovation"
-
-msgid "special_structure_function_value_fr"
-msgstr "Fonction de la structure"
-
-msgid "terrain_level"
-msgstr "Cote - terrain"
-
-msgid "upper_elevation"
-msgstr "Cote - plafond"
-
-msgid "vehicle_access"
-msgstr "vehicule_d_aspiration"
-
 msgid "venting_value_fr"
 msgstr "Ventilation"
+
+msgid "year_of_construction"
+msgstr "Année de construction"
+
+msgid "year_of_replacement"
+msgstr "Année de remplacement"
 
 msgid "id"
 msgstr "ID"
@@ -569,122 +526,4 @@ msgstr "Date de réception"
 msgid "date_traite"
 msgstr "Date de traitement"
 
-msgid "sige"
-msgstr "SIGE"
-
-msgid "sige_assainissement"
-msgstr "Assainissement"
-
-msgid "sige_autres_reseaux"
-msgstr "Autres réseaux"
-
-msgid "sige_cadastre"
-msgstr "Cadastre"
-
-msgid "sige_distribution"
-msgstr "Distribution"
-
-msgid "sige_qgis_abonne"
-msgstr "Abonné"
-
-msgid "sige_qgis_abonne_renvoi"
-msgstr "Abonnés – renvoi"
-
-msgid "sige_qgis_annotation"
-msgstr "Annotation"
-
-msgid "sige_qgis_annotation_point"
-msgstr "Annotation"
-
-msgid "sige_qgis_annotation_ligne"
-msgstr "Annotation"
-
-msgid "sige_qgis_chambres"
-msgstr "Chambre"
-
-msgid "sige_qgis_collecteurs"
-msgstr "Collecteur"
-
-msgid "sige_qgis_compteur_reseau_renvoi"
-msgstr "Compteur réseau - renvoi"
-
-msgid "sige_qgis_compteur_reseau"
-msgstr "Compteur réseau"
-
-msgid "sige_qgis_conduite_en_service"
-msgstr "Conduite en service"
-
-msgid "sige_qgis_conduite_hors_service"
-msgstr "Conduite hors service"
-
-msgid "sige_qgis_conduite_en_attente"
-msgstr "Conduite en attente"
-
-msgid "sige_qgis_conduite_désaffecté"
-msgstr "Conduite désaffectée"
-
-msgid "sige_qgis_conduite_projet_pdde"
-msgstr "Conduite PDDE"
-
-msgid "sige_qgis_conduite_etranger"
-msgstr "Conduite réseau étranger"
-
-msgid "sige_qgis_conduite_zone_pression"
-msgstr "Conduites par zones de pressions"
-
-msgid "sige_qgis_croquis_reseau"
-msgstr "Croquis réseau"
-
-msgid "sige_qgis_project"
-msgstr "Chantier réseau (en test)"
-
-msgid "sige_qgis_project_line"
-msgstr "Chantier réseau (en test)"
-
-msgid "sige_qgis_dossier_technique"
-msgstr "Dossier technique"
-
-msgid "sige_qgis_durete_eau"
-msgstr "Dureté moyenne de l'eau"
-
-msgid "sige_qgis_durete_eau_v2"
-msgstr "Dureté moy. de l'eau (communes SIGE)"
-
-msgid "sige_qgis_enquete"
-msgstr "Enquête"
-
-msgid "sige_qgis_enquete_camac"
-msgstr "Enquête CAMAC"
-
-msgid "sige_qgis_folios"
-msgstr "Folios"
-
-msgid "sige_qgis_hydrante"
-msgstr "Hydrante"
-
-msgid "sige_qgis_hydrante_pression"
-msgstr "Hydrante - Pression statique"
-
-msgid "sige_qgis_ouvrage_etranger"
-msgstr "Ouvrage étranger"
-
-msgid "sige_qgis_ouvrage_fonctionnel"
-msgstr "Ouvrage fonctionnel"
-
-msgid "sige_qgis_ouvrage_non_fonctionnel"
-msgstr "Ouvrage non fonctionnel"
-
-msgid "sige_qgis_qwat_fuite"
-msgstr "Fuite"
-
-msgid "sige_qgis_qwat_remote"
-msgstr "Télécommande"
-
-msgid "sige_qgis_vanne"
-msgstr "Vanne"
-
-msgid "sige_qgis_zone_consommation"
-msgstr "Zone de consommation"
-
-msgid "sige_qgis_zone_pression"
-msgstr "Zone de pression"
+# FIN SIGE
