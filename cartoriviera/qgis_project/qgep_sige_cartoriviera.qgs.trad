@@ -1,3 +1,6 @@
+msgid "_slope_per_mill"
+msgstr "Pente (pour mille)"
+
 msgid "accessibility_value_fr"
 msgstr "Accessibilité"
 
@@ -26,7 +29,7 @@ msgid "identifier"
 msgstr "Désignation"
 
 msgid "inside_coating_value_fr"
-msgstr "Revetement intérieur"
+msgstr "Revêtement intérieur"
 
 msgid "last_modification"
 msgstr "Dernière modification"
@@ -64,11 +67,17 @@ msgstr "Etat de l'ouvrage"
 msgid "usage_current_value_fr"
 msgstr "Usage actuel"
 
+msgid "usage_planned_abbr_fr"
+msgstr "Utilisation prévue"
+
 msgid "width"
 msgstr "Largeur"
 
 msgid "_depth"
 msgstr "Profondeur"
+
+msgid "_label"
+msgstr "Etiquette"
 
 msgid "cover_fastening_value_fr"
 msgstr "Couvercle - fixation"
@@ -78,6 +87,9 @@ msgstr "Couvercle - matériau"
 
 msgid "cover_shape_value_fr"
 msgstr "Couvercle - forme"
+
+msgid "manhole_function_value_fr"
+msgstr "Fonction du regard"
 
 msgid "positional_accuracy_value_fr"
 msgstr "Détermination planimétrique"

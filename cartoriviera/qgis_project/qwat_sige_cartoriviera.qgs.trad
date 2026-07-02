@@ -23,7 +23,7 @@ msgid "district_prefix"
 msgstr "Préfixe de commune"
 
 msgid "district_shortname"
-msgstr "Commune - abbréviation"
+msgstr "Commune - abréviation"
 
 msgid "district_zip"
 msgstr "Code postal"
@@ -137,7 +137,7 @@ msgid "fire_valve"
 msgstr "Vanne incendie"
 
 msgid "flocculation"
-msgstr "Flocculation"
+msgstr "Floculation"
 
 msgid "flow_average"
 msgstr "Débit moyen"
@@ -265,6 +265,9 @@ msgstr "Visibilité schématique"
 msgid "tunnel_or_bridge"
 msgstr "Tunnel ou pont"
 
+msgid "year_end"
+msgstr "Année de fin"
+
 msgid "year_rehabilitation"
 msgstr "Année de réhabilitation"
 
@@ -288,6 +291,9 @@ msgstr "Description"
 
 msgid "population"
 msgstr "Population"
+
+msgid "print_scale"
+msgstr "Echelle d'impression"
 
 msgid "prj_line_plan_name"
 msgstr "Nom de chantier"
@@ -355,6 +361,63 @@ msgstr "Origine"
 msgid "plan"
 msgstr "Plan"
 
+msgid "sige_cable_installed"
+msgstr "Câble installé"
+
+msgid "cable_type_value_fr"
+msgstr "Type"
+
+msgid "elevation_determination_value_fr"
+msgstr "Précision altimétrique"
+
+msgid "function_value_fr"
+msgstr "Fonction"
+
+msgid "horizontal_positioning_value_fr"
+msgstr "Précision"
+
+msgid "installation_year"
+msgstr "Année"
+
+msgid "name_number"
+msgstr "Identifiant"
+
+msgid "obj_id"
+msgstr "ID"
+
+msgid "owner_identifier"
+msgstr "Propriétaire"
+
+msgid "provider_identifier"
+msgstr "Exploitant"
+
+msgid "usr_aerial"
+msgstr "Aérien"
+
+msgid "width"
+msgstr "Largeur"
+
+msgid "altitude_lower_edge"
+msgstr "Altitude du fond"
+
+msgid "dimension1"
+msgstr "Longueur"
+
+msgid "dimension2"
+msgstr "Largeur"
+
+msgid "kind_value_fr"
+msgstr "Type"
+
+msgid "lenght"
+msgstr "Longueur"
+
+msgid "nominal_diameter"
+msgstr "Diamètre nominal"
+
+msgid "outside_diameter"
+msgstr "Diamètre extérieur"
+
 msgid "subscriber_identification"
 msgstr "Référence identifiant"
 
@@ -393,9 +456,6 @@ msgstr "Visib. schématique"
 
 msgid "closed"
 msgstr "Fermé"
-
-msgid "fk_nominal_diameter"
-msgstr "Diamètre nominal"
 
 msgid "schema_force_visible"
 msgstr "Visib. schématique forcée"
