@@ -1,0 +1,159 @@
+## HARDCODED DEBUT SIGE
+
+msgid "sige_assainissement"
+msgstr "Assainissement"
+
+msgid "sige_autres_reseaux"
+msgstr "Autres réseaux"
+
+msgid "sige_cadastre"
+msgstr "Cadastre"
+
+msgid "sige_distribution"
+msgstr "Distribution"
+
+msgid "sige_distribution_pdde"
+msgstr "Distribution - PDDE"
+
+msgid "sige_qgis_qwat_groupe"
+msgstr "PDDE"
+
+msgid "sige_qgis_qwat_installation_chambre_traitement"
+msgstr "PDDE - Chambre de traitement"
+
+msgid "sige_qgis_qwat_installation_station_pompage"
+msgstr "PDDE - Station de pompage"
+
+msgid "sige_qgis_qwat_installation_chambre_reseau"
+msgstr "PDDE - Chambre réseau"
+
+msgid "sige_qgis_qwat_installation_captage"
+msgstr "PDDE - Captage"
+
+msgid "sige_qgis_qwat_installation_reservoir"
+msgstr "PDDE - Réservoir"
+
+msgid "sige_qgis_qwat_pipe_nouvelles_pdde"
+msgstr "PDDE - Nouvelles conduites"
+
+msgid "sige_qgis_qwat_pipe_schema_renouvellement_pdde"
+msgstr "PDDE - Renouvellement conduites"
+
+msgid "sige_qgis_qwat_pipe_schema_a_desaffecter_pdde"
+msgstr "PDDE - Conduites à désafecter"
+
+msgid "sige_qgis_qwat_pipe_schema_zone_consommation_pdde"
+msgstr "PDDE - Zones de consommation"
+
+msgid "sige_qgis_abonne"
+msgstr "Abonné"
+
+msgid "sige_qgis_abonne_renvoi"
+msgstr "Abonnés – renvoi"
+
+msgid "sige_qgis_abonne_v2"
+msgstr "Abonnés SIGE"
+
+msgid "sige_qgis_abonne_renvoi_v2"
+msgstr "Abonnés SIGE – renvoi"
+
+msgid "sige_qgis_annotation"
+msgstr "Annotation"
+
+msgid "sige_qgis_annotation_point"
+msgstr "Annotation"
+
+msgid "sige_qgis_annotation_ligne"
+msgstr "Annotation"
+
+msgid "sige_qgis_chambres"
+msgstr "Chambre"
+
+msgid "sige_qgis_collecteurs"
+msgstr "Collecteur"
+
+msgid "sige_qgis_compteur_reseau_renvoi"
+msgstr "Compteur réseau - renvoi"
+
+msgid "sige_qgis_compteur_reseau"
+msgstr "Compteur réseau"
+
+msgid "sige_qgis_conduite_en_service"
+msgstr "Conduite en service"
+
+msgid "sige_qgis_conduite_hors_service"
+msgstr "Conduite hors service"
+
+msgid "sige_qgis_conduite_en_attente"
+msgstr "Conduite en attente"
+
+msgid "sige_qgis_conduite_désaffecté"
+msgstr "Conduite désaffectée"
+
+msgid "sige_qgis_conduite_projet_pdde"
+msgstr "Conduite PDDE"
+
+msgid "sige_qgis_conduite_etranger"
+msgstr "Conduite réseau étranger"
+
+msgid "sige_qgis_conduite_zone_pression"
+msgstr "Conduites par zones de pressions"
+
+msgid "sige_qgis_croquis_reseau"
+msgstr "Croquis réseau"
+
+msgid "sige_qgis_project"
+msgstr "Chantier réseau"
+
+msgid "sige_qgis_project_line"
+msgstr "Chantier réseau"
+
+msgid "sige_qgis_dossier_technique"
+msgstr "Dossier technique"
+
+msgid "sige_qgis_durete_eau"
+msgstr "Dureté moyenne de l'eau"
+
+msgid "sige_qgis_durete_eau_v2"
+msgstr "Dureté moy. de l'eau (communes SIGE)"
+
+msgid "sige_qgis_enquete_trace"
+msgstr "Tracé d'enquête"
+
+msgid "sige_qgis_enquete_camac"
+msgstr "Enquête CAMAC"
+
+msgid "sige_qgis_folios"
+msgstr "Folios"
+
+msgid "sige_qgis_hydrante"
+msgstr "Hydrante"
+
+msgid "sige_qgis_hydrante_pression"
+msgstr "Hydrante - Pression statique"
+
+msgid "sige_qgis_ouvrage_etranger"
+msgstr "Ouvrage étranger"
+
+msgid "sige_qgis_ouvrage_fonctionnel"
+msgstr "Ouvrage fonctionnel"
+
+msgid "sige_qgis_ouvrage_non_fonctionnel"
+msgstr "Ouvrage non fonctionnel"
+
+msgid "sige_qgis_qwat_fuite"
+msgstr "Fuite"
+
+msgid "sige_qgis_qwat_remote"
+msgstr "Télécommande"
+
+msgid "sige_qgis_vanne"
+msgstr "Vanne"
+
+msgid "sige_qgis_zone_consommation"
+msgstr "Zone de consommation"
+
+msgid "sige_qgis_zone_pression"
+msgstr "Zone de pression"
+
+## HARDCODED FIN SIGE

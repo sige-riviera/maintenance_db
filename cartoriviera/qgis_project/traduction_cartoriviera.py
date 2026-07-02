@@ -18,6 +18,7 @@ translateProjects = True
 folderpath = 'C:/qgis/maintenance_db/cartoriviera/qgis_project/'
 projects = ['qwat_sige_cartoriviera.qgs','qgep_sige_cartoriviera.qgs','cadastre_sige_cartoriviera.qgs']
 mergeTranslationFile = 'traductions_sige.txt'
+hardcodedTranslationFile = 'traductions_hardcoded.txt'
 
 def main():
     if translateProjects == True:
@@ -75,10 +76,24 @@ def mergeTranslationFiles(inputFiles, outputFile):
     with open(outputFile, 'w', encoding='utf-8') as outfile:
         outfile.write('\n# DEBUT SIGE\n\n')
 
+        # Fusion des fichiers .trad
         for fp in inputFiles:
             with open(fp, encoding='utf-8') as infile:
                 for line in infile:
                     outfile.write(line)
+
+        # Ajout des traductions hardcodées
+        hardcodedFile = os.path.join(folderpath, hardcodedTranslationFile)
+        if os.path.exists(hardcodedFile):
+            with open(hardcodedFile, encoding='utf-8') as infile:
+                #outfile.write('\n')
+                for line in infile:
+                    outfile.write(line)
+
+                # S'assure qu'il y a une ligne vide avant le marqueur de fin
+                if not line.endswith('\n'):
+                    outfile.write('\n')
+                outfile.write('\n')
 
         outfile.write('# FIN SIGE\n')
                         
