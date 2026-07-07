@@ -1,3 +1,11 @@
+## START qgep SIGE
+
+msgid "_depth"
+msgstr "Profondeur"
+
+msgid "_label"
+msgstr "Etiquette"
+
 msgid "_slope_per_mill"
 msgstr "Pente (pour mille)"
 
@@ -12,6 +20,15 @@ msgstr "k_strickler"
 
 msgid "connection_type_value_fr"
 msgstr "Type de connexion"
+
+msgid "cover_fastening_value_fr"
+msgstr "Couvercle - fixation"
+
+msgid "cover_material_value_fr"
+msgstr "Couvercle - matériau"
+
+msgid "cover_shape_value_fr"
+msgstr "Couvercle - forme"
 
 msgid "elevation_determination_value_fr"
 msgstr "Détermination altimétrique"
@@ -37,6 +54,9 @@ msgstr "Dernière modification"
 msgid "length_effective"
 msgstr "Longueur effective"
 
+msgid "manhole_function_value_fr"
+msgstr "Fonction du regard"
+
 msgid "material_value_fr"
 msgstr "Matériau"
 
@@ -45,6 +65,9 @@ msgstr "ID"
 
 msgid "owner_identifier"
 msgstr "Propriétaire"
+
+msgid "positional_accuracy_value_fr"
+msgstr "Détermination planimétrique"
 
 msgid "reliner_material_value_fr"
 msgstr "Chemisage - matériau"
@@ -70,36 +93,17 @@ msgstr "Usage actuel"
 msgid "usage_planned_abbr_fr"
 msgstr "Utilisation prévue"
 
-msgid "width"
-msgstr "Largeur"
-
-msgid "_depth"
-msgstr "Profondeur"
-
-msgid "_label"
-msgstr "Etiquette"
-
-msgid "cover_fastening_value_fr"
-msgstr "Couvercle - fixation"
-
-msgid "cover_material_value_fr"
-msgstr "Couvercle - matériau"
-
-msgid "cover_shape_value_fr"
-msgstr "Couvercle - forme"
-
-msgid "manhole_function_value_fr"
-msgstr "Fonction du regard"
-
-msgid "positional_accuracy_value_fr"
-msgstr "Détermination planimétrique"
-
 msgid "venting_value_fr"
 msgstr "Ventilation"
+
+msgid "width"
+msgstr "Largeur"
 
 msgid "year_of_construction"
 msgstr "Année de construction"
 
 msgid "year_of_replacement"
 msgstr "Année de remplacement"
+
+## END qgep SIGE
 

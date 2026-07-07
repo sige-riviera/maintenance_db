@@ -1,4 +1,4 @@
-## HARDCODED DEBUT SIGE
+## START HARDCODED SIGE
 
 msgid "sige_assainissement"
 msgstr "Assainissement"
@@ -156,4 +156,4 @@ msgstr "Zone de consommation"
 msgid "sige_qgis_zone_pression"
 msgstr "Zone de pression"
 
-## HARDCODED FIN SIGE
+## END HARDCODED SIGE

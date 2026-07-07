@@ -29,7 +29,7 @@ def main():
             #time.sleep(5) # Not needed because synchronous ?
             filepath = folderpath +  p + '.trad'
             filepaths.append(filepath)
-            generateTranslationFile(filepath)
+            generateTranslationFile(filepath, p)
             print('Translation file generated: ' + filepath)
             
         QgsProject.instance().clear()
@@ -40,13 +40,18 @@ def main():
                 
     else:
         filepath = '{0}{1}'.format(os.path.splitext(QgsProject.instance().fileName())[0],'.qgs.trad')
-        generateTranslationFile(filepath)
+        generateTranslationFile(filepath, p)
         print('Translation file generated: ' + filepath)
         
     print('End of script execution')
 
-def generateTranslationFile(file):
+def generateTranslationFile(file, projectName):
     fo = codecs.open(file, 'w', 'utf-8')
+
+    # Nom du projet (qwat, qgep, cadastre...)
+    projectPrefix = projectName.split('_')[0]
+
+    fo.write(u'## START {0} SIGE\n\n'.format(projectPrefix))
 
     uniqueAliases = {}
     for layer in QgsProject().instance().mapLayers().values():
@@ -55,15 +60,20 @@ def generateTranslationFile(file):
             if wmsAttributesOnly == False or isWmsAttribute(key, layer):
                 if key not in uniqueAliases:
                     uniqueAliases[key] = layerAliases[key]
-    
-    for field in uniqueAliases:
-    # Ignore les traductions vides
-        if not uniqueAliases[field]:
+
+    # Tri alphanumérique sur les msgid
+    for field in sorted(uniqueAliases.keys()):
+        translation = uniqueAliases[field]
+
+        # Ignore les traductions vides
+        if not translation:
             continue
 
         fo.write(u'msgid "{0}"\n'.format(field))
-        fo.write(u'msgstr "{0}"\n'.format(uniqueAliases[field]))
+        fo.write(u'msgstr "{0}"\n'.format(translation))
         fo.write(u'\n')
+
+    fo.write(u'## END {0} SIGE\n\n'.format(projectPrefix))
 
     fo.close()
 
@@ -86,14 +96,15 @@ def mergeTranslationFiles(inputFiles, outputFile):
         hardcodedFile = os.path.join(folderpath, hardcodedTranslationFile)
         if os.path.exists(hardcodedFile):
             with open(hardcodedFile, encoding='utf-8') as infile:
-                #outfile.write('\n')
                 for line in infile:
                     outfile.write(line)
 
-                # S'assure qu'il y a une ligne vide avant le marqueur de fin
-                if not line.endswith('\n'):
-                    outfile.write('\n')
+            # Garantit une fin de ligne si le fichier n'en possède pas
+            if 'line' in locals() and not line.endswith('\n'):
                 outfile.write('\n')
+
+            # Une ligne vide avant # FIN SIGE
+            outfile.write('\n')
 
         outfile.write('# FIN SIGE\n')
                         

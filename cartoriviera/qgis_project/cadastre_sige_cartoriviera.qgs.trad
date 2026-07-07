@@ -1,8 +1,4 @@
-msgid "id"
-msgstr "ID"
-
-msgid "remarque"
-msgstr "Remarque"
+## START cadastre SIGE
 
 msgid "camac"
 msgstr "Demande de permis de constr. CAMAC"
@@ -18,4 +14,12 @@ msgstr "Date de réception"
 
 msgid "date_traite"
 msgstr "Date de traitement"
+
+msgid "id"
+msgstr "ID"
+
+msgid "remarque"
+msgstr "Remarque"
+
+## END cadastre SIGE
 
